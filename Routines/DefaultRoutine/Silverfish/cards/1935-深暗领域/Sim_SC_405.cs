@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>星舰组件</b><b>战吼：</b>每有一个其他友方随从，便获得+1/+1。发射时也会触发。
 	class Sim_SC_405 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			onLaunchStarShip(p, own);
+		}
+
+		public override void onLaunchStarShip(Playfield p, Minion starShip)
+		{
+			int buff = (starShip.own) ? p.ownMinions.Count - 1 : p.enemyMinions.Count - 1;
+			p.minionGetBuffed(starShip, buff, buff);
+		}
 	}
 }

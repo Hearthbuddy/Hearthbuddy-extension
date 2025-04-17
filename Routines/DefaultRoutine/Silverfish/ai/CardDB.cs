@@ -431,6 +431,9 @@ namespace HREngine.Bots
             public bool Quickdraw = false;//快枪
             public bool Excavate = false;//发掘
             public bool Elusive = false;//扰魔
+            public bool StarShip = false;//星舰
+            public bool StarShipPiece = false;//星舰组件
+            public int StarShipLaunchCost = 5;//星舰发射消耗法力值
 
             public string textCN = "";
             public int count = 1;
@@ -1135,16 +1138,16 @@ namespace HREngine.Bots
                         break;
                 }
 
-                //移除扰魔的随从
+                //移除扰魔、地标、未发射的星舰
                 targetsForHeroPower.RemoveAll(minion => minion != null &&
                                                         minion.handcard != null &&
                                                         minion.handcard.card != null &&
-                                                        minion.handcard.card.Elusive);
-                //移除地标
-                targetsForHeroPower.RemoveAll(minion => minion != null &&
-                                                        minion.handcard != null &&
-                                                        minion.handcard.card != null &&
-                                                        minion.handcard.card.type == CardDB.cardtype.LOCATION);
+                                                        // 扰魔
+                                                        (minion.elusive ||
+                                                         // 地标
+                                                         minion.handcard.card.type == CardDB.cardtype.LOCATION ||
+                                                         //未发射的星舰
+                                                         (minion.handcard.card.StarShip && !minion.isStarShipLaunched)));
 
                 return targetsForHeroPower;
             }
@@ -1309,7 +1312,7 @@ namespace HREngine.Bots
             }
 
             /// <summary>
-            /// 计算费用 会减费的牌需要在里面写
+            /// 计算(手牌)费用 会减费的牌需要在里面写
             /// </summary>
             /// <param name="p"></param>
             /// <returns></returns>
@@ -1389,6 +1392,17 @@ namespace HREngine.Bots
                 retval = Math.Max(0, retval);
 
                 return retval;
+            }
+
+            /// <summary>
+            /// 获取星舰发射费用
+            /// </summary>
+            /// <param name="p"></param>
+            /// <param name="currentcost"></param>
+            /// <returns></returns>
+            public int getStarShipLaunchManaCost(Playfield p, int currentcost)
+            {
+                return Math.Max(0, currentcost + p.ownStarShipsCostMore - p.ownStarShipsCostMoreAtStart);
             }
 
             /// <summary>
@@ -2336,6 +2350,16 @@ namespace HREngine.Bots
                                 card.Elusive = true;//扰魔
                             }
                             break;
+                        case "3555":
+                            {
+                                card.StarShip = true; //星舰
+                            }
+                            break;
+                        case "3568":
+                            {
+                                card.StarShipPiece = true; //星舰组件
+                            }
+                            break;
                     }
                 }
                 
@@ -2406,6 +2430,32 @@ namespace HREngine.Bots
             if (this.carddbfidToCardList.TryGetValue(dbfID, out c))
                 return c;
             return this.unknownCard;
+        }
+
+        // 根据hero获取星舰卡
+        public Card getStarShipCardDataFromHeroID(HeroEnum hero)
+        {
+            switch (hero)
+            {
+                case HeroEnum.pala:
+                case HeroEnum.shaman:
+                case HeroEnum.warrior:
+                    return getCardDataFromID(cardIDEnum.SC_999t);
+                case HeroEnum.deathknight:
+                    return getCardDataFromID(cardIDEnum.GDB_100t4);
+                case HeroEnum.demonhunter:
+                    return getCardDataFromID(cardIDEnum.GDB_100t5);
+                case HeroEnum.druid:
+                    return getCardDataFromID(cardIDEnum.GDB_100t6);
+                case HeroEnum.hunter:
+                    return getCardDataFromID(cardIDEnum.GDB_100t7);
+                case HeroEnum.priest:
+                    return getCardDataFromID(cardIDEnum.GDB_100t8);
+                case HeroEnum.warlock:
+                    return getCardDataFromID(cardIDEnum.GDB_100t9);
+                default:
+                    return getCardDataFromID(cardIDEnum.GDB_100t2);
+            }
         }
 
         private void setAdditionalData()

@@ -11,7 +11,9 @@ namespace HREngine.Bots
 	//<b>星舰组件</b>当本随从被发射时，召唤<b>星舰</b>的一个复制。
 	class Sim_GDB_466 : SimTemplate
 	{
-		
-		
+		public override void onLaunchStarShip(Playfield p, Minion starShip)
+		{
+			p.callKid(starShip.handcard.card, p.ownMinions.Count - 1, starShip.own);
+		}
 	}
 }

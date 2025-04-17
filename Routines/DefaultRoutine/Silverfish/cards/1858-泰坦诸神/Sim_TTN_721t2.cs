@@ -18,7 +18,7 @@ namespace HREngine.Bots
                 if (m.handcard.card.cardIDenum == CardDB.cardIDEnum.TTN_721)
                 {
                     m.Hp += 3;
-                    m.handcard.card.Elusive = true; // 扰魔
+                    m.elusive = true; // 扰魔
 
                     // 选择一个随机友方随从重复此技能
                     List<Minion> possibleTargets = new List<Minion>(p.ownMinions);
@@ -27,7 +27,7 @@ namespace HREngine.Bots
                     {
                         Minion randomAlly = possibleTargets[p.getRandomNumber(0, possibleTargets.Count - 1)];
                         randomAlly.Hp += 3;
-                        randomAlly.handcard.card.Elusive = true; // 赋予相同的“扰魔”效果
+                        randomAlly.elusive = true; // 赋予相同的“扰魔”效果
                     }
                 }
             }

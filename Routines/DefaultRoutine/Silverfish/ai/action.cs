@@ -22,13 +22,14 @@ namespace HREngine.Bots
         useLocation, //使用地标
         useTitanAbility, //使用泰坦技能
         forge, //锻造
+        launchStarShip, // 发射星舰
     }
     
     public class Action
     {
         // 用于记录操作的类型。
         public actionEnum actionType; 
-        // 记录出的牌，在attackWithHero、attackWithMinion、useLocation操作中为null
+        // 记录出的牌，在attackWithHero、attackWithMinion、useLocation、launchStarShip操作中为null
         public Handmanager.Handcard card; 
         // 用于记录位置，如actionType为playcard时就会有内容，
         // 比如出一个随从就会标记出放置的位置（最左边为0），
@@ -184,6 +185,9 @@ namespace HREngine.Bots
                     case actionEnum.forge:
                         str.Append("使用随从 " + this.own.info() + " 锻造");
                         break;
+                    case actionEnum.launchStarShip:
+                        str.Append("发射星舰 " + this.own.info());
+                        break;
                 }
                 str.Append("，当前受到 ").Append(this.penalty).Append(" 点惩罚！");
                 Helpfunctions.Instance.ErrorLog(str.ToString());
@@ -289,6 +293,9 @@ namespace HREngine.Bots
                     break;
                 case actionEnum.forge:
                     str.Append("使用随从 " + this.own.info() + " 锻造");
+                    break;
+                case actionEnum.launchStarShip:
+                    str.Append("发射星舰 " + this.own.info());
                     break;
             }
             return str.ToString();
@@ -401,6 +408,10 @@ namespace HREngine.Bots
 
                 case actionEnum.forge:
                     retval.Append("使用随从 " + this.own.info() + " 锻造");
+                    break;
+                
+                case actionEnum.launchStarShip:
+                    retval.Append("发射星舰 " + this.own.info());
                     break;
 
             }

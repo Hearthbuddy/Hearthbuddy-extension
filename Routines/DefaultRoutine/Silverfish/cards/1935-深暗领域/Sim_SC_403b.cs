@@ -11,7 +11,9 @@ namespace HREngine.Bots
 	//<b>星舰组件</b>当本随从被发射时，对所有敌方随从造成2点伤害。
 	class Sim_SC_403b : SimTemplate
 	{
-		
-		
+		public override void onLaunchStarShip(Playfield p, Minion starShip)
+		{
+			p.allMinionOfASideGetDamage(!starShip.own, 2);
+		}
 	}
 }

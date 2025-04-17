@@ -11,7 +11,9 @@ namespace HREngine.Bots
 	//<b>星舰组件</b>当本随从被发射时，获得5点护甲值。
 	class Sim_SC_403a : SimTemplate
 	{
-		
-		
+		public override void onLaunchStarShip(Playfield p, Minion starShip)
+		{
+			p.minionGetArmor(starShip.own ? p.ownHero : p.enemyHero, 5);
+		}
 	}
 }

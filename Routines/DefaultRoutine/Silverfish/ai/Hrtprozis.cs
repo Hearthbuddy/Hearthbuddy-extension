@@ -699,6 +699,7 @@ namespace HREngine.Bots
             if (hc.card.poisonous) m.poisonous = true;
             if (hc.card.lifesteal) m.lifesteal = true;
             if (hc.card.reborn) m.reborn = true;
+            if (hc.card.Elusive) m.elusive = true;
             if (hc.card.Rush) m.rush = 1;
 
             if (hc.card.Stealth) m.stealth = true;

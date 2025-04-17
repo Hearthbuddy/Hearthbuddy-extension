@@ -355,6 +355,23 @@ namespace HREngine.Bots
                         }
                     }
                     break;
+                case actionEnum.launchStarShip:
+                    // 检查星舰是否可以发射
+                    foreach (Minion m in p.ownMinions)
+                    {
+                        if (m.entitiyID == a.own.entitiyID)
+                        {
+                            // 星舰且法力足够
+                            if (m.handcard.card.StarShip && !m.isStarShipLaunched &&
+                                p.mana >= m.handcard.card.getStarShipLaunchManaCost(p, m.handcard.card.StarShipLaunchCost))
+                            {
+                                actionFound = true;
+                            }
+
+                            break;
+                        }
+                    }
+                    break;
             }
 
             // 如果在上面的检查中没有找到合适的操作，返回 false

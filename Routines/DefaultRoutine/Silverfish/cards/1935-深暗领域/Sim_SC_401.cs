@@ -11,7 +11,9 @@ namespace HREngine.Bots
 	//<b>战吼：</b>你的下一次<b>星舰</b>发射的法力值消耗减少（2）点。
 	class Sim_SC_401 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own) p.ownStarShipsCostMore -= 2;
+		}
 	}
 }

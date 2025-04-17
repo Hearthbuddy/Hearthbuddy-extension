@@ -64,8 +64,15 @@ namespace HREngine.Bots
 
                     bool isChoice = hc.card.choice;
                     CardDB.Card c = hc.card;
-
-                    for (int choice = isChoice ? 1 : 0; choice <= (isChoice ? 2 : 1); choice++)
+                    int choiceBegin = 0;
+                    int choiceNum = 1;
+                    if (isChoice)
+                    {
+                        choiceBegin = 1;
+                        choiceNum = 2;
+                        if (c.cardIDenum == CardDB.cardIDEnum.GDB_120) choiceNum = 3;
+                    }
+                    for (int choice = choiceBegin; choice <= choiceNum; choice++)
                     {
                         if (isChoice)
                         {
@@ -92,30 +99,37 @@ namespace HREngine.Bots
                         trgts = c.getTargetsForCard(p, p.isLethalCheck, true);
                         if (trgts.Count == 0) continue;
 
+                        bool isRemoveLocation = false;
+                        bool isRemoveElusive = false;
+
                         //非地标目标指向，移除地标
                         if (c.type == CardDB.cardtype.MOB && 
                             c.cardIDenum != CardDB.cardIDEnum.VAC_529 && 
                             c.cardIDenum != CardDB.cardIDEnum.REV_023 && c.cardIDenum != CardDB.cardIDEnum.CORE_REV_023)
                         {
-                            trgts.RemoveAll(minion => minion != null &&
-                                  minion.handcard != null &&
-                                  minion.handcard.card != null &&
-                                  minion.handcard.card.type == CardDB.cardtype.LOCATION);
-
+                            isRemoveLocation = true;
                         }
 
                         //如果是法术，移除扰魔、地标
                         if (c.type == CardDB.cardtype.SPELL)
                         {
-                            trgts.RemoveAll(minion => minion != null &&
-                                  minion.handcard != null &&
-                                  minion.handcard.card != null &&
-                                  minion.handcard.card.Elusive);
-                            trgts.RemoveAll(minion => minion != null &&
-                                  minion.handcard != null &&
-                                  minion.handcard.card != null &&
-                                  minion.handcard.card.type == CardDB.cardtype.LOCATION);
+                            isRemoveElusive = true;
+                            isRemoveLocation = true;
                         }
+
+                        // 移除饶扰魔、地标、未发射的星舰
+                        trgts.RemoveAll(minion => minion != null &&
+                                                  minion.handcard != null &&
+                                                  minion.handcard.card != null &&
+                                                  (
+                                                      // 扰魔
+                                                      (isRemoveElusive && minion.elusive) ||
+                                                      // 地标
+                                                      (isRemoveLocation && minion.handcard.card.type ==
+                                                          CardDB.cardtype.LOCATION) ||
+                                                      // 未发射的星舰
+                                                      (minion.handcard.card.StarShip && !minion.isStarShipLaunched)
+                                                  ));
 
                         int bestplace = p.getBestPlace(c, p.isLethalCheck);
 
@@ -242,74 +256,91 @@ namespace HREngine.Bots
                 }
             }
 
-            // 使用地标逻辑
-            var usingMinions = (own ? p.ownMinions : p.enemyMinions)
-                .Where(m => m.handcard.card.type == CardDB.cardtype.LOCATION && m.CooldownTurn == 0 && m.Ready)
-                .ToList();
+            var usingMinions = (own ? p.ownMinions : p.enemyMinions).ToList();
             foreach (var minion in usingMinions)
             {
-                trgts = minion.handcard.card.getTargetsForLocation(p, p.isLethalCheck, true);
-                if (trgts.Count > 0)
+                if (minion.handcard.card.type == CardDB.cardtype.LOCATION && minion.CooldownTurn == 0 && minion.Ready)
                 {
-                    foreach (var trot in trgts)
+                    // 使用地标逻辑
+                    trgts = minion.handcard.card.getTargetsForLocation(p, p.isLethalCheck, true);
+                    if (trgts.Count > 0)
                     {
-                        int useLocationPenalty = usePenalityManager ? pen.getUseLocationPenality(minion, trot, p) : 0;
-                        if (useLocationPenalty <= 499)
+                        foreach (var trot in trgts)
                         {
-                            ret.Add(new Action(actionEnum.useLocation, null, minion, 0, trot, 0, 0));
+                            int useLocationPenalty =
+                                usePenalityManager ? pen.getUseLocationPenality(minion, trot, p) : 0;
+                            if (useLocationPenalty <= 499)
+                            {
+                                ret.Add(new Action(actionEnum.useLocation, null, minion, 0, trot, 0, 0));
+                            }
+                        }
+                    }
+                    else if (minion.handcard.card.sim_card.GetUseAbilityReqs().Length == 0)
+                    {
+                        ret.Add(new Action(actionEnum.useLocation, null, minion, 0, null, 0, 0));
+                    }
+                }
+                else if (minion.handcard.card.Titan)
+                {
+                    // 使用泰坦技能逻辑
+                    //初始化技能列表
+                    minion.handcard.card.TitanAbility = minion.handcard.card.GetTitanAbility();
+                    // 遍历每个技能
+                    for (int i = 0; i < 3; i++)
+                    {
+                        if ((i == 0 && minion.handcard.card.TitanAbilityUsed1) ||
+                            (i == 1 && minion.handcard.card.TitanAbilityUsed2) ||
+                            (i == 2 && minion.handcard.card.TitanAbilityUsed3))
+                        {
+                            continue; // 如果技能已经使用过，跳过
+                        }
+
+                        CardDB.Card ability = minion.handcard.card.TitanAbility[i];
+                        trgts = ability.getTargetsForCard(p, p.isLethalCheck, true);
+
+                        //移除地标、未发射的星舰
+                        trgts.RemoveAll(m => m != null &&
+                                             m.handcard != null &&
+                                             m.handcard.card != null &&
+                                             (m.handcard.card.type == CardDB.cardtype.LOCATION ||
+                                              m.handcard.card.StarShip && !minion.isStarShipLaunched));
+
+
+                        // 如果技能不需要目标，直接添加动作
+                        if (trgts.Count == 0)
+                        {
+                            ret.Add(new Action(actionEnum.useTitanAbility, null, minion, 0, null, 0, 0, i + 1));
+                            continue;
+                        }
+
+                        // 如果技能需要一个目标，生成对应的动作
+                        foreach (var trot in trgts)
+                        {
+                            int titanAbilityPenalty =
+                                usePenalityManager ? pen.getUseTitanAbilityPenality(minion, trot, p) : 0;
+                            if (titanAbilityPenalty <= 499)
+                            {
+                                ret.Add(new Action(actionEnum.useTitanAbility, null, minion, 0, trot,
+                                    titanAbilityPenalty, 0, i + 1));
+                            }
                         }
                     }
                 }
-                else if (minion.handcard.card.sim_card.GetUseAbilityReqs().Length == 0)
+                else if (minion.handcard.card.StarShip && !minion.isStarShipLaunched)
                 {
-                    ret.Add(new Action(actionEnum.useLocation, null, minion, 0, null, 0, 0));
-                }
-            }
-
-            // 使用泰坦技能逻辑
-            var titans = (own ? p.ownMinions : p.enemyMinions).Where(m => m.handcard.card.Titan).ToList();
-            foreach (var titan in titans)
-            {
-                //初始化技能列表
-                titan.handcard.card.TitanAbility = titan.handcard.card.GetTitanAbility();
-                // 遍历每个技能
-                for (int i = 0; i < 3; i++)
-                {
-                    if ((i == 0 && titan.handcard.card.TitanAbilityUsed1) ||
-                        (i == 1 && titan.handcard.card.TitanAbilityUsed2) ||
-                        (i == 2 && titan.handcard.card.TitanAbilityUsed3))
+                    // 发射星舰
+                    int cardCost = minion.handcard.card.getStarShipLaunchManaCost(p, minion.handcard.card.StarShipLaunchCost);
+                    if (p.mana >= cardCost)
                     {
-                        continue; // 如果技能已经使用过，跳过
-                    }
-
-                    CardDB.Card ability = titan.handcard.card.TitanAbility[i];
-                    trgts = ability.getTargetsForCard(p, p.isLethalCheck, true);
-
-                     //移除地标
-                    trgts.RemoveAll(minion => minion != null &&
-                                                            minion.handcard != null &&
-                                                            minion.handcard.card != null &&
-                                                            minion.handcard.card.type == CardDB.cardtype.LOCATION);
-
-
-                    // 如果技能不需要目标，直接添加动作
-                    if (trgts.Count == 0)
-                    {
-                        ret.Add(new Action(actionEnum.useTitanAbility, null, titan, 0, null, 0, 0, i + 1));
-                        continue;
-                    }
-
-                    // 如果技能需要一个目标，生成对应的动作
-                    foreach (var trot in trgts)
-                    {
-                        int titanAbilityPenalty = usePenalityManager ? pen.getUseTitanAbilityPenality(titan, trot, p) : 0;
-                        if (titanAbilityPenalty <= 499)
+                        int launchPenality = usePenalityManager ? pen.getLaunchStarShipPenality(minion, p) : 0;
+                        if (launchPenality <= 499)
                         {
-                            ret.Add(new Action(actionEnum.useTitanAbility, null, titan, 0, trot, titanAbilityPenalty, 0, i + 1));
+                            ret.Add(new Action(actionEnum.launchStarShip, null, minion, 0, null, launchPenality, 0));
                         }
                     }
                 }
             }
+
             return ret;
         }
 

@@ -2861,6 +2861,18 @@ namespace HREngine.Bots
             // 调用AI的基础逻辑来获取惩罚值
             return ai.botBase.getUseTitanAbilityPenality(titanMinion, target, p);
         }
+        
+        /// <summary>
+        /// 获取发射星舰的惩罚值
+        /// </summary>
+        /// <param name="starShipMinion">地标对应的随从对象</param>
+        /// <param name="p">当前场面</param>
+        /// <returns>惩罚值</returns>
+        public int getLaunchStarShipPenality(Minion starShipMinion, Playfield p)
+        {
+            // 调用AI的基础逻辑来获取惩罚值
+            return ai.botBase.getLaunchStarShipPenality(starShipMinion, p);
+        }
     }
 
 }

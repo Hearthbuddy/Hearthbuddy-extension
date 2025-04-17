@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>星舰组件</b><b>战吼：</b>对所有敌人造成1点伤害。发射时也会触发。
 	class Sim_SC_409 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			onLaunchStarShip(p, own);
+		}
+
+		public override void onLaunchStarShip(Playfield p, Minion starShip)
+		{
+			p.allCharsOfASideGetDamage(!starShip.own, 1);
+		}
 	}
 }

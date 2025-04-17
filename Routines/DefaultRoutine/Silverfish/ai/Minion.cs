@@ -115,6 +115,13 @@ namespace HREngine.Bots
         public int dormant = 0;//休眠
         public bool outcast = false;//流放
         public bool reborn = false;//复生
+        public bool elusive = false; //扰魔
+
+        // 每次新进来不需要从场面恢复，初始只有两种情况
+        // 1. 星舰未发射，为false
+        // 2. 星舰已发射，但是有可能模拟计算有星舰组件，所以此处初始固定false
+        public bool isStarShipLaunched = false; //星舰已发射
+        public Dictionary<CardDB.cardIDEnum, int> starShipGraveyard = new Dictionary<CardDB.cardIDEnum, int>(); //星舰组件墓地
 
         //法术迸发
         public bool Spellburst
@@ -154,7 +161,7 @@ namespace HREngine.Bots
                 return "{" + zonepos.ToString() + "} " + " (" + Angr + "/" + Hp + ") " + handcard.card.nameCN + "\n " + 
                     (frozen ? "[冻结]" : "") + (!Ready || cantAttack ? "[无法攻击]" : "[可攻击]") + (windfury ? "[风怒]" : "") + (taunt ? "[嘲讽]" : "")
                     + (divineshild ? "[圣盾]" : "") + (stealth ? "[隐身]" : "") + (immune ? "[免疫]" : "") + (untouchable ? "[无法被攻击]" : "") + (lifesteal ? "[吸血]" : "")
-                     + (dormant != 0 ? "[休眠(" + dormant.ToString() + ")]" : "") + (reborn ? "[复生]" : "") + (handcard.card.Elusive ? "[扰魔]" : "") + (poisonous ? "[剧毒]" : "");
+                     + (dormant != 0 ? "[休眠(" + dormant.ToString() + ")]" : "") + (reborn ? "[复生]" : "") + (elusive ? "[扰魔]" : "") + (poisonous ? "[剧毒]" : "");
             }
         }
 
@@ -260,6 +267,7 @@ namespace HREngine.Bots
             this.dormant = m.dormant;
             this.outcast = m.outcast;
             this.reborn = m.reborn;
+            this.elusive = m.elusive;
             this.cantLowerHPbelowONE = m.cantLowerHPbelowONE;
 
             this.silenced = m.silenced;
@@ -268,6 +276,13 @@ namespace HREngine.Bots
             this.cantAttack = m.cantAttack;
 
             this.CooldownTurn = m.CooldownTurn;
+
+            this.isStarShipLaunched = m.isStarShipLaunched;
+            foreach (var item in m.starShipGraveyard)
+            {
+                // 复制
+                this.starShipGraveyard.Add(item.Key, item.Value);
+            }
         }
 
         public void setMinionToMinion(Minion m)
@@ -363,6 +378,7 @@ namespace HREngine.Bots
             this.lifesteal = m.lifesteal;
             this.outcast = m.outcast;
             this.reborn = m.reborn;
+            this.elusive = m.elusive;
             this.cantLowerHPbelowONE = m.cantLowerHPbelowONE;
 
             this.silenced = m.silenced;
@@ -372,6 +388,14 @@ namespace HREngine.Bots
             this.cantAttack = m.cantAttack;
 
             this.CooldownTurn = m.CooldownTurn;
+            
+            this.isStarShipLaunched = m.isStarShipLaunched;
+            // 理论上这里是没用的，星舰未发射前不可能变形
+            foreach (var item in m.starShipGraveyard)
+            {
+                // 复制
+                this.starShipGraveyard.Add(item.Key, item.Value);
+            }
         }
 
         public int getRealAttack()
@@ -779,7 +803,33 @@ namespace HREngine.Bots
                 if (this.name == CardDB.cardNameEN.feugen) p.feugenDead = true;
             }
 
+            if (own && !this.silenced && this.handcard.card.StarShipPiece)
+            {
+                Minion starShip = p.ownMinions.Find(x =>
+                    x.handcard != null && x.handcard.card != null && x.handcard.card.StarShip && !x.isStarShipLaunched);
+                if (starShip == null)
+                {
+                    // 召唤星舰
+                    CardDB.Card kid = CardDB.Instance.getStarShipCardDataFromHeroID(p.ownHeroName);
+                    starShip = p.callKid(kid, this.zonepos + 1, this.own, false, true);
+                }
 
+                if (starShip != null)
+                {
+                    starShip.Hp += this.Hp;
+                    starShip.Angr += this.Angr;
+                    starShip.cantAttack = false;
+                    // 加入坟场
+                    if (starShip.starShipGraveyard.ContainsKey(this.handcard.card.cardIDenum))
+                    {
+                        starShip.starShipGraveyard.Add(this.handcard.card.cardIDenum, 1);
+                    }
+                    else
+                    {
+                        starShip.starShipGraveyard[this.handcard.card.cardIDenum]++;
+                    }
+                }
+            }
 
             if (own)
             {
@@ -1015,11 +1065,44 @@ namespace HREngine.Bots
         /// <param name="ownPlayerControler"></param>
         public void loadEnchantments(List<miniEnch> enchants, int ownPlayerControler)
         {
+            bool isStarShip = this.handcard.card.StarShip;
             foreach (miniEnch me in enchants)
             {
+                if (me.CARDID == CardDB.cardIDEnum.None)
+                {
+                    continue;
+                }
                 // reborns and destoyings----------------------------------------------
                 this.enchs += " " + me.CARDID;
-                
+
+                // 星舰未发射
+                if (isStarShip && !this.isStarShipLaunched)
+                {
+                    // 例如飞弹舱_SC_409e -> 飞弹舱_SC_40
+                    var starPiceName = Enum.GetName(typeof(CardDB.cardIDEnum), me.CARDID);
+                    if (starPiceName == null || starPiceName == "")
+                    {
+                        continue;
+                    }
+
+                    if (starPiceName.EndsWith("e"))
+                    {
+                        starPiceName = starPiceName.Substring(0, starPiceName.Length - 1);
+                    }
+
+                    var cardIdstringToEnum = CardDB.Instance.cardIdstringToEnum(starPiceName);
+                    if (!starShipGraveyard.ContainsKey(cardIdstringToEnum))
+                    {
+                        starShipGraveyard.Add(cardIdstringToEnum, 1);
+                    }
+                    else
+                    {
+                        starShipGraveyard[cardIdstringToEnum]++;
+                    }
+
+                    continue;
+                }
+
                 if (me.CARDID == CardDB.cardIDEnum.EX1_363e || me.CARDID == CardDB.cardIDEnum.EX1_363e2) //BlessingOfWisdom
                 {//智慧祝福
                     if (me.controllerOfCreator == ownPlayerControler)

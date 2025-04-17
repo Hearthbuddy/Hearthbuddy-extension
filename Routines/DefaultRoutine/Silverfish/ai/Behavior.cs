@@ -731,6 +731,17 @@ namespace HREngine.Bots
             return 0;
         }
 
+        /// <summary>
+        /// 发射星舰的惩罚值
+        /// </summary>
+        /// <param name="m"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public virtual int getLaunchStarShipPenality(Minion m, Playfield p)
+        {
+            return 0;
+        }
+
     }
 
 }

@@ -1,3 +1,5 @@
+using Triton.Game;
+
 namespace HREngine.Bots
 {
     using System;
@@ -594,6 +596,8 @@ namespace HREngine.Bots
         List<GraveYardItem> graveyartTillTurnStart = new List<GraveYardItem>();
 
         public List<SecretItem> enemySecrets = new List<SecretItem>();
+        
+        public List<List<CardDB.Card>> StarShipLaunchedList = new List<List<CardDB.Card>>();//已发射的星舰列表
 
         public bool feugenDead = false;
         public bool stalaggDead = false;
@@ -643,14 +647,14 @@ namespace HREngine.Bots
             Helpfunctions.Instance.logg("GraveYard:" + g);
             if (writetobuffer) Helpfunctions.Instance.writeToBuffer("GraveYard:" + g);*/
 
-            string s = "己方当前回合随从墓地: ";
+            string s = "ownDiedMinions: ";
             foreach (GraveYardItem gyi in this.turngraveyard)
             {
                 if (gyi.own) s += gyi.cardid + "," + gyi.entityId + ";";
             }
             Helpfunctions.Instance.logg(s);
 
-            s = "敌方当前回合随从墓地: ";
+            s = "enemyDiedMinions: ";
             foreach (GraveYardItem gyi in this.turngraveyard)
             {
                 if (!gyi.own) s += gyi.cardid + "," + gyi.entityId + ";";
@@ -658,18 +662,34 @@ namespace HREngine.Bots
             Helpfunctions.Instance.logg(s);
 
 
-            s = "己方当前回合卡牌墓地: ";
+            s = "otg: ";
             foreach (GraveYardItem gyi in this.turngraveyardAll)
             {
                 if (gyi.own) s += gyi.cardid + "," + gyi.entityId + ";";
             }
             Helpfunctions.Instance.logg(s);
 
-            s = "敌方当前回合卡牌墓地: ";
+            s = "etg: ";
             foreach (GraveYardItem gyi in this.turngraveyardAll)
             {
                 if (!gyi.own) s += gyi.cardid + "," + gyi.entityId + ";";
             }
+            Helpfunctions.Instance.logg(s);
+        }
+
+        public void printStarShipLaunchedList()
+        {
+            string s = "starShipLaunchedList:";
+            foreach (List<CardDB.Card> cards in this.StarShipLaunchedList)
+            {
+                foreach (var card in cards)
+                {
+                    s += " " + card.cardIDenum;
+                }
+
+                s += ";";
+            }
+
             Helpfunctions.Instance.logg(s);
         }
 
@@ -797,6 +817,44 @@ namespace HREngine.Bots
             this.turngraveyardAll.AddRange(listAll);
         }
 
+        public void addStarShipLaunchedList(List<int> subIDs)
+        {
+            if (subIDs == null || subIDs.Count <= 0)
+            {
+                return;
+            }
+
+            List<CardDB.Card> cards = new List<CardDB.Card>();
+            foreach (var subID in subIDs)
+            {
+                var entity = TritonHs.GameState.GetEntity(subID);
+
+                if (entity == null)
+                {
+                    continue;
+                }
+
+                var cardId = entity.GetCardId();
+                if (string.IsNullOrEmpty(cardId))
+                    cardId = entity.GetEntityDef().GetCardId();
+                var idEnum = CardDB.Instance.cardIdstringToEnum(cardId);
+                if (idEnum == CardDB.cardIDEnum.None || idEnum == CardDB.cardIDEnum.GDB_905 ||
+                    idEnum == CardDB.cardIDEnum.GDB_906)
+                {
+                    continue;
+                }
+
+                cards.Add(CardDB.Instance.getCardDataFromID(idEnum));
+
+            }
+
+            if (cards.Count > 0)
+            {
+                this.StarShipLaunchedList.Add(cards);
+            }
+
+        }
+
         public bool hasEnemyThisCardInDeck(CardDB.cardIDEnum cardid)
         {
             if (this.enemyGraveyard.ContainsKey(cardid))
@@ -832,12 +890,12 @@ namespace HREngine.Bots
 
         public void printGraveyards()
         {
-            string og = "己方坟场: ";
+            string og = "og: ";
             foreach (KeyValuePair<CardDB.cardIDEnum, int> e in this.ownGraveyard)
             {
                 og += e.Key + "," + e.Value + ";";
             }
-            string eg = "敌方坟场: ";
+            string eg = "eg: ";
             foreach (KeyValuePair<CardDB.cardIDEnum, int> e in this.enemyGraveyard)
             {
                 eg += e.Key + "," + e.Value + ";";

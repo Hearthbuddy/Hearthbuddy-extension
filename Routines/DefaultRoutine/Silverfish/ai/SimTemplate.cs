@@ -637,5 +637,15 @@ namespace HREngine.Bots
         {
             return;
         }
+
+        /// <summary>
+        /// 发射星舰
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含当前游戏状态的信息。</param>
+        /// <param name="starShip">星舰所属的随从对象</param>
+        public virtual void onLaunchStarShip(Playfield p, Minion starShip)
+        {
+            return;
+        }
     }
 }

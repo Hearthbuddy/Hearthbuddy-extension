@@ -679,7 +679,7 @@ namespace HREngine.Bots
                 this.ownHero.windfury = card.GetTag(GAME_TAG.WINDFURY) != 0;
                 this.ownHero.immune = card.GetTag(GAME_TAG.IMMUNE) != 0;
                 if (!ownHero.immune) this.ownHero.immuneWhileAttacking = card.GetTag(GAME_TAG.IMMUNE_WHILE_ATTACKING) != 0;
-                this.ownHero.handcard.card.Elusive = card.GetTag(GAME_TAG.ELUSIVE) != 0;
+                this.ownHero.elusive = card.GetTag(GAME_TAG.ELUSIVE) != 0;
                 this.ownHero.nameCN = CardDB.Instance.cardNameCNstringToEnum(card.Name);
             }
             else if (controller == enemyController)
@@ -699,7 +699,7 @@ namespace HREngine.Bots
                 this.enemyHero.stealth = (card.GetTag(GAME_TAG.STEALTH) == 0) ? false : true;
                 this.enemyHero.windfury = card.GetTag(GAME_TAG.WINDFURY) != 0;
                 this.enemyHero.immune = card.GetTag(GAME_TAG.IMMUNE) != 0; //don't use turn immune
-                this.enemyHero.handcard.card.Elusive = card.GetTag(GAME_TAG.ELUSIVE) != 0;
+                this.enemyHero.elusive = card.GetTag(GAME_TAG.ELUSIVE) != 0;
                 this.enemyHero.nameCN = CardDB.Instance.cardNameCNstringToEnum(card.Name);
             }
 
@@ -813,6 +813,24 @@ namespace HREngine.Bots
 
                 m.hChoice = card.GetTag(GAME_TAG.HIDDEN_CHOICE);
 
+                m.handcard.card.StarShip = c.StarShip;
+
+                m.handcard.card.StarShipPiece = c.StarShipPiece;
+
+                if (m.handcard.card.StarShip)
+                {
+                    // 可发射
+                    if (card.GetTag(GAME_TAG.LAUNCHPAD) != 0)
+                    {
+                        m.isStarShipLaunched = false;
+                        m.handcard.card.StarShipLaunchCost = GameUtils.StarshipLaunchCost(card.Card.m_entity.GetController());
+                    }
+                    else
+                    {
+                        m.isStarShipLaunched = true;
+                    }
+                }
+
                 var attaches = entity.GetAttachments();//附魔
                 if (attaches != null && attaches.Count > 0)
                 {
@@ -870,6 +888,7 @@ namespace HREngine.Bots
                 m.handcard.card.Quickdraw = c.Quickdraw;//快枪
                 m.handcard.card.Excavate = c.Excavate;//发掘
                 m.handcard.card.Elusive = c.Elusive;//扰魔
+                m.elusive = c.Elusive;//扰魔
 
                 if (m.charge > 0 && m.playedThisTurn && !m.Ready && m.numAttacksThisTurn == 0)
                 {
@@ -1152,6 +1171,7 @@ namespace HREngine.Bots
             Handmanager.Instance.printcards();
             Probabilitymaker.Instance.printTurnGraveYard();
             Probabilitymaker.Instance.printGraveyards();
+            Probabilitymaker.Instance.printStarShipLaunchedList();
             p.prozis.printOwnDeck();
             printUtils.printRecord = false;
         }

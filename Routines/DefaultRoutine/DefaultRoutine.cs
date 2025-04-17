@@ -1181,6 +1181,9 @@ def Execute():
                 case actionEnum.forge:
                     await HandleForge(moveTodo);
                     return;
+                case actionEnum.launchStarShip:
+                    await HandleLaunchStarShip(moveTodo);
+                    return;
                 default:
                     break;
             }
@@ -1402,6 +1405,62 @@ def Execute():
             Helpfunctions.Instance.logg("锻造: " + cardtoTrade.Name);
             await cardtoTrade.DeckAction();
             await Coroutine.Sleep(300);
+        }
+
+        /// <summary>
+        /// 处理发射星舰动作。
+        /// </summary>
+        private async Task HandleLaunchStarShip(Action moveTodo)
+        {
+            HSCard starShip = getEntityWithNumber(moveTodo.own.entitiyID);
+            if (starShip != null)
+            {
+                Helpfunctions.Instance.ErrorLog("发射星舰: " + starShip.Name);
+                await starShip.LeftClickCard();
+                await Coroutine.Sleep(500);
+                StarshipHUDManager starshipHUDManager = StarshipHUDManager.Get();
+                if (starshipHUDManager == null)
+                {
+                    Helpfunctions.Instance.ErrorLog("获取发射场景为空: " + starShip.Name);
+                    return;
+                }
+
+                PlayButton launchButton = starshipHUDManager.m_launchButton;
+                if (launchButton == null)
+                {
+                    Helpfunctions.Instance.ErrorLog("获取发射按钮为空: " + starShip.Name);
+                    return;
+                }
+
+                UberText newPlayButtonText = launchButton.m_newPlayButtonText;
+                if (!launchButton.IsEnabled() || !launchButton.GameObject.Active)
+                {
+                    Helpfunctions.Instance.ErrorLog(newPlayButtonText.Text + " 按钮无法点击.");
+                    PlayButton abortLaunchButton = starshipHUDManager.m_abortLaunchButton;
+                    if (abortLaunchButton == null || !abortLaunchButton.IsEnabled())
+                    {
+                        return;
+                    }
+
+                    UberText abortLaunchButtonText = abortLaunchButton.m_newPlayButtonText;
+                    Vector3 centera = abortLaunchButtonText.m_TextMeshGameObject.Renderer.Bounds.m_Center;
+                    Helpfunctions.Instance.ErrorLog("关闭发射台");
+                    Client.LeftClickAt(centera);
+                    await Coroutine.Sleep(1000);
+                    return;
+                }
+
+                Vector3 center = newPlayButtonText.m_TextMeshGameObject.Renderer.Bounds.m_Center;
+                Client.LeftClickAt(center);
+                // 更新星舰已发射
+                Probabilitymaker.Instance.addStarShipLaunchedList(starShip.Card.m_entity.GetSubCardIDs());
+                await Coroutine.Sleep(1000);
+            }
+            else
+            {
+                Helpfunctions.Instance.ErrorLog("[AI] 星舰目标丢失，再次重试...");
+                await Coroutine.Sleep(3000);
+            }
         }
 
         /// <summary>
@@ -1651,7 +1710,7 @@ def Execute():
                                             bool forbidden = false;
                                             switch (discoverCards[i].card.cardIDenum)
                                             {
-                                                case CardDB.cardIDEnum.UNG_999t5: if (m.handcard.card.Elusive) forbidden = true; break;
+                                                case CardDB.cardIDEnum.UNG_999t5: if (m.elusive) forbidden = true; break;
                                                 case CardDB.cardIDEnum.UNG_999t6: if (m.taunt) forbidden = true; break;
                                                 case CardDB.cardIDEnum.UNG_999t7: if (m.windfury) forbidden = true; break;
                                                 case CardDB.cardIDEnum.UNG_999t8: if (m.divineshild) forbidden = true; break;

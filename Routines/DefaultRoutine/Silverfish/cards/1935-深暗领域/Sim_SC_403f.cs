@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>星舰组件</b>当本随从被发射时，召唤两个2/2并具有<b>嘲讽</b>的陆战队员。
 	class Sim_SC_403f : SimTemplate
 	{
-		
-		
+		public override void onLaunchStarShip(Playfield p, Minion starShip)
+		{
+			p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SC_403t), starShip.zonepos - 1, starShip.own);
+			p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SC_403t), starShip.zonepos + 1, starShip.own);
+		}
 	}
 }

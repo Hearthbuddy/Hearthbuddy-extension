@@ -94,6 +94,9 @@ namespace HREngine.Bots
                     case actionEnum.forge:
                         retval -= 20;
                         continue;
+                    case actionEnum.launchStarShip:
+                        retval -= 20;
+                        continue;
                     // 英雄攻击
                     case actionEnum.attackWithHero:
                         continue;
@@ -313,6 +316,11 @@ namespace HREngine.Bots
             if (m.dormant > 0)
             {
                 retval -= bonus_mine * m.dormant;
+            }
+
+            if (m.handcard.card.StarShip && !m.isStarShipLaunched)
+            {
+                retval /= 5;
             }
             return retval;
         }

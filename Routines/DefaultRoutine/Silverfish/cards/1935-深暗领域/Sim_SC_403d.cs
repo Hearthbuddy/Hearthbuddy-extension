@@ -11,7 +11,9 @@ namespace HREngine.Bots
 	//<b>星舰组件</b>当本随从被发射时，随机对一个敌人造成3点伤害。
 	class Sim_SC_403d : SimTemplate
 	{
-		
-		
+		public override void onLaunchStarShip(Playfield p, Minion starShip)
+		{
+			p.getEnemyCharTargetForRandomSingleDamage(3);
+		}
 	}
 }

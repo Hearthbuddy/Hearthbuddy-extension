@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//召唤两个2/2并具有<b>嘲讽</b>的陆战队员。你的下一次<b>星舰</b>发射的法力值消耗减少（2）点。
 	class Sim_SC_404 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SC_403t), p.ownMinions.Count - 1, ownplay);
+			p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SC_403t), p.ownMinions.Count - 1, ownplay);
+			if (ownplay) p.ownStarShipsCostMore -= 2;
+		}
 	}
 }

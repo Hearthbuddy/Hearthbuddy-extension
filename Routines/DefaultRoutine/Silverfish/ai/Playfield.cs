@@ -229,6 +229,8 @@ namespace HREngine.Bots
         public int ownSpelsCostMoreAtStart = 0;
         public int ownDRcardsCostMore = 0;
         public int ownDRcardsCostMoreAtStart = 0;
+        public int ownStarShipsCostMore = 0;
+        public int ownStarShipsCostMoreAtStart = 0;
         public int beschwoerungsportal = 0;
         public int startedWithbeschwoerungsportal = 0;
         public int myCardsCostLess = 0;
@@ -332,6 +334,9 @@ namespace HREngine.Bots
         public bool playedElementalThisTurn = false;
         //本回合打出的元素随从数量
         public int ownElementalsPlayedThisTurn = 0;
+        //发射过的星舰列表
+        public List<List<CardDB.Card>> StarShipLaunchedList = new List<List<CardDB.Card>>();
+        
         //伞降咒符实现,添加一个全局光环检查
         public void onOwnTurnStart(Playfield p)
         {
@@ -576,6 +581,8 @@ namespace HREngine.Bots
                     this.ownGraveyard.Add(item.Key, item.Value);
                 }
             }
+            
+            this.StarShipLaunchedList.AddRange(Probabilitymaker.Instance.StarShipLaunchedList);
 
             addMinionsReal(prozis.ownMinions, ownMinions);
             addMinionsReal(prozis.enemyMinions, enemyMinions);
@@ -1196,6 +1203,8 @@ namespace HREngine.Bots
                 }
             }
 
+            this.StarShipLaunchedList.AddRange(p.StarShipLaunchedList);
+            
             this.anzOgOwnCThunAngrBonus = p.anzOgOwnCThunAngrBonus;
             this.anzOgOwnCThunHpBonus = p.anzOgOwnCThunHpBonus;
             this.anzOgOwnCThunTaunt = p.anzOgOwnCThunTaunt;
@@ -2530,11 +2539,12 @@ namespace HREngine.Bots
             if (own && !(this.enemyHero.immune || this.enemyHero.stealth)) trgts2.Add(this.enemyHero);//免疫 潜行
             else if (!own && !(this.ownHero.immune || this.ownHero.stealth)) trgts2.Add(this.ownHero);
 
-            //移除地标
+            //移除地标、未发射的星舰
             trgts2.RemoveAll(minion => minion != null &&
                                        minion.handcard != null &&
                                        minion.handcard.card != null &&
-                                       minion.handcard.card.type == CardDB.cardtype.LOCATION);
+                                       (minion.handcard.card.type == CardDB.cardtype.LOCATION ||
+                                        minion.handcard.card.StarShip && !minion.isStarShipLaunched));
             return trgts2;
         }
 
@@ -4082,6 +4092,9 @@ namespace HREngine.Bots
                 case actionEnum.forge:
                     HandleForge(a); // 处理锻造操作
                     break;
+                case actionEnum.launchStarShip:
+                    HandleLaunchStarShip(a); // 处理发射星舰操作
+                    break;
             }
 
             // 更新当前回合的操作计数
@@ -4230,6 +4243,50 @@ namespace HREngine.Bots
             this.mana -= a.card.card.ForgeCost;
             a.card.card = CardDB.Instance.getCardDataFromID(CardDB.Instance.cardIdstringToEnum(a.card.card.cardIDenum + "t"));
             a.card.card.Forged = true;
+        }
+        
+        /// <summary>
+        /// 处理发射星舰操作
+        /// </summary>
+        /// <param name="a"></param>
+        private void HandleLaunchStarShip(Action a)
+        {
+            this.mana -= a.own.handcard.card.getStarShipLaunchManaCost(this, a.own.handcard.card.StarShipLaunchCost);
+            this.ownStarShipsCostMore = 0;
+            a.own.isStarShipLaunched = true;
+            this.evaluatePenality += a.penalty;
+            // 记录敌方英雄当前的生命值
+            int enemyHeroHpBefore = this.enemyHero.Hp;
+            
+            // 理论应该模拟随机发射，但是为了场面计算效率，这里使用顺序发射
+            // 即时模拟了随机发射，游戏实际顺序还是会不一致，模拟随机没有意义
+            var starShipGraveYard = a.own.starShipGraveyard.ToArray();
+            List<CardDB.Card> launchedList = new List<CardDB.Card>();
+            foreach (var starShipPiece in starShipGraveYard)
+            {
+                var card = CardDB.Instance.getCardDataFromID(starShipPiece.Key);
+                for (int i = 0; i < starShipPiece.Value; i++)
+                {
+                    card.sim_card.onLaunchStarShip(this, a.own);
+                    launchedList.Add(card);
+                }
+            }
+
+            // 更新突袭状态
+            if (a.own.rush == 1)
+            {
+                a.own.cantAttack = true;
+                a.own.Ready = true;
+            }
+            
+            this.StarShipLaunchedList.Add(launchedList);
+
+            // 计算卡牌效果执行后敌方英雄的生命值差
+            int damageDealt = enemyHeroHpBefore - this.enemyHero.Hp;
+            if (damageDealt > 0)
+            {
+                this.damageDealtToEnemyHeroThisTurn += damageDealt;
+            }
         }
 
         /// <summary>
@@ -8323,7 +8380,7 @@ namespace HREngine.Bots
         /// <param name="own">是否为己方</param>
         /// <param name="spawnKid">是否生成随从</param>
         /// <param name="oneMoreIsAllowed">是否允许额外的随从</param>
-        public void callKid(CardDB.Card c, int zonepos, bool own, bool spawnKid = true, bool oneMoreIsAllowed = false)
+        public Minion callKid(CardDB.Card c, int zonepos, bool own, bool spawnKid = true, bool oneMoreIsAllowed = false)
         {
             // 默认允许的最大随从数量为7，如果允许额外的随从，则加1
             int allowed = 7 + (oneMoreIsAllowed ? 1 : 0);
@@ -8334,7 +8391,7 @@ namespace HREngine.Bots
                 if (this.ownMinions.Count >= allowed)
                 {
                     // 如果随从数量已达上限，则不再召唤新的随从
-                    return;
+                    return null;
                 }
             }
             else
@@ -8343,7 +8400,7 @@ namespace HREngine.Bots
                 if (this.enemyMinions.Count >= allowed)
                 {
                     // 如果随从数量已达上限，则不再召唤新的随从
-                    return;
+                    return null;
                 }
             }
 
@@ -8367,6 +8424,7 @@ namespace HREngine.Bots
 
             // 将随从放置到战场上并触发相关效果
             addMinionToBattlefield(m);
+            return m;
         }
 
         /// <summary>
@@ -11591,6 +11649,11 @@ namespace HREngine.Bots
                 CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.Instance.cardIdstringToEnum(a.own.handcard.card.cardIDenum.ToString() + suffix));
                 retval.Append(" 目标 " + (a.target != null && a.target.handcard != null ? a.target.handcard.card.nameCN.ToString() : "无"));
                 Helpfunctions.Instance.ErrorLog("printActionforDummies - " + retval.ToString());
+            }
+
+            if (a.actionType == actionEnum.launchStarShip)
+            {
+                Helpfunctions.Instance.ErrorLog("printActionforDummies - launch your starship: " + a.own.handcard.card.nameCN.ToString());
             }
             Helpfunctions.Instance.ErrorLog("");
         }

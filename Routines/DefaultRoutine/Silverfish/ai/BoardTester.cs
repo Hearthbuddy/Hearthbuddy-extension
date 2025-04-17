@@ -370,6 +370,7 @@ namespace HREngine.Bots
             m.poisonous = hc.card.poisonous;
             m.lifesteal = hc.card.lifesteal;
             m.reborn = hc.card.reborn;
+            m.elusive = hc.card.Elusive;
             m.stealth = hc.card.Stealth;
 
             if (own) m.synergy = PenalityManager.Instance.getClassRacePriorityPenality(heroNametoClass(this.ownheroname), (TAG_RACE)hc.card.race);
@@ -873,6 +874,22 @@ namespace HREngine.Bots
                     continue;
                 }
 
+                if (s.StartsWith("starShipLaunchedList:"))
+                {
+                    string temp = s.Replace("starShipLaunchedList: ", "");
+                    foreach (var tmp in temp.Split(';'))
+                    {
+                        if (tmp.Length <= 0 || tmp.Split(' ').Length <= 0) continue;
+                        List<CardDB.Card> cards = new List<CardDB.Card>();
+                        foreach (var subtmp in tmp.Split(' '))
+                        {
+                            CardDB.cardIDEnum cide = CardDB.Instance.cardIdstringToEnum(subtmp);
+                            if (cide != CardDB.cardIDEnum.None) cards.Add(CardDB.Instance.getCardDataFromID(cide));
+                        }
+                        Probabilitymaker.Instance.StarShipLaunchedList.Add(cards);
+                    }
+                }
+
                 // 发现牌
                 if (s.StartsWith("discover card:"))
                 {
@@ -1115,7 +1132,12 @@ namespace HREngine.Bots
                         if (s.Contains(" infest(")) infest = Convert.ToInt32(s.Split(new string[] { " infest(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
 
                         string enchs = "";
-                        if (s.Contains(" 附魔:")) enchs = s.Substring(s.IndexOf("附魔:"));
+                        if (s.Contains(" 附魔:"))
+                        {
+                            enchs = s.Substring(s.IndexOf("附魔:"));
+                            enchs = enchs.Replace("附魔: ","");
+                            enchs = enchs.Replace("\r","");
+                        }
 
                         CardDB.Card deathrattle2 = null;
                         if (s.Contains(" dethrl(")) deathrattle2 = CardDB.Instance.getCardDataFromID(CardDB.Instance.cardIdstringToEnum(s.Split(new string[] { " dethrl(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]));
@@ -1171,7 +1193,16 @@ namespace HREngine.Bots
                         tempminion.returnToHand = returnToHand;
                         tempminion.infest = infest;
                         tempminion.deathrattle2 = deathrattle2;
-                        tempminion.enchs = enchs;
+                        var subEnchs = enchs.Split(' ');
+                        List<miniEnch> enchants = new List<miniEnch>();
+                        if (subEnchs != null)
+                        {
+                            foreach (var subEnch in subEnchs)
+                            {
+                                enchants.Add(new miniEnch(CardDB.Instance.cardIdstringToEnum(subEnch),0,0,0,null));
+                            }
+                        }
+                        tempminion.loadEnchantments(enchants, 0);
                         tempminion.CooldownTurn = CooldownTurn;
 
                         if (maxhp > hp) tempminion.wounded = true;
@@ -1278,7 +1309,12 @@ namespace HREngine.Bots
                         if (s.Contains(" infest(")) infest = Convert.ToInt32(s.Split(new string[] { " infest(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
 
                         string enchs = "";
-                        if (s.Contains(" 附魔:")) enchs = s.Substring(s.IndexOf("附魔:"));
+                        if (s.Contains(" 附魔:"))
+                        {
+                            enchs = s.Substring(s.IndexOf("附魔:"));
+                            enchs = enchs.Replace("附魔: ","");
+                            enchs = enchs.Replace("\r","");
+                        }
 
                         CardDB.Card deathrattle2 = null;
                         if (s.Contains(" dethrl(")) deathrattle2 = CardDB.Instance.getCardDataFromID(CardDB.Instance.cardIdstringToEnum(s.Split(new string[] { " dethrl(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]));
@@ -1335,7 +1371,16 @@ namespace HREngine.Bots
                         tempminion.infest = infest;
                         tempminion.deathrattle2 = deathrattle2;
 
-                        tempminion.enchs = enchs;
+                        var subEnchs = enchs.Split(' ');
+                        List<miniEnch> enchants = new List<miniEnch>();
+                        if (subEnchs != null)
+                        {
+                            foreach (var subEnch in subEnchs)
+                            {
+                                enchants.Add(new miniEnch(CardDB.Instance.cardIdstringToEnum(subEnch),0,0,0,null));
+                            }
+                        }
+                        tempminion.loadEnchantments(enchants, 0);
 
                         if (maxhp > hp) tempminion.wounded = true;
                         tempminion.updateReadyness();
