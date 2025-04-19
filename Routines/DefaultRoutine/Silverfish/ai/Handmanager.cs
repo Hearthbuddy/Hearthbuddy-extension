@@ -59,6 +59,14 @@ namespace HREngine.Bots
             {
                 card = CardDB.Instance.unknownCard;
             }
+
+            public Handcard(CardDB.Card card, int manacost, int scriptDataNum)
+            {
+                this.card = card;
+                this.manacost = manacost;
+                this.SCRIPT_DATA_NUM_1 = scriptDataNum;
+            }
+
             public Handcard(Handcard hc)
             {
                 this.position = hc.position;

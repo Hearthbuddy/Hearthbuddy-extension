@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//召唤一个<b>@</b>/<b>@</b>的植物魔像。
 	class Sim_EDR_847p : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			Minion callKid;
+			if (ownplay)
+			{
+				callKid = p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_847pt2),
+					p.ownMinions.Count, true);
+			}
+			else
+			{
+				callKid = p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_847pt2),
+					p.enemyMinions.Count, false);
+			}
+
+			if (callKid != null)
+			{
+				callKid.Angr = p.ownHeroAblility.SCRIPT_DATA_NUM_1;
+				callKid.Hp = p.ownHeroAblility.SCRIPT_DATA_NUM_1;
+			}
+		}
 	}
 }

@@ -13,7 +13,7 @@ namespace HREngine.Bots
 	{
 		public override void onLaunchStarShip(Playfield p, Minion starShip)
 		{
-			p.callKid(starShip.handcard.card, p.ownMinions.Count - 1, starShip.own);
+			p.callKid(starShip.handcard.card, p.ownMinions.Count, starShip.own);
 		}
 	}
 }

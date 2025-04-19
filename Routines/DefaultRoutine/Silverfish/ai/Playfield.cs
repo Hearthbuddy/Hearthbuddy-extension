@@ -168,7 +168,9 @@ namespace HREngine.Bots
         public int ownBaronRivendare = 0;//瑞文戴尔男爵
         public int enemyBaronRivendare = 0;
         public int ownBrannBronzebeard = 0;//友方战吼额外触发次数
+        public int ownHeroPowerTimes = 0;//友方技能额外触发次数
         public int enemyBrannBronzebeard = 0;//敌方战吼额外触发次数
+        public int enemyHeroPowerTimes = 0;//敌方技能额外触发次数
         public int ownTurnEndEffectsTriggerTwice = 0;//达卡莱附魔师，回合结束效果会生效两次
         public int enemyTurnEndEffectsTriggerTwice = 0;
         public int ownFandralStaghelm = 0;//范达尔·鹿盔
@@ -336,6 +338,10 @@ namespace HREngine.Bots
         public int ownElementalsPlayedThisTurn = 0;
         //发射过的星舰列表
         public List<List<CardDB.Card>> StarShipLaunchedList = new List<List<CardDB.Card>>();
+        // 是否有符文图腾的赐福
+        public bool isInImbueStartBuff = false;
+        // 符文图腾的赐福进度
+        public int imbueStartBuffTimes = 2;
         
         //伞降咒符实现,添加一个全局光环检查
         public void onOwnTurnStart(Playfield p)
@@ -668,6 +674,8 @@ namespace HREngine.Bots
             this.enemyBaronRivendare = 0;
             this.ownBrannBronzebeard = 0;//友方战吼额外触发次数
             this.enemyBrannBronzebeard = 0;//敌方战吼额外触发次数
+            this.ownHeroPowerTimes = 0;
+            this.enemyHeroPowerTimes = 0;
             this.ownTurnEndEffectsTriggerTwice = 0;
             this.enemyTurnEndEffectsTriggerTwice = 0;
             this.ownFandralStaghelm = 0;//范达尔·鹿盔
@@ -676,8 +684,10 @@ namespace HREngine.Bots
             this.owncarddraw = 0;
             this.enemyAnzCards = Handmanager.Instance.enemyAnzCards;
             this.ownAbilityReady = prozis.ownAbilityisReady;
-            this.ownHeroAblility = new Handmanager.Handcard { card = prozis.heroAbility, manacost = prozis.ownHeroPowerCost };
-            this.enemyHeroAblility = new Handmanager.Handcard { card = prozis.enemyAbility, manacost = prozis.enemyHeroPowerCost };
+            this.ownHeroAblility = new Handmanager.Handcard(prozis.heroAbility, prozis.ownHeroPowerCost,
+                prozis.heroAbility == null ? 0 : prozis.heroAbility.TAG_SCRIPT_DATA_NUM_1);
+            this.enemyHeroAblility = new Handmanager.Handcard(prozis.enemyAbility, prozis.enemyHeroPowerCost,
+                prozis.enemyAbility == null ? 0 : prozis.enemyAbility.TAG_SCRIPT_DATA_NUM_1);
             this.enemyAbilityReady = false;
             this.bestEnemyPlay = null;
             this.ownQuest.Copy(Questmanager.Instance.ownQuest);
@@ -777,6 +787,9 @@ namespace HREngine.Bots
             {
                 this.ownSpellSchoolCounts[school] = 0;
             }
+
+            this.isInImbueStartBuff = prozis.isInImbueStartBuff;
+            this.imbueStartBuffTimes = prozis.imbueStartBuffTimes;
 
             //我方特殊随从的效果标志位 站场效果
             foreach (Minion m in this.ownMinions)
@@ -1260,8 +1273,10 @@ namespace HREngine.Bots
                 this.enemycarddraw = p.owncarddraw;
 
                 this.ownAbilityReady = true;
-                this.enemyHeroAblility = new Handmanager.Handcard { card = prozis.heroAbility, manacost = prozis.ownHeroPowerCost };
-                this.ownHeroAblility = new Handmanager.Handcard { card = prozis.enemyAbility, manacost = prozis.enemyHeroPowerCost };
+                this.ownHeroAblility = new Handmanager.Handcard(prozis.heroAbility, prozis.ownHeroPowerCost,
+                    p.ownHeroAblility.SCRIPT_DATA_NUM_1);
+                this.enemyHeroAblility = new Handmanager.Handcard(prozis.enemyAbility, prozis.enemyHeroPowerCost,
+                    p.enemyHeroAblility.SCRIPT_DATA_NUM_1);
                 this.enemyAbilityReady = false;
                 this.bestEnemyPlay = null;
                 
@@ -1547,6 +1562,8 @@ namespace HREngine.Bots
             this.lastPlayedCardCost = p.lastPlayedCardCost;
             //在本回合是否打出了元素牌
             this.playedElementalThisTurn = p.playedElementalThisTurn;
+            this.isInImbueStartBuff = p.isInImbueStartBuff;
+            this.imbueStartBuffTimes = p.imbueStartBuffTimes;
         }
 
         public void copyValuesFrom(Playfield p)
@@ -5228,6 +5245,13 @@ namespace HREngine.Bots
                 this.nextSecretThisTurnCost0 = false;
                 this.secretsplayedSinceRecalc++;
             }
+
+            if (isInImbueStartBuff && (--imbueStartBuffTimes) <=0)
+            {
+                // 灌注技能
+                imbueStartBuffTimes = 2;
+                ImbueHeroPower();
+            }
         }
 
         /// <summary>
@@ -5547,6 +5571,21 @@ namespace HREngine.Bots
 
             // 执行英雄技能的主要效果
             c.sim_card.onCardPlay(this, ownturn, target, choice);
+
+            if (ownturn)
+            {
+                for (int i = 0; i < this.ownHeroPowerTimes; i++)
+                {
+                    c.sim_card.onCardPlay(this, ownturn, target, choice);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < this.enemyHeroPowerTimes; i++)
+                {
+                    c.sim_card.onCardPlay(this, ownturn, target, choice);
+                }
+            }
 
             // 计算英雄技能执行后敌方英雄的生命值差
             int damageDealt = enemyHeroHpBefore - this.enemyHero.Hp;
@@ -12129,6 +12168,67 @@ namespace HREngine.Bots
                     }
                 }
             }
+        }
+        
+        /// <summary>
+        /// 灌注技能
+        /// </summary>
+        public void ImbueHeroPower()
+        {
+            Handmanager.Handcard hc = isOwnTurn ? this.ownHeroAblility : this.enemyHeroAblility;
+            var scriptDataNum = hc.SCRIPT_DATA_NUM_1;
+            switch (ownHeroName)
+            {
+                case HeroEnum.druid:
+                    if (ownHeroAblility.card.cardIDenum != CardDB.cardIDEnum.EDR_847p)
+                    {
+                        setNewHeroPower(CardDB.cardIDEnum.EDR_847p, isOwnTurn);
+                        hc.SCRIPT_DATA_NUM_1 = 0;
+                    }
+                    break;
+                case HeroEnum.hunter:
+                    if (ownHeroAblility.card.cardIDenum != CardDB.cardIDEnum.EDR_850p)
+                    {
+                        setNewHeroPower(CardDB.cardIDEnum.EDR_850p, isOwnTurn);
+                        hc.SCRIPT_DATA_NUM_1 = 0;
+                    }
+                    break;
+                case HeroEnum.priest:
+                    if (ownHeroAblility.card.cardIDenum != CardDB.cardIDEnum.EDR_449p)
+                    {
+                        setNewHeroPower(CardDB.cardIDEnum.EDR_449p, isOwnTurn);
+                        hc.SCRIPT_DATA_NUM_1 = 0;
+                    }
+                    break;
+                case HeroEnum.shaman:
+                    if (ownHeroAblility.card.cardIDenum != CardDB.cardIDEnum.EDR_448p)
+                    {
+                        setNewHeroPower(CardDB.cardIDEnum.EDR_448p, isOwnTurn);
+                        hc.SCRIPT_DATA_NUM_1 = 0;
+                    }
+                    break;
+                case HeroEnum.mage:
+                    if (ownHeroAblility.card.cardIDenum != CardDB.cardIDEnum.EDR_851p)
+                    {
+                        setNewHeroPower(CardDB.cardIDEnum.EDR_851p, isOwnTurn);
+                        hc.SCRIPT_DATA_NUM_1 = 0;
+                    }
+                    break;
+                case HeroEnum.pala:
+                    if (ownHeroAblility.card.cardIDenum != CardDB.cardIDEnum.EDR_445p)
+                    {
+                        setNewHeroPower(CardDB.cardIDEnum.EDR_445p, isOwnTurn);
+                        hc.SCRIPT_DATA_NUM_1 = 0;
+                    }
+                    break;
+                default:
+                    // 无法灌注
+                    return;
+
+            }
+
+            // 加一次灌注
+            hc.SCRIPT_DATA_NUM_1++;
         }
     }
 

@@ -964,6 +964,7 @@ namespace HREngine.Bots
                 {
                     abilityReady = (s.Split(' ')[1] == "True");
                     heroability = CardDB.Instance.getCardDataFromID(CardDB.Instance.cardIdstringToEnum(s.Split(' ')[2]));
+                    heroability.TAG_SCRIPT_DATA_NUM_1 = int.Parse(s.Split(' ')[3]);
                 }
 
                 if (readstate == 1 && counter >= 5) // secrets
@@ -1017,6 +1018,7 @@ namespace HREngine.Bots
                 if (readstate == 2 && counter == 3) // ability
                 {
                     enemyability = CardDB.Instance.getCardDataFromID(CardDB.Instance.cardIdstringToEnum(s.Split(' ')[2]));
+                    enemyability.TAG_SCRIPT_DATA_NUM_1 = int.Parse(s.Split(' ')[3]);
                 }
                 if (readstate == 2 && counter == 4) // fatigue
                 {

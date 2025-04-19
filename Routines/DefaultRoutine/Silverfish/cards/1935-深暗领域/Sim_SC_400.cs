@@ -27,7 +27,7 @@ namespace HREngine.Bots
 				}
 
 				var starShipCardDataFromHeroId = CardDB.Instance.getStarShipCardDataFromHeroID(p.ownHeroName);
-				var callKid = p.callKid(starShipCardDataFromHeroId, p.ownMinions.Count - 1, own.own);
+				var callKid = p.callKid(starShipCardDataFromHeroId, p.ownMinions.Count, own.own);
 				foreach (var launched in launcheds)
 				{
 					if (callKid != null)

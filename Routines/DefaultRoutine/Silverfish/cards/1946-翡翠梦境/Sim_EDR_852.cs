@@ -11,7 +11,9 @@ namespace HREngine.Bots
 	//<b>战吼：</b><b>灌注</b>你的英雄技能。
 	class Sim_EDR_852 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.ImbueHeroPower();
+		}
 	}
 }

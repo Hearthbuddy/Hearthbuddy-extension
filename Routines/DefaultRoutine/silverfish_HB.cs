@@ -473,6 +473,11 @@ namespace HREngine.Bots
                             {
                                 updateMinion(card, entity, controllerId, cardId);
                             }
+                            else if (card.Name == "符文图腾的赐福" && controllerId == ownController)
+                            {
+                                Hrtprozis.Instance.isInImbueStartBuff = true; // 符文图腾的赐福
+                                Hrtprozis.Instance.imbueStartBuffTimes = card.GetTag(GAME_TAG.TAG_SCRIPT_DATA_NUM_1); // 符文图腾的赐福进度
+                            }
                         }
                         break;
                     case TAG_ZONE.HAND:
@@ -736,6 +741,7 @@ namespace HREngine.Bots
             {
                 this.heroAbility = CardDB.Instance.getCardDataFromID(CardDB.Instance.cardIdstringToEnum(cardId));
                 this.ownAbilityisReady = card.GetTag(GAME_TAG.EXHAUSTED) == 0 ? true : false;
+                this.heroAbility.TAG_SCRIPT_DATA_NUM_1 = card.GetTag(GAME_TAG.TAG_SCRIPT_DATA_NUM_1);
                 this.ownHeroPowerCost = rtCost;
             }
             else if (controller == enemyController)

@@ -116,6 +116,9 @@ namespace HREngine.Bots
         public int enemyDirectDmg = 0; //预计对手斩杀线
         public int similarity = 66;
 
+        public bool isInImbueStartBuff = false; // 是否有符文图腾的赐福
+        public int imbueStartBuffTimes = 2; // 符文图腾的赐福进度
+
         //连续使用元素牌的回合数
         public int ownConsecutiveElementalTurns = 0;
         //上个回合玩家使用的元素牌数量
@@ -723,7 +726,7 @@ namespace HREngine.Bots
                 + ( this.ownHero.enchs.Length > 0 ? " 附魔:" + this.ownHero.enchs : "" )
                 );
             help.logg("weapon: " + ownWeapon.Angr + " " + ownWeapon.Durability + " " + this.ownWeapon.card.nameCN + " " + this.ownWeapon.card.cardIDenum + " " + (this.ownWeapon.poisonous ? 1 : 0) + " " + (this.ownWeapon.lifesteal ? 1 : 0) + " " + this.ownWeapon.scriptNum1 );
-            help.logg("ability: " + this.ownAbilityisReady + " " + this.heroAbility.cardIDenum);
+            help.logg("ability: " + this.ownAbilityisReady + " " + this.heroAbility.cardIDenum + " " + this.heroAbility.TAG_SCRIPT_DATA_NUM_1);
             string secs = "";
             foreach (CardDB.cardIDEnum sec in this.ownSecretList)
             {
@@ -738,7 +741,7 @@ namespace HREngine.Bots
             help.logg("enemyhero:");
             help.logg((this.enemyHeroname == HeroEnum.None ? this.enemyHeronameingame : this.enemyHeroname.ToString()) + " " + this.enemyHero.Hp + " " + this.enemyHero.maxHp + " " + this.enemyHero.armor + " " + this.enemyHero.frozen + " " + this.enemyHero.immune + " " + this.enemyHero.entitiyID + " " + this.enemyHero.stealth + (this.enemyHero.enchs.Length > 0 ? " 附魔:" + this.enemyHero.enchs : ""));
             help.logg("weapon: " + this.enemyWeapon.Angr + " " + this.enemyWeapon.Durability + " " + this.enemyWeapon.card.nameCN + " " + this.enemyWeapon.card.cardIDenum + " " + (this.enemyWeapon.poisonous ? 1 : 0) + " " + (this.enemyWeapon.lifesteal ? 1 : 0) + " " + this.enemyWeapon.scriptNum1);
-            help.logg("ability: " + "True" + " " + this.enemyAbility.cardIDenum);
+            help.logg("ability: " + "True" + " " + this.enemyAbility.cardIDenum + " " + this.enemyAbility.TAG_SCRIPT_DATA_NUM_1);
             help.logg("fatigue: " + this.ownDeckSize + " " + this.ownHeroFatigue + " " + this.enemyDeckSize + " " + this.enemyHeroFatigue);
         }
 
