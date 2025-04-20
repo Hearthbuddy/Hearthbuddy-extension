@@ -820,7 +820,7 @@ namespace HREngine.Bots
                     starShip.Angr += this.Angr;
                     starShip.cantAttack = false;
                     // 加入坟场
-                    if (starShip.starShipGraveyard.ContainsKey(this.handcard.card.cardIDenum))
+                    if (!starShip.starShipGraveyard.ContainsKey(this.handcard.card.cardIDenum))
                     {
                         starShip.starShipGraveyard.Add(this.handcard.card.cardIDenum, 1);
                     }
