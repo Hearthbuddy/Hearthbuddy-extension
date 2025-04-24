@@ -1017,6 +1017,7 @@ def Execute():
             }
 
             // 更新一切
+            await Coroutine.Sleep(500);
             bool sleepRetry = false;
             bool templearn = Silverfish.Instance.updateEverything(behave, 0, out sleepRetry);
             if (sleepRetry)

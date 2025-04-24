@@ -601,6 +601,7 @@ namespace HREngine.Bots
 
         public bool feugenDead = false;
         public bool stalaggDead = false;
+        public bool isDeckReverse = false;
 
         private static Probabilitymaker instance;
         public static Probabilitymaker Instance
@@ -726,6 +727,11 @@ namespace HREngine.Bots
                 if (ent.cardid == CardDB.cardIDEnum.FP1_014)
                 {
                     this.stalaggDead = true;
+                }
+                
+                if (ent.cardid == CardDB.cardIDEnum.MAW_016)
+                {
+                    this.isDeckReverse = true;
                 }
 
                 bool found = false;

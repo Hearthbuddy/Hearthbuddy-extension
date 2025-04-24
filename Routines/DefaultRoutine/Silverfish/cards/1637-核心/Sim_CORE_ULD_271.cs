@@ -13,7 +13,7 @@ namespace HREngine.Bots
 		{
 			public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 			{
-				p.minionGetDamageOrHeal(own, 3); // 对该随从造成10点伤害
+				p.minionGetDamageOrHeal(own, 3); // 对该随从造成3点伤害
 			}
 			
 		}

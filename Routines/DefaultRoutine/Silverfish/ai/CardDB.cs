@@ -434,6 +434,7 @@ namespace HREngine.Bots
             public bool StarShip = false;//星舰
             public bool StarShipPiece = false;//星舰组件
             public int StarShipLaunchCost = 5;//星舰发射消耗法力值
+            public bool Objective = false; // 光环
 
             public string textCN = "";
             public int count = 1;
@@ -550,7 +551,7 @@ namespace HREngine.Bots
                 //if wereTargets=true and 0 targets at end -> then can not play this card
                 List<Minion> retval = new List<Minion>();
                 if (this.type == CardDB.cardtype.MOB && ((own && p.ownMinions.Count >= 7) || (!own && p.enemyMinions.Count >= 7))) return retval; // cant play mob, if we have allready 7 mininos
-                if (this.Secret && ((own && (p.ownSecretsIDList.Contains(this.cardIDenum) || p.ownSecretsIDList.Count >= 5)) || (!own && p.enemySecretCount >= 5))) return retval;
+                if ((this.Secret || this.Quest || this.Questline || this.Objective) && ((own && ((p.ownSecretsIDList.Contains(this.cardIDenum) && !this.Objective) || p.ownSecretsIDList.Count >= 5)) || (!own && p.enemySecretCount >= 5))) return retval;
                 if (this.sim_card.GetPlayReqs().Length == 0) { retval.Add(null); return retval; }
 
                 List<Minion> targets = new List<Minion>();
@@ -1700,6 +1701,9 @@ namespace HREngine.Bots
                         }
                         retval = retval + offset;
                         break;
+                    case CardDB.cardNameEN.prismaticbeam: //棱彩光束减费
+                        retval = retval + offset - p.enemyMinions.Count + p.enemyMobsCountStarted;
+                        break;
                     default:
                         retval = retval + offset;
                         break;
@@ -2282,6 +2286,11 @@ namespace HREngine.Bots
                         case "2919":
                             {
                                 card.TAG_SCRIPT_DATA_NUM_4 = int.Parse(tag.GetAttribute("value"));
+                            }
+                            break;
+                        case "2311":
+                            {
+                                card.Objective = true;//光环
                             }
                             break;
                         case "2332":

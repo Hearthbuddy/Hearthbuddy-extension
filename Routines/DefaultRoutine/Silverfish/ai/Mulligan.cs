@@ -504,6 +504,7 @@ as well as
 
             //增加特殊留牌规则
             behave.specialMulligan(cards);
+            behave.specialMulligan(cards, enemyHeroClass);
 
             for (var i = 0; i < mulliganData.Cards.Count; i++)
             {

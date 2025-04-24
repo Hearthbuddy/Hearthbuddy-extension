@@ -721,6 +721,14 @@ namespace HREngine.Bots
         }
 
         /// <summary>
+        /// 特殊留牌规则
+        /// </summary>
+        /// <param name="cards">起手卡牌</param>
+        public virtual void specialMulligan(List<HREngine.Bots.Mulligan.CardIDEntity> cards, HeroEnum enemyHeroClass)
+        {
+        }
+
+        /// <summary>
         /// 探底
         /// </summary>
         /// <param name="card"></param>

@@ -342,6 +342,8 @@ namespace HREngine.Bots
         public bool isInImbueStartBuff = false;
         // 符文图腾的赐福进度
         public int imbueStartBuffTimes = 2;
+        // 牌库从高到低排列
+        public bool isDeckReverse = false;
         
         //伞降咒符实现,添加一个全局光环检查
         public void onOwnTurnStart(Playfield p)
@@ -783,6 +785,8 @@ namespace HREngine.Bots
             this.lastPlayedCardCost = 0;
             //在本回合是否打出了元素牌
             this.playedElementalThisTurn = false;
+            // 牌库从高到低排列
+            this.isDeckReverse = Probabilitymaker.Instance.isDeckReverse;
             foreach (TAG_SPELL_SCHOOL school in Enum.GetValues(typeof(TAG_SPELL_SCHOOL)))
             {
                 this.ownSpellSchoolCounts[school] = 0;
@@ -1564,6 +1568,7 @@ namespace HREngine.Bots
             this.playedElementalThisTurn = p.playedElementalThisTurn;
             this.isInImbueStartBuff = p.isInImbueStartBuff;
             this.imbueStartBuffTimes = p.imbueStartBuffTimes;
+            this.isDeckReverse = p.isDeckReverse;
         }
 
         public void copyValuesFrom(Playfield p)
@@ -6259,13 +6264,47 @@ namespace HREngine.Bots
                     }
                     break;
             }
+            
+            // 十字军光环
+            foreach (CardDB.cardIDEnum s in this.ownSecretsIDList)
+            {
+                if (s == CardDB.cardIDEnum.TTN_908)
+                {
+                    this.minionGetBuffed(attacker, 2, 1);
+                }
+            }
 
             // 处理随从上附加的智慧祝福效果：每次攻击时抽取一张牌
             if (attacker.ownBlessingOfWisdom >= 1)
             {
                 for (int i = 0; i < attacker.ownBlessingOfWisdom; i++)
                 {
-                    this.drawACard(CardDB.cardNameEN.unknown, true);
+                    if (this.isDeckReverse)
+                    {
+                        var deck = this.prozis.turnDeck;
+                        if (deck.Count == 0) continue;
+
+                        // 获取有序牌库列表（按卡牌ID稳定排序）
+                        var orderedDeck = deck.Keys
+                            .OrderBy(id => id.ToString())
+                            .Select(id => CardDB.Instance.getCardDataFromID(id));
+
+                        // 确定最高费用
+                        int maxCost = orderedDeck.Max(c => c.cost);
+
+                        // 选择首个最高费用卡牌
+                        CardDB.Card targetCard = orderedDeck
+                            .FirstOrDefault(c => c.cost == maxCost);
+
+                        if (targetCard != null)
+                        {
+                            // 直接抽卡但不修改牌库
+                            this.drawACard(targetCard.cardIDenum, true);
+                            this.evaluatePenality -= 2;
+                        }
+                    }
+                    else
+                        this.drawACard(CardDB.cardNameEN.unknown, true);
                 }
             }
             if (attacker.enemyBlessingOfWisdom >= 1)

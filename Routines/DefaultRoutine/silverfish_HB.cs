@@ -473,10 +473,12 @@ namespace HREngine.Bots
                             {
                                 updateMinion(card, entity, controllerId, cardId);
                             }
-                            else if (card.Name == "符文图腾的赐福" && controllerId == ownController)
+                            else if (CardDB.Instance.cardNameCNstringToEnum(card.Name) == CardDB.cardNameCN.符文图腾的赐福 &&
+                                     controllerId == ownController)
                             {
                                 Hrtprozis.Instance.isInImbueStartBuff = true; // 符文图腾的赐福
-                                Hrtprozis.Instance.imbueStartBuffTimes = card.GetTag(GAME_TAG.TAG_SCRIPT_DATA_NUM_1); // 符文图腾的赐福进度
+                                Hrtprozis.Instance.imbueStartBuffTimes =
+                                    card.GetTag(GAME_TAG.TAG_SCRIPT_DATA_NUM_1); // 符文图腾的赐福进度
                             }
                         }
                         break;
@@ -629,14 +631,12 @@ namespace HREngine.Bots
 
         private void updateSecret(HSCard card, Entity entity, int controller, string cardId, int entityId)
         {
-            if (card.IsSecret)
-            {
-                if (controller == ownController)
-                    ownSecretList.Add(cardId);
-                else
-                    enemySecretList.Add(entityId, (TAG_CLASS)card.Class);
-            }
-            else if (entity.IsQuest() || entity.GetTag(1725) > 0)
+            if (controller == ownController)
+                // 奥秘区的卡都在这里，不单纯保存奥秘了
+                ownSecretList.Add(cardId);
+            else
+                enemySecretList.Add(entityId, (TAG_CLASS)card.Class);
+            if (entity.IsQuest() || entity.GetTag(1725) > 0)
             {
                 if (controller == ownController)
                 {
