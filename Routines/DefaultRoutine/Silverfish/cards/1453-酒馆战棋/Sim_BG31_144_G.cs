@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 萨满祭司 费用：0 攻击力：4 生命值：4
 	//Adaptive Ancestor
 	//进化始祖
 	//[x]<b>Choose One - </b>Gain +6Attack and <b>Divine Shield</b>; or+6 Health and <b>Venomous</b>.

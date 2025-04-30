@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 术士 费用：0 攻击力：4 生命值：4
 	//Big Brother
 	//老大哥
 	//[x]<b>Taunt</b>After you cast a Tavern spell,minions in the Tavern have+1/+1 this turn.

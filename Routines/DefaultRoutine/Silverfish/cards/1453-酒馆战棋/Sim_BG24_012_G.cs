@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 萨满祭司 费用：0 攻击力：8 生命值：8
 	//Murky
 	//奔波尔霸
-	//<b>Battlecry:</b> Give a friendly Murloc +6/+6 for each one you control.
-	//<b>战吼：</b>你每控制一个鱼人，使一个友方鱼人获得+6/+6。
+	//[x]<b>Battlecry:</b> Give a friendlyMurloc +8/+8 for eachone you control.
+	//<b>战吼：</b>你每控制一个鱼人，使一个友方鱼人获得+8/+8。
 	class Sim_BG24_012_G : SimTemplate
 	{
 		

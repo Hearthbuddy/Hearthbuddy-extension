@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：20
+	//随从 巫妖王 费用：0 攻击力：10 生命值：20
 	//Catacomb Crasher
 	//古墓捣蛋鬼
 	//[x]Whenever you would summona minion that doesn't fit in yourwarband, give your minions+2/+2 permanently.

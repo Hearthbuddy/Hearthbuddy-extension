@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：10
+	//随从 战士 费用：0 攻击力：4 生命值：10
 	//Sanctum Rester
 	//圣殿眠龙
 	//<b>Start of Combat:</b> Give your Dragons +20 Attack.
