@@ -31,9 +31,9 @@ namespace HREngine.Bots
                 bool havedonesomething = true;
                 posmoves.Clear();
 
+                rootfield.startTurn();
                 posmoves.Add(new Playfield(rootfield));
                 posmoves[0].isLethalCheck = false; 
-                posmoves[0].startTurn();
                 rootfield.guessingHeroHP = posmoves[0].guessingHeroHP;
                 List<Playfield> temp = new List<Playfield>();
                 int deep = 0;
@@ -183,8 +183,7 @@ namespace HREngine.Bots
                 bestplay.owncarddraw = rootfield.owncarddraw;
                 bestplay.complete = true;
 				bestplay.isLethalCheck = rootfield.isLethalCheck;
-                Ai.Instance.botBase.getPlayfieldValue(bestplay);
-                bestval = bestplay.value;
+                bestval = Ai.Instance.botBase.getPlayfieldValue(bestplay);
                 rootfield.value = bestplay.value;
 
                 if (twotsamount > 0 || (rootfield.isLethalCheck && berserkIfCanFinishNextTour > 0))

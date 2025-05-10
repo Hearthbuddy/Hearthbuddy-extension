@@ -1296,6 +1296,8 @@ namespace HREngine.Bots
 
             // 如果不攻击就能击杀敌方英雄，额外加分
             if (!attacted && p.enemyHero.Hp <= 0) retval += 10000;
+            
+            retval -= p.evaluatePenality;
 
             // 返回计算后的场面价值
             return retval;
