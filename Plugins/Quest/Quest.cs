@@ -26,7 +26,6 @@ namespace Quest
     public class Quest : IPlugin
     {
         private static readonly ILog Log = Logger.GetLoggerInstanceForType();
-        private readonly Stopwatch stopwatch_0 = new Stopwatch();
         private bool _enabled;
 
         private UserControl _control;
@@ -66,9 +65,8 @@ namespace Quest
         /// <summary> The plugin start callback. Do any initialization here. </summary>
         public void Start()
         {
-            stopwatch_0.Restart();
             Log.DebugFormat("[任务插件] 开启");
-            GameEventManager.GameOver += GameEventManagerOnGameOver;
+            GameEventManager.NewGame += GameEventManagerOnNewGame;
             QuestSettings.Instance.ReloadFile();
             UpdateGui(false);
         }
@@ -81,9 +79,8 @@ namespace Quest
         /// <summary> The plugin stop callback. Do any pre-dispose cleanup here. </summary>
         public void Stop()
         {
-            stopwatch_0.Stop();
             Log.DebugFormat("[任务插件] 停止");
-            GameEventManager.GameOver -= GameEventManagerOnGameOver;
+            GameEventManager.NewGame -= GameEventManagerOnNewGame;
         }
 
         public JsonSettings Settings
@@ -277,20 +274,6 @@ namespace Quest
                         BindingMode.TwoWay, QuestSettings.Instance))
                     {
                         Log.DebugFormat("[SettingsControl] SetupCheckBoxBinding failed for 'NeedAutoCheckBox'.");
-                        throw new Exception("The SettingsControl could not be created.");
-                    }
-
-                    if (!Wpf.SetupTextBoxBinding(root, "RunTimeTextBox", "RunTime",
-                        BindingMode.TwoWay, QuestSettings.Instance))
-                    {
-                        Log.DebugFormat("[SettingsControl] SetupTextBoxBinding failed for 'RunTimeTextBox'.");
-                        throw new Exception("The SettingsControl could not be created.");
-                    }
-
-                    if (!Wpf.SetupTextBoxBinding(root, "IntervalTextBox", "Interval",
-                        BindingMode.TwoWay, QuestSettings.Instance))
-                    {
-                        Log.DebugFormat("[SettingsControl] SetupTextBoxBinding failed for 'IntervalTextBox'.");
                         throw new Exception("The SettingsControl could not be created.");
                     }
 
@@ -614,54 +597,12 @@ namespace Quest
             t.Start(bSleep);
         }
 
-        private void GameEventManagerOnGameOver(object sender, GameOverEventArgs gameOverEventArgs)
+        private void GameEventManagerOnNewGame(object sender, NewGameEventArgs newGameEventArgs)
         {
             try
             {
-                if (QuestSettings.Instance.NeedAuto)
-                {
-                    QuestSettings.Instance.RunTimeSecond += (long)stopwatch_0.Elapsed.TotalSeconds;
-                }
-                else QuestSettings.Instance.RunTimeSecond = 0;
-                stopwatch_0.Restart();
-
-                //凌晨重置时间
-                /*
-                //判断时间，重置TodayRebootCnt
-                TimeSpan nowDt = DateTime.Now.TimeOfDay;
-                TimeSpan workStart = DateTime.Parse("00:00:00").TimeOfDay;
-                TimeSpan workStop = DateTime.Parse("00:00:05").TimeOfDay;
-                if (nowDt > workStart && nowDt < workStop)
-                {
-                    Log($"当前时间0点0分，重启次数重置为0");
-                    TodayRebootCnt = -1;
-                    TimerMonitor.Stop();
-                    Delay(1000 * 6);
-                    TimerMonitor.Interval = 1000;
-                    TimerMonitor.Start();
-                }
-                if (TodayRebootCnt == -1)
-                {
-                    TodayRebootCnt = 0;
-                    TodayRebootCntStr = TodayRebootCnt.ToString() + "/";
-                    if (!IsRunning)
-                    {
-                        if (NeedPushMessage)
-                        {
-                            string result;
-                            PushStone.PostMessage(PushPlusToken, "",
-                                CurrRunningAccount.Email, TodayRebootCnt, RebootCntMax,
-                                PushStone.MSG_TYPE.MSG_START, out result);
-                            Log(result);
-                        }
-                        Log($"一日之计在于晨，兄弟中控自动开始运行");
-                        StartRun();
-                    }
-                }*/
-
                 bool bSleep = false;
-                if (QuestSettings.Instance.NeedAuto &&
-                    QuestSettings.Instance.RunTimeSecond > QuestSettings.Instance.Interval * 3600)
+                if (QuestSettings.Instance.NeedAuto)
                 {
                     Random random = new Random();
                     QuestManager quest = QuestManager.Get();
@@ -671,13 +612,15 @@ namespace Quest
                         QuestListDataModel questDay = quest.CreateActiveQuestsDataModel(
                             QuestPool.QuestPoolType.DAILY,Assets.QuestPool.RewardTrackType.GLOBAL, true);
 
-                        //筛选0进度每日任务
+                        //筛选经验900的每日任务
                         List<QuestDataModel> questValidDay=new List<QuestDataModel>();
                         foreach (QuestDataModel item in questDay.Quests)
                         {
-                            if (item == null) break;
-                            if (item.QuestId > 0 && item.Progress == 0 &&
-                                item.Quota > 0 && item.RerollCount>0)
+                            if (item == null || item.QuestId <= 0 || item.RerollCount <= 0) continue;
+                            if (item.RewardTrackXp == 900 ||
+                                Math.Abs(item.RewardTrackXp / 1.1 - 900) < 1e-6 ||
+                                Math.Abs(item.RewardTrackXp / 1.15 - 900) < 1e-6 ||
+                                Math.Abs(item.RewardTrackXp / 1.2 - 900) < 1e-6)
                             {
                                 questValidDay.Add(item);
                             }
@@ -690,41 +633,10 @@ namespace Quest
                             int idx = random.Next(questValidDay.Count);
                             QuestDataModel questRe = questValidDay[idx];
                             quest.RerollQuest(questRe.QuestId);
-                            Log.ErrorFormat("随机更换无法完成的每日任务{0}：{1}",
+                            Log.ErrorFormat("随机更换经验最低的每日任务{0}：{1}",
                                 questRe.QuestId, questRe.Description);
                         }
                     }
-
-                    {
-                        //获取所有每周任务
-                        QuestListDataModel quesWeek = quest.CreateActiveQuestsDataModel(
-                            QuestPool.QuestPoolType.WEEKLY, Assets.QuestPool.RewardTrackType.GLOBAL,true);
-
-                        //筛选0进度每周任务
-                        List<QuestDataModel> questValidWeek = new List<QuestDataModel>();
-                        foreach (QuestDataModel item in quesWeek.Quests)
-                        {
-                            if (item == null) break;
-                            if (item.QuestId > 0 && item.Progress == 0 &&
-                                item.Quota > 0 && item.RerollCount > 0)
-                            {
-                                questValidWeek.Add(item);
-                            }
-                        }
-
-                        //随机更换1个任务
-                        if (questValidWeek.Count > 0)
-                        {
-                            bSleep = true;
-                            int idx = random.Next(questValidWeek.Count);
-                            QuestDataModel questRe = questValidWeek[idx];
-                            quest.RerollQuest(questRe.QuestId);
-                            Log.ErrorFormat("随机更换无法完成的每周任务{0}：{1}",
-                                questRe.QuestId, questRe.Description);
-                        }
-                    }
-
-                    QuestSettings.Instance.RunTimeSecond = 0;
                 }
 
                 UpdateGui(bSleep);

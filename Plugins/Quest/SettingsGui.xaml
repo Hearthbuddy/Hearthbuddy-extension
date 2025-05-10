@@ -90,18 +90,10 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
                     <CheckBox x:Name="NeedAutoCheckBox" Grid.Row="0" Grid.Column="0" Margin="3"/>
-                    <Label Grid.Row="0" Grid.Column="1" Content="每日挂机" Margin="3" />
-                    <TextBox Name="RunTimeTextBox" Grid.Row="0" Grid.Column="2" Margin="3" IsReadOnly="True"/>
-                    <Label Grid.Row="0" Grid.Column="3" Content="/" Margin="3" />
-                    <TextBox Name="IntervalTextBox" Grid.Row="0" Grid.Column="4" Margin="3"/>
-                    <Label Grid.Row="0" Grid.Column="5" Content="小时后，自动更换进度为0的任务（随机更换）" Margin="3" />
+                    <Label Grid.Row="0" Grid.Column="1" Content="自动更换经验为900（原始）的任务（随机更换）" Margin="3" />
                 </Grid>
  
                 <Grid>

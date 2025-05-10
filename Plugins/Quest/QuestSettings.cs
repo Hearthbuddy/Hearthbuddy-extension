@@ -34,8 +34,6 @@ namespace Quest
         }
 
         private bool _needAuto;
-        private long _runTimeSecond;
-        private string _runTime;
         private int _interval;
 
         private int _questIdDay1;
@@ -123,9 +121,6 @@ namespace Quest
         public void Reset()
         {
             NeedAuto = true;
-            RunTimeSecond=0;
-            RunTime = "0.00";
-            Interval = 1;
             ResetQuest();
         }
 
@@ -141,53 +136,6 @@ namespace Quest
                 }
                 _needAuto = value;
                 NotifyPropertyChanged(() => NeedAuto);
-            }
-        }
-
-        [DefaultValue("0.00")]
-        public string RunTime
-        {
-            get { return _runTime; }
-            set
-            {
-                if (value.Equals(_runTime))
-                {
-                    return;
-                }
-                _runTime = value;
-                NotifyPropertyChanged(() => RunTime);
-            }
-        }
-
-        [DefaultValue(0)]
-        public long RunTimeSecond
-        {
-            get { return _runTimeSecond; }
-            set
-            {
-                if (value.Equals(_runTimeSecond))
-                {
-                    return;
-                }
-                _runTimeSecond = value;
-                NotifyPropertyChanged(() => RunTimeSecond);
-                float t = ((float)_runTimeSecond / 3600);
-                RunTime = t.ToString("F2");
-            }
-        }
-
-        [DefaultValue(1)]
-        public int Interval
-        {
-            get { return _interval; }
-            set
-            {
-                if (value.Equals(_interval))
-                {
-                    return;
-                }
-                _interval = value;
-                NotifyPropertyChanged(() => Interval);
             }
         }
 
