@@ -11,7 +11,11 @@ namespace HREngine.Bots
         private int bonus_enemy = 4;
         private int bonus_mine = 4;
 
-        public override string BehaviorName() { return "丨狂野丨快攻暗牧"; }
+        public override string BehaviorName()
+        {
+            return "丨狂野丨快攻暗牧";
+        }
+
         PenalityManager penman = PenalityManager.Instance;
 
         //改于2024.9.9  by血色
@@ -35,16 +39,16 @@ namespace HREngine.Bots
         /// 快攻暗牧的留牌策略
         /// </summary>
         /// <param name="cards">起手卡牌列表</param>
-        public override void specialMulligan(List<Mulligan.CardIDEntity> cards)
+        public override void specialMulligan(List<Mulligan.CardIDEntity> cards, HeroEnum enemyHeroClass)
         {
-            int flag1 = 0;//宝藏经销商
-            int flag2 = 0;//心灵按摩师
-            int flag3 = 0;//虚触侍从
-            int flag4 = 0;//随船外科医师
-            int flag5 = 0;//空降歹徒
-            int flag6 = 0;//纸艺天使
-            int flag7 = 0;//狂暴邪翼蝠
-            int flag8 = 0;//针灸
+            int flag1 = 0; //宝藏经销商
+            int flag2 = 0; //心灵按摩师
+            int flag3 = 0; //虚触侍从
+            int flag4 = 0; //随船外科医师
+            int flag5 = 0; //空降歹徒
+            int flag6 = 0; //纸艺天使
+            int flag7 = 0; //狂暴邪翼蝠
+            int flag8 = 0; //针灸
             foreach (Mulligan.CardIDEntity card in cards)
             {
                 CardDB.Card cardCN = CardDB.Instance.getCardDataFromID(card.id);
@@ -52,30 +56,37 @@ namespace HREngine.Bots
                 {
                     flag1 += 1;
                 }
+
                 if (cardCN.nameCN == CardDB.cardNameCN.心灵按摩师)
                 {
                     flag2 += 1;
                 }
+
                 if (cardCN.nameCN == CardDB.cardNameCN.虚触侍从)
                 {
                     flag3 += 1;
                 }
+
                 if (cardCN.nameCN == CardDB.cardNameCN.随船外科医师)
                 {
                     flag4 += 1;
                 }
+
                 if (cardCN.nameCN == CardDB.cardNameCN.空降歹徒)
                 {
                     flag5 += 1;
                 }
+
                 if (cardCN.nameCN == CardDB.cardNameCN.纸艺天使)
                 {
                     flag6 += 1;
                 }
+
                 if (cardCN.nameCN == CardDB.cardNameCN.狂暴邪翼蝠)
                 {
                     flag7 += 1;
                 }
+
                 if (cardCN.nameCN == CardDB.cardNameCN.针灸)
                 {
                     flag8 += 1;
@@ -131,7 +142,6 @@ namespace HREngine.Bots
                         card.holdByRule = -2;
                         card.holdReason = "不符合特殊规则不留";
                     }
-
                 }
 
                 if (cardCN.nameCN == CardDB.cardNameCN.心灵按摩师)
@@ -201,10 +211,17 @@ namespace HREngine.Bots
 
                 if (cardCN.nameCN == CardDB.cardNameCN.虚触侍从)
                 {
-                    if (cards.Count == 3 && flag1 + flag2 + flag4 >= 1)
+                    if (cards.Count >= 3
+                        && (enemyHeroClass == HeroEnum.mage //法师
+                            || enemyHeroClass == HeroEnum.shaman //萨满
+                            || enemyHeroClass == HeroEnum.druid //德鲁伊
+                            || enemyHeroClass == HeroEnum.warrior //战士
+                            || enemyHeroClass == HeroEnum.deathknight //巫妖王
+                            || enemyHeroClass == HeroEnum.warlock) //术士    
+                       )
                     {
                         card.holdByRule = 2;
-                        card.holdReason = "先手有1费能下的海盗，留一张虚触侍从";
+                        card.holdReason = "先后手对面职业是1费竞争力不强的职业(非牧骑瞎贼)，留一张虚触侍从";
                         foreach (Mulligan.CardIDEntity tmp in cards)
                         {
                             if (tmp.entitiy == card.entitiy) continue;
@@ -215,10 +232,34 @@ namespace HREngine.Bots
                             }
                         }
                     }
-                    else if (cards.Count > 3 && flag4 >= 1)
+                    else if (cards.Count == 3 && (flag1 + flag2 + flag4 >= 1)
+                                              && (enemyHeroClass == HeroEnum.demonhunter //恶魔猎手
+                                                  || enemyHeroClass == HeroEnum.thief //贼
+                                                  || enemyHeroClass == HeroEnum.priest //牧师
+                                                  || enemyHeroClass == HeroEnum.pala) //骑士
+                            )
                     {
                         card.holdByRule = 2;
-                        card.holdReason = "后手有随船外科医师，留一张虚触侍从";
+                        card.holdReason = "先手有能用的1费海盗，对面是1费竞争力强的职业(牧骑瞎贼)留一张虚触侍从";
+                        foreach (Mulligan.CardIDEntity tmp in cards)
+                        {
+                            if (tmp.entitiy == card.entitiy) continue;
+                            if (tmp.id == card.id)
+                            {
+                                tmp.holdByRule = -2;
+                                tmp.holdReason = "按规则丢弃第二张卡虚触侍从";
+                            }
+                        }
+                    }
+                    else if (cards.Count > 3 && flag4 >= 1
+                                             && (enemyHeroClass == HeroEnum.demonhunter //恶魔猎手
+                                                 || enemyHeroClass == HeroEnum.thief //贼
+                                                 || enemyHeroClass == HeroEnum.priest //牧师
+                                                 || enemyHeroClass == HeroEnum.pala) //骑士
+                            )
+                    {
+                        card.holdByRule = 2;
+                        card.holdReason = "后手有随船外科医师，对面是1费竞争力强的职业(牧骑瞎贼)留一张虚触侍从";
                         foreach (Mulligan.CardIDEntity tmp in cards)
                         {
                             if (tmp.entitiy == card.entitiy) continue;
@@ -372,16 +413,72 @@ namespace HREngine.Bots
                         card.holdReason = "不留黑暗主教本尼迪塔斯";
                     }
                 }
+
+                if (cardCN.nameCN == CardDB.cardNameCN.赎罪教堂)
+                {
+                    if (cards.Count >= 3)
+                    {
+                        card.holdByRule = -2;
+                        card.holdReason = "不留赎罪教堂";
+                    }
+                }
+
+                if (cardCN.nameCN == CardDB.cardNameCN.异教低阶牧师)
+                {
+                    if (cards.Count >= 3)
+                    {
+                        card.holdByRule = -2;
+                        card.holdReason = "不留异教低阶牧师";
+                    }
+                }
+
+                if (cardCN.nameCN == CardDB.cardNameCN.灰烬元素)
+                {
+                    if (cards.Count >= 3)
+                    {
+                        card.holdByRule = -2;
+                        card.holdReason = "不留灰烬元素";
+                    }
+                }
+
+                if (cardCN.nameCN == CardDB.cardNameCN.雷纳索尔王子)
+                {
+                    if (cards.Count >= 3)
+                    {
+                        card.holdByRule = -2;
+                        card.holdReason = "不留雷纳索尔王子";
+                    }
+                }
+
+                if (cardCN.nameCN == CardDB.cardNameCN.皮普强力水霸)
+                {
+                    if (cards.Count >= 3)
+                    {
+                        card.holdByRule = -2;
+                        card.holdReason = "不留皮普强力水霸";
+                    }
+                }
+
+                if (cardCN.nameCN == CardDB.cardNameCN.亮石旋岩虫)
+                {
+                    if (cards.Count >= 3)
+                    {
+                        card.holdByRule = -2;
+                        card.holdReason = "不留亮石旋岩虫";
+                    }
+                }
             }
         }
 
-        public override int getComboPenality(CardDB.Card card, Minion target, Playfield p, Handmanager.Handcard nowHandcard)
+        public override int getComboPenality(CardDB.Card card, Minion target, Playfield p,
+            Handmanager.Handcard nowHandcard)
         {
             // 无法选中(值越大越不会打出)
             if (target != null && target.untouchable)
             {
                 return 100000;
             }
+
             // 初始惩罚值（负为优先打出该牌，正为低优先打出该牌）
             int pen = 0;
             //一费检查手牌有没有船载火炮、幸运币、海盗，此处为没有海盗，返回值1000不打出此combo。
@@ -393,7 +490,8 @@ namespace HREngine.Bots
                     {
                         foreach (Handmanager.Handcard hhc in p.owncards)
                         {
-                            if (hhc.card.nameCN == CardDB.cardNameCN.幸运币 || hhc.getManaCost(p) == 1 && hhc.card.race != CardDB.Race.PIRATE && hhc.card.type == CardDB.cardtype.MOB)
+                            if (hhc.card.nameCN == CardDB.cardNameCN.幸运币 || hhc.getManaCost(p) == 1 &&
+                                hhc.card.race != CardDB.Race.PIRATE && hhc.card.type == CardDB.cardtype.MOB)
                             {
                                 return 1000;
                             }
@@ -401,6 +499,7 @@ namespace HREngine.Bots
                     }
                 }
             }
+
             //如果是海盗并且随从有船载火炮 增加基础推荐出牌。
             if (card.race == CardDB.Race.PIRATE)
             {
@@ -413,7 +512,7 @@ namespace HREngine.Bots
                 }
             }
 
-            int 一费有用随从 = 0;//1费随从手牌数量           
+            int 一费有用随从 = 0; //1费随从手牌数量           
             foreach (Handmanager.Handcard hc in p.owncards)
             {
                 if (hc.card.nameCN == CardDB.cardNameCN.宝藏经销商
@@ -424,7 +523,17 @@ namespace HREngine.Bots
                     一费有用随从++;
             }
 
-            int 暗影法术牌 = 0;//暗影法术牌手牌数量           
+            int 一费海盗 = 0; //1费随从手牌数量           
+            foreach (Handmanager.Handcard hc in p.owncards)
+            {
+                if (hc.card.nameCN == CardDB.cardNameCN.宝藏经销商
+                    || hc.card.nameCN == CardDB.cardNameCN.心灵按摩师
+                    || hc.card.nameCN == CardDB.cardNameCN.随船外科医师)
+                    一费海盗++;
+            }
+
+
+            int 暗影法术牌 = 0; //暗影法术牌手牌数量           
             foreach (Handmanager.Handcard hc in p.owncards)
             {
                 if (hc.card.nameCN == CardDB.cardNameCN.亡者复生
@@ -444,18 +553,25 @@ namespace HREngine.Bots
                 }
             }
 
-            bool 幸运币 = false;   // 是否有幸运币
+            bool 幸运币 = false; // 是否有幸运币
             bool 一费的狂暴邪翼蝠 = false; // 是否有1费的狂暴邪翼蝠
-            bool 随船外科医师 = false;   // 是否有随船外科医师
-            bool 宝藏经销商 = false;   // 是否有宝藏经销商
-            bool 心灵按摩师 = false;   // 是否有心灵按摩师
-            bool 海盗帕奇斯 = false;   // 是否有海盗帕奇斯
-            bool 空降歹徒 = false;   // 是否有空降歹徒
-            bool 纸艺天使 = false;   // 是否有纸艺天使
-            bool 狂暴邪翼蝠 = false;   // 是否有狂暴邪翼蝠
-            bool 暗影投弹手 = false;   // 是否有暗影投弹手
-            bool 虚触侍从 = false;   // 是否有虚触侍从
-            bool 亡者复生 = false;   // 是否有亡者复生  
+            bool 随船外科医师 = false; // 是否有随船外科医师
+            bool 宝藏经销商 = false; // 是否有宝藏经销商
+            bool 心灵按摩师 = false; // 是否有心灵按摩师
+            bool 海盗帕奇斯 = false; // 是否有海盗帕奇斯
+            bool 空降歹徒 = false; // 是否有空降歹徒
+            bool 纸艺天使 = false; // 是否有纸艺天使
+            bool 狂暴邪翼蝠 = false; // 是否有狂暴邪翼蝠
+            bool 暗影投弹手 = false; // 是否有暗影投弹手
+            bool 虚触侍从 = false; // 是否有虚触侍从
+            bool 亡者复生 = false; // 是否有亡者复生  
+            bool 赎罪教堂 = false; // 是否有赎罪教堂
+            bool 针灸 = false; // 是否有针灸
+            bool 口渴的流浪者 = false; // 是否有口渴的流浪者
+            bool 大于一费的口渴的流浪者 = false; // 是否有大于一费的口渴的流浪者
+            bool 黑暗主教本尼迪塔斯 = false; // 是否有黑暗主教本尼迪塔斯
+            bool 雷纳索尔王子 = false;
+            bool 灰烬元素 = false;
 
             // 遍历手牌
             foreach (Handmanager.Handcard hc in p.owncards)
@@ -517,9 +633,44 @@ namespace HREngine.Bots
                     虚触侍从 = true;
                 }
 
-                if (hc.card.nameCN == CardDB.cardNameCN.虚触侍从)
+                if (hc.card.nameCN == CardDB.cardNameCN.亡者复生)
                 {
                     亡者复生 = true;
+                }
+
+                if (hc.card.nameCN == CardDB.cardNameCN.赎罪教堂)
+                {
+                    赎罪教堂 = true;
+                }
+
+                if (hc.card.nameCN == CardDB.cardNameCN.针灸)
+                {
+                    针灸 = true;
+                }
+
+                if (hc.card.nameCN == CardDB.cardNameCN.黑暗主教本尼迪塔斯)
+                {
+                    黑暗主教本尼迪塔斯 = true;
+                }
+
+                if (hc.card.nameCN == CardDB.cardNameCN.口渴的流浪者)
+                {
+                    口渴的流浪者 = true;
+                }
+
+                if (hc.card.nameCN == CardDB.cardNameCN.口渴的流浪者 && hc.manacost >= 1)
+                {
+                    大于一费的口渴的流浪者 = true;
+                }
+
+                if (hc.card.nameCN == CardDB.cardNameCN.雷纳索尔王子)
+                {
+                    雷纳索尔王子 = true;
+                }
+
+                if (hc.card.nameCN == CardDB.cardNameCN.灰烬元素)
+                {
+                    灰烬元素 = true;
                 }
             }
 
@@ -544,17 +695,24 @@ namespace HREngine.Bots
             //此处为单卡描述
             switch (card.nameCN)
             {
+                case CardDB.cardNameCN.幸运币:
+                    break;
                 case CardDB.cardNameCN.亡者复生:
                     if (p.getCorpseCount() < 2) // 如果墓地里的尸体小于2 建议不出牌。 
                     {
                         pen += 500;
                     }
-                    if (p.owncards.Count < 2 && p.getCorpseCount() >= 1)   // 手牌数量太少了可以推荐出牌
+
+                    if (p.owncards.Count < 2 && p.getCorpseCount() >= 1) // 手牌数量太少了可以推荐出牌
                     {
                         pen -= 10;
                     }
+
                     break;
                 case CardDB.cardNameCN.暗影投弹手:
+                    break;
+                case CardDB.cardNameCN.宝藏经销商:
+                    pen -= 2;
                     break;
                 case CardDB.cardNameCN.心灵按摩师:
                     pen -= 2;
@@ -563,32 +721,65 @@ namespace HREngine.Bots
                     pen += 1;
                     break;
                 case CardDB.cardNameCN.精神灼烧:
-                    if (target != null && target.Hp <= 2 || !target.own)       //对方随从生命值小于 2
+                    if (target == null)
                     {
+                        break;
+                    }
+
+                    if (target.Hp > 2 || target.divineshild)
+                    {
+                        // 目标生命大于2, 场攻能解的话调整出牌顺序走不进这里，解不掉也没必要解了
+                        return 1000;
+                    }
+
+                    if (!target.own)
+                    {
+                        // 目标生命值小于等于2，并且非己方随从，惩罚减少20
                         pen -= 20;
                     }
+                    else
+                    {
+                        // 目标生命值小于等于2，并且己方随从
+                        if (p.enemyHero.immune) return 1000; //对面免疫时不打。
+
+                        if (p.anzEnemyTaunt == 0 && p.calTotalAngr() + p.calDirectDmg(p.mana, false) >=
+                            p.enemyHero.Hp + p.enemyHero.armor)
+                        {
+                            //斩杀
+                            return -20;
+                        }
+
+                        pen += 20;
+                        if (p.enemyHero.Hp + p.enemyHero.armor < 10)
+                        {
+                            pen -= 25;
+                        }
+                    }
+
                     break;
                 case CardDB.cardNameCN.随船外科医师:
                     foreach (Handmanager.Handcard hc in p.owncards)
                     {
-                        if (hc.card.race == CardDB.Race.PIRATE || hc.card.nameCN == CardDB.cardNameCN.错误产物 || hc.card.nameCN == CardDB.cardNameCN.口渴的流浪者 || hc.card.nameCN == CardDB.cardNameCN.虚触侍从)
+                        if (hc.card.race == CardDB.Race.PIRATE || hc.card.nameCN == CardDB.cardNameCN.错误产物 ||
+                            hc.card.nameCN == CardDB.cardNameCN.口渴的流浪者 || hc.card.nameCN == CardDB.cardNameCN.虚触侍从)
                         {
-
                             pen -= 35;
-
                         }
                     }
-                    pen -= 2;
+
+                    pen -= 3;
                     break;
                 case CardDB.cardNameCN.伴唱机:
                     if (p.mana < 4)
                     {
                         pen += 10;
                     }
+
                     if (p.anzOwnAuchenaiSoulpriest > 0 && p.mana > 4)
                     {
                         pen -= 20;
                     }
+
                     break;
                 case CardDB.cardNameCN.奇利亚斯豪华版3000型:
                     if (p.ownMinions.Count >= 3) pen -= 30;
@@ -620,19 +811,18 @@ namespace HREngine.Bots
                             pen -= 3;
                         }
                     }
+
                     break;
                 case CardDB.cardNameCN.心灵震爆:
-                    if (p.enemyHero.immune) return 1000;    //对面免疫时不打。
-                                                            //对面使用脱罪力证不打。(不成功)
-                                                            //如果对手没有嘲讽随从，然后计算你的总攻击力加上你可以对敌方英雄造成的伤害，看是否足够来击败对手的英雄。
-                    if (p.anzEnemyTaunt == 0 && p.calTotalAngr() + p.calDirectDmg(p.mana, false) >= p.enemyHero.Hp + p.enemyHero.armor)
+                    if (p.enemyHero.immune) return 1000; //对面免疫时不打。
+                    //对面使用脱罪力证不打。(不成功)
+                    //如果对手没有嘲讽随从，然后计算你的总攻击力加上你可以对敌方英雄造成的伤害，看是否足够来击败对手的英雄。
+                    if (p.anzEnemyTaunt == 0 && p.calTotalAngr() + p.calDirectDmg(p.mana, false) >=
+                        p.enemyHero.Hp + p.enemyHero.armor)
                     {
                         return -20;
                     }
-                    if (p.owncards.FindAll(x => x.card.nameCN == CardDB.cardNameCN.心灵震爆).Count >= 3 && p.anzEnemyTaunt == 0 && p.calTotalAngr() + p.calDirectDmg(p.mana, false) >= p.enemyHero.Hp + p.enemyHero.armor)
-                    {
-                        return -20;
-                    }
+
                     if (p.ownWeapon.Durability == 0) //首先检查己方武器的耐久度是否为0
                     {
                         if (p.enemySecretCount == 0) //进一步检查对手是否没有奥秘
@@ -640,16 +830,19 @@ namespace HREngine.Bots
                             {
                                 if (hc.card.nameCN == CardDB.cardNameCN.暮光欺诈者) return 0;
                             }
+
                         pen += 50;
-                        if (p.ownAbilityReady) return 200;//少生孩子多射箭
+                        if (p.ownAbilityReady) return 200; //少生孩子多射箭
                         // 手里有别牌就藏着
                         foreach (Handmanager.Handcard hc in p.owncards)
                         {
-                            if (hc.getManaCost(p) <= nowHandcard.getManaCost(p) && hc.card.nameCN != CardDB.cardNameCN.心灵震爆) return 200;
+                            if (hc.getManaCost(p) <= nowHandcard.getManaCost(p) &&
+                                hc.card.nameCN != CardDB.cardNameCN.心灵震爆) return 200;
                         }
                     }
                     else
                         pen += 10;
+
                     break;
                 case CardDB.cardNameCN.迪菲亚麻风侏儒:
                     if (暗影法术牌 <= 0) pen += 20;
@@ -662,6 +855,7 @@ namespace HREngine.Bots
                     {
                         ownAtk += item.Angr;
                     }
+
                     foreach (var item in p.enemyMinions)
                     {
                         enemyAtk += item.Angr;
@@ -682,31 +876,56 @@ namespace HREngine.Bots
                     {
                         pen += 10;
                     }
+
                     break;
                 case CardDB.cardNameCN.空降歹徒:
-                    foreach (Handmanager.Handcard hc in p.owncards)
-                    {
-                        if ((hc.card.race == CardDB.Race.PIRATE || pirateCards.Contains(card)) && hc.card.nameCN != CardDB.cardNameCN.空降歹徒)
-                        {
-                            return 1000; // 如果手牌中有其他海盗，禁止使用空降歹徒
-                        }
-                    }
-                    pen += bonus_mine * 4; // 增加惩罚值，避免在不合适时机打出
+                    pen += 5;
                     break;
                 case CardDB.cardNameCN.赎罪教堂:
-                    if (p.ownMinions.Select(temp => temp.handcard.card.type != CardDB.cardtype.LOCATION).ToList().Count > 0 &&
-                        p.mana >= 3 && p.owncards.Count <= 3)
+                    if (p.ownMinions.Select(temp => temp.handcard.card.type != CardDB.cardtype.LOCATION).ToList()
+                            .Count > 0 &&
+                        p.ownMaxMana >= 3 && p.owncards.Count <= 3)
                     {
                         pen -= 100;
                     }
+
+                    pen -= 30;
                     break;
             }
 
-            if (Hrtprozis.Instance.gTurn == 2
-                 && 幸运币
-                 && 宝藏经销商
-                 && 心灵按摩师
-                 && !随船外科医师)
+            if (雷纳索尔王子
+                && 灰烬元素)
+            {
+                switch (card.nameCN)
+                {
+                    case CardDB.cardNameCN.雷纳索尔王子:
+                        pen += 20;
+                        break;
+                    case CardDB.cardNameCN.灰烬元素:
+                        pen -= 5;
+                        break;
+                }
+            }
+
+            if (p.ownMinions.Count >= 1
+                && 赎罪教堂
+                && (灰烬元素 || 雷纳索尔王子)
+               )
+            {
+                switch (card.nameCN)
+                {
+                    case CardDB.cardNameCN.赎罪教堂:
+                        pen -= 20;
+                        break;
+                }
+            }
+
+
+            if (p.ownMaxMana == 1
+                && 幸运币
+                && 宝藏经销商
+                && 心灵按摩师
+                && !随船外科医师)
             {
                 switch (card.nameCN)
                 {
@@ -719,7 +938,28 @@ namespace HREngine.Bots
                 }
             }
 
-            if (Hrtprozis.Instance.gTurn == 2
+            if (p.ownMaxMana == 1
+                && 暗影投弹手
+                && 狂暴邪翼蝠
+                && 心灵按摩师
+                && 随船外科医师)
+            {
+                switch (card.nameCN)
+                {
+                    case CardDB.cardNameCN.随船外科医师:
+                        pen -= 200;
+                        break;
+                    case CardDB.cardNameCN.心灵按摩师:
+                        pen -= 200;
+                        break;
+                    case CardDB.cardNameCN.幸运币:
+                        pen -= 40;
+                        break;
+                }
+            }
+
+
+            if (p.ownMaxMana == 1
                 && 幸运币
                 && 宝藏经销商
                 && 暗影投弹手
@@ -738,12 +978,12 @@ namespace HREngine.Bots
                 }
             }
 
-            if (Hrtprozis.Instance.gTurn == 1
-                 && 宝藏经销商
-                 && (暗影投弹手 || 虚触侍从)
-                 && !心灵按摩师
-                 && !海盗帕奇斯
-                 && !随船外科医师)
+            if (p.ownMaxMana == 1
+                && 宝藏经销商
+                && (暗影投弹手 || 虚触侍从)
+                && !心灵按摩师
+                && !海盗帕奇斯
+                && !随船外科医师)
             {
                 switch (card.nameCN)
                 {
@@ -753,7 +993,7 @@ namespace HREngine.Bots
                 }
             }
 
-            if (Hrtprozis.Instance.gTurn == 2
+            if (p.ownMaxMana == 1
                 && 幸运币
                 && 一费有用随从 == 0
                 && 海盗帕奇斯
@@ -771,23 +1011,23 @@ namespace HREngine.Bots
                 }
             }
 
-            if (Hrtprozis.Instance.gTurn == 2
-                 && 幸运币
-                 && 一费有用随从 >= 2)
+            if (p.ownMaxMana == 1
+                && 幸运币
+                && 一费有用随从 >= 2)
             {
                 switch (card.nameCN)
                 {
                     case CardDB.cardNameCN.幸运币:
-                        pen -= 5;
+                        pen -= 50;
                         break;
                 }
             }
 
-            if (Hrtprozis.Instance.gTurn == 2
+            if (p.ownMaxMana == 1
                 && 幸运币
                 && 一费有用随从 == 1
                 && 一费的狂暴邪翼蝠
-                 )
+               )
             {
                 switch (card.nameCN)
                 {
@@ -797,7 +1037,7 @@ namespace HREngine.Bots
                 }
             }
 
-            if (Hrtprozis.Instance.gTurn == 2
+            if (p.ownMaxMana == 1
                 && 幸运币
                 && 一费有用随从 == 0
                 && p.enemyHero.Hp <= (p.enemyHero.maxHp - 3)
@@ -810,6 +1050,54 @@ namespace HREngine.Bots
                         break;
                 }
             }
+
+            if (p.ownMaxMana == 2
+                && 幸运币
+                && 一费有用随从 <= 1
+                && 赎罪教堂
+                && p.ownMinions.Count >= 1)
+            {
+                switch (card.nameCN)
+                {
+                    case CardDB.cardNameCN.赎罪教堂:
+                        pen -= 50;
+                        break;
+                }
+            }
+
+            if (p.ownMaxMana == 2
+                && !幸运币
+                && !口渴的流浪者
+                && !狂暴邪翼蝠
+                && 一费有用随从 <= 1
+                && 宝藏经销商
+                && 针灸
+                && 纸艺天使)
+            {
+                switch (card.nameCN)
+                {
+                    case CardDB.cardNameCN.纸艺天使:
+                        pen -= 10;
+                        break;
+                }
+            } //2费没硬币没口渴的流浪者没狂暴邪翼蝠，1费随从只有宝藏经销商和针灸和纸艺天使，提高纸艺天使优先
+
+            if (p.ownMaxMana == 5 //最大水晶==5
+                && p.owncards.Count == 2 //手牌数量
+                && p.enemyMinions.Count == 0 //敌方随从数量
+                && !幸运币
+                && 大于一费的口渴的流浪者
+                && 黑暗主教本尼迪塔斯)
+            {
+                switch (card.nameCN)
+                {
+                    case CardDB.cardNameCN.黑暗主教本尼迪塔斯:
+                        pen -= 150;
+                        break;
+                }
+            }
+            //Hrtprozis.Instance.gTurn == 2
+
 
             return pen;
         }
@@ -863,8 +1151,12 @@ namespace HREngine.Bots
                         retval -= i * 10;
                         continue;
 
-                    case actionEnum.trade:
-                        retval -= 20; // 交换行动减分
+                    case actionEnum.useTitanAbility: //泰坦
+                        retval += 20;
+                        continue;
+
+                    case actionEnum.forge: //锻造
+                        retval += 25;
                         continue;
 
                     // 英雄或随从攻击
@@ -874,18 +1166,29 @@ namespace HREngine.Bots
                         {
                             attacted = true; // 如果攻击了英雄，标记为已攻击
                         }
+
                         if (a.actionType == actionEnum.attackWithMinion)
                         {
                             int atk = a.own.Angr > 0 ? a.own.Angr + p.anzOldWoman : a.own.Angr;
                             retval += atk * 10;
                         }
+
                         continue;
 
                     // 使用英雄技能
                     case actionEnum.useHeroPower:
                         useAb = true; // 使用了英雄技能
-                        break;
+                        if (p.ownHeroName == HeroEnum.deathknight && p.ownMinions.Count == 7) //DK
+                        {
+                            retval -= 10000;
+                        }
 
+                        if (p.ownHeroName == HeroEnum.shaman && p.ownMinions.Count == 7) //萨满
+                        {
+                            retval -= 10000;
+                        }
+
+                        continue;
 
                     //在这里加出牌顺序
                     case actionEnum.playcard:
@@ -896,13 +1199,26 @@ namespace HREngine.Bots
                             case CardDB.cardNameCN.幸运币:
                                 retval -= i * 10;
                                 break;
+                            case CardDB.cardNameCN.随船外科医师:
+                                retval -= i * 9;
+                                break;
+                            case CardDB.cardNameCN.宝藏经销商:
+                                retval -= i * 8;
+                                break;
+                            case CardDB.cardNameCN.心灵按摩师:
+                                retval -= i * 5;
+                                break;
                             case CardDB.cardNameCN.暮光欺诈者:
+                                retval += i * 15;
+                                break;
+                            case CardDB.cardNameCN.空降歹徒:
                                 retval += i * 15;
                                 break;
                             case CardDB.cardNameCN.赎罪教堂:
                                 retval -= (i * 11 + 5);
                                 break;
                         }
+
                         break;
 
                     default:
@@ -939,7 +1255,8 @@ namespace HREngine.Bots
             }
 
             // 针对术士职业的特殊防“亵渎”
-            if (retval > 50 && p.enemyHeroStartClass == TAG_CLASS.WARLOCK && p.enemyMinions.Count == 0 && p.ownMinions.Count > 2)
+            if (retval > 50 && p.enemyHeroStartClass == TAG_CLASS.WARLOCK && p.enemyMinions.Count == 0 &&
+                p.ownMinions.Count > 2)
             {
                 bool found = false;
 
@@ -955,6 +1272,7 @@ namespace HREngine.Bots
                             found = true;
                         }
                     }
+
                     if (!found)
                     {
                         if (i == 1) retval += 10;
@@ -1019,14 +1337,14 @@ namespace HREngine.Bots
                 case CardDB.cardNameCN.黏土巢母:
                 case CardDB.cardNameCN.骸骨巨龙:
                     return 10;
-
             }
+
             if (card.race == CardDB.Race.DRAGON)
             {
                 return 3;
             }
-            return 0;
 
+            return 0;
         }
 
         /// <summary>
@@ -1046,14 +1364,18 @@ namespace HREngine.Bots
                     break;
                 }
             }
-            if (m.destroyOnEnemyTurnEnd || m.destroyOnEnemyTurnStart || m.destroyOnOwnTurnEnd || m.destroyOnOwnTurnStart) dieNextTurn = true;
+
+            if (m.destroyOnEnemyTurnEnd || m.destroyOnEnemyTurnStart || m.destroyOnOwnTurnEnd ||
+                m.destroyOnOwnTurnStart) dieNextTurn = true;
             if (dieNextTurn)
             {
                 return -1;
             }
+
             if (m.Hp <= 0) return 0;
             int retval = 0;
-            if (m.Angr > 0 || m.taunt || m.handcard.card.race == CardDB.Race.TOTEM || p.enemyHeroStartClass == TAG_CLASS.PALADIN || p.enemyHeroStartClass == TAG_CLASS.PRIEST)
+            if (m.Angr > 0 || m.taunt || m.handcard.card.race == CardDB.Race.TOTEM ||
+                p.enemyHeroStartClass == TAG_CLASS.PALADIN || p.enemyHeroStartClass == TAG_CLASS.PRIEST)
                 retval += m.Hp * 4;
             retval += m.spellpower * 2;
             retval += m.Hp * m.Angr / 2;
@@ -1063,6 +1385,7 @@ namespace HREngine.Bots
                 if (m.Angr > 5) retval += 10;
                 if (m.windfury) retval += m.Angr * 2;
             }
+
             if (m.silenced) return retval;
 
             if (m.taunt) retval += 2;
@@ -1078,9 +1401,9 @@ namespace HREngine.Bots
             {
                 retval += 8;
             }
+
             if (m.lifesteal) retval += m.Angr * bonus_enemy * 4;
 
-            int bonus = 4;
             switch (m.handcard.card.nameCN)
             {
                 case CardDB.cardNameCN.巫师学徒:
@@ -1126,6 +1449,8 @@ namespace HREngine.Bots
                 case CardDB.cardNameCN.纸艺天使:
                 case CardDB.cardNameCN.纳亚克海克森:
                 case CardDB.cardNameCN.粗暴的猢狲:
+                case CardDB.cardNameCN.伊谢尔风歌:
+                case CardDB.cardNameCN.饱胀水蛭:
                     retval += 150;
                     break;
 
@@ -1162,6 +1487,7 @@ namespace HREngine.Bots
                     retval += 15;
                     break;
             }
+
             return retval;
         }
 
@@ -1182,11 +1508,14 @@ namespace HREngine.Bots
                     break;
                 }
             }
-            if (m.destroyOnEnemyTurnEnd || m.destroyOnEnemyTurnStart || m.destroyOnOwnTurnEnd || m.destroyOnOwnTurnStart) dieNextTurn = true;
+
+            if (m.destroyOnEnemyTurnEnd || m.destroyOnEnemyTurnStart || m.destroyOnOwnTurnEnd ||
+                m.destroyOnOwnTurnStart) dieNextTurn = true;
             if (dieNextTurn)
             {
                 return -1;
             }
+
             if (m.Hp <= 0) return 0;
             int retval = 5;
             if (m.Hp <= 0) return 0;
@@ -1207,7 +1536,6 @@ namespace HREngine.Bots
             // 圣盾嘲讽
             if (m.divineshild && m.taunt) retval += 4;
 
-            int bonus = 4;
             switch (m.handcard.card.nameCN)
             {
                 case CardDB.cardNameCN.虚触侍从:
@@ -1220,6 +1548,7 @@ namespace HREngine.Bots
                     retval += 1 * bonus_mine;
                     break;
             }
+
             return retval;
         }
 
@@ -1260,16 +1589,19 @@ namespace HREngine.Bots
             // 快死了
             else if (p.ownHero.Hp + p.ownHero.armor - offset_mine > 0)
             {
-                retval -= 4 * (hpboarder + 1 - p.ownHero.Hp - p.ownHero.armor + offset_mine) * (hpboarder + 1 - p.ownHero.Hp - p.ownHero.armor + offset_mine);
+                retval -= 4 * (hpboarder + 1 - p.ownHero.Hp - p.ownHero.armor + offset_mine) *
+                          (hpboarder + 1 - p.ownHero.Hp - p.ownHero.armor + offset_mine);
             }
             else
             {
                 retval -= 3 * (hpboarder + 1) * (hpboarder + 1) + 100;
             }
+
             if (p.ownHero.Hp + p.ownHero.armor - offset_mine < 6 && p.ownHero.Hp + p.ownHero.armor - offset_mine > 0)
             {
                 retval -= 80 / (p.ownHero.Hp + p.ownHero.armor - offset_mine);
             }
+
             // 对手血线安全
             if (p.enemyHero.Hp + p.enemyHero.armor + offset_enemy >= aggroboarder)
             {
@@ -1280,16 +1612,20 @@ namespace HREngine.Bots
             {
                 retval += 4 * (aggroboarder + 1 - p.enemyHero.Hp - p.enemyHero.armor - offset_enemy);
             }
+
             // 场攻+直伤大于对方生命，预计完成斩杀
-            if (p.anzEnemyTaunt == 0 && p.calTotalAngr() + p.calDirectDmg(p.mana, false) >= p.enemyHero.Hp + p.enemyHero.armor)
+            if (p.anzEnemyTaunt == 0 &&
+                p.calTotalAngr() + p.calDirectDmg(p.mana, false) >= p.enemyHero.Hp + p.enemyHero.armor)
             {
                 retval += 2000;
             }
+
             // 下回合斩杀本回合打脸
             if (p.calDirectDmg(p.ownMaxMana + 1, false, true) >= p.enemyHero.Hp + p.enemyHero.armor)
             {
                 retval += 100;
             }
+
             return retval;
         }
 
@@ -1313,6 +1649,7 @@ namespace HREngine.Bots
                     sii.canBe_explosive = false;
                 }
             }
+
             return pen;
         }
     }

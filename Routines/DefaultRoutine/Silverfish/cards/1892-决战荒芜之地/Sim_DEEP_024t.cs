@@ -21,5 +21,14 @@ namespace HREngine.Bots
             }
         }
 
-    }
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]
+			{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), // 条件1：有可用目标时必须选择
+				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 条件2：目标必须是敌方角色
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_OR_ENEMY_HERO) // 条件3：目标类型限制（随从或敌方英雄）
+			};
+		}
+	}
 }

@@ -5,8 +5,8 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_REV_290 : SimTemplate //* 赎罪教堂 Cathedral of Atonement
-                                    //使一个随从获得+2/+1。抽一张牌。
-                                    //Give a minion +2/+1 and draw a card.
+    //使一个随从获得+2/+1。抽一张牌。
+    //Give a minion +2/+1 and draw a card.
     {
         public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
@@ -15,13 +15,12 @@ namespace HREngine.Bots
             {
                 // 为目标随从增加2点攻击力和1点生命值
                 p.minionGetBuffed(target, 2, 1);
+                // 抽一张牌
+                p.drawACard(CardDB.cardIDEnum.None, triggerMinion.own);
             }
-
-            // 抽一张牌
-            p.drawACard(CardDB.cardIDEnum.None, triggerMinion.own);
         }
 
-        public override PlayReq[] GetPlayReqs()
+        public override PlayReq[] GetUseAbilityReqs()
         {
             return new PlayReq[]
             {

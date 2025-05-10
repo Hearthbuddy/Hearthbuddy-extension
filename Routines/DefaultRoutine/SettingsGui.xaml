@@ -72,7 +72,7 @@ AI值相关说明和卡组代码请滑动到下面的文本框中查看。&#13;&
                     <TextBox Name="deckCode" TextWrapping="Wrap" Width="500"  Grid.Row="1" Grid.Column="0"  Margin="3,5,3,1" Height="Auto" Text="
 参考卡组代码：&#xA;&#xA;
 【标准】元素萨：&#xA;AAECAejwBATm5AXAjwa9vgat4QYN46AElrcF3/4FsI0Gio8Gvo8Gw48G7JUG054GzKIGpsAGqM4G7eYGAAA=&#xA;&#xA;
-【狂野】快攻暗牧：&#xA;AAEBAa0GApG8Arv3Aw6hBJEP6bADurYD184Do/cDrfcDjYEE3aQFxKgG/KgG17oG1cEG3PMGAAA=&#xA;&#xA;
+【狂野】快攻暗牧：&#xA;AAEBAZLeBQKRvAK79wMOoQSRD+mwA7q2A6P3A633A4aDBd2kBcacBsSoBvyoBte6BtXBBtzzBgAA&#xA;&#xA;
 【标准】元素法：&#xA;AAECAcz6AwT9ngS9vgaY4QbC6gYNsf4F3/4F1JUG8ZsGmJ0Gsp4G054GwZ8GzKIGqM4G7eYGmeoG3+oGAAA=&#xA;&#xA;
 【狂野】剑鱼贼：&#xA;AAEBAaIHApG8AsekBg6MAvsP6bADqssD890DiskEmtsE16MF07IFv/cF1p4G/KUG/KgGyfQGAAED87MGx6QG9rMGx6QG6N4Gx6QGAAA=&#xA;&#xA;
 【狂野】锁喉剑鱼贼：&#xA;AAEBAaIHApG8AsekBg77D+XRAr+uA+mwA6rLA470A4rJBJrbBNejBb/3BdaeBvylBvyoBsn0BgABA/OzBsekBvazBsekBujeBsekBgAA&#xA;&#xA;
