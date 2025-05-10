@@ -9,7 +9,16 @@ namespace HREngine.Bots
 
         public string TestFilePath { get; set; }
 
-        public string CardDbPath { get; set; }
+        public string CardDbPath
+        {
+            set
+            {
+                if (!string.IsNullOrEmpty(MainPath))
+                {
+                    Settings.Instance.path = Path.Combine(MainPath, value); // 用于CardDB类构造，读取CardDefs.xml
+                }
+            }
+        }
 
         //根据卡组选择合适的策略
         public Behavior Bot { get; set; }
@@ -35,8 +44,6 @@ namespace HREngine.Bots
             }
 
             using (File.Create(logFile)) ;
-
-            Settings.Instance.path = Path.Combine(MainPath, CardDbPath); // 用于CardDB类构造，读取CardDefs.xml
 
             InitSetting();
 
