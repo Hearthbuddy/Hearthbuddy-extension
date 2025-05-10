@@ -1163,7 +1163,7 @@ namespace HREngine.Bots
             public List<Minion> getTargetsForLocation(Playfield p, bool isLethalCheck, bool own)
             {
                 List<Minion> retval = new List<Minion>();
-                if (this.sim_card.GetPlayReqs().Length == 0) { retval.Add(null); return retval; }
+                if (this.sim_card.GetUseAbilityReqs().Length == 0) { retval.Add(null); return retval; }
 
                 List<Minion> targets = new List<Minion>();
                 bool targetAll = false;
@@ -1308,6 +1308,13 @@ namespace HREngine.Bots
                 {
                     retval.Add(null);
                 }
+
+                //移除地标、未发射星舰
+                retval.RemoveAll(minion => minion != null &&
+                                           minion.handcard != null &&
+                                           minion.handcard.card != null &&
+                                           (minion.handcard.card.type == CardDB.cardtype.LOCATION ||
+                                            (minion.handcard.card.StarShip && !minion.isStarShipLaunched)));
 
                 return retval;
             }
