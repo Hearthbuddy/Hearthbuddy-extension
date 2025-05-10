@@ -183,7 +183,7 @@ namespace HREngine.Bots
                         str.Append(" 目标 " + (this.target != null && this.target.handcard != null ? this.target.handcard.card.nameCN.ToString() : "无"));
                         break;
                     case actionEnum.forge:
-                        str.Append("使用随从 " + this.own.info() + " 锻造");
+                        str.Append("使用随从 " + (this.card != null && this.card.card != null ? this.card.card.chnInfo() : "无") + " 锻造");
                         break;
                     case actionEnum.launchStarShip:
                         str.Append("发射星舰 " + this.own.info());
@@ -292,7 +292,7 @@ namespace HREngine.Bots
                     str.Append(" 目标 " + (this.target != null && this.target.handcard != null ? this.target.handcard.card.nameCN.ToString() : "无"));
                     break;
                 case actionEnum.forge:
-                    str.Append("使用随从 " + this.own.info() + " 锻造");
+                    str.Append("使用随从 " + (this.card != null && this.card.card != null ? this.card.card.chnInfo() : "无") + " 锻造");
                     break;
                 case actionEnum.launchStarShip:
                     str.Append("发射星舰 " + this.own.info());
@@ -407,7 +407,7 @@ namespace HREngine.Bots
                     break;
 
                 case actionEnum.forge:
-                    retval.Append("使用随从 " + this.own.info() + " 锻造");
+                    retval.Append("使用随从 " + (this.card != null && this.card.card != null ? this.card.card.chnInfo() : "无") + " 锻造");
                     break;
                 
                 case actionEnum.launchStarShip:
