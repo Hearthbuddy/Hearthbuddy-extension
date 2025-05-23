@@ -518,7 +518,6 @@ namespace HREngine.Bots
                 if (hc.card.nameCN == CardDB.cardNameCN.宝藏经销商
                     || hc.card.nameCN == CardDB.cardNameCN.心灵按摩师
                     || hc.card.nameCN == CardDB.cardNameCN.暗影投弹手
-                    || hc.card.nameCN == CardDB.cardNameCN.虚触侍从
                     || hc.card.nameCN == CardDB.cardNameCN.随船外科医师)
                     一费有用随从++;
             }
@@ -978,12 +977,7 @@ namespace HREngine.Bots
                 }
             }
 
-            if (p.ownMaxMana == 1
-                && 宝藏经销商
-                && (暗影投弹手 || 虚触侍从)
-                && !心灵按摩师
-                && !海盗帕奇斯
-                && !随船外科医师)
+            if ((p.ownMaxMana == 1 && 宝藏经销商 && 暗影投弹手 && !心灵按摩师 && !海盗帕奇斯 && !随船外科医师) || (p.ownMaxMana == 2 && 虚触侍从))
             {
                 switch (card.nameCN)
                 {
