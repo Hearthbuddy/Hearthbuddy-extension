@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：10 生命值：10
+	//随从 术士 费用：0 攻击力：12 生命值：12
 	//Ashen Corruptor
 	//灰烬腐蚀者
 	//[x]After your hero takesdamage, rewind it andgive minions in the Tavern+2/+2 this turn.

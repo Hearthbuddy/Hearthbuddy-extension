@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：4 生命值：12
+	//随从 德鲁伊 费用：0 攻击力：4 生命值：16
 	//Dreaming Thornweaver
 	//睡梦织棘者
 	//[x]<b>Avenge (4):</b> Your <b>Blood Gems</b>give an extra +2 Healththis game. <i>(Swaps toAttack next turn!)</i>@[x]<b>Avenge (4):</b> Your <b>Blood Gems</b>give an extra +2 Attackthis game. <i>(Swaps toHealth next turn!)</i>

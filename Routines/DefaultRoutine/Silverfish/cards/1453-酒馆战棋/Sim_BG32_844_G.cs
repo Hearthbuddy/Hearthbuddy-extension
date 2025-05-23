@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：14 生命值：10
+	//随从 法师 费用：0 攻击力：16 生命值：10
 	//Lokholar, Frostforger
 	//铸霜者洛克霍拉
 	//At the end of your turn, give your other minions +{0}/+{1} twice.

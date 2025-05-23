@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：3 生命值：4
+	//随从 牧师 费用：0 攻击力：5 生命值：5
 	//Starry-eyed Explorer
 	//星眸探险者
 	//[x]At the start of every twoturns, make an adjacentTier 2 minion Golden.<i>({0} |4(turn, turns) left!)</i>@[x]At the start of every twoturns, make an adjacentTier 2 minion Golden.<i>(Next turn!)</i>

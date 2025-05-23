@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：5 生命值：4
+	//随从 恶魔猎手 费用：0 攻击力：3 生命值：2
 	//Coilskar Sapper
 	//库斯卡工兵
 	//<b>Deathrattle:</b> Get 2 random <b>Spellcraft</b> spells.

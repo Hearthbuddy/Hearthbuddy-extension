@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：4 生命值：2
+	//随从 法师 费用：0 攻击力：3 生命值：1
 	//Glowing Cinder
 	//辐光余烬
 	//[x]<b>Deathrattle:</b> YourElementals that give statsgrant an extra +1 Attackthis game.

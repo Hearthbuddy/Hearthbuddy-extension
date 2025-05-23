@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：4 生命值：4
+	//随从 萨满祭司 费用：0 攻击力：8 生命值：6
 	//Gormling Gourmet
 	//戈姆蛴食客
 	//[x]<b>Taunt</b><b>Battlecry and Deathrattle:</b>__Get 2 Seafood Stews.

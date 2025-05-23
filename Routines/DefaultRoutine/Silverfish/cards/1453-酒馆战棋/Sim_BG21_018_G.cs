@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：6 生命值：12
+	//随从 牧师 费用：0 攻击力：4 生命值：10
 	//Defiant Shipwright
 	//挑衅的船工
 	//Whenever this gains Attack, gain +2 Health.

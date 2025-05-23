@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：2 生命值：7
+	//随从 战士 费用：0 攻击力：4 生命值：8
 	//Greenskeeper
 	//护植绿龙
 	//After this attacks, trigger your right-most <b>Battlecry</b>.
