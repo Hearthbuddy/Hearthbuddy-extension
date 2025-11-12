@@ -171598,6 +171598,14 @@ namespace HREngine.Bots
 			/// </summary>
 			PlayThisTurnEnchantment,
 			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>dummy ench</para>
+			/// <para>假人附加效果</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			假人附加效果,
+			/// <summary>
 			/// <para>法术 法师 费用：4</para>
 			/// <para>Tear Reality</para>
 			/// <para>撕裂现实</para>
@@ -224525,6 +224533,2302 @@ namespace HREngine.Bots
 			/// <para>从每个玩家的牌库中各召唤一个随从。重复，直到任意一方的随从数量达到上限。</para>
 			/// </summary>
 			战争前线_TID_949,
+			/// <summary>
+			/// <para>法术 法师 费用：2</para>
+			/// <para>Semi-Stable Portal</para>
+			/// <para>半稳定的传送门</para>
+			/// <para><b>Rewind</b>Add a random minionto your hand. It costs(3) less.</para>
+			/// <para><b>回溯</b>。随机将一张随从牌置入你的手牌。该牌的法力值消耗减少（3）点。</para>
+			/// </summary>
+			半稳定的传送门,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Keep Timeline</para>
+			/// <para>维持时间线</para>
+			/// <para>Do nothing.<i>This timeline isperfect as-is!</i></para>
+			/// <para>什么都不做。<i>这条时间线很完美！</i></para>
+			/// </summary>
+			维持时间线,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Rewind Timeline</para>
+			/// <para>回溯时间线</para>
+			/// <para><b>Rewind</b> the card's effect.</para>
+			/// <para><b>回溯</b>这张牌的效果。</para>
+			/// </summary>
+			回溯时间线,
+			/// <summary>
+			/// <para>法术 牧师 费用：3</para>
+			/// <para>Chrono Daggers</para>
+			/// <para>时空飞刃</para>
+			/// <para><b>Rewind</b>Throw 3 knives atrandom enemies that deal $2 damage each.</para>
+			/// <para><b>回溯</b>。随机向敌人射出3把飞刀，每把造成$2点伤害。</para>
+			/// </summary>
+			时空飞刃,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：3 生命值：5</para>
+			/// <para>Aeon Wizard</para>
+			/// <para>永世巫师</para>
+			/// <para>[x]<b>Rewind</b><b>Battlecry:</b> Get 2 randomspells from your class.</para>
+			/// <para><b>回溯</b>。<b>战吼：</b>随机获取2张你职业的法术牌。</para>
+			/// </summary>
+			永世巫师,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：2 生命值：2</para>
+			/// <para>Portal Vanguard</para>
+			/// <para>传送门卫士</para>
+			/// <para>[x]<b>Rewind</b><b>Battlecry:</b> Draw a randomminion. Give it +2/+2.</para>
+			/// <para><b>回溯</b>。<b>战吼：</b>随机抽一张随从牌，使其获得+2/+2。</para>
+			/// </summary>
+			传送门卫士,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Guarding Time</para>
+			/// <para>护卫时间</para>
+			/// <para>+2/+2.</para>
+			/// <para>+2/+2。</para>
+			/// </summary>
+			护卫时间,
+			/// <summary>
+			/// <para>随从 中立 费用：7 攻击力：7 生命值：7</para>
+			/// <para>Conflux Crasher</para>
+			/// <para>时光流汇扫荡者</para>
+			/// <para><b>Rewind</b><b>Battlecry:</b> Deal 7 damageto a random enemy.</para>
+			/// <para><b>回溯</b>。<b>战吼：</b>随机对一个敌人造成7点伤害。</para>
+			/// </summary>
+			时光流汇扫荡者,
+			/// <summary>
+			/// <para>随从 术士 费用：10 攻击力：10 生命值：10</para>
+			/// <para>Timethief Rafaam</para>
+			/// <para>时空大盗拉法姆</para>
+			/// <para>[x]<b>Fabled+</b>. Your deck size is 40,but has 10 Rafaams! <b>Battlecry:</b>If you played the rest, destroythe enemy hero.@ <i>({0} left!)</i>@ <i>(Ready!)</i></para>
+			/// <para><b>奇闻+</b>你的套牌容量为40，但其中有10张拉法姆！<b>战吼：</b>如果你使用过其余拉法姆，消灭敌方英雄。@<i>（还剩{0}个！）</i>@<i>（已经就绪！）</i></para>
+			/// </summary>
+			时空大盗拉法姆,
+			/// <summary>
+			/// <para>随从 术士 费用：1 攻击力：1 生命值：1</para>
+			/// <para>Tiny Rafaam</para>
+			/// <para>小小拉法姆</para>
+			/// <para>[x]<b>Deathrattle:</b> Draw a Rafaam.</para>
+			/// <para><b>亡语：</b>抽一张拉法姆。</para>
+			/// </summary>
+			小小拉法姆,
+			/// <summary>
+			/// <para>随从 术士 费用：2 攻击力：2 生命值：2</para>
+			/// <para>Green Rafaam</para>
+			/// <para>绿色拉法姆</para>
+			/// <para><b>Battlecry:</b> Give Rafaamsin your hand +2/+2.</para>
+			/// <para><b>战吼：</b>使你手牌中的拉法姆获得+2/+2。</para>
+			/// </summary>
+			绿色拉法姆,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>SUPREME GREENOLOGY!</para>
+			/// <para>最最伟大的绿色学！</para>
+			/// <para>+2/+2.</para>
+			/// <para>+2/+2。</para>
+			/// </summary>
+			最最伟大的绿色学,
+			/// <summary>
+			/// <para>随从 术士 费用：4 攻击力：4 生命值：4</para>
+			/// <para>Explorer Rafaam</para>
+			/// <para>探险者拉法姆</para>
+			/// <para><b>Battlecry:</b> <b>Discover</b> a Rafaam from your deck.</para>
+			/// <para><b>战吼：</b>从你的牌库中<b>发现</b>一张拉法姆。</para>
+			/// </summary>
+			探险者拉法姆,
+			/// <summary>
+			/// <para>随从 术士 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Warchief Rafaam</para>
+			/// <para>大酋长拉法姆</para>
+			/// <para>[x]<b>Battlecry:</b> Gain 5 Armor.If you control anotherRafaam, gain 5 more.</para>
+			/// <para><b>战吼：</b>获得5点护甲值。如果你控制着其他拉法姆，再获得5点。</para>
+			/// </summary>
+			大酋长拉法姆,
+			/// <summary>
+			/// <para>随从 术士 费用：7 攻击力：7 生命值：7</para>
+			/// <para>Mindflayer R'faam</para>
+			/// <para>夺心者拉法姆</para>
+			/// <para>[x]<b>Taunt</b><b>Battlecry:</b> If you're holdinganother Rafaam, summona copy of this.</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>如果你的手牌中有其他拉法姆，召唤一个本随从的复制。</para>
+			/// </summary>
+			夺心者拉法姆,
+			/// <summary>
+			/// <para>随从 术士 费用：6 攻击力：6 生命值：6</para>
+			/// <para>Calamitous Rafaam</para>
+			/// <para>灾异拉法姆</para>
+			/// <para><b>Battlecry:</b> Deal 6 damage to all minions that aren't Rafaam.</para>
+			/// <para><b>战吼：</b>对所有非拉法姆随从造成6点伤害。</para>
+			/// </summary>
+			灾异拉法姆,
+			/// <summary>
+			/// <para>随从 术士 费用：8 攻击力：8 生命值：8</para>
+			/// <para>Giant Rafaam</para>
+			/// <para>巨人拉法姆</para>
+			/// <para>[x]<b>Rush</b>. Costs (1) lessfor each Rafaam you'veplayed this game.</para>
+			/// <para><b>突袭</b>。在本局对战中，你每使用过一张拉法姆，本牌的法力值消耗便减少（1）点。</para>
+			/// </summary>
+			巨人拉法姆,
+			/// <summary>
+			/// <para>随从 术士 费用：3 攻击力：3 生命值：3</para>
+			/// <para>Murloc Rafaam</para>
+			/// <para>鱼人拉法姆</para>
+			/// <para><b>Battlecry:</b> The next Rafaam you play costs (3) less.</para>
+			/// <para><b>战吼：</b>你的下一张拉法姆的法力值消耗减少（3）点。</para>
+			/// </summary>
+			鱼人拉法姆,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>MRGLEERM MRGLOSLGY!!</para>
+			/// <para>姆啦啦姆鱼人学！！</para>
+			/// <para>Your next Rafaam costs (3) less.</para>
+			/// <para>你的下一张拉法姆牌的法力值消耗减少（3）点。</para>
+			/// </summary>
+			姆啦啦姆鱼人学,
+			/// <summary>
+			/// <para>随从 术士 费用：9 攻击力：9 生命值：9</para>
+			/// <para>Archmage Rafaam</para>
+			/// <para>大法师拉法姆</para>
+			/// <para><b>Battlecry:</b> Transform all minions that aren't Rafaam into 1/1 Sheep.</para>
+			/// <para><b>战吼：</b>将所有非拉法姆随从变形成为1/1的绵羊。</para>
+			/// </summary>
+			大法师拉法姆,
+			/// <summary>
+			/// <para>随从 术士 费用：1 攻击力：1 生命值：1</para>
+			/// <para>Baaaafam</para>
+			/// <para>拉法姆绵羊</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			拉法姆绵羊,
+			/// <summary>
+			/// <para>法术 法师 费用：1</para>
+			/// <para>Mirror Dimension</para>
+			/// <para>镜像维度</para>
+			/// <para>Summon a 0/4 minion with <b>Taunt</b>. If you are holding a Dragon, summon another.</para>
+			/// <para>召唤一个0/4并具有<b>嘲讽</b>的随从。如果你的手牌中有龙牌，再召唤一个。</para>
+			/// </summary>
+			镜像维度,
+			/// <summary>
+			/// <para>随从 法师 费用：1 攻击力：0 生命值：4</para>
+			/// <para>Mirrored Mage</para>
+			/// <para>镜像法师</para>
+			/// <para><b>Taunt</b></para>
+			/// <para><b>嘲讽</b></para>
+			/// </summary>
+			镜像法师,
+			/// <summary>
+			/// <para>随从 术士 费用：3 攻击力：3 生命值：3</para>
+			/// <para>Bygone Doomspeaker</para>
+			/// <para>过去的末日宣言者</para>
+			/// <para>[x]<b>Rewind</b><b>Battlecry:</b> Both players_discard a random card.</para>
+			/// <para><b>回溯</b>。<b>战吼：</b>双方玩家各随机弃一张牌。</para>
+			/// </summary>
+			过去的末日宣言者,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：8 攻击力：6 生命值：6</para>
+			/// <para>Gelbin of Tomorrow</para>
+			/// <para>明日巨匠格尔宾</para>
+			/// <para>[x]<b>Fabled</b><b>Battlecry:</b> Put one of eachAura from your deck intothe battlefield.</para>
+			/// <para><b>奇闻</b><b>战吼：</b>将每种不同的光环从你的牌库中置入战场。</para>
+			/// </summary>
+			明日巨匠格尔宾,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：4</para>
+			/// <para>Gnomish Aura</para>
+			/// <para>侏儒光环</para>
+			/// <para>[x]<b>Tradeable</b>At the end of your turn,restore #4 Health to all yourcharacters. Lasts @ turns.</para>
+			/// <para><b>可交易</b>在你的回合结束时，为你的所有角色恢复#4点生命值。持续@回合。</para>
+			/// </summary>
+			侏儒光环,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：5</para>
+			/// <para>Mekkatorque's Aura</para>
+			/// <para>梅卡托克的光环</para>
+			/// <para>[x]<b>Tradeable</b>. At the endof your turn, give a randomfriendly minion +4/+4 and<b>Divine Shield</b>. Lasts @ turns.</para>
+			/// <para><b>可交易</b>在你的回合结束时，随机使一个友方随从获得+4/+4和<b>圣盾</b>。持续@回合。</para>
+			/// </summary>
+			梅卡托克的光环,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>For Gnomeregan!</para>
+			/// <para>为了诺莫瑞根！</para>
+			/// <para>+4/+4.</para>
+			/// <para>+4/+4。</para>
+			/// </summary>
+			为了诺莫瑞根,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：4 攻击力：2 生命值：6</para>
+			/// <para>Farseer Wo</para>
+			/// <para>先知者沃</para>
+			/// <para>[x]<b>Elusive</b>After you cast a spell,<b>Discover</b> a Nature spellfrom the past.</para>
+			/// <para><b>扰魔</b>。在你施放一个法术后，<b>发现</b>一张来自过去的自然法术牌。</para>
+			/// </summary>
+			先知者沃_TIME_013,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：6</para>
+			/// <para>Instant Multiverse</para>
+			/// <para>瞬时多重宇宙</para>
+			/// <para><b>Rewind</b>Summon 12 Mana worth of random minions.<b>Overload:</b> (3)</para>
+			/// <para><b>回溯</b>。随机召唤消耗总计12点法力值的随从。<b>过载：</b>（3）</para>
+			/// </summary>
+			瞬时多重宇宙,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：2 攻击力：2 生命值：1</para>
+			/// <para>Hardlight Protector</para>
+			/// <para>强光护卫</para>
+			/// <para>[x]<b>Divine Shield</b><b>Battlecry:</b> Restore #3 Healthto your hero and give them<b>Divine Shield</b>.</para>
+			/// <para><b>圣盾</b>。<b>战吼：</b>为你的英雄恢复#3点生命值并使其获得<b>圣盾</b>。</para>
+			/// </summary>
+			强光护卫,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：3</para>
+			/// <para>Neon Innovation</para>
+			/// <para>耀眼创意</para>
+			/// <para><b>Discover</b> a Paladin Mech from the past. Give it +5/+5.</para>
+			/// <para><b>发现</b>一张来自过去的圣骑士机械牌。使其获得+5/+5。</para>
+			/// </summary>
+			耀眼创意,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Neon Sign</para>
+			/// <para>耀眼标识</para>
+			/// <para>+5/+5.</para>
+			/// <para>+5/+5。</para>
+			/// </summary>
+			耀眼标识,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：4 攻击力：2 生命值：1</para>
+			/// <para>Tankgineer</para>
+			/// <para>坦克机械师</para>
+			/// <para>[x]<b>Divine Shield</b><b>Deathrattle:</b> Summon a 7/7Tank with <b>Divine Shield</b>.</para>
+			/// <para><b>圣盾</b>。<b>亡语：</b>召唤一辆7/7并具有<b>圣盾</b>的坦克。</para>
+			/// </summary>
+			坦克机械师,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：3</para>
+			/// <para>Mend the Timeline</para>
+			/// <para>修补时间线</para>
+			/// <para><b>Rewind</b>Get 2 random Holy spells. Restore Health to your hero equal to their Costs.</para>
+			/// <para><b>回溯</b>。随机获取2张神圣法术牌，为你的英雄恢复等同于其法力值消耗的生命值。</para>
+			/// </summary>
+			修补时间线,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：4 攻击力：3 生命值：3</para>
+			/// <para>Manifested Timeways</para>
+			/// <para>时间流具象</para>
+			/// <para><b>Battlecry:</b> If you controlan Aura, deal 3 damageto all enemies.</para>
+			/// <para><b>战吼：</b>如果你控制着光环，对所有敌人造成3点伤害。</para>
+			/// </summary>
+			时间流具象,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：2 攻击力：12 生命值：12</para>
+			/// <para>Broxigar</para>
+			/// <para>布洛克斯加</para>
+			/// <para>[x]<b>Fabled, Charge</b><b>Start of Game:</b> Disappear.Kill all 4 Demons from Argusto reappear in hand.</para>
+			/// <para><b>奇闻冲锋。</b><b>对战开始时：</b>消失。消灭全部4个来自阿古斯的恶魔以重新出现在手牌中。</para>
+			/// </summary>
+			布洛克斯加_TIME_020,
+			/// <summary>
+			/// <para>武器 恶魔猎手 费用：3 攻击力：3 耐久度：0</para>
+			/// <para>Axe of Cenarius</para>
+			/// <para>塞纳留斯之斧</para>
+			/// <para>[x]<b>Lifesteal</b>After your hero attacksand kills a minion, drawa Portal to Argus.</para>
+			/// <para><b>吸血</b>。在你的英雄攻击并消灭一个随从后，抽一张阿古斯传送门。</para>
+			/// </summary>
+			塞纳留斯之斧,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：0</para>
+			/// <para>First Portal to Argus</para>
+			/// <para>第一道阿古斯传送门</para>
+			/// <para>[x]Summon a 1/1 Demon foryour opponent. When it dies,draw a card and shuffle thenext Portal into your deck.</para>
+			/// <para>为你的对手召唤一个1/1的恶魔。当它死亡时，抽一张牌，并将下一道传送门洗入你的牌库。</para>
+			/// </summary>
+			第一道阿古斯传送门,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：1 攻击力：1 生命值：1</para>
+			/// <para>Fleeing Ur'zul</para>
+			/// <para>奔逃的乌祖尔</para>
+			/// <para>[x]<b>Deathrattle:</b> Your opponentdraws a card. Shuffle theSecond Portal to Argusinto their deck.</para>
+			/// <para><b>亡语：</b>你的对手抽一张牌，将第二道阿古斯传送门洗入其牌库。</para>
+			/// </summary>
+			奔逃的乌祖尔,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：0</para>
+			/// <para>Second Portal to Argus</para>
+			/// <para>第二道阿古斯传送门</para>
+			/// <para>[x]Summon a 2/1 Demon foryour opponent. When it dies,draw a card and shuffle thenext Portal into your deck.</para>
+			/// <para>为你的对手召唤一个2/1的恶魔。当它死亡时，抽一张牌，并将下一道传送门洗入你的牌库。</para>
+			/// </summary>
+			第二道阿古斯传送门,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：2 攻击力：2 生命值：1</para>
+			/// <para>Fleeing Incubus</para>
+			/// <para>奔逃的夜魔</para>
+			/// <para>[x]<b>Deathrattle:</b> Your opponentdraws a card. Shuffle theThird Portal to Argusinto their deck.</para>
+			/// <para><b>亡语：</b>你的对手抽一张牌，将第三道阿古斯传送门洗入其牌库。</para>
+			/// </summary>
+			奔逃的夜魔,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：0</para>
+			/// <para>Third Portal to Argus</para>
+			/// <para>第三道阿古斯传送门</para>
+			/// <para>[x]Summon a 3/1 Demon foryour opponent. When it dies,draw a card and shuffle thenext Portal into your deck.</para>
+			/// <para>为你的对手召唤一个3/1的恶魔。当它死亡时，抽一张牌，并将下一道传送门洗入你的牌库。</para>
+			/// </summary>
+			第三道阿古斯传送门,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：3 攻击力：3 生命值：1</para>
+			/// <para>Fleeing Wrathguard</para>
+			/// <para>奔逃的愤怒卫士</para>
+			/// <para>[x]<b>Deathrattle:</b> Your opponentdraws a card. Shuffle theFinal Portal to Argusinto their deck.</para>
+			/// <para><b>亡语：</b>你的对手抽一张牌，将最后一道阿古斯传送门洗入其牌库。</para>
+			/// </summary>
+			奔逃的愤怒卫士,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：0</para>
+			/// <para>Final Portal to Argus</para>
+			/// <para>最后一道阿古斯传送门</para>
+			/// <para>Summon a 4/1Demon for your opponent. When it dies, Broxigar reappears in your hand.</para>
+			/// <para>为你的对手召唤一个4/1的恶魔。当它死亡时，布洛克斯加会重新出现在你的手牌中。</para>
+			/// </summary>
+			最后一道阿古斯传送门,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：4 攻击力：4 生命值：1</para>
+			/// <para>Fleeing Terrorguard</para>
+			/// <para>奔逃的恐惧卫士</para>
+			/// <para><b>Deathrattle:</b> Broxigar reappears in your opponent's hand.</para>
+			/// <para><b>亡语：</b>布洛克斯加重新出现在你对手的手牌中。</para>
+			/// </summary>
+			奔逃的恐惧卫士,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：5 攻击力：5 生命值：4</para>
+			/// <para>Doomsday Prepper</para>
+			/// <para>末日准备狂</para>
+			/// <para><b>Outcast:</b> Your hero is <b>Immune</b> until yournext turn.</para>
+			/// <para><b>流放：</b>直到你的下个回合，你的英雄<b>免疫</b>。</para>
+			/// </summary>
+			末日准备狂,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：8 攻击力：7 生命值：9</para>
+			/// <para>Perennial Serpent</para>
+			/// <para>累世巨蛇</para>
+			/// <para>[x]<b>Rush</b>Costs (4) less if a minionis <b>Dormant</b>.</para>
+			/// <para><b>突袭</b>。如果有<b>休眠</b>的随从，本牌的法力值消耗减少（4）点。</para>
+			/// </summary>
+			累世巨蛇,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：3</para>
+			/// <para>Contingency</para>
+			/// <para>后备预案</para>
+			/// <para>Draw the bottom two cards from your deck.</para>
+			/// <para>抽取你牌库底的两张牌。</para>
+			/// </summary>
+			后备预案,
+			/// <summary>
+			/// <para>随从 中立 费用：9 攻击力：8 生命值：8</para>
+			/// <para>Murozond, Unbounded</para>
+			/// <para>无限巨龙姆诺兹多</para>
+			/// <para><b>Battlecry:</b> At the start of your next turn, set this minion's Attack to INFINITY!</para>
+			/// <para><b>战吼：</b>在你的下个回合开始时，将本随从的攻击力变为无穷大！</para>
+			/// </summary>
+			无限巨龙姆诺兹多,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>INFINITE POWER!</para>
+			/// <para>永恒无穷</para>
+			/// <para>Attack set to INFINITY!</para>
+			/// <para>攻击力变为无穷大！</para>
+			/// </summary>
+			永恒无穷,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Murozond, End of Time</para>
+			/// <para>时光之末姆诺兹多</para>
+			/// <para>At the start of your next turn, set Murozond's Attack to INFINITY!</para>
+			/// <para>在你的下个回合开始时，将姆诺兹多的攻击力变为无穷大！</para>
+			/// </summary>
+			时光之末姆诺兹多,
+			/// <summary>
+			/// <para>随从 术士 费用：2 攻击力：4 生命值：4</para>
+			/// <para>Twilight Timehopper</para>
+			/// <para>暮光时空跃迁者</para>
+			/// <para>[x]<b>Battlecry:</b> Shuffle 2Shreds of Time into yourdeck. When drawn, deal 3damage to your hero.</para>
+			/// <para><b>战吼：</b>将2张时空撕裂洗入你的牌库。抽到时空撕裂时会对你的英雄造成3点伤害。</para>
+			/// </summary>
+			暮光时空跃迁者,
+			/// <summary>
+			/// <para>法术 术士 费用：0</para>
+			/// <para>Shred of Time</para>
+			/// <para>时空撕裂</para>
+			/// <para><b>Casts When Drawn</b>Deal $3 damage toyour hero.</para>
+			/// <para><b>抽到时施放</b>对你的英雄造成$3点伤害。</para>
+			/// </summary>
+			时空撕裂,
+			/// <summary>
+			/// <para>法术 术士 费用：1</para>
+			/// <para>Entropic Continuity</para>
+			/// <para>续连熵能</para>
+			/// <para>[x]Give your minions +1/+1.Shuffle 2 Shreds of Timeinto your deck.</para>
+			/// <para>使你的随从获得+1/+1。将2张时空撕裂洗入你的牌库。</para>
+			/// </summary>
+			续连熵能,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Ruptured Reality</para>
+			/// <para>碎裂现实</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			碎裂现实,
+			/// <summary>
+			/// <para>法术 术士 费用：2</para>
+			/// <para>Tachyon Barrage</para>
+			/// <para>超光子弹幕</para>
+			/// <para>Deal $6 damage split among all enemies. Shuffle 2 Shreds of Time into your deck.</para>
+			/// <para>造成$6点伤害，随机分配到所有敌人身上。将2张时空撕裂洗入你的牌库。</para>
+			/// </summary>
+			超光子弹幕,
+			/// <summary>
+			/// <para>随从 术士 费用：4 攻击力：4 生命值：4</para>
+			/// <para>Fatebreaker</para>
+			/// <para>破命之龙</para>
+			/// <para>[x]<b>Lifesteal</b><b>Battlecry:</b> Cast a Shredof Time from your deckto gain +3/+3.</para>
+			/// <para><b>吸血</b>。<b>战吼：</b>从你的牌库中施放一张时空撕裂以获得+3/+3。</para>
+			/// </summary>
+			破命之龙,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>Fate Broken</para>
+			/// <para>破碎命运</para>
+			/// <para>+3/+3.</para>
+			/// <para>+3/+3。</para>
+			/// </summary>
+			破碎命运,
+			/// <summary>
+			/// <para>随从 术士 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Ruinous Velocidrake</para>
+			/// <para>灾毁迅疾幼龙</para>
+			/// <para>[x]<b>Rush</b><b>Battlecry:</b> Cast a Shred_of Time from your deck to___summon a copy of this.</para>
+			/// <para><b>突袭</b>。<b>战吼：</b>从你的牌库中施放一张时空撕裂以召唤一个本随从的复制。</para>
+			/// </summary>
+			灾毁迅疾幼龙,
+			/// <summary>
+			/// <para>法术 术士 费用：5</para>
+			/// <para>Divergence</para>
+			/// <para>裂解术</para>
+			/// <para>Split a randomminion in your hand into two halves.</para>
+			/// <para>随机将你手牌中的一张随从牌拆成两半。</para>
+			/// </summary>
+			裂解术,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>Divergent</para>
+			/// <para>分裂</para>
+			/// <para>Cost split in half.</para>
+			/// <para>法力值消耗变为一半。</para>
+			/// </summary>
+			分裂_TIME_030e1,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>Diverged</para>
+			/// <para>裂分</para>
+			/// <para>Attack and Health split in half.</para>
+			/// <para>攻击力和生命值变为一半。</para>
+			/// </summary>
+			裂分,
+			/// <summary>
+			/// <para>法术 术士 费用：4</para>
+			/// <para>RAFAAM LADDER!!</para>
+			/// <para>拉法姆人梯</para>
+			/// <para>Draw 3 cards of different Costs.</para>
+			/// <para>抽三张法力值消耗不同的牌。</para>
+			/// </summary>
+			拉法姆人梯,
+			/// <summary>
+			/// <para>随从 术士 费用：6 攻击力：6 生命值：7</para>
+			/// <para>Chronogor</para>
+			/// <para>克洛诺戈尔</para>
+			/// <para>[x]<b>Battlecry:</b> You draw your2 highest Cost cards.Your opponent draws your2 lowest Cost cards.</para>
+			/// <para><b>战吼：</b>你抽取你法力值消耗最高的两张牌，你的对手抽取你法力值消耗最低的两张牌。</para>
+			/// </summary>
+			克洛诺戈尔,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：6 攻击力：3 生命值：5</para>
+			/// <para>Druid of Regrowth</para>
+			/// <para>再生德鲁伊</para>
+			/// <para><b>Rewind</b><b>Battlecry:</b> Cast 2 random Nature spells.</para>
+			/// <para><b>回溯</b>。<b>战吼：</b>随机施放2个自然法术。</para>
+			/// </summary>
+			再生德鲁伊,
+			/// <summary>
+			/// <para>随从 战士 费用：4 攻击力：3 生命值：3</para>
+			/// <para>Stadium Announcer</para>
+			/// <para>现场播报员</para>
+			/// <para>[x]<b>Rewind</b><b>Battlecry:</b> Both playersequip a random weapon.Give yours +1/+1.</para>
+			/// <para><b>回溯</b>。<b>战吼：</b>双方玩家各随机装备一把武器，使你的武器获得+1/+1。</para>
+			/// </summary>
+			现场播报员,
+			/// <summary>
+			/// <para>附魔 战士 费用：0</para>
+			/// <para>Upper Hand</para>
+			/// <para>优势压制</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			优势压制_TIME_034e,
+			/// <summary>
+			/// <para>随从 中立 费用：6 攻击力：6 生命值：6</para>
+			/// <para>Time Machine</para>
+			/// <para>时间机器</para>
+			/// <para><b>Taunt</b><b>Deathrattle:</b> Get a random <b>Rewind</b> card.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>随机获取一张<b>回溯</b>牌。</para>
+			/// </summary>
+			时间机器,
+			/// <summary>
+			/// <para>随从 牧师 费用：3 攻击力：2 生命值：4</para>
+			/// <para>Royal Informant</para>
+			/// <para>王室线人</para>
+			/// <para>[x]<b>Battlecry:</b> Look at the right-most card in your opponent'shand. Either get a copy of it orincrease its Cost by (2).</para>
+			/// <para><b>战吼：</b>检视你对手最右边的手牌。获取该牌的一张复制，或者使其法力值消耗增加（2）点。</para>
+			/// </summary>
+			王室线人,
+			/// <summary>
+			/// <para>附魔 牧师 费用：0</para>
+			/// <para>Threat Mitigation</para>
+			/// <para>威胁降低</para>
+			/// <para>Costs (2) more.</para>
+			/// <para>法力值消耗增加（2）点。</para>
+			/// </summary>
+			威胁降低,
+			/// <summary>
+			/// <para>法术 牧师 费用：0</para>
+			/// <para>Mitigate Threat</para>
+			/// <para>降低威胁</para>
+			/// <para>Increase the Costof your opponent'scard by (2).</para>
+			/// <para>使你的对手这张牌的法力值消耗增加（2）点。</para>
+			/// </summary>
+			降低威胁,
+			/// <summary>
+			/// <para>随从 潜行者 费用：3 攻击力：2 生命值：2</para>
+			/// <para>Disciple of the Dove</para>
+			/// <para>白鸽学徒</para>
+			/// <para><b>Battlecry:</b> Draw a minion. Give minions in your hand +2 Health.</para>
+			/// <para><b>战吼：</b>抽一张随从牌。使你手牌中的随从牌获得+2生命值。</para>
+			/// </summary>
+			白鸽学徒,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Dove's Blessing</para>
+			/// <para>白鸽的祝福</para>
+			/// <para>+2 Health.</para>
+			/// <para>+2生命值。</para>
+			/// </summary>
+			白鸽的祝福,
+			/// <summary>
+			/// <para>随从 中立 费用：8 攻击力：3 生命值：3</para>
+			/// <para>Mister Clocksworth</para>
+			/// <para>钟表先生克劳沃斯</para>
+			/// <para>[x]<b>Rewind</b>, <b>Rewind</b><b>Battlecry:</b> Summon 2 random<b>Legendary</b> minions.</para>
+			/// <para><b>回溯</b>，<b>回溯</b><b>战吼：</b>随机召唤2个<b>传说</b>随从。</para>
+			/// </summary>
+			钟表先生克劳沃斯,
+			/// <summary>
+			/// <para>随从 中立 费用：8 攻击力：3 生命值：3</para>
+			/// <para>Mister Clocksworth</para>
+			/// <para>钟表先生克劳沃斯</para>
+			/// <para>[x]<b>Rewind</b>, <b>Rewind</b><b>Battlecry:</b> Summon 2 random<b>Legendary</b> minions.</para>
+			/// <para><b>回溯</b>，<b>回溯</b><b>战吼：</b>随机召唤2个<b>传说</b>随从。</para>
+			/// </summary>
+			钟表先生克劳沃斯_TIME_038t1,
+			/// <summary>
+			/// <para>随从 中立 费用：8 攻击力：3 生命值：3</para>
+			/// <para>Mister Clocksworth</para>
+			/// <para>钟表先生克劳沃斯</para>
+			/// <para>[x]<b>Rewind</b><b>Battlecry:</b> Summon 2 random<b>Legendary</b> minions.</para>
+			/// <para><b>回溯</b><b>战吼：</b>随机召唤2个<b>传说</b>随从。</para>
+			/// </summary>
+			钟表先生克劳沃斯_TIME_038t2,
+			/// <summary>
+			/// <para>随从 中立 费用：8 攻击力：3 生命值：3</para>
+			/// <para>Mister Clocksworth</para>
+			/// <para>钟表先生克劳沃斯</para>
+			/// <para>[x]<b>Battlecry:</b> Summon 2 random<b>Legendary</b> minions.</para>
+			/// <para><b>战吼：</b>随机召唤2个<b>传说</b>随从。</para>
+			/// </summary>
+			钟表先生克劳沃斯_TIME_038t3,
+			/// <summary>
+			/// <para>法术 牧师 费用：1</para>
+			/// <para>Deja Vu</para>
+			/// <para>似曾相识</para>
+			/// <para><b>Discover</b> a copy of acard in your opponent's hand. It costs (1) less.</para>
+			/// <para><b>发现</b>一张你的对手手牌的复制，其法力值消耗减少（1）点。</para>
+			/// </summary>
+			似曾相识,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：6 生命值：3</para>
+			/// <para>Fading Memory</para>
+			/// <para>消散的回忆</para>
+			/// <para><b>Deathrattle:</b> Get arandom 5-Cost minion from the past.</para>
+			/// <para><b>亡语：</b>随机获取一张来自过去的法力值消耗为（5）的随从牌。</para>
+			/// </summary>
+			消散的回忆,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：4 生命值：4</para>
+			/// <para>Futuristic Forefather</para>
+			/// <para>未来主义先祖</para>
+			/// <para>[x]<b>Taunt</b>. <b>Battlecry:</b> Look at 3cards. Guess which one isin your opponent's handto gain +4 Health.</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>检视三张卡牌。猜中来自你对手手牌中的卡牌，则获得+4生命值。</para>
+			/// </summary>
+			未来主义先祖,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Infiltration</para>
+			/// <para>潜入未来</para>
+			/// <para>+4 Health.</para>
+			/// <para>+4生命值。</para>
+			/// </summary>
+			潜入未来,
+			/// <summary>
+			/// <para>随从 猎人 费用：4 攻击力：5 生命值：6</para>
+			/// <para>King Maluk</para>
+			/// <para>穆拉克</para>
+			/// <para><b>Battlecry:</b> Discardyour hand. Get anInfinite Banana.</para>
+			/// <para><b>战吼：</b>弃掉你的手牌。获取一张无穷香蕉。</para>
+			/// </summary>
+			穆拉克,
+			/// <summary>
+			/// <para>法术 猎人 费用：1</para>
+			/// <para>Infinite Banana</para>
+			/// <para>无穷香蕉</para>
+			/// <para>[x]Give a minion +1/+1.<i>(This stays in your hand.)</i></para>
+			/// <para>使一个随从获得+1/+1。<i>（本牌会保留在你手中。）</i></para>
+			/// </summary>
+			无穷香蕉,
+			/// <summary>
+			/// <para>附魔 猎人 费用：0</para>
+			/// <para>Infinite Banana</para>
+			/// <para>无穷香蕉</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			无穷香蕉_TIME_042te,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：6 攻击力：4 生命值：4</para>
+			/// <para>PMM Infinitizer</para>
+			/// <para>无穷永动机</para>
+			/// <para><b>Battlecry:</b> Set a friendly minion's Attack and Health to 8. It can't attack heroes this turn.</para>
+			/// <para><b>战吼：</b>将一个友方随从的攻击力和生命值变为8。该随从在本回合中无法攻击英雄。</para>
+			/// </summary>
+			无穷永动机,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Infinitized</para>
+			/// <para>无穷</para>
+			/// <para>Stats changed to 8/8.</para>
+			/// <para>属性值变成8/8。</para>
+			/// </summary>
+			无穷,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Pacifitized</para>
+			/// <para>不动</para>
+			/// <para>Can't attack heroes this turn.</para>
+			/// <para>在本回合中无法攻击英雄。</para>
+			/// </summary>
+			不动,
+			/// <summary>
+			/// <para>地标 圣骑士 费用：2</para>
+			/// <para>Past Gnomeregan</para>
+			/// <para>过去的诺莫瑞根</para>
+			/// <para>[x]Give a minion +2/+1.<i>Advance to the present!</i></para>
+			/// <para>使一个随从获得+2/+1。<i>推进到现在！</i></para>
+			/// </summary>
+			过去的诺莫瑞根,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Gnomish Strength</para>
+			/// <para>侏儒之力</para>
+			/// <para>+2/+1.</para>
+			/// <para>+2/+1。</para>
+			/// </summary>
+			侏儒之力,
+			/// <summary>
+			/// <para>地标 圣骑士 费用：2</para>
+			/// <para>Present Gnomeregan</para>
+			/// <para>现在的诺莫瑞根</para>
+			/// <para>[x]Give a minion +2/+1and "<b>Deathrattle:</b> Deal 2damage to the enemy hero."<i>Advance to the future!</i></para>
+			/// <para>使一个随从获得+2/+1和“<b>亡语：</b>对敌方英雄造成2点伤害。”<i>推进到未来！</i></para>
+			/// </summary>
+			现在的诺莫瑞根,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Leper Strength</para>
+			/// <para>麻风之力</para>
+			/// <para><b>Deathrattle:</b> Deal 2 damage to the enemy hero.</para>
+			/// <para><b>亡语：</b>对敌方英雄造成2点伤害。</para>
+			/// </summary>
+			麻风之力,
+			/// <summary>
+			/// <para>地标 圣骑士 费用：2</para>
+			/// <para>Future Gnomeregan</para>
+			/// <para>未来的诺莫瑞根</para>
+			/// <para>[x]Give a minion+2/+1, <b>Divine_Shield</b>,and "<b>Deathrattle:</b> Deal 2damage to the enemy hero."</para>
+			/// <para>使一个随从获得+2/+1，<b>圣盾</b>和“<b>亡语：</b>对敌方英雄造成2点伤害。”</para>
+			/// </summary>
+			未来的诺莫瑞根,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：1 生命值：4</para>
+			/// <para>Whelp of the Infinite</para>
+			/// <para>永恒雏龙</para>
+			/// <para><b>Poisonous</b><b>Reborn</b></para>
+			/// <para><b>剧毒</b>。<b>复生</b></para>
+			/// </summary>
+			永恒雏龙,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：3 生命值：12</para>
+			/// <para>Cyborg Patriarch</para>
+			/// <para>赛博格族长</para>
+			/// <para><b>Dormant</b> for 3 turns.<b>Taunt</b></para>
+			/// <para><b>休眠</b>3回合。<b>嘲讽</b></para>
+			/// </summary>
+			赛博格族长,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Prime Ape</para>
+			/// <para>擎天金刚</para>
+			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
+			/// <para><b>休眠</b>。@回合后唤醒。</para>
+			/// </summary>
+			擎天金刚,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：5 生命值：3</para>
+			/// <para>Devious Coyote</para>
+			/// <para>狡诈的郊狼</para>
+			/// <para>[x]<b>Stealth</b>. Costs (1) less foreach time the enemy herotook damage this turn.</para>
+			/// <para><b>潜行</b>。在本回合中，敌方英雄每受到一次伤害，本牌的法力值消耗便减少（1）点。</para>
+			/// </summary>
+			狡诈的郊狼,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：5 生命值：1</para>
+			/// <para>Clockwork Rager</para>
+			/// <para>钟表发条暴怒者</para>
+			/// <para>[x]<b>Battlecry:</b> Gain +1 Healthfor each turn you've takenthis game.@ <i>(@ |4(turn, turns))</i></para>
+			/// <para><b>战吼：</b>在本局对战中，你每进行过一个回合，便获得+1生命值。@<i>（已进行过@个回合）</i></para>
+			/// </summary>
+			钟表发条暴怒者,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Clockwork Rage</para>
+			/// <para>发条暴怒</para>
+			/// <para>Increased Health.</para>
+			/// <para>生命值提高。</para>
+			/// </summary>
+			发条暴怒,
+			/// <summary>
+			/// <para>随从 中立 费用：2 攻击力：1 生命值：1</para>
+			/// <para>Dangerous Variant</para>
+			/// <para>危险的异变体</para>
+			/// <para>At the start of your turn, transform into a random 5-Cost minion.</para>
+			/// <para>在你的回合开始时，随机变形成为一个法力值消耗为（5）的随从。</para>
+			/// </summary>
+			危险的异变体,
+			/// <summary>
+			/// <para>随从 中立 费用：6 攻击力：4 生命值：9</para>
+			/// <para>Sentient Hourglass</para>
+			/// <para>灵知沙漏</para>
+			/// <para>[x]<b>Rush</b>After this minion survivesdamage, swap its stats.</para>
+			/// <para><b>突袭</b>。在本随从受到伤害并存活下来后，其攻击力和生命值互换。</para>
+			/// </summary>
+			灵知沙漏,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Sand Flow</para>
+			/// <para>沙漏转流</para>
+			/// <para>Attack and Health swapped.</para>
+			/// <para>攻击力和生命值互换。</para>
+			/// </summary>
+			沙漏转流,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：3 生命值：5</para>
+			/// <para>Soldier of the Infinite</para>
+			/// <para>永恒龙士兵</para>
+			/// <para><b>Rush</b><b>Battlecry:</b> Double this minion's Attack.</para>
+			/// <para><b>突袭</b>。<b>战吼：</b>本随从的攻击力翻倍。</para>
+			/// </summary>
+			永恒龙士兵,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Infinite Scales</para>
+			/// <para>永恒之鳞</para>
+			/// <para>Doubled Attack.</para>
+			/// <para>攻击力翻倍。</para>
+			/// </summary>
+			永恒之鳞,
+			/// <summary>
+			/// <para>随从 中立 费用：8 攻击力：4 生命值：12</para>
+			/// <para>Amber Warden</para>
+			/// <para>琥珀守卫</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Summon arandom minion fromthe past.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>随机召唤一个来自过去的随从。</para>
+			/// </summary>
+			琥珀守卫,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：7 生命值：2</para>
+			/// <para>Sandmaw</para>
+			/// <para>流沙巨口</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			流沙巨口,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：3 生命值：4</para>
+			/// <para>Time Skipper</para>
+			/// <para>时空艇长</para>
+			/// <para>At the end of each player's turn, give them a Coin.</para>
+			/// <para>在每个玩家的回合结束时，使其获得一张幸运币。</para>
+			/// </summary>
+			时空艇长,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Skipping Time</para>
+			/// <para>穿越时间</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			穿越时间,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：4 生命值：5</para>
+			/// <para>Unknown Voyager</para>
+			/// <para>未知旅客</para>
+			/// <para>After this survives damage, transform into a random 7-Cost minion.</para>
+			/// <para>在本随从受到伤害并存活下来后，随机变形成为一个法力值消耗为（7）的随从。</para>
+			/// </summary>
+			未知旅客,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：4 生命值：1</para>
+			/// <para>Whelp of the Bronze</para>
+			/// <para>青铜雏龙</para>
+			/// <para><b>Lifesteal</b><b>Divine Shield</b></para>
+			/// <para><b>吸血</b>。<b>圣盾</b></para>
+			/// </summary>
+			青铜雏龙,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：4 生命值：5</para>
+			/// <para>Wizened Truthseeker</para>
+			/// <para>年迈的真理追寻者</para>
+			/// <para><b>Battlecry:</b> Set the Cost of every card in both player's hands back to their original Costs.</para>
+			/// <para><b>战吼：</b>将双方玩家手牌中每张牌的法力值消耗变回原消耗。</para>
+			/// </summary>
+			年迈的真理追寻者,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>True Wisdom</para>
+			/// <para>真正的智慧</para>
+			/// <para>Cost changed.</para>
+			/// <para>法力值消耗已变更。</para>
+			/// </summary>
+			真正的智慧,
+			/// <summary>
+			/// <para>随从 中立 费用：1 攻击力：1 生命值：1</para>
+			/// <para>Paltry Flutterwing</para>
+			/// <para>渺小的振翅蝶</para>
+			/// <para>[x]<b>Deathrattle:</b> Summon arandom 2-Cost minion thatis <b>Dormant</b> for 2 turns.</para>
+			/// <para><b>亡语：</b>随机召唤一个法力值消耗为（2）并<b>休眠</b>2回合的随从。</para>
+			/// </summary>
+			渺小的振翅蝶,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Consequences</para>
+			/// <para>振翅的后果</para>
+			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
+			/// <para><b>休眠</b>。@回合后唤醒。</para>
+			/// </summary>
+			振翅的后果,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：2 生命值：1</para>
+			/// <para>Living Paradox</para>
+			/// <para>悖论活体</para>
+			/// <para><b>Elusive</b><b>Battlecry:</b> Summon two2/1 Living Paradoxes with <b>Elusive</b>.</para>
+			/// <para><b>扰魔</b>。<b>战吼：</b>召唤两个2/1并具有<b>扰魔</b>的悖论活体。</para>
+			/// </summary>
+			悖论活体,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：4 生命值：9</para>
+			/// <para>Quantum Destabilizer</para>
+			/// <para>量子反稳定机</para>
+			/// <para>This minion takes double damage from all sources.</para>
+			/// <para>本随从受到的所有伤害翻倍。</para>
+			/// </summary>
+			量子反稳定机,
+			/// <summary>
+			/// <para>随从 中立 费用：2 攻击力：3 生命值：2</para>
+			/// <para>Timeless Causality</para>
+			/// <para>越时因果</para>
+			/// <para><b>Battlecry:</b> Reverse the order of your deck.</para>
+			/// <para><b>战吼：</b>倒转你的牌库排序。</para>
+			/// </summary>
+			越时因果,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：3 生命值：6</para>
+			/// <para>Chronicle Keeper</para>
+			/// <para>史书守护者</para>
+			/// <para><b>Battlecry:</b> If you're holding a Dragon, gain <b>Taunt</b> and <b>Divine Shield</b>.</para>
+			/// <para><b>战吼：</b>如果你的手牌中有龙牌，则获得<b>嘲讽</b>和<b>圣盾</b>。</para>
+			/// </summary>
+			史书守护者,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：8 生命值：8</para>
+			/// <para>Timelord Nozdormu</para>
+			/// <para>时光之主诺兹多姆</para>
+			/// <para>[x]<b>Dormant</b> for 5 turns.<b>Rush</b>. After you play a cardfrom the newest expansion,_awaken 1 turn sooner.</para>
+			/// <para><b>休眠</b>5回合。<b>突袭</b>。在你使用一张最新扩展包的牌后，提前1回合唤醒。</para>
+			/// </summary>
+			时光之主诺兹多姆,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Lord of Time</para>
+			/// <para>时光之王</para>
+			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
+			/// <para><b>休眠</b>。@回合后唤醒。</para>
+			/// </summary>
+			时光之王,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Nozdormu Play Enchant</para>
+			/// <para></para>
+			/// <para>After you play a card from the newest expansion, awaken 1 turn sooner.</para>
+			/// <para></para>
+			/// </summary>
+			_TIME_063e2,
+			/// <summary>
+			/// <para>随从 中立 费用：7 攻击力：4 生命值：8</para>
+			/// <para>Chrono-Lord Deios</para>
+			/// <para>时空领主戴欧斯</para>
+			/// <para>[x]Your <b>Battlecries</b>,<b>Deathrattles</b>, Hero Power,and end of turn effectstrigger twice.</para>
+			/// <para>你的<b>战吼</b>，<b>亡语</b>，英雄技能和回合结束效果会触发两次。</para>
+			/// </summary>
+			时空领主戴欧斯,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Deios' Influence</para>
+			/// <para>戴欧斯的影响</para>
+			/// <para>Your <b>Battlecries</b>, <b>Deathrattles</b>, Hero Power, and end of turn effects trigger twice.</para>
+			/// <para>你的<b>战吼</b>，<b>亡语</b>，英雄技能和回合结束效果会触发两次。</para>
+			/// </summary>
+			戴欧斯的影响,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：2 生命值：4</para>
+			/// <para>Hourglass Attendant</para>
+			/// <para>沙漏侍者</para>
+			/// <para>[x]<b>Divine Shield</b>At the end of your turn,give all minions in yourhand +1/+1.</para>
+			/// <para><b>圣盾</b>。在你的回合结束时，使你手牌中的所有随从牌获得+1/+1。</para>
+			/// </summary>
+			沙漏侍者,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Sandy Polish</para>
+			/// <para>时沙晶光</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			时沙晶光,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：4 生命值：3</para>
+			/// <para>Misplaced Pyromancer</para>
+			/// <para>穿越的炎术士</para>
+			/// <para>Whenever you <b>Shatter</b> a card, deal 2 damage toall enemy minions.</para>
+			/// <para>每当你<b>裂变</b>一张牌时，对所有敌方随从造成2点伤害。</para>
+			/// </summary>
+			穿越的炎术士,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：2 生命值：2</para>
+			/// <para>Circadiamancer</para>
+			/// <para>昼夜节律术师</para>
+			/// <para>[x]<b>Battlecry:</b> Add a random8-Cost minion to your hand.At the start of your turns,reduce its Cost by (1).</para>
+			/// <para><b>战吼：</b>随机将一张法力值消耗为（8）的随从牌置入你的手牌，在你的回合开始时，其法力值消耗减少（1）点。</para>
+			/// </summary>
+			昼夜节律术师,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Metaphysical</para>
+			/// <para>超然形上</para>
+			/// <para>Reduces Cost each turn.</para>
+			/// <para>法力值消耗每回合减少。</para>
+			/// </summary>
+			超然形上,
+			/// <summary>
+			/// <para>随从 中立 费用：6 攻击力：4 生命值：6</para>
+			/// <para>Chromie</para>
+			/// <para>克罗米</para>
+			/// <para><b>Deathrattle:</b> Draw another copy of cards you've played this game.@ <i>(@ |4(card,cards))</i></para>
+			/// <para><b>亡语：</b>抽取你在本局对战中使用过的每张牌的另一张复制。@<i>（抽@张牌）</i></para>
+			/// </summary>
+			克罗米_TIME_103,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>Play After Rewind</para>
+			/// <para>回溯之后</para>
+			/// <para>You can only play the left and right-most cards in your hand.</para>
+			/// <para>你只能使用最左边和最右边的手牌。</para>
+			/// </summary>
+			回溯之后,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：5 攻击力：3 生命值：2</para>
+			/// <para>Muradin, High King</para>
+			/// <para>高山之王穆拉丁</para>
+			/// <para>[x]<b>Fabled</b>, <b>Rush</b>. <b>Battlecry:</b>Bring the High King'sHammer to ME! <b>Deathrattle:</b>Add it to your hand.</para>
+			/// <para><b>奇闻</b><b>突袭</b>。<b>战吼：</b>为本随从装备高山之王的战锤！<b>亡语：</b>将战锤置入你的手牌。</para>
+			/// </summary>
+			高山之王穆拉丁,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Hammer of the High King</para>
+			/// <para>高山之王的战锤</para>
+			/// <para>Holding the High King's Hammer. <b>Deathrattle:</b> Add it to your hand.</para>
+			/// <para>持有高山之王的战锤。<b>亡语：</b>将战锤置入你的手牌。</para>
+			/// </summary>
+			高山之王的战锤,
+			/// <summary>
+			/// <para>武器 萨满祭司 费用：6 攻击力：3 耐久度：0</para>
+			/// <para>High King's Hammer</para>
+			/// <para>高山之王的战锤</para>
+			/// <para>[x]<b>Windfury</b><b>Deathrattle:</b> Shuffle thisinto your deck with +2_Attack permanently.</para>
+			/// <para><b>风怒</b>。<b>亡语：</b>将本武器洗入你的牌库并永久具有+2攻击力。</para>
+			/// </summary>
+			高山之王的战锤_TIME_209t,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：3</para>
+			/// <para>Avatar Form</para>
+			/// <para>天神下凡形态</para>
+			/// <para>[x]Give a friendly character+2 Attack and "After thisattacks, deal 2 damage toall enemies" this turn.</para>
+			/// <para>在本回合中，使一个友方角色获得+2攻击力和“在本角色攻击后，对所有敌人造成2点伤害”。</para>
+			/// </summary>
+			天神下凡形态,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Avatar Form</para>
+			/// <para>天神下凡形态</para>
+			/// <para>+2 Attack and After this attacks, deal 2 damage to all enemies this turn.</para>
+			/// <para>+2攻击力。在本角色攻击后，对所有敌人造成2点伤害</para>
+			/// </summary>
+			天神下凡形态_TIME_209t2e,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Lady Azshara</para>
+			/// <para>艾萨拉女士</para>
+			/// <para>[x]<b>Fabled</b>. <b>Choose One -</b>Empower Zin-Azshari; orThe Well of Eternity. <i>(The__other gets destroyed!)</i></para>
+			/// <para><b>奇闻</b><b>抉择：</b>强化辛艾萨莉；或者永恒之井。<i>（未选择的选项会被摧毁！）</i></para>
+			/// </summary>
+			艾萨拉女士,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：5</para>
+			/// <para>Empower Zin-Azshari</para>
+			/// <para>强化辛艾萨莉</para>
+			/// <para>[x]The minions summonedby Zin-Azshari will havedoubled stats. DestroyThe Well of Eternity.</para>
+			/// <para>辛艾萨莉召唤的随从会拥有翻倍属性值。摧毁永恒之井。</para>
+			/// </summary>
+			强化辛艾萨莉,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：5</para>
+			/// <para>Empower the Well</para>
+			/// <para>强化永恒之井</para>
+			/// <para>The spells created by The Well of Eternity will cast twice.Destroy Zin-Azshari.</para>
+			/// <para>永恒之井创建的法术会施放两次。摧毁辛艾萨莉。</para>
+			/// </summary>
+			强化永恒之井,
+			/// <summary>
+			/// <para>地标 德鲁伊 费用：4</para>
+			/// <para>The Well of Eternity</para>
+			/// <para>永恒之井</para>
+			/// <para>Fill your handwith random<b>Temporary</b> spells.</para>
+			/// <para>用随机的<b>临时</b>法术牌填满你的手牌。</para>
+			/// </summary>
+			永恒之井_TIME_211t1,
+			/// <summary>
+			/// <para>地标 德鲁伊 费用：4</para>
+			/// <para>The Well of Eternity</para>
+			/// <para>永恒之井</para>
+			/// <para>[x]Fill your handwith random <b>Temporary</b>spells. They cast twice.</para>
+			/// <para>用随机的<b>临时</b>法术牌填满你的手牌，这些牌会施放两次。</para>
+			/// </summary>
+			永恒之井_TIME_211t1t,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Eternalized</para>
+			/// <para>永恒</para>
+			/// <para>Casts twice.</para>
+			/// <para>施放两次。</para>
+			/// </summary>
+			永恒,
+			/// <summary>
+			/// <para>地标 德鲁伊 费用：4</para>
+			/// <para>Zin-Azshari</para>
+			/// <para>辛艾萨莉</para>
+			/// <para>Summon a copy of a friendly minion.</para>
+			/// <para>召唤一个友方随从的一个复制。</para>
+			/// </summary>
+			辛艾萨莉,
+			/// <summary>
+			/// <para>地标 德鲁伊 费用：4</para>
+			/// <para>Zin-Azshari</para>
+			/// <para>辛艾萨莉</para>
+			/// <para>Summon a copy of a friendly minion withits stats doubled.</para>
+			/// <para>召唤一个友方随从的一个具有翻倍属性值的复制。</para>
+			/// </summary>
+			辛艾萨莉_TIME_211t2t,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>The City's Strength</para>
+			/// <para>都城之力</para>
+			/// <para>Doubled stats.</para>
+			/// <para>属性值翻倍。</para>
+			/// </summary>
+			都城之力,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：1</para>
+			/// <para>Lightning Rod</para>
+			/// <para>引雷针</para>
+			/// <para>Deal $2 damage to a friendly minion to deal $4 damage to a random enemy minion.</para>
+			/// <para>对一个友方随从造成$2点伤害，以随机对一个敌方随从造成$4点伤害。</para>
+			/// </summary>
+			引雷针,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：2 攻击力：2 生命值：3</para>
+			/// <para>Primordial Overseer</para>
+			/// <para>始源监督者</para>
+			/// <para>[x]<b>Battlecry:</b> If you've cast aNature spell while holdingthis, gain +1/+1 anddraw a card.</para>
+			/// <para><b>战吼：</b>如果你在本牌在你手中时施放过自然法术，获得+1/+1并抽一张牌。</para>
+			/// </summary>
+			始源监督者,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：2 攻击力：1 生命值：4</para>
+			/// <para>Flux Revenant</para>
+			/// <para>时流亡魂</para>
+			/// <para>[x]<b>Taunt</b>Whenever you would damagethis with a Nature spell, itgains +2/+1 instead.</para>
+			/// <para><b>嘲讽</b>。每当你即将用自然法术对本随从造成伤害，改为本随从获得+2/+1。</para>
+			/// </summary>
+			时流亡魂,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Flux Overcapacity</para>
+			/// <para>时流超载</para>
+			/// <para>+2/+1.</para>
+			/// <para>+2/+1。</para>
+			/// </summary>
+			时流超载,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：2</para>
+			/// <para>Thunderquake</para>
+			/// <para>雷霆动地</para>
+			/// <para>[x]Deal $1 damageto all minions.Get a Static Shock.</para>
+			/// <para>对所有随从造成$1点伤害。获取一张静电震击。</para>
+			/// </summary>
+			雷霆动地,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：3</para>
+			/// <para>Nascent Bolt</para>
+			/// <para>新生闪电</para>
+			/// <para>Deal $5 damage to a minion. If it survives, draw 2 cards.</para>
+			/// <para>对一个随从造成$5点伤害。如果该随从依然存活，抽两张牌。</para>
+			/// </summary>
+			新生闪电,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Stormrook</para>
+			/// <para>雷鸫</para>
+			/// <para>[x]Whenever you woulddamage this with a Naturespell, summon a random__5-Cost minion instead.</para>
+			/// <para>每当你即将用自然法术对本随从造成伤害，改为随机召唤一个法力值消耗为（5）的随从。</para>
+			/// </summary>
+			雷鸫,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：0</para>
+			/// <para>Static Shock</para>
+			/// <para>静电震击</para>
+			/// <para>Deal $1 damage to a minion. Give your hero +1 Attack this turn.</para>
+			/// <para>对一个随从造成$1点伤害。在本回合中，使你的英雄获得+1攻击力。</para>
+			/// </summary>
+			静电震击,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Statically Charged</para>
+			/// <para>静电充能</para>
+			/// <para>+1 Attack this turn.</para>
+			/// <para>在本回合中+1攻击力。</para>
+			/// </summary>
+			静电充能,
+			/// <summary>
+			/// <para>随从 潜行者 费用：4 攻击力：2 生命值：3</para>
+			/// <para>Cleansing Lightspawn</para>
+			/// <para>净化的光耀之子</para>
+			/// <para>[x]<b>Lifesteal</b><b>Battlecry:</b> Deal damageto an enemy minion equal___to this minion's Health.</para>
+			/// <para><b>吸血</b>。<b>战吼：</b>对一个敌方随从造成等同于本随从生命值的伤害。</para>
+			/// </summary>
+			净化的光耀之子,
+			/// <summary>
+			/// <para>随从 中立 费用：2 攻击力：3 生命值：1</para>
+			/// <para>Yesterloc</para>
+			/// <para>昨日鱼人</para>
+			/// <para>At the end of your turn, give your other minions +1_Health.</para>
+			/// <para>在你的回合结束时，使你的其他随从获得+1生命值。</para>
+			/// </summary>
+			昨日鱼人,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Mrrgls of Yore</para>
+			/// <para>昨日鱼响</para>
+			/// <para>+1 Health.</para>
+			/// <para>+1生命值。</para>
+			/// </summary>
+			昨日鱼响,
+			/// <summary>
+			/// <para>随从 潜行者 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Divine Augur</para>
+			/// <para>神圣预言师</para>
+			/// <para>[x]<b>Battlecry:</b> Set the Attackand Health of every minionin your hand to the higherof the two stats.</para>
+			/// <para><b>战吼：</b>将你手牌中每张随从牌的攻击力和生命值变为两者中的高值。</para>
+			/// </summary>
+			神圣预言师,
+			/// <summary>
+			/// <para>附魔 潜行者 费用：0</para>
+			/// <para>Light Intensity</para>
+			/// <para>圣光烈性</para>
+			/// <para>Attack increased.</para>
+			/// <para>攻击力提高。</para>
+			/// </summary>
+			圣光烈性,
+			/// <summary>
+			/// <para>附魔 潜行者 费用：0</para>
+			/// <para>Light Polarity</para>
+			/// <para>圣光极性</para>
+			/// <para>Health increased.</para>
+			/// <para>生命值提高。</para>
+			/// </summary>
+			圣光极性,
+			/// <summary>
+			/// <para>随从 潜行者 费用：2 攻击力：1 生命值：4</para>
+			/// <para>Amber Priestess</para>
+			/// <para>琥珀女祭司</para>
+			/// <para>[x]<b>Taunt</b><b>Battlecry:</b> Restore Healthto a character equal tothis minion's Health.</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>为一个角色恢复等同于本随从生命值的生命值。</para>
+			/// </summary>
+			琥珀女祭司,
+			/// <summary>
+			/// <para>法术 潜行者 费用：3</para>
+			/// <para>Intertwined Fate</para>
+			/// <para>纠缠宿命</para>
+			/// <para><b>Discover</b> a copy of a card from your deck and one from your opponent's.</para>
+			/// <para>从你的牌库和对手的牌库各<b>发现</b>一张牌的一张复制。</para>
+			/// </summary>
+			纠缠宿命,
+			/// <summary>
+			/// <para>法术 潜行者 费用：3</para>
+			/// <para>Cease to Exist</para>
+			/// <para>抹除存在</para>
+			/// <para><b>Rewind</b><b>Silence</b> and destroy a random enemy minion.</para>
+			/// <para><b>回溯</b>。<b>沉默</b>并消灭一个随机敌方随从。</para>
+			/// </summary>
+			抹除存在,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：4 生命值：1</para>
+			/// <para>Temporal Traveler</para>
+			/// <para>时空旅行者</para>
+			/// <para>[x]<b>Deathrattle:</b> Summon a4/1 Shadow that attacks arandom enemy minion.</para>
+			/// <para><b>亡语：</b>召唤一个4/1的影子，并使其随机攻击一个敌方随从。</para>
+			/// </summary>
+			时空旅行者,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：4 生命值：1</para>
+			/// <para>Temporal Shadow</para>
+			/// <para>时空之影</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			时空之影,
+			/// <summary>
+			/// <para>随从 潜行者 费用：6 攻击力：6 生命值：2</para>
+			/// <para>Eternus</para>
+			/// <para>伊特努丝</para>
+			/// <para>[x]<b>Battlecry:</b> Take control ofan enemy minion with this__minion's Health or less.</para>
+			/// <para><b>战吼：</b>夺取一个生命值小于或等于本随从的敌方随从的控制权。</para>
+			/// </summary>
+			伊特努丝,
+			/// <summary>
+			/// <para>地标 潜行者 费用：7</para>
+			/// <para>Past Conflux</para>
+			/// <para>过去的时光流汇</para>
+			/// <para>[x]Summon a random Dragonthat costs (5) or more.<i>Advance to the present!</i></para>
+			/// <para>随机召唤一条法力值消耗大于或等于（5）点的龙。<i>推进到现在！</i></para>
+			/// </summary>
+			过去的时光流汇,
+			/// <summary>
+			/// <para>地标 潜行者 费用：7</para>
+			/// <para>Present Conflux</para>
+			/// <para>现在的时光流汇</para>
+			/// <para>[x]<b>Discover</b> a Dragonthat costs (5) or moreand summon it.<i>Advance to the future!</i></para>
+			/// <para><b>发现</b>并召唤一条法力值消耗大于或等于（5）点的龙。<i>推进到未来！</i></para>
+			/// </summary>
+			现在的时光流汇,
+			/// <summary>
+			/// <para>地标 潜行者 费用：7</para>
+			/// <para>Future Conflux</para>
+			/// <para>未来的时光流汇</para>
+			/// <para>[x]<b>Discover</b> a Dragonthat costs (5) or moreand summon it. Alsoget a copy of it.</para>
+			/// <para><b>发现</b>并召唤一条法力值消耗大于或等于（5）点的龙，并获取一张它的复制。</para>
+			/// </summary>
+			未来的时光流汇,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：4</para>
+			/// <para>Aeon Rend</para>
+			/// <para>永世裂痕</para>
+			/// <para><b>Rewind</b>Deal $4 damage to two random enemies.</para>
+			/// <para><b>回溯</b>。随机对两个敌人造成$4点伤害。</para>
+			/// </summary>
+			永世裂痕,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：4 攻击力：2 生命值：6</para>
+			/// <para>Timeway Warden</para>
+			/// <para>时间流守望者</para>
+			/// <para>[x]<b>Battlecry:</b> Imprison anenemy minion. It goes<b>Dormant</b> for 10,000 turns.___<b>Deathrattle:</b> Awaken it.</para>
+			/// <para><b>战吼：</b>囚禁一个敌方随从，使其<b>休眠</b>10000回合。<b>亡语：</b>唤醒该随从。</para>
+			/// </summary>
+			时间流守望者,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>Eternal Imprisonment</para>
+			/// <para>永恒囚禁</para>
+			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
+			/// <para><b>休眠</b>。@回合后唤醒。</para>
+			/// </summary>
+			永恒囚禁,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：4</para>
+			/// <para>Hounds of Fury</para>
+			/// <para>怒火狱犬</para>
+			/// <para>[x]Summon two 3/3Demons. If your deck hasno minions, they attackthe lowest Health enemy.</para>
+			/// <para>召唤两个3/3的恶魔。如果你的牌库中没有随从牌，使其攻击生命值最低的敌人。</para>
+			/// </summary>
+			怒火狱犬,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：3 攻击力：3 生命值：3</para>
+			/// <para>Sargeran Felhound</para>
+			/// <para>萨格拉斯的地狱犬</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			萨格拉斯的地狱犬,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：3 攻击力：3 生命值：3</para>
+			/// <para>Sargeran Felhound</para>
+			/// <para>萨格拉斯的地狱犬</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			萨格拉斯的地狱犬_TIME_443t2,
+			/// <summary>
+			/// <para>武器 恶魔猎手 费用：1 攻击力：2 耐久度：0</para>
+			/// <para>Time-Lost Glaive</para>
+			/// <para>迷时战刃</para>
+			/// <para><b>Deathrattle:</b> Get a random Demonfrom the past.</para>
+			/// <para><b>亡语：</b>随机获取一张来自过去的恶魔牌。</para>
+			/// </summary>
+			迷时战刃,
+			/// <summary>
+			/// <para>地标 恶魔猎手 费用：6</para>
+			/// <para>The Eternal Hold</para>
+			/// <para>永时坚垒</para>
+			/// <para>[x]Get a Demon that costs(5) or more. If your deckhas no minions, yournext one costs (0).</para>
+			/// <para>获取一张法力值消耗大于或等于（5）点的恶魔牌。如果你的牌库中没有随从牌，你的下一张随从牌法力值消耗为（0）点。</para>
+			/// </summary>
+			永时坚垒,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>Jailbreak</para>
+			/// <para>越狱</para>
+			/// <para>Your next minion costs (0).</para>
+			/// <para>你的下一张随从牌的法力值消耗为（0）点。</para>
+			/// </summary>
+			越狱,
+			/// <summary>
+			/// <para>法术 潜行者 费用：2</para>
+			/// <para>Power Word: Barrier</para>
+			/// <para>真言术：障</para>
+			/// <para>Give a character <b>Divine Shield</b>. Give minions in your hand +2 Health.</para>
+			/// <para>使一个角色获得<b>圣盾</b>。使你手牌中的随从牌获得+2生命值。</para>
+			/// </summary>
+			真言术障,
+			/// <summary>
+			/// <para>附魔 潜行者 费用：0</para>
+			/// <para>Barrier</para>
+			/// <para>屏障</para>
+			/// <para>+2 Health</para>
+			/// <para>+2生命值</para>
+			/// </summary>
+			屏障,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：2</para>
+			/// <para>Solitude</para>
+			/// <para>命源</para>
+			/// <para>[x]<b>Discover</b> a minion. Ifyour deck has no minions,reduce the Cost of anyin your hand by (2).</para>
+			/// <para><b>发现</b>一张随从牌。如果你的牌库中没有随从牌，使你手牌中的随从牌法力值消耗减少（2）点。</para>
+			/// </summary>
+			命源,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：3</para>
+			/// <para>Lasting Legacy</para>
+			/// <para>绵延传承</para>
+			/// <para>[x]Give your hero+4 Attack this turn. If yourdeck has no minions, giveany in hand +4 Attack.</para>
+			/// <para>在本回合中，使你的英雄获得+4攻击力。如果你的牌库中没有随从牌，使你手牌中的随从牌获得+4攻击力。</para>
+			/// </summary>
+			绵延传承,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>Broxigar's Honor</para>
+			/// <para>布洛克斯加的荣耀</para>
+			/// <para>+4 Attack this turn.</para>
+			/// <para>在本回合中+4攻击力。</para>
+			/// </summary>
+			布洛克斯加的荣耀,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>Broxigar's Legacy</para>
+			/// <para>布洛克斯加的传承</para>
+			/// <para>+4 Attack.</para>
+			/// <para>+4攻击力。</para>
+			/// </summary>
+			布洛克斯加的传承,
+			/// <summary>
+			/// <para>法术 猎人 费用：2</para>
+			/// <para>Precise Shot</para>
+			/// <para>精确射击</para>
+			/// <para>Deal $3 damage.If this is EXACTLY in the center of your hand,deal $5 instead.</para>
+			/// <para>造成$3点伤害。如果本牌位于你手牌的正中间，改为造成$5点。</para>
+			/// </summary>
+			精确射击,
+			/// <summary>
+			/// <para>随从 猎人 费用：2 攻击力：3 生命值：1</para>
+			/// <para>Arrow Retriever</para>
+			/// <para>拾箭龙鹰</para>
+			/// <para><b>Battlecry:</b> Draw until you have 3 cards.</para>
+			/// <para><b>战吼：</b>抽牌，直到你拥有三张手牌。</para>
+			/// </summary>
+			拾箭龙鹰,
+			/// <summary>
+			/// <para>法术 猎人 费用：3</para>
+			/// <para>Wormhole</para>
+			/// <para>虫洞</para>
+			/// <para><b>Rewind</b>Summon a random3-Cost Beast. It attacksa random enemy.</para>
+			/// <para><b>回溯</b>。随机召唤一只法力值消耗为（3）的野兽并使其攻击随机敌人。</para>
+			/// </summary>
+			虫洞_TIME_602,
+			/// <summary>
+			/// <para>随从 猎人 费用：2 攻击力：1 生命值：1</para>
+			/// <para>Ticking Timebomb</para>
+			/// <para>计时炸弹</para>
+			/// <para><b>Deathrattle:</b> Destroy a random enemy minion.</para>
+			/// <para><b>亡语：</b>随机消灭一个敌方随从。</para>
+			/// </summary>
+			计时炸弹,
+			/// <summary>
+			/// <para>随从 猎人 费用：6 攻击力：3 生命值：4</para>
+			/// <para>Epoch Stalker</para>
+			/// <para>纪元追猎者</para>
+			/// <para><b>Rush</b>, <b>Elusive</b><b>Battlecry:</b> Summon acopy of this.</para>
+			/// <para><b>突袭</b>。<b>扰魔</b><b>战吼：</b>召唤一个本随从的复制。</para>
+			/// </summary>
+			纪元追猎者,
+			/// <summary>
+			/// <para>随从 猎人 费用：1 攻击力：1 生命值：3</para>
+			/// <para>Quel'dorei Fletcher</para>
+			/// <para>奎尔多雷造箭师</para>
+			/// <para>Your Hero Power costs(0) while your hand has3 or less cards.</para>
+			/// <para>当你的手牌少于或等于三张时，你的英雄技能的法力值消耗为（0）点。</para>
+			/// </summary>
+			奎尔多雷造箭师,
+			/// <summary>
+			/// <para>附魔 猎人 费用：0</para>
+			/// <para>Fletching</para>
+			/// <para>削制箭支</para>
+			/// <para>Your Hero Power costs (0).</para>
+			/// <para>你的英雄技能的法力值消耗为（0）点。</para>
+			/// </summary>
+			削制箭支,
+			/// <summary>
+			/// <para>随从 猎人 费用：3 攻击力：2 生命值：4</para>
+			/// <para>Ranger General Sylvanas</para>
+			/// <para>游侠将军希尔瓦娜斯</para>
+			/// <para>[x]<b>Fabled</b>. <b>Battlecry:</b> Deal 2damage to all enemies.____If you've played Alleria or______Vereesa, repeat for each.</para>
+			/// <para><b>奇闻</b><b>战吼：</b>对所有敌人造成2点伤害。如果你使用过奥蕾莉亚或温蕾萨，每使用过一位，重复一次。</para>
+			/// </summary>
+			游侠将军希尔瓦娜斯_TIME_609,
+			/// <summary>
+			/// <para>随从 猎人 费用：3 攻击力：2 生命值：4</para>
+			/// <para>Ranger Captain Alleria</para>
+			/// <para>游侠队长奥蕾莉亚</para>
+			/// <para>[x]<b>Battlecry:</b> <b>Discover</b> a spell.If you've played Sylvanas orVereesa, repeat for each.</para>
+			/// <para><b>战吼：</b><b>发现</b>一张法术牌。如果你使用过希尔瓦娜斯或温蕾萨，每使用过一位，重复一次。</para>
+			/// </summary>
+			游侠队长奥蕾莉亚,
+			/// <summary>
+			/// <para>随从 猎人 费用：3 攻击力：2 生命值：4</para>
+			/// <para>Ranger Initiate Vereesa</para>
+			/// <para>游侠新兵温蕾萨</para>
+			/// <para>[x]<b>Battlecry:</b> Give minions inyour deck +1/+1. If you'veplayed Alleria or Sylvanas,repeat for each.</para>
+			/// <para><b>战吼：</b>使你牌库中的随从牌获得+1/+1。如果你使用过奥蕾莉亚或希尔瓦娜斯，每使用过一位，重复一次。</para>
+			/// </summary>
+			游侠新兵温蕾萨,
+			/// <summary>
+			/// <para>附魔 猎人 费用：0</para>
+			/// <para>Windrunner's Allegiance</para>
+			/// <para>风行者之誓</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			风行者之誓,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：6</para>
+			/// <para>Shadows of Yesterday</para>
+			/// <para>昨日之影</para>
+			/// <para><b>Rewind</b>Summon four 3/2 Shades. They each gain tworandom <b>Bonus Effects</b>.</para>
+			/// <para><b>回溯</b>。召唤四个3/2的影子，每个影子分别随机获得两项<b>额外效果</b>。</para>
+			/// </summary>
+			昨日之影,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：2 攻击力：3 生命值：2</para>
+			/// <para>Anomalous Shade</para>
+			/// <para>畸变之影</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			畸变之影,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：2</para>
+			/// <para>Timestop</para>
+			/// <para>时间停滞</para>
+			/// <para>Deal $3 damage.<b>Freeze</b> two random enemy minions.</para>
+			/// <para>造成$3点伤害。随机<b>冻结</b>两个敌方随从。</para>
+			/// </summary>
+			时间停滞,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：3</para>
+			/// <para>Blood Draw</para>
+			/// <para>赤红汲取</para>
+			/// <para><b>Discover</b> a spell.This costs Health instead of Mana.</para>
+			/// <para><b>发现</b>一张法术牌。本牌消耗生命值，而非法力值。</para>
+			/// </summary>
+			赤红汲取,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：1 攻击力：2 生命值：1</para>
+			/// <para>Cryofrozen Champion</para>
+			/// <para>时空冰封勇士</para>
+			/// <para><b>Deathrattle:</b> Get a random<b>Legendary</b> minion. Reduce its Cost by (1).</para>
+			/// <para><b>亡语：</b>随机获取一张<b>传说</b>随从牌，其法力值消耗减少（1）点。</para>
+			/// </summary>
+			时空冰封勇士,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：3 攻击力：3 生命值：4</para>
+			/// <para>Liferender</para>
+			/// <para>生命撕裂者</para>
+			/// <para><b>Battlecry:</b> If your hero's Health changed this turn, deal 6 damage to an enemy minion.</para>
+			/// <para><b>战吼：</b>在本回合中，如果你的英雄的生命值发生变化，对一个敌方随从造成6点伤害。</para>
+			/// </summary>
+			生命撕裂者,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：8</para>
+			/// <para>Forgotten Millennium</para>
+			/// <para>遗忘纪元</para>
+			/// <para>Fill your hand with random Undead.They cost Health instead of Mana this turn.</para>
+			/// <para>用随机亡灵牌填满你的手牌。在本回合中，这些牌消耗生命值，而非法力值。</para>
+			/// </summary>
+			遗忘纪元,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Forgotten</para>
+			/// <para>遗忘</para>
+			/// <para>Costs Health instead of Mana.</para>
+			/// <para>消耗生命值，而非法力值。</para>
+			/// </summary>
+			遗忘,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：4</para>
+			/// <para>Memoriam Manifest</para>
+			/// <para>悼念成真</para>
+			/// <para>Summon the highest Cost friendly Undead that died this game.</para>
+			/// <para>召唤在本局对战中死亡的法力值消耗最高的友方亡灵。</para>
+			/// </summary>
+			悼念成真,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：4 攻击力：8 生命值：7</para>
+			/// <para>Chronochiller</para>
+			/// <para>时空封冻者</para>
+			/// <para>You no longer draw a card at the start of your turn.</para>
+			/// <para>你不再会在你的回合开始时抽牌。</para>
+			/// </summary>
+			时空封冻者,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：4 攻击力：5 生命值：3</para>
+			/// <para>Husk, Eternal Reaper</para>
+			/// <para>永时收割者哈斯克</para>
+			/// <para>[x]<b>Battlecry:</b> Give your hero"<b>Deathrattle:</b> Spend up to20 <b>Corpses</b> to resurrect withthat much Health."</para>
+			/// <para><b>战吼：</b>使你的英雄获得“<b>亡语：</b>消耗最多20份<b>残骸</b>，复活你的英雄并使其具有等量生命值。”</para>
+			/// </summary>
+			永时收割者哈斯克_TIME_618,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Eternal Life Player Enchant</para>
+			/// <para>永时命数玩家附加效果</para>
+			/// <para><b>Deathrattle:</b> Spend up to 20 <b>Corpses</b> to resurrect with that much Health.</para>
+			/// <para><b>亡语：</b>消耗最多20份<b>残骸</b>，复活你的英雄并使其具有等量生命值。</para>
+			/// </summary>
+			永时命数玩家附加效果,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>A Second Chance</para>
+			/// <para>第二次机会</para>
+			/// <para>Your hero has been resurrected.</para>
+			/// <para>你的英雄复活了。</para>
+			/// </summary>
+			第二次机会,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：0</para>
+			/// <para>Eternal Life</para>
+			/// <para>永时命数</para>
+			/// <para><b>Deathrattle:</b> Spend up to 20 <b>Corpses</b> to resurrect with that much Health.</para>
+			/// <para><b>亡语：</b>消耗最多20份<b>残骸</b>，复活你的英雄并使其具有等量生命值。</para>
+			/// </summary>
+			永时命数,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：4 攻击力：4 生命值：5</para>
+			/// <para>Talanji of the Graves</para>
+			/// <para>墓地尊主塔兰吉</para>
+			/// <para>[x]<b>Fabled.</b> <b>Battlecry:</b> DrawBwonsamdi <i>(or resurrecthim if he has died)</i>. Choosea Boon to give him.</para>
+			/// <para><b>奇闻</b><b>战吼：</b>抽取邦桑迪<i>（如果他已经死亡则将其复活）</i>，选择并使其获得一项恩泽。</para>
+			/// </summary>
+			墓地尊主塔兰吉,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Boon of Power Player Ench</para>
+			/// <para>威力恩泽玩家附加效果</para>
+			/// <para>Give Bwonsamdi <b>Taunt</b> <i>permanently</i>.</para>
+			/// <para>使邦桑迪<i>永久</i>获得<b>嘲讽</b>。</para>
+			/// </summary>
+			威力恩泽玩家附加效果,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Boon of Longevity Player Ench</para>
+			/// <para>长命恩泽玩家附加效果</para>
+			/// <para>Give Bwonsamdi <b>Lifesteal</b> <i>permanently</i>.</para>
+			/// <para>使邦桑迪<i>永久</i>获得<b>吸血</b>。</para>
+			/// </summary>
+			长命恩泽玩家附加效果,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Boon of Speed Player Ench</para>
+			/// <para>速度恩泽玩家附加效果</para>
+			/// <para>Give Bwonsamdi <b>Rush</b> <i>permanently</i>.</para>
+			/// <para>使邦桑迪<i>永久</i>获得<b>突袭</b>。</para>
+			/// </summary>
+			速度恩泽玩家附加效果,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Pact for Power</para>
+			/// <para>威力契约</para>
+			/// <para><b>Taunt</b>.</para>
+			/// <para><b>嘲讽</b>。</para>
+			/// </summary>
+			威力契约,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Pact for Longevity</para>
+			/// <para>长命契约</para>
+			/// <para><b>Lifesteal</b>.</para>
+			/// <para><b>吸血</b>。</para>
+			/// </summary>
+			长命契约,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Pact for Speed</para>
+			/// <para>速度契约</para>
+			/// <para><b>Rush</b>.</para>
+			/// <para><b>突袭</b>。</para>
+			/// </summary>
+			速度契约,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：6 攻击力：6 生命值：6</para>
+			/// <para>Bwonsamdi</para>
+			/// <para>邦桑迪</para>
+			/// <para>[x]<b>Deathrattle:</b> Summon arandom @-Cost minion.<i>(Any Boons given to___Bwonsamdi carry over.)</i></para>
+			/// <para><b>亡语：</b>随机召唤一个法力值消耗为（@）的随从。<i>（邦桑迪获得的所有恩泽都会继承下去。）</i></para>
+			/// </summary>
+			邦桑迪_TIME_619t,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：3</para>
+			/// <para>What Befell Zandalar</para>
+			/// <para>赞达拉的惨象</para>
+			/// <para>[x]Deal $2 damage to allenemies. Choose a Boonto give to Bwonsamdi.</para>
+			/// <para>对所有敌人造成$2点伤害。选择并使邦桑迪获得一项恩泽。</para>
+			/// </summary>
+			赞达拉的惨象,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：0</para>
+			/// <para>Boon of Power</para>
+			/// <para>威力恩泽</para>
+			/// <para>Give Bwonsamdi <b>Taunt</b> <i>permanently</i>. Minions summoned by his <b>Deathrattle</b> cost (2) more.</para>
+			/// <para>使邦桑迪<i>永久</i>获得<b>嘲讽</b>。其<b>亡语</b>召唤的随从的法力值消耗增加（2）点。</para>
+			/// </summary>
+			威力恩泽,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：0</para>
+			/// <para>Boon of Longevity</para>
+			/// <para>长命恩泽</para>
+			/// <para>Give Bwonsamdi <b>Lifesteal</b> <i>permanently</i>. Minions summoned by his <b>Deathrattle</b> cost (2) more.</para>
+			/// <para>使邦桑迪<i>永久</i>获得<b>吸血</b>。其<b>亡语</b>召唤的随从的法力值消耗增加（2）点。</para>
+			/// </summary>
+			长命恩泽,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：0</para>
+			/// <para>Boon of Speed</para>
+			/// <para>速度恩泽</para>
+			/// <para>Give Bwonsamdi <b>Rush</b> <i>permanently</i>. Minions summoned by his <b>Deathrattle</b> cost (2) more.</para>
+			/// <para>使邦桑迪<i>永久</i>获得<b>突袭</b>。其<b>亡语</b>召唤的随从的法力值消耗增加（2）点。</para>
+			/// </summary>
+			速度恩泽,
+			/// <summary>
+			/// <para>法术 猎人 费用：2</para>
+			/// <para>Untimely Death</para>
+			/// <para>失时往生</para>
+			/// <para><b>Secret:</b> When a friendly minion dies the turn after being played, resummon it.</para>
+			/// <para><b>奥秘：</b>当一个友方随从在被使用的下一回合死亡时，再次召唤该随从。</para>
+			/// </summary>
+			失时往生,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：5</para>
+			/// <para>Chronological Aura</para>
+			/// <para>时序光环</para>
+			/// <para>At the end of your turn, summon a 3/5 Dragon with <b>Taunt</b>.Lasts @ turns.</para>
+			/// <para>在你的回合结束时，召唤一条3/5并具有<b>嘲讽</b>的龙。持续@回合。</para>
+			/// </summary>
+			时序光环,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：4 攻击力：3 生命值：5</para>
+			/// <para>Chronological Drake</para>
+			/// <para>时序幼龙</para>
+			/// <para><b>Taunt</b></para>
+			/// <para><b>嘲讽</b></para>
+			/// </summary>
+			时序幼龙,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：1</para>
+			/// <para>Waveshaping</para>
+			/// <para>波涛形塑</para>
+			/// <para><b>Discover</b> a card from your deck. The others get put on the bottom.</para>
+			/// <para>从你的牌库中<b>发现</b>一张牌。将其余选项置于牌库底。</para>
+			/// </summary>
+			波涛形塑,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：2</para>
+			/// <para>Ebb and Flow</para>
+			/// <para>潮起潮落</para>
+			/// <para>Deal $3 damage.If you played a minion while holding this,gain 5 Armor.</para>
+			/// <para>造成$3点伤害。如果你在本牌在你手中时使用过随从牌，获得5点护甲值。</para>
+			/// </summary>
+			潮起潮落,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Endangered Dodo</para>
+			/// <para>濒危的渡渡鸟</para>
+			/// <para>[x]<b>Taunt</b><b>Battlecry:</b> If you have 10 orless Health, gain +5/+5 and___summon a copy of this.</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>如果你的生命值小于或等于10点，获得+5/+5并召唤一个本随从的复制。</para>
+			/// </summary>
+			濒危的渡渡鸟,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Endangered</para>
+			/// <para>大难临头</para>
+			/// <para>+5/+5.</para>
+			/// <para>+5/+5。</para>
+			/// </summary>
+			大难临头_TIME_703e,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：8 攻击力：6 生命值：6</para>
+			/// <para>Highborne Mentor</para>
+			/// <para>上层精灵教师</para>
+			/// <para>[x]<b>Battlecry:</b> Get a 2/2 Pupil.<b>Discover</b> a spell that costs(7) or more from the pastto teach it.</para>
+			/// <para><b>战吼：</b>获取一张2/2的小学生。<b>发现</b>一个来自过去的法力值消耗大于或等于（7）点的法术，教会小学生。</para>
+			/// </summary>
+			上层精灵教师,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：2 攻击力：2 生命值：2</para>
+			/// <para>Highborne Pupil</para>
+			/// <para>上层精灵小学生</para>
+			/// <para><b>Battlecry:</b> Cast {0}.</para>
+			/// <para><b>战吼：</b>施放{0}。</para>
+			/// </summary>
+			上层精灵小学生,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：6 攻击力：4 生命值：7</para>
+			/// <para>Krona, Keeper of Eons</para>
+			/// <para>纪元守护者克洛纳</para>
+			/// <para>[x]<b>Taunt</b><b>Battlecry:</b> Set the Costsof the bottom 5 cardsof your deck to (1).</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>将你牌库底的五张牌的法力值消耗变为（1）点。</para>
+			/// </summary>
+			纪元守护者克洛纳,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：2 攻击力：2 生命值：3</para>
+			/// <para>The Fins Beyond Time</para>
+			/// <para>超时空鳍侠</para>
+			/// <para>[x]<b>Battlecry:</b> Replace yourhand with your startinghand. Swap back at theend of your turn.</para>
+			/// <para><b>战吼：</b>将你的手牌替换为你的起始手牌。在你的回合结束时换回。</para>
+			/// </summary>
+			超时空鳍侠,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Time Altered</para>
+			/// <para>时空切换</para>
+			/// <para>Cleanup enchant for TIME_706</para>
+			/// <para>清除TIME_706的附加效果</para>
+			/// </summary>
+			时空切换,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Beyond Time</para>
+			/// <para>超时空</para>
+			/// <para>Your hand is swapped with your starting hand this turn.</para>
+			/// <para>在本回合中你的手牌替换为你的起始手牌。</para>
+			/// </summary>
+			超时空,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：2</para>
+			/// <para>Alternate Reality</para>
+			/// <para>平行现实</para>
+			/// <para>[x]Replace your hand anddeck with random <b>ChooseOne</b> cards from the past.They cost (1) less.</para>
+			/// <para>将你的手牌和牌库里的牌替换为来自过去的随机<b>抉择</b>牌，其法力值消耗减少（1）点。</para>
+			/// </summary>
+			平行现实,
+			/// <summary>
+			/// <para>随从 牧师 费用：4 攻击力：3 生命值：3</para>
+			/// <para>Troubled Double</para>
+			/// <para>暴徒双人组</para>
+			/// <para><b>Stealth</b><b>Combo:</b> Summon acopy of this.</para>
+			/// <para><b>潜行</b>。<b>连击：</b>召唤一个本随从的复制。</para>
+			/// </summary>
+			暴徒双人组,
+			/// <summary>
+			/// <para>法术 牧师 费用：2</para>
+			/// <para>Flashback</para>
+			/// <para>闪回</para>
+			/// <para>Summon two random 1-Cost minions from the past. <b>Combo:</b> With +1 Attack.</para>
+			/// <para>随机召唤两个来自过去的法力值消耗为（1）的随从。<b>连击：</b>并具有+1攻击力。</para>
+			/// </summary>
+			闪回,
+			/// <summary>
+			/// <para>附魔 牧师 费用：0</para>
+			/// <para>Memories</para>
+			/// <para>回忆</para>
+			/// <para>+1 Attack.</para>
+			/// <para>+1攻击力。</para>
+			/// </summary>
+			回忆,
+			/// <summary>
+			/// <para>法术 牧师 费用：7</para>
+			/// <para>Dethrone</para>
+			/// <para>诛灭暴君</para>
+			/// <para>Destroy a minion. <b>Combo:</b> Summon a random 8-Cost minion.</para>
+			/// <para>消灭一个随从。<b>连击：</b>随机召唤一个法力值消耗为（8）的随从。</para>
+			/// </summary>
+			诛灭暴君,
+			/// <summary>
+			/// <para>随从 牧师 费用：5 攻击力：4 生命值：6</para>
+			/// <para>Time Adm'ral Hooktail</para>
+			/// <para>时空上将钩尾</para>
+			/// <para><b>Battlecry:</b> Summon a 0/8 Chest for your opponent. <i>It's FULL of Coins!</i></para>
+			/// <para><b>战吼：</b>为你的对手召唤一个0/8的宝箱。<i>宝箱装满了幸运币！</i></para>
+			/// </summary>
+			时空上将钩尾,
+			/// <summary>
+			/// <para>随从 牧师 费用：3 攻击力：0 生命值：8</para>
+			/// <para>Timeless Chest</para>
+			/// <para>永恒宝箱</para>
+			/// <para><b>Deathrattle:</b> Fill your opponent's handwith Coins.</para>
+			/// <para><b>亡语：</b>用幸运币填满你对手的手牌。</para>
+			/// </summary>
+			永恒宝箱,
+			/// <summary>
+			/// <para>随从 战士 费用：6 攻击力：7 生命值：5</para>
+			/// <para>Chrono-Lord Epoch</para>
+			/// <para>时光领主埃博克</para>
+			/// <para><b>Battlecry:</b> Destroy all minions that your opponent played last turn.</para>
+			/// <para><b>战吼：</b>消灭你的对手上回合使用的所有随从。</para>
+			/// </summary>
+			时光领主埃博克,
+			/// <summary>
+			/// <para>法术 战士 费用：5</para>
+			/// <para>For Glory!</para>
+			/// <para>为了荣耀！</para>
+			/// <para>Draw 2 cards. Costs(1) less for each minion your opponent controls.</para>
+			/// <para>抽两张牌。你的对手每控制一个随从，本牌的法力值消耗便减少（1）点。</para>
+			/// </summary>
+			为了荣耀,
+			/// <summary>
+			/// <para>法术 战士 费用：2</para>
+			/// <para>Slow Motion</para>
+			/// <para>慢动作</para>
+			/// <para>Your opponent's cards cost (1) more next turn.</para>
+			/// <para>下个回合，你的对手卡牌的法力值消耗增加（1）点。</para>
+			/// </summary>
+			慢动作,
+			/// <summary>
+			/// <para>附魔 战士 费用：0</para>
+			/// <para>Sloooowwedd Dooowwwnnn</para>
+			/// <para>忄曼云力亻乍</para>
+			/// <para>Costs (1) more.</para>
+			/// <para>法力值消耗增加（1）点。</para>
+			/// </summary>
+			忄曼云力亻乍,
+			/// <summary>
+			/// <para>附魔 战士 费用：0</para>
+			/// <para>Slowed Down</para>
+			/// <para>迟缓</para>
+			/// <para>Your cards cost (1) more this turn.</para>
+			/// <para>在本回合中你的卡牌法力值消耗增加（1）点。</para>
+			/// </summary>
+			迟缓,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：5 生命值：3</para>
+			/// <para>Soldier of the Bronze</para>
+			/// <para>青铜龙士兵</para>
+			/// <para><b>Taunt</b><b>Battlecry:</b> Double this minion's Health.</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>本随从的生命值翻倍。</para>
+			/// </summary>
+			青铜龙士兵,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Bronze Scales</para>
+			/// <para>青铜之鳞</para>
+			/// <para>Doubled Health.</para>
+			/// <para>生命值翻倍。</para>
+			/// </summary>
+			青铜之鳞,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：3 攻击力：3 生命值：4</para>
+			/// <para>Kaldorei Cultivator</para>
+			/// <para>卡多雷培育师</para>
+			/// <para>[x]<b>Battlecry:</b> <b>Discover</b> 2 Beasts.Put them on the bottom ofyour deck with +5/+5.</para>
+			/// <para><b>战吼：</b><b>发现</b>2张野兽牌，将它们置于你的牌库底并具有+5/+5。</para>
+			/// </summary>
+			卡多雷培育师,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Nurtured</para>
+			/// <para>培育</para>
+			/// <para>+5/+5.</para>
+			/// <para>+5/+5。</para>
+			/// </summary>
+			培育_TIME_730e,
+			/// <summary>
+			/// <para>法术 战士 费用：2</para>
+			/// <para>Precursory Strike</para>
+			/// <para>先行打击</para>
+			/// <para>Deal $3 damage.If you're holding a minion that costs (5) or more, draw a minion.</para>
+			/// <para>造成$3点伤害。如果你的手牌中有法力值消耗大于或等于（5）点的随从牌，抽一张随从牌。</para>
+			/// </summary>
+			先行打击,
+			/// <summary>
+			/// <para>法术 牧师 费用：4</para>
+			/// <para>Fast Forward</para>
+			/// <para>快进</para>
+			/// <para>Draw 2 cards.Pick one to have its Cost reduced by (2).</para>
+			/// <para>抽两张牌，从中选择一张，使其法力值消耗减少（2）点。</para>
+			/// </summary>
+			快进,
+			/// <summary>
+			/// <para>地标 猎人 费用：4</para>
+			/// <para>Past Silvermoon</para>
+			/// <para>过去的银月城</para>
+			/// <para>[x]Deal 5 damage to arandom enemy minion.<i>Advance to the present!</i></para>
+			/// <para>随机对一个敌方随从造成5点伤害。<i>推进到现在！</i></para>
+			/// </summary>
+			过去的银月城,
+			/// <summary>
+			/// <para>地标 猎人 费用：4</para>
+			/// <para>Present Silvermoon</para>
+			/// <para>现在的银月城</para>
+			/// <para>[x]Deal 5 damage to arandom enemy minion.Excess hits the enemy hero.<i>Advance to the future!</i></para>
+			/// <para>随机对一个敌方随从造成5点伤害，超过目标生命值的伤害会命中敌方英雄。<i>推进到未来！</i></para>
+			/// </summary>
+			现在的银月城,
+			/// <summary>
+			/// <para>地标 猎人 费用：4</para>
+			/// <para>Future Silvermoon</para>
+			/// <para>未来的银月城</para>
+			/// <para>[x]Deal 5 damage to thelowest Health enemyminion. Excess damagehits the enemy hero.</para>
+			/// <para>对生命值最低的敌方随从造成5点伤害，超过目标生命值的伤害会命中敌方英雄。</para>
+			/// </summary>
+			未来的银月城,
+			/// <summary>
+			/// <para>随从 战士 费用：7 攻击力：7 生命值：7</para>
+			/// <para>Lo'Gosh, Blood Fighter</para>
+			/// <para>血斗士洛戈什</para>
+			/// <para>[x]<b>Fabled</b>, <b>Rush</b>. <b>Deathrattle:</b>Summon a Blood Fighter fromyour hand. It gains +5/+5 andattacks a random enemy.</para>
+			/// <para><b>奇闻</b><b>突袭</b>。<b>亡语：</b>从你的手牌中召唤一位血斗士，使其获得+5/+5并随机攻击一个敌人。</para>
+			/// </summary>
+			血斗士洛戈什,
+			/// <summary>
+			/// <para>附魔 战士 费用：0</para>
+			/// <para>Crimson Blood</para>
+			/// <para>鲜红之血</para>
+			/// <para>+5/+5.</para>
+			/// <para>+5/+5。</para>
+			/// </summary>
+			鲜红之血,
+			/// <summary>
+			/// <para>随从 战士 费用：7 攻击力：7 生命值：7</para>
+			/// <para>Broll, Blood Fighter</para>
+			/// <para>血斗士布罗尔</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Summon a BloodFighter from your hand. Giveit +5/+5 and <b>Taunt</b>.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>从你的手牌中召唤一位血斗士，使其获得+5/+5和<b>嘲讽</b>。</para>
+			/// </summary>
+			血斗士布罗尔,
+			/// <summary>
+			/// <para>随从 战士 费用：7 攻击力：7 生命值：7</para>
+			/// <para>Valeera, Blood Fighter</para>
+			/// <para>血斗士瓦莉拉</para>
+			/// <para>[x]<b>Elusive</b><b>Deathrattle:</b> Summon a BloodFighter from your hand. Giveit +5/+5 and <b>Elusive</b>.</para>
+			/// <para><b>扰魔</b>。<b>亡语：</b>从你的手牌中召唤一位血斗士，使其获得+5/+5和<b>扰魔</b>。</para>
+			/// </summary>
+			血斗士瓦莉拉,
+			/// <summary>
+			/// <para>随从 法师 费用：5 攻击力：2 生命值：8</para>
+			/// <para>Azure Queen Sindragosa</para>
+			/// <para>碧蓝女王辛达苟萨</para>
+			/// <para>[x]<b>Fabled</b>If you control anotherDragon, your Arcanespells cost (2) less.</para>
+			/// <para><b>奇闻</b>如果你控制着其他龙，你的奥术法术的法力值消耗减少（2）点。</para>
+			/// </summary>
+			碧蓝女王辛达苟萨,
+			/// <summary>
+			/// <para>随从 法师 费用：5 攻击力：2 生命值：8</para>
+			/// <para>Azure King Malygos</para>
+			/// <para>碧蓝之王玛里苟斯</para>
+			/// <para>If you control another Dragon, your Arcane spells cast twice.</para>
+			/// <para>如果你控制着其他龙，你的奥术法术会施放两次。</para>
+			/// </summary>
+			碧蓝之王玛里苟斯,
+			/// <summary>
+			/// <para>法术 法师 费用：8</para>
+			/// <para>Azure Oathstone</para>
+			/// <para>碧蓝誓言石</para>
+			/// <para>Summon your Dragons that died this game.</para>
+			/// <para>召唤在本局对战中死亡的你的龙。</para>
+			/// </summary>
+			碧蓝誓言石,
+			/// <summary>
+			/// <para>法术 法师 费用：3</para>
+			/// <para>Arcane Barrage</para>
+			/// <para>奥术弹幕</para>
+			/// <para>Deal $3 damage to an enemy and $2 damage to two other random ones.</para>
+			/// <para>对一个敌人造成$3点伤害，并随机对两个其他敌人造成$2点伤害。</para>
+			/// </summary>
+			奥术弹幕,
+			/// <summary>
+			/// <para>随从 法师 费用：5 攻击力：4 生命值：7</para>
+			/// <para>Algeth'ar Instructor</para>
+			/// <para>艾杰斯亚导师</para>
+			/// <para><b>Spell Damage +2</b></para>
+			/// <para><b>法术伤害+2</b></para>
+			/// </summary>
+			艾杰斯亚导师,
+			/// <summary>
+			/// <para>法术 法师 费用：4</para>
+			/// <para>Alter Time</para>
+			/// <para>操控时间</para>
+			/// <para><b>Discover</b> two Arcane spells from the past. They cost (2) less.</para>
+			/// <para><b>发现</b>两张来自过去的奥术法术牌，其法力值消耗减少（2）点。</para>
+			/// </summary>
+			操控时间,
+			/// <summary>
+			/// <para>随从 法师 费用：7 攻击力：5 生命值：5</para>
+			/// <para>Temporal Construct</para>
+			/// <para>时空构造体</para>
+			/// <para>[x]<b>Battlecry:</b> Deal 5 damageto an enemy minion.Draw cards equal to theexcess damage.</para>
+			/// <para><b>战吼：</b>对一个敌方随从造成5点伤害，然后抽牌，数量等同于超过目标生命值的伤害。</para>
+			/// </summary>
+			时空构造体,
+			/// <summary>
+			/// <para>法术 法师 费用：7</para>
+			/// <para>Anomalize</para>
+			/// <para>异化</para>
+			/// <para>Summon a random10 and 1-Cost minion. Scramble their stats.</para>
+			/// <para>随机召唤法力值消耗为（10）和（1）的随从各一个，打乱其属性值。</para>
+			/// </summary>
+			异化,
+			/// <summary>
+			/// <para>附魔 法师 费用：0</para>
+			/// <para>Anomalized</para>
+			/// <para>畸形异化</para>
+			/// <para>Attack and Health scrambled.</para>
+			/// <para>打乱了攻击力和生命值。</para>
+			/// </summary>
+			畸形异化,
+			/// <summary>
+			/// <para>随从 法师 费用：2 攻击力：2 生命值：2</para>
+			/// <para>Faceless Enigma</para>
+			/// <para>神秘无面者</para>
+			/// <para>[x]<b>Battlecry:</b> Look at 2 random<b>Secrets</b>. Pick one to cast foryourself. The other castsfor your opponent.</para>
+			/// <para><b>战吼：</b>检视2个随机<b>奥秘</b>，选择其中一个为你自己施放，另一个为你的对手施放。</para>
+			/// </summary>
+			神秘无面者,
+			/// <summary>
+			/// <para>随从 法师 费用：4 攻击力：4 生命值：4</para>
+			/// <para>Timelooper Toki</para>
+			/// <para>时光循环者托奇</para>
+			/// <para>[x]<b>Battlecry:</b> Get 4 randomspells from the past. Whenyou play ALL 4, get anotherTimelooper Toki.</para>
+			/// <para><b>战吼：</b>随机获取4张来自过去的法术牌。当你使用了全部4张法术牌，再获取一张时光循环者托奇。</para>
+			/// </summary>
+			时光循环者托奇,
+			/// <summary>
+			/// <para>附魔 法师 费用：0</para>
+			/// <para>Looping Time</para>
+			/// <para>循环时间</para>
+			/// <para>Play the 4 spells created by Toki to create Toki.</para>
+			/// <para>使用4张托奇创建的法术牌以创建托奇。</para>
+			/// </summary>
+			循环时间,
+			/// <summary>
+			/// <para>法术 战士 费用：5</para>
+			/// <para>Gladiatorial Combat</para>
+			/// <para>角斗开战</para>
+			/// <para>[x]Summon a randomminion from your deck.Summon a 5/5 Tiger with<b>Stealth</b> for your opponent.</para>
+			/// <para>从你的牌库中随机召唤一个随从。为你的对手召唤一只5/5并具有<b>潜行</b>的老虎。</para>
+			/// </summary>
+			角斗开战,
+			/// <summary>
+			/// <para>随从 战士 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Coliseum Tiger</para>
+			/// <para>角斗场猛虎</para>
+			/// <para><b>Stealth</b></para>
+			/// <para><b>潜行</b></para>
+			/// </summary>
+			角斗场猛虎,
+			/// <summary>
+			/// <para>随从 战士 费用：5 攻击力：2 生命值：6</para>
+			/// <para>Heir of Hereafter</para>
+			/// <para>后世之嗣</para>
+			/// <para>[x]<b>Taunt</b><b>Battlecry:</b> Gain +2/+2 foreach damaged minion.</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>每有一个受伤的随从，便获得+2/+2。</para>
+			/// </summary>
+			后世之嗣,
+			/// <summary>
+			/// <para>附魔 战士 费用：0</para>
+			/// <para>Bloodthirsty</para>
+			/// <para>嗜血渴望</para>
+			/// <para>+2/+2.</para>
+			/// <para>+2/+2。</para>
+			/// </summary>
+			嗜血渴望_TIME_871e,
+			/// <summary>
+			/// <para>随从 战士 费用：8 攻击力：13 生命值：13</para>
+			/// <para>Undefeated Champion</para>
+			/// <para>不败冠军</para>
+			/// <para>[x]<b>Rush</b>. <b>Battlecry:</b> Fill youropponent's board with__random 1-Cost minions.</para>
+			/// <para><b>突袭</b>。<b>战吼：</b>用随机的法力值消耗为（1）的随从填满你对手的面板。</para>
+			/// </summary>
+			不败冠军,
+			/// <summary>
+			/// <para>法术 战士 费用：1</para>
+			/// <para>Unleash the Crocolisks</para>
+			/// <para>放出鳄鱼</para>
+			/// <para>Gain 10 Armor.Summon two 2/3 Beasts for your opponent.</para>
+			/// <para>获得10点护甲值。为你的对手召唤两只2/3的鳄鱼。</para>
+			/// </summary>
+			放出鳄鱼,
+			/// <summary>
+			/// <para>随从 战士 费用：2 攻击力：2 生命值：3</para>
+			/// <para>Coliseum Crocolisk</para>
+			/// <para>角斗场鳄鱼</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			角斗场鳄鱼,
+			/// <summary>
+			/// <para>随从 牧师 费用：4 攻击力：5 生命值：4</para>
+			/// <para>Garona Halforcen</para>
+			/// <para>半兽人迦罗娜</para>
+			/// <para>[x]<b>Fabled</b>. <b>Battlecry:</b> If youropponent is holding KingLlane, destroy him and cuttheir Health in half.</para>
+			/// <para><b>奇闻</b><b>战吼：</b>如果莱恩国王在对手手牌中，将其摧毁并将敌方英雄的生命值砍半。</para>
+			/// </summary>
+			半兽人迦罗娜_TIME_875,
+			/// <summary>
+			/// <para>随从 牧师 费用：3 攻击力：3 生命值：3</para>
+			/// <para>King Llane</para>
+			/// <para>莱恩国王</para>
+			/// <para>[x]<b>Start of Game:</b> Hide fromGarona in the enemy's deck.<b>Battlecry:</b> Draw a card. Shufflethis back into your deck.</para>
+			/// <para><b>对战开始时：</b>躲避迦罗娜，藏进敌方牌库。<b>战吼：</b>抽一张牌。将本随从洗回你的牌库。</para>
+			/// </summary>
+			莱恩国王,
+			/// <summary>
+			/// <para>武器 牧师 费用：2 攻击力：3 耐久度：0</para>
+			/// <para>The Kingslayers</para>
+			/// <para>弑君者</para>
+			/// <para>After your hero attacks, both players draw a <b>Legendary</b> card.</para>
+			/// <para>在你的英雄攻击后，双方玩家各抽一张<b>传说</b>卡牌。</para>
+			/// </summary>
+			弑君者_TIME_875t1,
+			/// <summary>
+			/// <para>随从 牧师 费用：1 攻击力：1 生命值：1</para>
+			/// <para>Shapeshifter</para>
+			/// <para>神秘变形者</para>
+			/// <para>[x]Each turn this is in yourhand, transform into arandom minion in youropponent's hand.</para>
+			/// <para>如果这张牌在你的手牌中，每个回合都会随机变成你对手手牌中的一张随从牌。</para>
+			/// </summary>
+			神秘变形者,
+			/// <summary>
+			/// <para>附魔 牧师 费用：0</para>
+			/// <para>Shapeshifting</para>
+			/// <para>变形</para>
+			/// <para>Transforming into a random minion in your opponent's hand.</para>
+			/// <para>变成你对手手牌中的一张随从牌。</para>
+			/// </summary>
+			变形_TIME_876e,
+			/// <summary>
+			/// <para>随从 潜行者 费用：10 攻击力：7 生命值：7</para>
+			/// <para>Medivh the Hallowed</para>
+			/// <para>圣者麦迪文</para>
+			/// <para>[x]<b>Fabled</b>. Costs (0) ifyou control Karazhan.<b>Battlecry:</b> <b>Silence</b> and destroyall other minions.</para>
+			/// <para><b>奇闻</b>如果你控制着卡拉赞，本牌的法力值消耗为（0）点。<b>战吼：</b><b>沉默</b>并消灭所有其他随从。</para>
+			/// </summary>
+			圣者麦迪文,
+			/// <summary>
+			/// <para>武器 潜行者 费用：10 攻击力：1 耐久度：0</para>
+			/// <para>Atiesh the Greatstaff</para>
+			/// <para>圣杖埃提耶什</para>
+			/// <para>[x]Costs (0) if you controlMedivh. Double thedamage and healingof your spells.</para>
+			/// <para>如果你控制着麦迪文，本牌的法力值消耗为（0）点。你的法术的伤害和治疗效果翻倍。</para>
+			/// </summary>
+			圣杖埃提耶什,
+			/// <summary>
+			/// <para>地标 潜行者 费用：10</para>
+			/// <para>Karazhan the Sanctum</para>
+			/// <para>圣地卡拉赞</para>
+			/// <para>Costs (0) if you're wielding Atiesh. Summon two random 8-Cost minions.</para>
+			/// <para>如果你装备着埃提耶什，本牌的法力值消耗为（0）点。随机召唤两个法力值消耗为（8）的随从。</para>
+			/// </summary>
+			圣地卡拉赞,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>The Coin</para>
+			/// <para>幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only.</para>
+			/// <para>在本回合中，获得一个法力水晶。</para>
+			/// </summary>
+			幸运币_TIME_COIN1,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>The Coin</para>
+			/// <para>幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only.</para>
+			/// <para>在本回合中，获得一个法力水晶。</para>
+			/// </summary>
+			幸运币_TIME_COIN2,
 			/// <summary>
 			/// <para>随从 中立 费用：4 攻击力：3 生命值：5</para>
 			/// <para>Elise the Navigator</para>
