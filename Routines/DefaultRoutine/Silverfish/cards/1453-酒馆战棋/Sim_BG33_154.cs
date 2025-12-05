@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：5 生命值：5
+	//随从 术士 费用：0 攻击力：5 生命值：6
 	//Lord of the Ruins
 	//废墟领主
 	//After a friendly Demon deals damage, give friendly minions other than it +{0}/+{1}.

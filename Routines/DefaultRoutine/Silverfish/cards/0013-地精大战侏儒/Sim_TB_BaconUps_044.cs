@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：3 攻击力：4 生命值：4
+	//随从 牧师 费用：0 攻击力：4 生命值：4
 	//Iron Sensei
 	//钢铁武道家
 	//At the end of your turn, give another friendly Mech +4/+4.

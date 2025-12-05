@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：10 生命值：10
+	//随从 术士 费用：2 攻击力：10 生命值：10
 	//Champion of Sargeras
 	//萨格拉斯的勇士
 	//<b>Battlecry and Deathrattle:</b> Minions in the Tavern have +4/+4 this game.

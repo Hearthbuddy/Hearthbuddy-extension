@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：2
+	//BATTLEGROUND_SPELL 中立 费用：1
 	//Leaf Through the Pages
 	//快速浏览
-	//Your next three<b>Refreshes</b> cost (0).
-	//你下三次<b>刷新</b>酒馆的消耗为（0）枚铸币。
+	//Gain 2 free <b>Refreshes</b>.
+	//获得2次免费的<b>刷新</b>。
 	class Sim_BG28_827 : SimTemplate
 	{
 		

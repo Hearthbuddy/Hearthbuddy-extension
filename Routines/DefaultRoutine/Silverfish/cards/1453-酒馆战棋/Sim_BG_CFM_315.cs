@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：1 攻击力：1 生命值：1
+	//随从 猎人 费用：0 攻击力：1 生命值：1
 	//Alleycat
 	//雄斑虎
 	//<b>Battlecry:</b> Summon a 1/1_Cat.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 潜行者 费用：5
+	//法术 潜行者 费用：6
 	//Resuscitate
 	//轮回转生
 	//Resurrect a 1, 2,and 3-Cost minion.Give them <b>Reborn</b>.

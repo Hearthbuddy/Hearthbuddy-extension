@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//随从 巫妖王 费用：0 攻击力：16 生命值：8
+	//Sepulchral Sergeant
+	//陵墓中士
+	//[x]<b>Deathrattle:</b> Give yourminions +{0} Health.<i>(Improves permanently___after this gains Attack!)</i>
+	//<b>亡语：</b>使你的随从获得+{0}生命值。<i>（在本随从获得攻击力后永久提升！）</i>
+	class Sim_BG34_111_G : SimTemplate
+	{
+		
+		
+	}
+}

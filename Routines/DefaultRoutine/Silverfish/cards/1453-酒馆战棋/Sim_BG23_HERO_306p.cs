@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：2
+	//英雄技能 中立 费用：3
 	//Reclaimed Souls
 	//重拾灵魂
 	//[x]<b>Discover</b> a plain copy ofa minion that diedlast combat.<i>(Unlocks on Turn 3.)</i>

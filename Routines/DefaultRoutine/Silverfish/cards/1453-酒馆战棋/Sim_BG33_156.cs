@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：8 生命值：2
+	//随从 术士 费用：0 攻击力：6 生命值：2
 	//Silent Enforcer
 	//沉默的惩罚者
 	//[x]<b>Taunt</b><b>Deathrattle:</b> Deal {0} damageto all minions <i>(exceptfriendly Demons)</i>.

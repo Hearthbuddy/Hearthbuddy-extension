@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 巫妖王 费用：4
+	//法术 巫妖王 费用：5
 	//Sanguine Infestation
 	//血虫感染
 	//Draw 2 cards.Summon two 0/2 Leeches.

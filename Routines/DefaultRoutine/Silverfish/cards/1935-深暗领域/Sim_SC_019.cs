@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//地标 术士 费用：3
+	//地标 术士 费用：4
 	//Ultralisk Cavern
 	//雷兽窟
 	//[x]Deal 1 damageto all enemies.<b>Deathrattle:</b> Summon an8/8 Ultralisk with <b>Rush</b>.

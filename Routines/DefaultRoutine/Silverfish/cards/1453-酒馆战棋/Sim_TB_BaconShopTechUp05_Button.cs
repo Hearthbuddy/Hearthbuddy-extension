@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//GAME_MODE_BUTTON 中立 费用：10
+	//GAME_MODE_BUTTON 中立 费用：11
 	//Tavern Tier 5
 	//等级5
 	//The Tavern offers higher Tier minions.

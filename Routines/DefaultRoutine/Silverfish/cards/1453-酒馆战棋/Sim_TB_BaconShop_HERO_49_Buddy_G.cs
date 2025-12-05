@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 中立 费用：0 攻击力：8 生命值：8
 	//Magnus Manastorm
 	//玛格努斯·法力风暴
-	//[x]4 <b>Refreshes</b> each turncost (0). <i>(@ left!)</i>
-	//每回合中，有4次<b>刷新</b>的消耗为（0）。<i>（还剩@次！）</i>
+	//[x]Four <b>Refreshes</b> each turnare free. <i>({0} left!)</i>
+	//每回合中，有四次<b>刷新</b>免费。<i>（还剩{0}次！）</i>
 	class Sim_TB_BaconShop_HERO_49_Buddy_G : SimTemplate
 	{
 		

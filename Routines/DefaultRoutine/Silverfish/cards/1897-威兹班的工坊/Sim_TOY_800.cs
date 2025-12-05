@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 德鲁伊 费用：3
+	//法术 德鲁伊 费用：4
 	//Sparkling Phial
 	//闪光试剂瓶
 	//[x]Deal $2 damage.Your next card this turncosts that much less.

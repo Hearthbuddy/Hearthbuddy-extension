@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：7 生命值：7
+	//随从 战士 费用：2 攻击力：7 生命值：7
 	//Obsidian Ravager
 	//黑曜石掠夺者
 	//[x]<b>Rally:</b> Deal damage equalto this minion's Attack tothe target and an adjacentminion.

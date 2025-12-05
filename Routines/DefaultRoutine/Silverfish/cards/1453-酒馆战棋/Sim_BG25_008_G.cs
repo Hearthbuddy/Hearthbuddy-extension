@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：8 生命值：2
+	//随从 巫妖王 费用：0 攻击力：6 生命值：2
 	//Eternal Knight
 	//永恒骑士
 	//[x]Has +{0}/+{1} for each friendlyEternal Knight that died this__game <i>(wherever this is)</i>.

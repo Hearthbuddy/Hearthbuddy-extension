@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：6 生命值：6
+	//随从 术士 费用：0 攻击力：10 生命值：10
 	//Impulsive Trickster
 	//躁动欺诈者
 	//[x]<b>Deathrattle:</b> Give thisminion's maximum Healthto another friendly minion,twice.

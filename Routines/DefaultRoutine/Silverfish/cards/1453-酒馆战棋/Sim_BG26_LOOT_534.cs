@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：3 攻击力：2 生命值：2
+	//随从 巫妖王 费用：0 攻击力：2 生命值：2
 	//Gilded Gargoyle
 	//镀金的石像鬼
 	//<b>Deathrattle:</b> Add a Coin to your hand.

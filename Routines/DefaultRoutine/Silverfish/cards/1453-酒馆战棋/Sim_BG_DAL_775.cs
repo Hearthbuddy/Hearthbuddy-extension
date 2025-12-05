@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：7 攻击力：3 生命值：7
+	//随从 中立 费用：0 攻击力：3 生命值：7
 	//Tunnel Blaster
 	//坑道爆破师
 	//[x]<b>Taunt</b><b>Deathrattle:</b> Deal 3 damageto all minions.

@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//英雄技能 中立 费用：0
 	//Clairvoyance
 	//洞察未来
-	//[x]<b>Passive</b>Your first <b>Refresh</b> eachturn costs (0).
-	//<b>被动</b>每回合你第一次<b>刷新</b>酒馆的消耗为（0）枚铸币。
+	//[x]Your first <b>Refresh</b>each turn is free.
+	//每回合中，你的第一次<b>刷新</b>免费。
 	class Sim_TB_BaconShop_HP_063 : SimTemplate
 	{
 		

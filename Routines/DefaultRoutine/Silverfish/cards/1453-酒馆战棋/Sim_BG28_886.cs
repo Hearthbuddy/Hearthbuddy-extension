@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：1
+	//BATTLEGROUND_SPELL 中立 费用：2
 	//Staff of Enrichment
 	//富足之杖
 	//Give minions in the Tavern +{0}/+{1}this game.

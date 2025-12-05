@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//随从 法师 费用：1 攻击力：20 生命值：16
+	//Timewarped Sea Glass
+	//时空扭曲海玻璃
+	//[x]<b>Divine Shield</b><b>Rally:</b> Triple this minion'sstats. <i>({1} |4(time, times) per combat.)</i>@[x]<b>Divine Shield</b><b>Rally:</b> Triple this minion'sstats. <i>({0} left!)</i>
+	//<b>圣盾</b>。<b>进击：</b>本随从的属性值变为三倍。<i>（每场战斗限{1}次。）</i>@<b>圣盾</b>。<b>进击：</b>本随从的属性值变为三倍。<i>（还剩{0}次！）</i>
+	class Sim_BG34_Giant_110_G : SimTemplate
+	{
+		
+		
+	}
+}

@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 猎人 费用：0 攻击力：6 生命值：2
 	//Icesnarl the Mighty
 	//冰嚎，强力猛狼
-	//[x]After a friendly minionkills an enemy, gain+2 Health permanently.
-	//在一个友方随从消灭敌人后，永久获得+2生命值。
+	//[x]After a friendly minionkills an enemy, gain+3 Health permanently.
+	//在一个友方随从消灭敌人后，永久获得+3生命值。
 	class Sim_BG20_HERO_100_Buddy : SimTemplate
 	{
 		
