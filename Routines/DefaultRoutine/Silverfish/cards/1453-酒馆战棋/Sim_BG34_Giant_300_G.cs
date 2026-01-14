@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：2 攻击力：10 生命值：8
+	//随从 术士 费用：1 攻击力：10 生命值：8
 	//Timewarped Rewinder
 	//时空扭曲回溯者
 	//[x]After your hero takesdamage, rewind it andgive your Demons+{2} Health.

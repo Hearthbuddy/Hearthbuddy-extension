@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：2 攻击力：2 生命值：2
+	//随从 巫妖王 费用：1 攻击力：2 生命值：2
 	//Timewarped Radio Star
 	//时空扭曲电台明星
 	//[x]<b>Deathrattle:</b> Get 2 copies ofthe enemy minion thatkilled this with full Healthand enchantments.

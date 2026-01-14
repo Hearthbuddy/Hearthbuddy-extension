@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：12 生命值：12
+	//随从 圣骑士 费用：0 攻击力：12 生命值：10
 	//Junk Jouster
 	//废铁枪骑士
 	//Whenever a minion is <b>Magnetized</b> to this, give your minions +{0}/+{1}.

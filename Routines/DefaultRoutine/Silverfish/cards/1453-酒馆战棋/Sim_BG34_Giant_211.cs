@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：2 攻击力：6 生命值：7
+	//随从 恶魔猎手 费用：2 攻击力：9 生命值：10
 	//Timewarped Pashmar
 	//时空扭曲帕什玛
 	//[x]<b>Avenge ({0}):</b> Get a random<b>Spellcraft</b> spell andTavern spell.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：1 攻击力：6 生命值：7
+	//随从 术士 费用：1 攻击力：12 生命值：14
 	//Timewarped Calligrapher
 	//时空扭曲书画家
 	//[x]<b>Battlecry, Deathrattle,and Rally:</b> Get a randomTavern spell.

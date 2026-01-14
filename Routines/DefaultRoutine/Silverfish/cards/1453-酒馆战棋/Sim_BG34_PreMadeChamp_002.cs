@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：2 攻击力：12 生命值：8
+	//随从 猎人 费用：1 攻击力：12 生命值：8
 	//Timewarped Lab Rat
 	//时空扭曲实验室老鼠
 	//After you cast a spell, give your Beasts +{0}/+{1}.

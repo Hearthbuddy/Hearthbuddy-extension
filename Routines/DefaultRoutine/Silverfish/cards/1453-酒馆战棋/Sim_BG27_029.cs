@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：3 生命值：13
+	//随从 巫妖王 费用：0 攻击力：2 生命值：10
 	//Champion of the Primus
 	//兵主的勇士
 	//[x]<b>Avenge ({1}):</b> Your Undeadhave +{0} Attack this game <i>(wherever they are)</i>.

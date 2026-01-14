@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：2 生命值：8
+	//随从 巫妖王 费用：0 攻击力：2 生命值：7
 	//Ghoul of the Feast
 	//宴会食尸鬼
 	//[x]<b>Avenge ({2}):</b> Give a friendlyminion of each type +{0}/+{1}permanently.

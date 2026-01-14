@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：2 攻击力：5 生命值：7
+	//随从 中立 费用：1 攻击力：5 生命值：7
 	//Timewarped Henchman
 	//时空扭曲匪徒
 	//[x]After you kill a secondminion each combat,get a plain copy of it.

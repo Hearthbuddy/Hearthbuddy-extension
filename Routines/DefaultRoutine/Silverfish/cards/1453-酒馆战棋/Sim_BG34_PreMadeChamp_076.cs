@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：2 攻击力：12 生命值：8
+	//随从 德鲁伊 费用：1 攻击力：12 生命值：8
 	//Timewarped Bloodbinder
 	//时空扭曲血缚野猪人
 	//[x]At the start of your turn, get{0} <b>Blood Gems</b>. They alsocount as Tavern spells.

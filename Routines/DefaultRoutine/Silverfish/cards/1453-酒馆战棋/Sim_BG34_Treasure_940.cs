@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：2
+	//BATTLEGROUND_SPELL 中立 费用：1
 	//Timewarped Chef's Choice
 	//时空扭曲主厨甄选
 	//Choose a minion. Get a random minion of the same type from Tiers 4, 5, and 6.

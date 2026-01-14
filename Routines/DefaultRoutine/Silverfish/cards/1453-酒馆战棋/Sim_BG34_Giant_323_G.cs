@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：1 攻击力：10 生命值：22
+	//随从 恶魔猎手 费用：2 攻击力：10 生命值：22
 	//Timewarped Secretary
 	//时空扭曲秘书
 	//[x]After you cast {1} <b>Spellcraft</b>spells, get two randomTavern spells. <i>({0} left!)</i>

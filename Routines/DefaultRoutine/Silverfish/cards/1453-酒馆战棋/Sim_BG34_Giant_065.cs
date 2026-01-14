@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：2 攻击力：7 生命值：7
+	//随从 战士 费用：2 攻击力：10 生命值：10
 	//Timewarped Low-Flier
 	//时空扭曲低保真飞龙
 	//[x]At the end of your turn, give+{0} Attack to your minionswith less Attack than this.Repeat with Health.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：2 攻击力：6 生命值：8
+	//随从 中立 费用：1 攻击力：6 生命值：8
 	//Timewarped Tipper
 	//时空扭曲小费酒客
 	//If you have any unspent Gold at the end of your turn, get 2 random minions and Tavern spells.

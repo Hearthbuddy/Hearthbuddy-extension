@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：2 攻击力：28 生命值：12
+	//随从 恶魔猎手 费用：1 攻击力：28 生命值：12
 	//Timewarped Karathress
 	//时空扭曲卡拉瑟雷斯
 	//After you summon a minion in combat, get 2 copies of Deep Blues.

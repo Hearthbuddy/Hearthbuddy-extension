@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：18 生命值：12
+	//随从 战士 费用：0 攻击力：16 生命值：10
 	//Fire-forged Evoker
 	//火铸唤魔师
 	//[x]<b>Start of Combat:</b> Give your Dragons +{0}/+{1}.After you cast a Tavernspell, improve this.

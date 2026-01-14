@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：2 攻击力：10 生命值：6
+	//随从 德鲁伊 费用：1 攻击力：10 生命值：6
 	//Timewarped Thorncaller
 	//时空扭曲荆棘召唤者
 	//[x]<b>Battlecry and Deathrattle:</b>Get 2 Blood Gem Barrages.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：4 攻击力：4 生命值：4
+	//随从 圣骑士 费用：3 攻击力：3 生命值：3
 	//Cardboard Golem
 	//纸板魔像
 	//<b>Battlecry:</b> Increase the duration of Auras in your hand, deck, and battlefield by 1.

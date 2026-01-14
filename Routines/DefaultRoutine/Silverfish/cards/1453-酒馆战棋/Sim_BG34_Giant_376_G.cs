@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：20
+	//随从 中立 费用：2 攻击力：12 生命值：20
 	//Timewarped Deios
 	//时空扭曲戴欧斯
 	//Your <b>Battlecries</b>, <b>Deathrattles</b>, and <b>Rallies</b> trigger three times.

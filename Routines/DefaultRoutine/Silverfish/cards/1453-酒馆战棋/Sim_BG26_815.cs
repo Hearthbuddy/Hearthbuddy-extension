@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：1 生命值：1
+	//随从 牧师 费用：0 攻击力：4 生命值：4
 	//Underhanded Dealer
 	//开挂荷官
 	//After you gain Gold, gain +{0}/+{1}.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：8 攻击力：6 生命值：6
+	//随从 德鲁伊 费用：7 攻击力：6 生命值：6
 	//Highborne Mentor
 	//上层精灵教师
 	//[x]<b>Battlecry:</b> Get a 2/2 Pupil.<b>Discover</b> a spell that costs(7) or more from the pastto teach it.

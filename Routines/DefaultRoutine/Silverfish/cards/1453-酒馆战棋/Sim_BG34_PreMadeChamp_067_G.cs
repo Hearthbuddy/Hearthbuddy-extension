@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：2 攻击力：30 生命值：10
+	//随从 牧师 费用：1 攻击力：30 生命值：10
 	//Timewarped Plunderer
 	//时空扭曲掠夺者
 	//<b>Deathrattle:</b> Increase your maximum Gold by {0}.

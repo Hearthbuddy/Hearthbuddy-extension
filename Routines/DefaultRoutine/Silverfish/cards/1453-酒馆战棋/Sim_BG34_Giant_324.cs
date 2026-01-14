@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：2 攻击力：6 生命值：9
+	//随从 无效的 费用：1 攻击力：6 生命值：9
 	//Timewarped Summoner
 	//时空扭曲召唤师
 	//<b>Spellcraft:</b> Choose a minion. Transform all minions in the Tavern into ones of its type, keeping Tiers.

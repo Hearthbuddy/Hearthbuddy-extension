@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：1 攻击力：12 生命值：24
+	//随从 圣骑士 费用：2 攻击力：12 生命值：24
 	//Timewarped Grease Bot
 	//时空扭曲滑油机器人
 	//[x]<b>Divine Shield</b>. After a friendlyminion loses <b>Divine Shield</b>,give your minions +{0}/+{1}permanently.

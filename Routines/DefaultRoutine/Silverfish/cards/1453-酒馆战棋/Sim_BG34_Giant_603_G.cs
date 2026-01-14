@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：1 攻击力：14 生命值：10
+	//随从 中立 费用：2 攻击力：14 生命值：10
 	//Timewarped Tender
 	//时空扭曲护灯人
 	//[x]At the end of your turn,get {0} random Tavernspells that give stats.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：5 生命值：5
+	//随从 法师 费用：0 攻击力：4 生命值：4
 	//En-Djinn Blazer
 	//爆焰灯神
 	//[x]<b>Battlecry:</b> After the Tavernis <b>Refreshed</b> this game,give its right-mostminion +{0}/+{1}.

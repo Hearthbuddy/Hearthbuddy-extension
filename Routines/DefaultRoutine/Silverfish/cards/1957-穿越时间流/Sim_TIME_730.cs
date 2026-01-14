@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：3 攻击力：3 生命值：4
+	//随从 德鲁伊 费用：2 攻击力：2 生命值：3
 	//Kaldorei Cultivator
 	//卡多雷培育师
 	//[x]<b>Battlecry:</b> <b>Discover</b> 2 Beasts.Put them on the bottom ofyour deck with +5/+5.

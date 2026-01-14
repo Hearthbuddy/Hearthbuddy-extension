@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：2 攻击力：7 生命值：13
+	//随从 德鲁伊 费用：1 攻击力：7 生命值：13
 	//Timewarped Bandit
 	//时空扭曲强盗
 	//[x]At the start of your turn,discard a spell for this toplay {0} <b>Blood Gems</b> onall your minions.

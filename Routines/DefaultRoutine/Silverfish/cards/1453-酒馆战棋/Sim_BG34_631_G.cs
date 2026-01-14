@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：2 生命值：6
+	//随从 战士 费用：0 攻击力：2 生命值：8
 	//Whelp Watcher
 	//雏龙守护者
 	//<b>Rally:</b> Summon a 6/6 Whelp to attack the target first.

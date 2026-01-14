@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：2 攻击力：4 生命值：6
+	//随从 萨满祭司 费用：1 攻击力：4 生命值：6
 	//Timewarped Acolyte
 	//时空扭曲侍战者
 	//At the start of your turn, spin the Wheel ofYogg-Saron.

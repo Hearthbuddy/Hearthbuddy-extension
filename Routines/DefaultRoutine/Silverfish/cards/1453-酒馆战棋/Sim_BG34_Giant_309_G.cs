@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：2 攻击力：24 生命值：24
+	//随从 猎人 费用：1 攻击力：24 生命值：24
 	//Timewarped Nine Frogs
 	//时空扭曲九蛙
 	//[x]After you buy a minion, get 2random Tavern spells fromthe same Tier. <i>({0} left!)</i>

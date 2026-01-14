@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：1 攻击力：8 生命值：8
+	//随从 圣骑士 费用：1 攻击力：12 生命值：12
 	//Timewarped Sensei
 	//时空扭曲武道家
 	//At the end of your turn, give adjacent Mechs +{0}/+{1}.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 潜行者 费用：2
+	//法术 潜行者 费用：1
 	//Power Word: Barrier
 	//真言术：障
 	//Give a character <b>Divine Shield</b>. Give minions in your hand +2 Health.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：2 攻击力：4 生命值：12
+	//随从 无效的 费用：1 攻击力：4 生命值：12
 	//Timewarped Nellie's Ship
 	//时空扭曲奈利的船
 	//[x]At the start of each turn,<b>Discover</b> 2 Pirates to crew theship. <b>Deathrattle:</b> Summon__and get those Pirates.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：24 生命值：14
+	//随从 圣骑士 费用：1 攻击力：24 生命值：14
 	//Timewarped Probius
 	//时空扭曲普罗比斯
 	//[x]<b>Magnetic</b>After you <b>Magnetize</b> this to__a Mech, make it Golden.

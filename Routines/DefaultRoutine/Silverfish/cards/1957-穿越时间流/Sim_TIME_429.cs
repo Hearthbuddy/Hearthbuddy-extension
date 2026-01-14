@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 潜行者 费用：5 攻击力：5 生命值：5
+	//随从 潜行者 费用：4 攻击力：4 生命值：5
 	//Divine Augur
 	//神圣预言师
 	//[x]<b>Battlecry:</b> Set the Attackand Health of every minionin your hand to the higherof the two stats.

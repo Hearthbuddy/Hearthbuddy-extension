@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：2 攻击力：8 生命值：6
+	//随从 中立 费用：1 攻击力：8 生命值：6
 	//Timewarped Botani
 	//时空扭曲绿植
 	//At the end of your turn,get a random minionof your Tier.
