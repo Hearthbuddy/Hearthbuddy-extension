@@ -155,6 +155,7 @@ class TAG_CARD_SET_ENUM:
     EMERALD_DREAM = 1946
     LOST_CITY_OF_UNGORO = 1952
     ACROSS_THE_TIMEWAYS = 1957
+    CATACLYSM = 1980
 
 TAG_CARD_SET = {
     TAG_CARD_SET_ENUM.INVALID:                  "0000-失效",
@@ -227,6 +228,7 @@ TAG_CARD_SET = {
     TAG_CARD_SET_ENUM.EMERALD_DREAM:            "1946-翡翠梦境",
     TAG_CARD_SET_ENUM.LOST_CITY_OF_UNGORO:      "1952-安戈洛龟途",
     TAG_CARD_SET_ENUM.ACROSS_THE_TIMEWAYS:      "1957-穿越时间流",
+    TAG_CARD_SET_ENUM.CATACLYSM:                "1980-大地的裂变",
 }
 
 cardNameEn = ""
