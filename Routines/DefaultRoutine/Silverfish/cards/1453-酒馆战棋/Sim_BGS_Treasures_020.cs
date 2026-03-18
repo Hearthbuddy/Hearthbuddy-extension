@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//法术 中立 费用：0
 	//Top Shelf
 	//顶级优选
-	//<b>Discover</b> a minionfrom a Tier higher.
-	//<b>发现</b>一个高一级的随从。
+	//<b>Discover</b> a minionfrom a Tier higher<i>(up to Tier 7)</i>.
+	//<b>发现</b>一个高一级的随从<i>（最高等级7）</i>。
 	class Sim_BGS_Treasures_020 : SimTemplate
 	{
 		

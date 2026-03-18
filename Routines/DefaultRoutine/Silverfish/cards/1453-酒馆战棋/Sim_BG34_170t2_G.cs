@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：2 生命值：8
+	//随从 圣骑士 费用：0 攻击力：2 生命值：6
 	//Blue Volumizer
 	//蓝色扩音机
 	//[x]<b>Magnetic</b>. The first time this isplayed or <b>Magnetized</b>, yourVolumizers have +{1} Health this_____game <i>(wherever they are)</i>.

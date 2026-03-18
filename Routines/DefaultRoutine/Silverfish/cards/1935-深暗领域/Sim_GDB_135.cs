@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：5 攻击力：4 生命值：6
+	//随从 法师 费用：4 攻击力：4 生命值：5
 	//Ingenious Artificer
 	//聪明的技师
 	//[x]__<b>Battlecry:</b> The next Draenei__you play refreshes ManaCrystals equal to its Attack.

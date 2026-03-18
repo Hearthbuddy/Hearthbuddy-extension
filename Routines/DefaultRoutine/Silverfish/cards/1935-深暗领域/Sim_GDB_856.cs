@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：4 攻击力：3 生命值：3
+	//随从 德鲁伊 费用：3 攻击力：3 生命值：3
 	//Exarch Othaar
 	//大主教奥萨尔
 	//[x]<b>Battlecry:</b> If you're buildinga <b>Starship</b>, get 3 differentArcane spells and reducetheir Costs by (2).

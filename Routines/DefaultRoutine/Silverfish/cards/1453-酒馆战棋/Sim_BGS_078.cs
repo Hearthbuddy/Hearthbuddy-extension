@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：4 生命值：3
+	//随从 猎人 费用：0 攻击力：5 生命值：4
 	//Monstrous Macaw
 	//巨大的金刚鹦鹉
 	//[x]<b>Rally:</b> Trigger yourleft-most <b>Deathrattle</b>__<i>(except this minion's)</i>.

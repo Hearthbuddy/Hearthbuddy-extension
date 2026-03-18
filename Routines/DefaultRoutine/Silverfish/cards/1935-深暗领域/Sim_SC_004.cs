@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄 无效的 费用：8
+	//英雄 无效的 费用：7
 	//Kerrigan, Queen of Blades
 	//刀锋女王凯瑞甘
 	//[x]<b>Battlecry:</b> Summon two2/5 Hive Queens. Deal 3damage to all enemies.

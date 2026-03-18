@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//法术 中立 费用：0
 	//Might of Stormwind
 	//暴风城之力
-	//Give 3 random friendly minions +1/+1.
-	//随机使三个友方随从获得+1/+1。
+	//Give all friendly minions Attack equal to your Tier.
+	//使所有友方随从获得等同于你当前等级的攻击力。
 	class Sim_BGS_Treasures_007 : SimTemplate
 	{
 		

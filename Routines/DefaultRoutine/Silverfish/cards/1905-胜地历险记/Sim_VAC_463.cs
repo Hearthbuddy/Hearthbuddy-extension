@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：4 攻击力：3 生命值：4
+	//随从 中立 费用：3 攻击力：3 生命值：4
 	//Concierge
 	//前台礼宾
 	//Your cards from another class cost (1) less.

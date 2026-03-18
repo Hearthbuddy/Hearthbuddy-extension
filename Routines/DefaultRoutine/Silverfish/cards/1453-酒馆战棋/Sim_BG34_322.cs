@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：8 生命值：16
+	//随从 猎人 费用：0 攻击力：16 生命值：32
 	//Stalwart Kodo
 	//坚韧的科多兽
 	//[x]After you summon a minionin combat, give it thisminion's maximum stats.<i>(3 times per combat.)</i>@[x]After you summon a minionin combat, give it thisminion's maximum stats.<i>({0} left!)</i>

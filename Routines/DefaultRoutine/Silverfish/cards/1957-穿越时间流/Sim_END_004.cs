@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：7 攻击力：6 生命值：5
+	//随从 无效的 费用：7 攻击力：5 生命值：4
 	//Remnant of Rage
 	//愤怒残魂
 	//[x]Costs (1) less for eachminion that died this turn._<b>Battlecry:</b> Draw 2 cards.

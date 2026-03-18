@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 法师 费用：8
+	//法术 法师 费用：7
 	//Yogg in the Box
 	//匣中古神
 	//Cast 5 random spells. If your deck has no minions, the spells cast cost (5) or more.

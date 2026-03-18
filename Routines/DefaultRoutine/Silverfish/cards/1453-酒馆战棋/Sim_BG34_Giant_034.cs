@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：1 攻击力：10 生命值：6
+	//随从 巫妖王 费用：2 攻击力：10 生命值：6
 	//Timewarped Geist
 	//时空扭曲恶鬼
 	//<b>Deathrattle:</b> Your Tavern spells give an extra +{0}/+{1} this game.

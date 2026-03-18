@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 术士 费用：2
+	//法术 术士 费用：1
 	//Announce Darkness
 	//弃明投暗
 	//Replace your Hero Power and non-Warlock cards with Warlock ones.They cost (1) less.

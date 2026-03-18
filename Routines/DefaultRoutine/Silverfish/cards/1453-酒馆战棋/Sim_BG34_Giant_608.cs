@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：1 攻击力：5 生命值：5
+	//随从 德鲁伊 费用：2 攻击力：5 生命值：5
 	//Timewarped Lil' Quilboar
 	//时空扭曲小野猪
 	//[x]<b>Reborn</b><b>Deathrattle:</b> This plays {0}<b>Blood Gems</b> on all yourQuilboar.

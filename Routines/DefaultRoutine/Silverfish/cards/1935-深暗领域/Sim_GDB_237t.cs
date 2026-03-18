@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：3 攻击力：2 生命值：4
+	//随从 猎人 费用：3 攻击力：2 生命值：5
 	//Snacking Scrunguk
 	//觅食的狡兽
 	//<b>Taunt</b>

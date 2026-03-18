@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：4 攻击力：4 生命值：4
+	//随从 恶魔猎手 费用：3 攻击力：4 生命值：4
 	//Ci'Cigi
 	//希希集
 	//[x]<b>Battlecry, Outcast, andDeathrattle:</b> Get a random__first-edition Demon Hunter__card <i>(in mint condition)</i>.

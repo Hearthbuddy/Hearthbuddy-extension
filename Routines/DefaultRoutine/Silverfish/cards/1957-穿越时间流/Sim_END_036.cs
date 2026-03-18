@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：4 攻击力：2 生命值：5
+	//随从 中立 费用：4 攻击力：3 生命值：6
 	//Morchie
 	//米罗克
 	//[x]Your <b>Rewinds</b> keepBOTH potential outcomes.<b>Battlecry:</b> <b>Discover</b> a <b>Rewind</b>card from any class.

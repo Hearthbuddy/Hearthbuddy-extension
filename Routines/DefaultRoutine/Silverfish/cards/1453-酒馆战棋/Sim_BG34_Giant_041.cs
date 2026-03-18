@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：2 攻击力：5 生命值：9
+	//随从 战士 费用：1 攻击力：5 生命值：9
 	//Timewarped Greenskeeper
 	//时空扭曲护植绿龙
 	//[x]<b>Rally:</b> Trigger yourright-most <b>Battlecry</b> and<b>Deathrattle</b>.

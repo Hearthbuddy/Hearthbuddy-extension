@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：1
+	//BATTLEGROUND_SPELL 中立 费用：2
 	//Power of George
 	//乔治之力
 	//[x]<b>Casts When Bought</b>Make 'Boon of Light'your second Hero Power.

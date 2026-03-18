@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//英雄技能 中立 费用：1
 	//Rune of Damnation
 	//咒罚符文
-	//Destroy a friendly Undead to get a random Undead.
-	//消灭一个友方亡灵以随机获取一张亡灵牌。
+	//Destroy a friendly Undead to get a random Undead.<i>(Unlocks at Tier 2.)</i>
+	//消灭一个友方亡灵以随机获取一张亡灵牌。<i>（等级2时解锁。）</i>
 	class Sim_TB_BaconShop_HP_702t : SimTemplate
 	{
 		

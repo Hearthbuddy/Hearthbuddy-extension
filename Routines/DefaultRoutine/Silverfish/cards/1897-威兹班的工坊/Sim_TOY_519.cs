@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 牧师 费用：9
+	//法术 牧师 费用：8
 	//Everything Must Go!
 	//一件不留
 	//Summon two random 4-Cost minions. Costs (1) less for each card you've drawn this turn.

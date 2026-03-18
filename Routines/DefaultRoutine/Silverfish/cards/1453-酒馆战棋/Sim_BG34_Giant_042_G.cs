@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：1 攻击力：12 生命值：30
+	//随从 猎人 费用：2 攻击力：12 生命值：30
 	//Timewarped Chameleon
 	//时空扭曲变色龙
 	//<b>Start of Combat:</b> Transform into a Golden copy of the minion to the left of this.

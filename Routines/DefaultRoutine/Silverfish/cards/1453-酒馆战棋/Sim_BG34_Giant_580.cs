@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：2 攻击力：8 生命值：8
+	//随从 法师 费用：1 攻击力：8 生命值：8
 	//Timewarped Ragnaros
 	//时空扭曲拉格纳罗斯
 	//<b>Start of Combat:</b> Deal this minion's Attack to the highest-Health enemy minion.

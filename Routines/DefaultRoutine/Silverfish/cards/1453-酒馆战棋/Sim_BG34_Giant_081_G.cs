@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：2 攻击力：2 生命值：18
+	//随从 巫妖王 费用：1 攻击力：2 生命值：18
 	//Timewarped Deathswarmer
 	//时空扭曲群居蛛魔
 	//[x]Whenever this takesdamage, your Undead have+{0} Attack this game<i>(wherever they are)</i>.

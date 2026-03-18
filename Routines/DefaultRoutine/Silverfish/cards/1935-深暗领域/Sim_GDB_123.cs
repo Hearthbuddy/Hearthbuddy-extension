@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 术士 费用：2
+	//法术 术士 费用：1
 	//Abduction Ray
 	//挟持射线
 	//Get a random Demon. Reduce its Cost by (2). Repeatable this turn.

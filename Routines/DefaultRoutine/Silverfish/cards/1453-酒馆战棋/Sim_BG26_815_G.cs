@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：8 生命值：8
+	//随从 牧师 费用：0 攻击力：6 生命值：6
 	//Underhanded Dealer
 	//开挂荷官
-	//After you gain Gold, gain +{0}/+{1}.
-	//在你获得铸币后，获得+{0}/+{1}。
+	//After you gain Gold, gain +{0}/+{1} twice.
+	//在你获得铸币后，获得+{0}/+{1}，触发两次。
 	class Sim_BG26_815_G : SimTemplate
 	{
 		

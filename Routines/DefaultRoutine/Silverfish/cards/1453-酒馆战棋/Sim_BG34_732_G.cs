@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：18 生命值：10
+	//随从 战士 费用：0 攻击力：28 生命值：10
 	//Stuntdrake
 	//迷雾幼龙
 	//<b>Avenge ({0}):</b> Give this minion's Attack to two different friendly minions, twice.

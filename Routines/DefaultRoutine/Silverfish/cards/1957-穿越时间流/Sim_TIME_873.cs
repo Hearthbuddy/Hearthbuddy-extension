@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 战士 费用：1
+	//法术 战士 费用：2
 	//Unleash the Crocolisks
 	//放出鳄鱼
 	//Gain 10 Armor.Summon two 2/3 Beasts for your opponent.

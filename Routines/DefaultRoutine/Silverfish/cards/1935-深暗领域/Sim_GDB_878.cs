@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：3 攻击力：3 生命值：2
+	//随从 中立 费用：2 攻击力：2 生命值：1
 	//Braingill
 	//脑鳃鱼人
 	//<b>Battlecry:</b> Give your other Murlocs "<b>Deathrattle:</b> Draw a card."

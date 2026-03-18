@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：5 攻击力：2 生命值：6
+	//随从 恶魔猎手 费用：5 攻击力：3 生命值：6
 	//Wrathspike Brute
 	//怒刺蛮兵
 	//[x]<b>Taunt</b>After this is attacked,deal 1 damage toall enemies.

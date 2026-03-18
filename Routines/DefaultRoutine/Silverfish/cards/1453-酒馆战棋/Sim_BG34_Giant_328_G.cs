@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：2 攻击力：24 生命值：16
+	//随从 中立 费用：1 攻击力：24 生命值：16
 	//Timewarped Tide Razor
 	//时空扭曲海浪剃刀号
 	//<b>Deathrattle:</b> Summon and get {0} random Pirates.

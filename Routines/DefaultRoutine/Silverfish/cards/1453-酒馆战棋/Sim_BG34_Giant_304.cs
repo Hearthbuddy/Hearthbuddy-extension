@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：2 攻击力：5 生命值：4
+	//随从 恶魔猎手 费用：2 攻击力：10 生命值：6
 	//Timewarped Sapper
 	//时空扭曲工兵
 	//[x]<b>Taunt</b><b>Deathrattle:</b> Get aSpitescale Special.

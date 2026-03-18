@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：5 生命值：4
+	//随从 无效的 费用：0 攻击力：6 生命值：4
 	//Plankwalker
 	//走跳板的海盗
 	//[x]Whenever you cast a Tavernspell, give three randomfriendly minions +{0}/+{1}.

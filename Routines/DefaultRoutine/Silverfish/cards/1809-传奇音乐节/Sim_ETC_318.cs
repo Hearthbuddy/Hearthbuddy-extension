@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 圣骑士 费用：4
+	//法术 圣骑士 费用：3
 	//Boogie Down
 	//布吉舞乐
 	//[x]Summon two 1-Costminions from your deck.<b>Finale:</b> Summon another.

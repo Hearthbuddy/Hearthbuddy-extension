@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：5 攻击力：5 生命值：5
+	//随从 萨满祭司 费用：3 攻击力：3 生命值：3
 	//Carress, Cabaret Star
 	//歌唱明星卡瑞斯
 	//<b>Battlecry:</b> Destroy tworandom enemy minions. <b>Freeze</b> three random enemy minions.

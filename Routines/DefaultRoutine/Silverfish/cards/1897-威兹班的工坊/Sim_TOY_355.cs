@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：5 攻击力：3 生命值：6
+	//随从 猎人 费用：3 攻击力：3 生命值：4
 	//Hemet, Foam Marksman
 	//绵弹枪神赫米特
 	//After a friendly Beast dies, get a random <b>Legendary</b> Beast from the past. It costs (2) less.

@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Void Ministration
 	//虚空援助
 	//Give all characters +10/+10. Their abilities deal <b>Critical Damage</b> this turn.
-	//使所有角色获得+10/+10，且在本回合中其技能会造成<b>爆击伤害</b>。
+	//使所有角色获得+10/+10，且在本回合中其技能会造成<b>暴击伤害</b>。
 	class Sim_LETL_866P2_01 : SimTemplate
 	{
 		

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：2 攻击力：6 生命值：5
+	//随从 术士 费用：1 攻击力：6 生命值：5
 	//Timewarped Shadowdancer
 	//时空扭曲影舞者
 	//[x]<b>Taunt</b>At the end of your turn, castStaff of Enrichment.

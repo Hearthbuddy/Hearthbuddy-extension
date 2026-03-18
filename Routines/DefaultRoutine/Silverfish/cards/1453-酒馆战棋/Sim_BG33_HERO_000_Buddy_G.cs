@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：14
+	//随从 中立 费用：0 攻击力：10 生命值：10
 	//Stoneshell Guardian
 	//石壳守卫
-	//[x]<b>Start of Combat:</b> Copy allfriendly <b>Rallies</b> twice<i>(except otherStoneshells)</i>.
-	//<b>战斗开始时：</b>复制所有友方<b>进击</b>效果<i>（其他石壳守卫的除外）</i>，复制两次。
+	//[x]The first two Triple Rewardsyou play each turn <b>Discover</b>from Golden minons.<i>({0} left!)</i>
+	//每回合中，你使用的前两张三连奖励会<b>发现</b>金色随从。<i>（还剩{0}张！）</i>
 	class Sim_BG33_HERO_000_Buddy_G : SimTemplate
 	{
 		

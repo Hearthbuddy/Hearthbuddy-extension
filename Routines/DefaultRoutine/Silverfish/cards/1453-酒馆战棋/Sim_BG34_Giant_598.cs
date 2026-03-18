@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：2 攻击力：5 生命值：7
+	//随从 圣骑士 费用：1 攻击力：5 生命值：7
 	//Timewarped Mothership
 	//时空扭曲母舰
 	//<b>Avenge ({0}):</b> Get a random Protoss minion.

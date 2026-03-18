@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：2 攻击力：6 生命值：14
+	//随从 圣骑士 费用：2 攻击力：10 生命值：20
 	//Timewarped Guard
 	//时空扭曲齿械保镖
 	//[x]<b>Divine Shield</b><b>Rally:</b> Give 2 differentfriendly minions <b>DivineShield</b> permanently.

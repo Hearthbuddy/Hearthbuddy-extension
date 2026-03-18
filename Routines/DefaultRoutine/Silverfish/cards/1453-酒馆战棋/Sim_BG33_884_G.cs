@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：12 生命值：12
+	//随从 德鲁伊 费用：0 攻击力：10 生命值：10
 	//Bloodsnout Warlord
 	//血吻督军
 	//[x]Whenever a friendly <b>Rally</b>minion attacks, this plays{0} <b>Blood Gems</b> on allyour minions.

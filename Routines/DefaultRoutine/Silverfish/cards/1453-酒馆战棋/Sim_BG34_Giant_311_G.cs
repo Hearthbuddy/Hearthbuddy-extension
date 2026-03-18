@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：1 攻击力：8 生命值：4
+	//随从 术士 费用：2 攻击力：8 生命值：4
 	//Timewarped Shivarra
 	//时空扭曲破坏魔
 	//[x]Whenever a minion isconsumed, this gainsdouble its stats.

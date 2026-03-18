@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：4 攻击力：3 生命值：3
+	//随从 圣骑士 费用：3 攻击力：3 生命值：3
 	//Yrel, Beacon of Hope
 	//伊瑞尔，希望信标
 	//[x]<b>Rush</b><b>Deathrattle:</b> Get threedifferent Librams froman older timeline!

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：9 生命值：9
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//The Last One Standing
 	//最后的生物
 	//<b>Rally:</b> Give a friendly minion of each type +{0}/+{1} permanently.

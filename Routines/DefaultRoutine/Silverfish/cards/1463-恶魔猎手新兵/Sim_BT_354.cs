@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 恶魔猎手 费用：3
+	//法术 恶魔猎手 费用：2
 	//Blade Dance
 	//刃舞
 	//Deal damage equal to your hero's Attack to 3 random enemy minions.

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：6 生命值：4
+	//随从 牧师 费用：0 攻击力：4 生命值：2
 	//Peggy Sturdybone
 	//佩吉·斯特迪伯
-	//[x]Whenever a card is added toyour hand, give anotherfriendly Pirate +{0}/+{1}.
-	//每当一张卡牌被置入你的手牌，使另一个友方海盗获得+{0}/+{1}。
+	//[x]Whenever a card is added toyour hand, give anotherfriendly Pirate +{0}/+{1},twice.
+	//每当一张卡牌被置入你的手牌，使另一个友方海盗获得+{0}/+{1}，触发两次。
 	class Sim_BG25_032_G : SimTemplate
 	{
 		

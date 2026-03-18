@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：2 攻击力：8 生命值：14
+	//随从 术士 费用：1 攻击力：8 生命值：14
 	//Timewarped Kil'rek
 	//时空扭曲基尔里克
 	//<b>Taunt</b><b>Deathrattle:</b> Get 2random Demons.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 战士 费用：3
+	//法术 战士 费用：2
 	//Minion Sandwich
 	//随从三明治
 	//[x]Summon the minionsstuffed in this Sandwich.@[x]Summon the {0} |4(minion, minions)stuffed in this Sandwich.

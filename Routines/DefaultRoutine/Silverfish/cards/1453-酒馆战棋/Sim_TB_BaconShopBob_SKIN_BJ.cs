@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
 	//英雄 中立 费用：0
-	//Chihu Wrathion
+	//Chi Hu Wrathion
 	//螭虎当垆拉希奥
 	//
 	//

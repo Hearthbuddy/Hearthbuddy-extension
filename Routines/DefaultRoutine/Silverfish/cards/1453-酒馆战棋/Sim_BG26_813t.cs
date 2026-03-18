@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：2
+	//BATTLEGROUND_SPELL 中立 费用：0
 	//The Goldenizer
 	//点金术
 	//Make a friendly minion Golden.

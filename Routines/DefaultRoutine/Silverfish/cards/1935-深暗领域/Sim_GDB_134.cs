@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：7 攻击力：4 生命值：3
+	//随从 法师 费用：6 攻击力：4 生命值：3
 	//Arkwing Pilot
 	//阿肯飞翼驾驶员
 	//At the end of your turn, deal 3 damage to a random enemy. <b><b>Spellburst</b>:</b> Summon an Arkwing Pilot.

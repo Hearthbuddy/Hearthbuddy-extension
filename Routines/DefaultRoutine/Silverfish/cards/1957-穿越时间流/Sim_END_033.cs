@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：7 攻击力：6 生命值：9
+	//随从 中立 费用：7 攻击力：6 生命值：8
 	//Prescient Slitherdrake
 	//先觉蜿变幼龙
 	//[x]<b>Elusive</b>Costs (3) less if you're_holding another Dragon.

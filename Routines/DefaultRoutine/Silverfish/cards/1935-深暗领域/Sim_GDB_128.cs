@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：7 攻击力：7 生命值：7
+	//随从 术士 费用：6 攻击力：6 生命值：6
 	//Archimonde
 	//阿克蒙德
 	//[x]<b>Battlecry:</b> Summon everyDemon you played thisgame that didn't startin your deck.

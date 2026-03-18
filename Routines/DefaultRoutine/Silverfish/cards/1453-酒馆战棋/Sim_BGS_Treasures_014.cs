@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//The Unlimited Coin
 	//无穷铸币
 	//Gain 1 Gold.Return this to your hand at end of turn.
-	//获得1枚铸币。在回合结束时，将该牌移回你的手牌。
+	//获得1枚铸币。在回合结束时，将本牌移回你的手牌。
 	class Sim_BGS_Treasures_014 : SimTemplate
 	{
 		

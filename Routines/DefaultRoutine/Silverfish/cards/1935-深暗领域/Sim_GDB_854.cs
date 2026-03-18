@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：5 攻击力：6 生命值：5
+	//随从 德鲁伊 费用：4 攻击力：5 生命值：4
 	//Uluu, the Everdrifter
 	//乌鲁，泛天巨兽
 	//[x]Each turn this is in yourhand, gain two random<b>Choose One</b> choices.@<b>Choose One -</b> {0}; or {1}.

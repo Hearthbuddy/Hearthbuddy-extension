@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：2 攻击力：14 生命值：14
+	//随从 萨满祭司 费用：1 攻击力：14 生命值：14
 	//Timewarped Scourfin
 	//时空扭曲寻宝鱼人
 	//[x]<b><b>Taunt</b>.</b> <b>Deathrattle:</b> Give arandom minion in your hand+{0}/+{1} and summon it forthis combat only.

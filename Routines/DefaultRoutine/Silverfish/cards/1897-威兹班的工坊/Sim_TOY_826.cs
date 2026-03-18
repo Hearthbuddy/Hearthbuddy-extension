@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 巫妖王 费用：3
+	//法术 巫妖王 费用：2
 	//Threads of Despair
 	//绝望线缕
 	//Give all minions"<b>Deathrattle:</b> Deal 1damage to all minions."

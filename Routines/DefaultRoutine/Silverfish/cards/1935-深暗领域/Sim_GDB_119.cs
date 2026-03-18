@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 恶魔猎手 费用：2
+	//法术 恶魔猎手 费用：1
 	//Emergency Meeting
 	//紧急会议
 	//[x]Get two 4/4 Crewmates.Put a random Demonthat costs (3) or lessbetween them.

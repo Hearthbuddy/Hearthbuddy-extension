@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 萨满祭司 费用：0 攻击力：8 生命值：8
 	//Shoalfin Mystic
 	//浅鳍秘法师
-	//[x]When you sell this,your Tavern spells give an___extra +2/+2 this game.
-	//当你出售本随从时，你的酒馆法术在本局对战中使随从额外获得+2/+2。
+	//[x]When you sell this,your Tavern spells give an___extra +{0}/+{1} this game.
+	//当你出售本随从时，你的酒馆法术在本局对战中使随从额外获得+{0}/+{1}。
 	class Sim_BG32_860_G : SimTemplate
 	{
 		

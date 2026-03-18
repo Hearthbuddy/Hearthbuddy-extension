@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：1 攻击力：10 生命值：10
+	//随从 猎人 费用：1 攻击力：14 生命值：14
 	//Timewarped Alleycat
 	//时空扭曲雄斑虎
 	//At the end of your turn, summon 2 Tabbycats with this minion's stats.
