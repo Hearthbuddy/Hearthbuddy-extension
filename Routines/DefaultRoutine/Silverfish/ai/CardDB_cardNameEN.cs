@@ -679,7 +679,7 @@ namespace HREngine.Bots
 			/// </summary>
 			druidofthesaber_AT_042t2,
 			/// <summary>
-			/// <para>法术 德鲁伊 费用：4</para>
+			/// <para>法术 德鲁伊 费用：5</para>
 			/// <para>Astral Communion</para>
 			/// <para>星界沟通</para>
 			/// <para>Gain 10 Mana Crystals. Discard your hand.</para>
@@ -3306,8 +3306,8 @@ namespace HREngine.Bots
 			/// <para>随从 术士 费用：1 攻击力：2 生命值：1</para>
 			/// <para>Grave Defiler</para>
 			/// <para>墓地污染者</para>
-			/// <para><b>Battlecry:</b> Copy a Fel spell in your hand.</para>
-			/// <para><b>战吼：</b>复制你手牌中的一张邪能法术牌。</para>
+			/// <para>[x]<b>Battlecry:</b> Choose a Felspell in your hand.Get a copy of it.</para>
+			/// <para><b>战吼：</b>选择你手牌中的一张邪能法术牌，获取一张它的复制。</para>
 			/// </summary>
 			gravedefiler,
 			/// <summary>
@@ -8098,7 +8098,7 @@ namespace HREngine.Bots
 			/// <para>随从 德鲁伊 费用：0 攻击力：2 生命值：7</para>
 			/// <para>Bonker</para>
 			/// <para>狂棍野猪人</para>
-			/// <para><b>Rally:</b> This plays {0} <b>Blood Gems</b> on all your other minions.</para>
+			/// <para><b>Rally:</b> This plays {0}<b>Blood Gems</b> on all yourother minions.</para>
 			/// <para><b>进击：</b>本随从对你的所有其他随从各使用{0}张<b>鲜血宝石</b>。</para>
 			/// </summary>
 			bonker,
@@ -8106,7 +8106,7 @@ namespace HREngine.Bots
 			/// <para>随从 德鲁伊 费用：0 攻击力：4 生命值：14</para>
 			/// <para>Bonker</para>
 			/// <para>狂棍野猪人</para>
-			/// <para><b>Rally:</b> This plays {0} <b>Blood Gems</b> on all your other minions.</para>
+			/// <para><b>Rally:</b> This plays {0}<b>Blood Gems</b> on all yourother minions.</para>
 			/// <para><b>进击：</b>本随从对你的所有其他随从各使用{0}张<b>鲜血宝石</b>。</para>
 			/// </summary>
 			bonker_BG20_104_G,
@@ -8304,6 +8304,22 @@ namespace HREngine.Bots
 			bloodgem,
 			/// <summary>
 			/// <para>法术 中立 费用：0</para>
+			/// <para>Blood Gem</para>
+			/// <para>鲜血宝石</para>
+			/// <para>Give a minion +{0}/+{1}. If it's a Quilboar, also give it <b>Divine Shield</b>.</para>
+			/// <para>使一个随从获得+{0}/+{1}。如果该随从是野猪人，还会使其获得<b>圣盾</b>。</para>
+			/// </summary>
+			bloodgem_BG20_GEM_DivineShield,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Shielded</para>
+			/// <para>野猪圣盾</para>
+			/// <para><b>Divine Shield</b>.</para>
+			/// <para><b>圣盾</b>。</para>
+			/// </summary>
+			shielded_BG20_GEM_DivineShielde,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
 			/// <para>Blood Gem No Impact</para>
 			/// <para>无影响鲜血宝石</para>
 			/// <para></para>
@@ -8318,6 +8334,38 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			bloodgemnoimpactnotarget,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Blood Gem</para>
+			/// <para>鲜血宝石</para>
+			/// <para>Give a minion +{0}/+{1}. If it's a Quilboar, also give it <b>Reborn</b>.</para>
+			/// <para>使一个随从获得+{0}/+{1}。如果该随从是野猪人，还会使其获得<b>复生</b>。</para>
+			/// </summary>
+			bloodgem_BG20_GEM_Reborn,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Re-boar-ned</para>
+			/// <para>野猪复生</para>
+			/// <para><b>Reborn</b>.</para>
+			/// <para><b>复生</b>。</para>
+			/// </summary>
+			reboarned,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Blood Gem</para>
+			/// <para>鲜血宝石</para>
+			/// <para>Give a minion +{0}/+{1}. If it's a Quilboar, also give it <b>Taunt</b>.</para>
+			/// <para>使一个随从获得+{0}/+{1}。如果该随从是野猪人，还会使其获得<b>嘲讽</b>。</para>
+			/// </summary>
+			bloodgem_BG20_GEM_Taunt,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Taunted</para>
+			/// <para>野猪嘲讽</para>
+			/// <para><b>Taunt</b>.</para>
+			/// <para><b>嘲讽</b>。</para>
+			/// </summary>
+			taunted,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Blood Gem</para>
@@ -8434,7 +8482,7 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Glory of Combat</para>
 			/// <para>战斗的荣耀</para>
-			/// <para>[x]After a friendly minion killsan enemy, give it+1 Attack permanently.</para>
+			/// <para>[x]After a friendly minionkills an enemy, give it+1 Attack permanently.</para>
 			/// <para>在友方随从消灭敌人后，使其永久获得+1攻击力。</para>
 			/// </summary>
 			gloryofcombat,
@@ -8666,16 +8714,16 @@ namespace HREngine.Bots
 			/// <para>随从 德鲁伊 费用：0 攻击力：3 生命值：7</para>
 			/// <para>Death's Head Sage</para>
 			/// <para>亡首圣贤</para>
-			/// <para>After you get a <b>Blood Gem</b>, get an extra one.</para>
-			/// <para>在你获取一张<b>鲜血宝石</b>后，额外获取一张。</para>
+			/// <para>After you get a <b>Blood Gem</b>, get an extra copy of it.</para>
+			/// <para>在你获取一张<b>鲜血宝石</b>后，额外获取一张该宝石的复制。</para>
 			/// </summary>
 			deathsheadsage,
 			/// <summary>
 			/// <para>随从 德鲁伊 费用：0 攻击力：6 生命值：14</para>
 			/// <para>Death's Head Sage</para>
 			/// <para>亡首圣贤</para>
-			/// <para>After you get a <b>Blood Gem</b>, get two extra.</para>
-			/// <para>在你获取一张<b>鲜血宝石</b>后，额外获取两张。</para>
+			/// <para>After you get a <b>Blood Gem</b>, get 2 extra copies of it.</para>
+			/// <para>在你获取一张<b>鲜血宝石</b>后，额外获取2张该宝石的复制。</para>
 			/// </summary>
 			deathsheadsage_BG20_HERO_103_Buddy_G,
 			/// <summary>
@@ -8886,6 +8934,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			celebrationnguyen,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Outlaw Nguyen</para>
+			/// <para>草莽英雄阮大师</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			outlawnguyen,
 			/// <summary>
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Power of the Storm</para>
@@ -9503,7 +9559,7 @@ namespace HREngine.Bots
 			/// </summary>
 			sated,
 			/// <summary>
-			/// <para>随从 术士 费用：0 攻击力：9 生命值：5</para>
+			/// <para>随从 术士 费用：0 攻击力：6 生命值：3</para>
 			/// <para>Famished Felbat</para>
 			/// <para>饥饿的魔蝠</para>
 			/// <para>At the end of your turn, your Demons each consume a minion in the Tavern to gain its stats.</para>
@@ -9511,7 +9567,7 @@ namespace HREngine.Bots
 			/// </summary>
 			famishedfelbat,
 			/// <summary>
-			/// <para>随从 术士 费用：0 攻击力：18 生命值：10</para>
+			/// <para>随从 术士 费用：0 攻击力：12 生命值：6</para>
 			/// <para>Famished Felbat</para>
 			/// <para>饥饿的魔蝠</para>
 			/// <para>[x]At the end of your turn, yourDemons each consume aminion in the Tavern togain double its stats.</para>
@@ -9655,7 +9711,7 @@ namespace HREngine.Bots
 			/// </summary>
 			promoted,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：3 生命值：3</para>
+			/// <para>随从 战士 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Tarecgosa</para>
 			/// <para>泰蕾苟萨</para>
 			/// <para>This permanently keeps <b><b>Bonus Keyword</b>s</b> and stats gained in combat.</para>
@@ -9663,7 +9719,7 @@ namespace HREngine.Bots
 			/// </summary>
 			tarecgosa,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 战士 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Tarecgosa</para>
 			/// <para>泰蕾苟萨</para>
 			/// <para>This permanently keeps <b><b>Bonus Keyword</b>s</b> and double stats gained in combat.</para>
@@ -10087,6 +10143,14 @@ namespace HREngine.Bots
 			/// </summary>
 			lynxridercariel,
 			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Leader Cariel</para>
+			/// <para>将领凯瑞尔</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			leadercariel,
+			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Cariel Watcher</para>
 			/// <para>凯瑞尔监控</para>
@@ -10178,7 +10242,7 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：2</para>
 			/// <para>I Spy</para>
 			/// <para>间谍探查</para>
-			/// <para>[x]<b>Discover</b> a plain copy ofa minion from your next opponent's warband.</para>
+			/// <para>[x]<b>Discover</b> a plain copy ofa minion from your nextopponent's warband.</para>
 			/// <para>从你下一个对手的战队中<b>发现</b>一个随从的原始版复制。</para>
 			/// </summary>
 			ispy,
@@ -10254,6 +10318,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			cookietheinfinite,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Poisoner Cookie</para>
+			/// <para>大毒师曲奇</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			poisonercookie,
 			/// <summary>
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Stir the Pot</para>
@@ -10334,6 +10406,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			seedysneed,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Mystery Racer Sneed</para>
+			/// <para>神秘车手斯尼德</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			mysteryracersneed,
 			/// <summary>
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Pilot the Shredder</para>
@@ -11143,6 +11223,14 @@ namespace HREngine.Bots
 			/// </summary>
 			rebelvarden,
 			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Resistance Varden</para>
+			/// <para>抵抗军瓦尔登</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			resistancevarden,
+			/// <summary>
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Twice as Nice</para>
 			/// <para>好事成霜</para>
@@ -11426,7 +11514,7 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Expedition Plans</para>
 			/// <para>远行计划</para>
-			/// <para>[x]Skip your first turn.<b>Discover</b> a Tier 6, 4, and2 minion to get at thoseTiers.</para>
+			/// <para>[x]Skip your first turn.<b>Discover</b> minions fromTiers 6, 4, and 2 to getat those Tiers.</para>
 			/// <para>跳过你的第一个回合。<b>发现</b>等级6，4和2的随从各一个，当你达到对应等级时才可使用。</para>
 			/// </summary>
 			expeditionplans,
@@ -11842,16 +11930,16 @@ namespace HREngine.Bots
 			/// <para>随从 恶魔猎手 费用：0 攻击力：6 生命值：7</para>
 			/// <para>Tidemistress Athissa</para>
 			/// <para>潮汐主母阿茜萨</para>
-			/// <para>Whenever you cast a spell, give 4 friendly Naga +1/+1.</para>
-			/// <para>每当你施放一个法术，使4个友方纳迦获得+1/+1。</para>
+			/// <para>Whenever you cast a spell, give all your Naga +{0}/+{1} permanently.</para>
+			/// <para>每当你施放一个法术，使你的所有纳迦永久获得+{0}/+{1}。</para>
 			/// </summary>
 			tidemistressathissa,
 			/// <summary>
 			/// <para>随从 恶魔猎手 费用：0 攻击力：12 生命值：14</para>
 			/// <para>Tidemistress Athissa</para>
 			/// <para>潮汐主母阿茜萨</para>
-			/// <para>Whenever you cast a spell, give 4 friendly Naga +2/+2.</para>
-			/// <para>每当你施放一个法术，使4个友方纳迦获得+2/+2。</para>
+			/// <para>Whenever you cast a spell, give all your Naga +{0}/+{1} permanently.</para>
+			/// <para>每当你施放一个法术，使你的所有纳迦永久获得+{0}/+{1}。</para>
 			/// </summary>
 			tidemistressathissa_BG23_013_G,
 			/// <summary>
@@ -11943,19 +12031,19 @@ namespace HREngine.Bots
 			/// </summary>
 			sanguinechampion_BG23_017_G,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：5 生命值：6</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：6 生命值：8</para>
 			/// <para>Darkgaze Elder</para>
 			/// <para>暗视长者</para>
-			/// <para>[x]Whenever you spend 6 Gold,this plays a <b>Blood Gem</b>on all your Quilboar.<i>(@ Gold left!)</i></para>
-			/// <para>每当你花掉6枚铸币，本随从对你的所有野猪人各使用一张<b>鲜血宝石</b>。<i>（还剩@枚！）</i></para>
+			/// <para>[x]Whenever you spend {2} Gold,this plays two <b>Blood Gems</b>on all your Quilboar.<i>({0} Gold left!)</i></para>
+			/// <para>每当你花掉{2}枚铸币，本随从对你的所有野猪人各使用两张<b>鲜血宝石</b>。<i>（还剩{0}枚！）</i></para>
 			/// </summary>
 			darkgazeelder,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：10 生命值：12</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：12 生命值：16</para>
 			/// <para>Darkgaze Elder</para>
 			/// <para>暗视长者</para>
-			/// <para>[x]Whenever you spend 6 Gold,this plays two <b>Blood Gems</b>on all your Quilboar.<i>(@ Gold left!)</i></para>
-			/// <para>每当你花掉6枚铸币，本随从对你的所有野猪人各使用两张<b>鲜血宝石</b>。<i>（还剩@枚！）</i></para>
+			/// <para>[x]Whenever you spend {2} Gold,this plays four <b>Blood Gems</b>on all your Quilboar.<i>({0} Gold left!)</i></para>
+			/// <para>每当你花掉{2}枚铸币，本随从对你的所有野猪人各使用四张<b>鲜血宝石</b>。<i>（还剩{0}枚！）</i></para>
 			/// </summary>
 			darkgazeelder_BG23_018_G,
 			/// <summary>
@@ -12074,16 +12162,16 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Treasure-Seeker Elise</para>
 			/// <para>宝藏追寻者伊莉斯</para>
-			/// <para>After you <b>Refresh</b> 5 times, find the <b>Golden</b> Monkey! <i>(@ left!)</i></para>
-			/// <para>在你<b>刷新</b>5次后，找到<b>黄金</b>猿！<i>（还剩@次！）</i></para>
+			/// <para>Whenever you <b>Refresh</b> 5 times, find the <b>Golden</b> Monkey! <i>(@ left!)</i></para>
+			/// <para>每当你<b>刷新</b>5次，找到<b>黄金</b>猿！<i>（还剩@次！）</i></para>
 			/// </summary>
 			treasureseekerelise,
 			/// <summary>
 			/// <para>随从 中立 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Treasure-Seeker Elise</para>
 			/// <para>宝藏追寻者伊莉斯</para>
-			/// <para>After you <b>Refresh</b> 5 times, find two <b>Golden</b> Monkeys! <i>(@ left!)</i></para>
-			/// <para>在你<b>刷新</b>5次后，找到两尊<b>黄金</b>猿！<i>（还剩@次！）</i></para>
+			/// <para>Whenever you <b>Refresh</b> 5 times, find two <b>Golden</b> Monkeys! <i>(@ left!)</i></para>
+			/// <para>每当你<b>刷新</b>5次，找到两尊<b>黄金</b>猿！<i>（还剩@次！）</i></para>
 			/// </summary>
 			treasureseekerelise_BG23_353_G,
 			/// <summary>
@@ -12647,21 +12735,29 @@ namespace HREngine.Bots
 			/// </summary>
 			warpwing_BG24_004_G,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：4 生命值：4</para>
-			/// <para>Sinrunner Blanchy</para>
-			/// <para>罪奔者布兰契</para>
-			/// <para><b>Reborn</b>. This is <b>Reborn</b>with full Health and enchantments in combat.</para>
-			/// <para><b>复生</b>。本随从在战斗中<b>复生</b>时会具有所有生命值和附加效果。</para>
-			/// </summary>
-			sinrunnerblanchy,
-			/// <summary>
 			/// <para>随从 无效的 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Sinrunner Blanchy</para>
 			/// <para>罪奔者布兰契</para>
-			/// <para><b>Reborn</b>. This is <b>Reborn</b>with full Health and enchantments in combat.</para>
-			/// <para><b>复生</b>。本随从在战斗中<b>复生</b>时会具有所有生命值和附加效果。</para>
+			/// <para><b>Reborn</b>. This is <b>Reborn</b> with full stats and <b><b>Bonus Keyword</b>s</b>.</para>
+			/// <para><b>复生</b>。本随从<b>复生</b>时会具有所有属性值和<b><b>额外关键词</b></b>。</para>
+			/// </summary>
+			sinrunnerblanchy,
+			/// <summary>
+			/// <para>随从 无效的 费用：0 攻击力：16 生命值：16</para>
+			/// <para>Sinrunner Blanchy</para>
+			/// <para>罪奔者布兰契</para>
+			/// <para><b>Reborn</b>. This is <b>Reborn</b> with full stats and <b>Bonus Keywords</b>.</para>
+			/// <para><b>复生</b>。本随从<b>复生</b>时会具有所有属性值和<b>额外关键词</b>。</para>
 			/// </summary>
 			sinrunnerblanchy_BG24_005_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Blanchy Buff</para>
+			/// <para>布兰契的增益</para>
+			/// <para>+{0}/+{1}</para>
+			/// <para>+{0}/+{1}</para>
+			/// </summary>
+			blanchybuff,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Reborn Removed</para>
@@ -12882,7 +12978,7 @@ namespace HREngine.Bots
 			/// <para>随从 德鲁伊 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Bristlemane Scrapsmith</para>
 			/// <para>刺鬃废料铁匠</para>
-			/// <para>[x]After a friendly <b>Taunt</b>minion dies,get a <b>Blood Gem</b>.</para>
+			/// <para>[x]After a friendly minionwith <b>Taunt</b> dies, get a<b>Blood Gem</b>.</para>
 			/// <para>在一个友方<b>嘲讽</b>随从死亡后，获取一张<b>鲜血宝石</b>。</para>
 			/// </summary>
 			bristlemanescrapsmith,
@@ -12890,7 +12986,7 @@ namespace HREngine.Bots
 			/// <para>随从 德鲁伊 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Bristlemane Scrapsmith</para>
 			/// <para>刺鬃废料铁匠</para>
-			/// <para>[x]After a friendly <b>Taunt</b>minion dies,get 2 <b>Blood Gems</b>.</para>
+			/// <para>[x]After a friendly minionwith <b>Taunt</b> dies, get 2<b>Blood Gems</b>.</para>
 			/// <para>在一个友方<b>嘲讽</b>随从死亡后，获取2张<b>鲜血宝石</b>。</para>
 			/// </summary>
 			bristlemanescrapsmith_BG24_707_G,
@@ -13138,8 +13234,8 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Enhancification</para>
 			/// <para>强化</para>
-			/// <para>[x]After each <b>Refresh</b>, givea minion in the Tavern a_random <b>Bonus Keyword</b>.</para>
-			/// <para>在每次<b>刷新</b>后，使酒馆中的一个随从获得一项随机<b>额外关键词</b>。</para>
+			/// <para>[x]After the Tavern is<b>Refreshed</b>, give a randomminion in it a random<b>Bonus Keyword</b>.</para>
+			/// <para>在酒馆<b>刷新</b>后，随机使其中的一个随从获得一项随机<b>额外关键词</b>。</para>
 			/// </summary>
 			enhancification,
 			/// <summary>
@@ -13426,8 +13522,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_QUEST_REWARD 中立 费用：0</para>
 			/// <para>Mirror Shield</para>
 			/// <para>镜盾</para>
-			/// <para>[x]After each <b>Refresh</b>, givea minion in the Tavern+6/+6 and <b>Divine Shield</b>.</para>
-			/// <para>在每次<b>刷新</b>后，使酒馆中的一个随从获得+6/+6和<b>圣盾</b>。</para>
+			/// <para>[x]After the Tavern is<b>Refreshed</b>, give a randomminion in it +6/+6 and<b>Divine Shield</b>.</para>
+			/// <para>在酒馆<b>刷新</b>后，随机使其中的一个随从获得+6/+6和<b>圣盾</b>。</para>
 			/// </summary>
 			mirrorshield,
 			/// <summary>
@@ -13991,7 +14087,7 @@ namespace HREngine.Bots
 			/// </summary>
 			anubaraknerubianking_BG25_007_G,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：1</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：2</para>
 			/// <para>Eternal Knight</para>
 			/// <para>永恒骑士</para>
 			/// <para>[x]Has +{0}/+{1} for each friendlyEternal Knight that died this__game <i>(wherever this is)</i>.</para>
@@ -14007,7 +14103,7 @@ namespace HREngine.Bots
 			/// </summary>
 			eternallegion,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：8 生命值：2</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：8 生命值：4</para>
 			/// <para>Eternal Knight</para>
 			/// <para>永恒骑士</para>
 			/// <para>[x]Has +{0}/+{1} for each friendlyEternal Knight that died this__game <i>(wherever this is)</i>.</para>
@@ -14335,6 +14431,38 @@ namespace HREngine.Bots
 			/// </summary>
 			captainsanders_BG25_034_G,
 			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：2 生命值：6</para>
+			/// <para>Pufferquil</para>
+			/// <para>刺豚野猪</para>
+			/// <para>Whenever a spell is cast on this, gain <b>Venomous</b> until next turn.</para>
+			/// <para>每当法术被施放在本随从身上，直到下个回合，获得<b>烈毒</b>。</para>
+			/// </summary>
+			pufferquil,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：4 生命值：12</para>
+			/// <para>Pufferquil</para>
+			/// <para>刺豚野猪</para>
+			/// <para>Whenever a spell is cast on this, gain <b>Venomous</b>.</para>
+			/// <para>每当法术被施放在本随从身上，获得<b>烈毒</b>。</para>
+			/// </summary>
+			pufferquil_BG25_039_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Puffed Full</para>
+			/// <para>刺豚饱胀</para>
+			/// <para><b>Venomous</b>.</para>
+			/// <para><b>烈毒</b></para>
+			/// </summary>
+			puffedfull,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Puffed Up</para>
+			/// <para>刺豚气胀</para>
+			/// <para><b>Venomous</b> until next turn.</para>
+			/// <para>直到下个回合，获得<b>烈毒</b>。</para>
+			/// </summary>
+			puffedup,
+			/// <summary>
 			/// <para>随从 无效的 费用：0 攻击力：2 生命值：4</para>
 			/// <para>Blazing Skyfin</para>
 			/// <para>烈火飞鱼</para>
@@ -14655,7 +14783,23 @@ namespace HREngine.Bots
 			/// </summary>
 			radiostar_BG25_399_G,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：1 生命值：4</para>
+			/// <para>随从 术士 费用：0 攻击力：3 生命值：3</para>
+			/// <para>Leeching Felhound</para>
+			/// <para>吸血地狱犬</para>
+			/// <para>This costs Health instead of Gold to buy.</para>
+			/// <para>购买本随从会消耗生命值，而非铸币。</para>
+			/// </summary>
+			leechingfelhound,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：6 生命值：6</para>
+			/// <para>Leeching Felhound</para>
+			/// <para>吸血地狱犬</para>
+			/// <para>This costs Health instead of Gold to buy.</para>
+			/// <para>购买本随从会消耗生命值，而非铸币。</para>
+			/// </summary>
+			leechingfelhound_BG25_520_G,
+			/// <summary>
+			/// <para>随从 猎人 费用：0 攻击力：1 生命值：3</para>
 			/// <para>Sly Raptor</para>
 			/// <para>狡猾的迅猛龙</para>
 			/// <para><b>Deathrattle:</b> Summon a random Beast. Set its stats to {0}/{1}.</para>
@@ -14663,7 +14807,7 @@ namespace HREngine.Bots
 			/// </summary>
 			slyraptor,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：2 生命值：8</para>
+			/// <para>随从 猎人 费用：0 攻击力：2 生命值：6</para>
 			/// <para>Sly Raptor</para>
 			/// <para>狡猾的迅猛龙</para>
 			/// <para><b>Deathrattle:</b> Summon a random Beast. Set its stats to {0}/{1}.</para>
@@ -14871,7 +15015,7 @@ namespace HREngine.Bots
 			/// </summary>
 			paleontologistputricide,
 			/// <summary>
-			/// <para>英雄技能 中立 费用：4</para>
+			/// <para>英雄技能 中立 费用：3</para>
 			/// <para>Build-An-Undead</para>
 			/// <para>构造亡灵</para>
 			/// <para>[x]Craft a custom Undead.<i>({0} |4(Creation, Creations) left!)</i></para>
@@ -14898,16 +15042,16 @@ namespace HREngine.Bots
 			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Shadowy Construct</para>
 			/// <para>阴暗构造体</para>
-			/// <para>After a friendly minion dies, gain its maximum stats. <i>(Once per combat.)</i></para>
-			/// <para>在一个友方随从死亡后，获得其最大属性值。<i>（每场战斗限一次。）</i></para>
+			/// <para>Whenever a friendly minion dies, gain its maximum stats. <i>(Once per combat.)</i></para>
+			/// <para>每当一个友方随从死亡，获得其最大属性值。<i>（每场战斗限一次。）</i></para>
 			/// </summary>
 			shadowyconstruct,
 			/// <summary>
 			/// <para>随从 巫妖王 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Shadowy Construct</para>
 			/// <para>阴暗构造体</para>
-			/// <para>After a friendly minion dies, gain its maximum stats. <i>(Twice per combat.)</i></para>
-			/// <para>在一个友方随从死亡后，获得其最大属性值。<i>（每场战斗限两次。）</i></para>
+			/// <para>Whenever a friendly minion dies, gain its maximum stats. <i>(Twice per combat.)</i></para>
+			/// <para>每当一个友方随从死亡，获得其最大属性值。<i>（每场战斗限两次。）</i></para>
 			/// </summary>
 			shadowyconstruct_BG25_HERO_103_Buddy_G,
 			/// <summary>
@@ -15087,7 +15231,7 @@ namespace HREngine.Bots
 			/// </summary>
 			extragoldnextturndnt,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：4 生命值：4</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Bream Counter</para>
 			/// <para>裁脍鱼人</para>
 			/// <para>While this is in your hand, after you play a Murloc, gain +{0}/+{1}.</para>
@@ -15095,7 +15239,7 @@ namespace HREngine.Bots
 			/// </summary>
 			breamcounter,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：8 生命值：8</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Bream Counter</para>
 			/// <para>裁脍鱼人</para>
 			/// <para>While this is in your hand, after you play a Murloc, gain +{0}/+{1}.</para>
@@ -15151,7 +15295,7 @@ namespace HREngine.Bots
 			/// </summary>
 			lulling,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：5 生命值：5</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：3 生命值：3</para>
 			/// <para>Accord-o-Tron</para>
 			/// <para>手风琴机器人</para>
 			/// <para>[x]<b>Magnetic</b>At the start of your turn,gain 1 Gold.</para>
@@ -15159,7 +15303,7 @@ namespace HREngine.Bots
 			/// </summary>
 			accordotron,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：10 生命值：10</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Accord-o-Tron</para>
 			/// <para>手风琴机器人</para>
 			/// <para>[x]<b>Magnetic</b>At the start of your turn,gain 2 Gold.</para>
@@ -15170,16 +15314,8 @@ namespace HREngine.Bots
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Accord-o-Tron</para>
 			/// <para>手风琴机器人</para>
-			/// <para>At the start of your turn, gain 2 Gold.</para>
-			/// <para>在你的回合开始时，获得2枚铸币。</para>
-			/// </summary>
-			accordotron_BG26_147_Ge,
-			/// <summary>
-			/// <para>附魔 中立 费用：0</para>
-			/// <para>Accord-o-Tron</para>
-			/// <para>手风琴机器人</para>
-			/// <para>At the start of your turn, gain 1 Gold.</para>
-			/// <para>在你的回合开始时，获得1枚铸币。</para>
+			/// <para>At the start of your turn, gain {0} Gold.</para>
+			/// <para>在你的回合开始时，获得{0}枚铸币。</para>
 			/// </summary>
 			accordotron_BG26_147e,
 			/// <summary>
@@ -15202,16 +15338,16 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：0 攻击力：5 生命值：10</para>
 			/// <para>Polarizing Beatboxer</para>
 			/// <para>极性B-Box拳手</para>
-			/// <para>Whenever you <b>Magnetize</b> another minion, it also <b>Magnetizes</b> to this.</para>
-			/// <para>每当你对另一个随从<b>磁力吸附</b>时，还会对本随从<b>磁力吸附</b>。</para>
+			/// <para>Whenever you <b>Magnetize</b> to a different minion, it also <b>Magnetizes</b> to this.</para>
+			/// <para>每当你对一个不同的随从<b>磁力吸附</b>时，还会对本随从<b>磁力吸附</b>。</para>
 			/// </summary>
 			polarizingbeatboxer,
 			/// <summary>
 			/// <para>随从 圣骑士 费用：0 攻击力：10 生命值：20</para>
 			/// <para>Polarizing Beatboxer</para>
 			/// <para>极性B-Box拳手</para>
-			/// <para>[x]Whenever you <b>Magnetize</b>another minion, it also_<b>Magnetizes</b> to this twice.</para>
-			/// <para>每当你对另一个随从<b>磁力吸附</b>时，还会对本随从<b>磁力吸附</b>两次。</para>
+			/// <para>Whenever you <b>Magnetize</b> to a different minion, it also <b>Magnetizes</b> to this twice.</para>
+			/// <para>每当你对一个不同的随从<b>磁力吸附</b>时，还会对本随从<b>磁力吸附</b>两次。</para>
 			/// </summary>
 			polarizingbeatboxer_BG26_149_G,
 			/// <summary>
@@ -15263,7 +15399,7 @@ namespace HREngine.Bots
 			/// </summary>
 			bristlebach_BG26_157_G,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：1 生命值：3</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：2 生命值：5</para>
 			/// <para>Moon-Bacon Jazzer</para>
 			/// <para>暗膘爵士乐手</para>
 			/// <para>[x]<b>Battlecry:</b> Your <b>BloodGems</b> give an extra+1 Health this game.</para>
@@ -15271,7 +15407,7 @@ namespace HREngine.Bots
 			/// </summary>
 			moonbaconjazzer,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：2 生命值：6</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：4 生命值：10</para>
 			/// <para>Moon-Bacon Jazzer</para>
 			/// <para>暗膘爵士乐手</para>
 			/// <para>[x]<b>Battlecry:</b> Your <b>BloodGems</b> give an extra+2 Health this game.</para>
@@ -15303,7 +15439,7 @@ namespace HREngine.Bots
 			/// </summary>
 			pricklypiper_BG26_160_G,
 			/// <summary>
-			/// <para>随从 法师 费用：0 攻击力：5 生命值：4</para>
+			/// <para>随从 法师 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Dancing Barnstormer</para>
 			/// <para>农场热舞旋风</para>
 			/// <para>[x]<b>Battlecry and Deathrattle:</b>Give Elementals in theTavern +{0}/+{1} thisgame.</para>
@@ -15311,7 +15447,7 @@ namespace HREngine.Bots
 			/// </summary>
 			dancingbarnstormer,
 			/// <summary>
-			/// <para>随从 法师 费用：0 攻击力：10 生命值：8</para>
+			/// <para>随从 法师 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Dancing Barnstormer</para>
 			/// <para>农场热舞旋风</para>
 			/// <para>[x]<b>Battlecry and Deathrattle:</b>Give Elementals in theTavern +{0}/+{1} thisgame twice.</para>
@@ -15591,7 +15727,7 @@ namespace HREngine.Bots
 			/// </summary>
 			partnerup_BG26_355t2,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：3 生命值：3</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：4 生命值：3</para>
 			/// <para>Scourfin</para>
 			/// <para>寻宝鱼人</para>
 			/// <para><b>Deathrattle:</b> Give arandom minion in your hand +{0}/+{1}.</para>
@@ -15599,7 +15735,7 @@ namespace HREngine.Bots
 			/// </summary>
 			scourfin,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：8 生命值：6</para>
 			/// <para>Scourfin</para>
 			/// <para>寻宝鱼人</para>
 			/// <para><b>Deathrattle:</b> Give arandom minion in your hand +{0}/+{1}.</para>
@@ -15695,7 +15831,7 @@ namespace HREngine.Bots
 			/// </summary>
 			sickriffs_BG26_501t,
 			/// <summary>
-			/// <para>随从 恶魔猎手 费用：0 攻击力：2 生命值：3</para>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：2 生命值：2</para>
 			/// <para>Deep Blue Crooner</para>
 			/// <para>深沉蓝调歌手</para>
 			/// <para><b>Spellcraft:</b> Give a minion +{0}/+{1} until next turn. Improve your future Deep Blues.</para>
@@ -15703,7 +15839,7 @@ namespace HREngine.Bots
 			/// </summary>
 			deepbluecrooner,
 			/// <summary>
-			/// <para>随从 恶魔猎手 费用：0 攻击力：4 生命值：6</para>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Deep Blue Crooner</para>
 			/// <para>深沉蓝调歌手</para>
 			/// <para><b>Spellcraft:</b> Give a minion +{0}/+{1} until next turn. Improve your future Deep Blues.</para>
@@ -15743,7 +15879,7 @@ namespace HREngine.Bots
 			/// </summary>
 			deepblues_BG26_502t,
 			/// <summary>
-			/// <para>随从 恶魔猎手 费用：0 攻击力：5 生命值：6</para>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：6 生命值：7</para>
 			/// <para>Zesty Shaker</para>
 			/// <para>热情沙锤手</para>
 			/// <para>[x]Once per turn, when a<b>Spellcraft</b> spell is played on_this, get a new copy of it.</para>
@@ -15751,7 +15887,7 @@ namespace HREngine.Bots
 			/// </summary>
 			zestyshaker,
 			/// <summary>
-			/// <para>随从 恶魔猎手 费用：0 攻击力：10 生命值：12</para>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：12 生命值：14</para>
 			/// <para>Zesty Shaker</para>
 			/// <para>热情沙锤手</para>
 			/// <para>[x]Once per turn, when a<b>Spellcraft</b> spell is played on_this, get 2 new copies of it.</para>
@@ -15786,16 +15922,16 @@ namespace HREngine.Bots
 			/// <para>随从 术士 费用：0 攻击力：3 生命值：6</para>
 			/// <para>Tichondrius</para>
 			/// <para>提克迪奥斯</para>
-			/// <para>After your hero takes damage, give your Demons +2/+1.</para>
-			/// <para>在你的英雄受到伤害后，使你的恶魔获得+2/+1。</para>
+			/// <para>After your hero takes damage, give your Demons +{0}/+{1}.</para>
+			/// <para>在你的英雄受到伤害后，使你的恶魔获得+{0}/+{1}。</para>
 			/// </summary>
 			tichondrius,
 			/// <summary>
 			/// <para>随从 术士 费用：0 攻击力：6 生命值：12</para>
 			/// <para>Tichondrius</para>
 			/// <para>提克迪奥斯</para>
-			/// <para>After your hero takes damage, give your Demons +4/+2.</para>
-			/// <para>在你的英雄受到伤害后，使你的恶魔获得+4/+2。</para>
+			/// <para>After your hero takes damage, give your Demons +{0}/+{1}.</para>
+			/// <para>在你的英雄受到伤害后，使你的恶魔获得+{0}/+{1}。</para>
 			/// </summary>
 			tichondrius_BG26_523_G,
 			/// <summary>
@@ -15807,7 +15943,7 @@ namespace HREngine.Bots
 			/// </summary>
 			dreadlordsembrace,
 			/// <summary>
-			/// <para>随从 术士 费用：0 攻击力：5 生命值：4</para>
+			/// <para>随从 术士 费用：0 攻击力：2 生命值：1</para>
 			/// <para>Malchezaar, Prince of Dance</para>
 			/// <para>舞蹈王子玛克扎尔</para>
 			/// <para>Two <b>Refreshes</b> each turn cost Health instead of Gold. <i>(@ left!)</i></para>
@@ -15815,7 +15951,7 @@ namespace HREngine.Bots
 			/// </summary>
 			malchezaarprinceofdance,
 			/// <summary>
-			/// <para>随从 术士 费用：0 攻击力：10 生命值：8</para>
+			/// <para>随从 术士 费用：0 攻击力：4 生命值：2</para>
 			/// <para>Malchezaar, Prince of Dance</para>
 			/// <para>舞蹈王子玛克扎尔</para>
 			/// <para>Four <b>Refreshes</b> each turn cost Health instead of Gold.<i>(@ left!)</i></para>
@@ -16010,24 +16146,24 @@ namespace HREngine.Bots
 			/// <para>随从 猎人 费用：0 攻击力：3 生命值：6</para>
 			/// <para>Banana Slamma</para>
 			/// <para>香蕉猛猿</para>
-			/// <para>[x]After you summon aBeast in combat,double its stats.</para>
-			/// <para>在战斗中，在你召唤一只野兽后，使其属性值翻倍。</para>
+			/// <para>[x]After you summon aBeast in combat,double its Attack.</para>
+			/// <para>在战斗中，在你召唤一只野兽后，使其攻击力翻倍。</para>
 			/// </summary>
 			bananaslamma,
 			/// <summary>
 			/// <para>随从 猎人 费用：0 攻击力：6 生命值：12</para>
 			/// <para>Banana Slamma</para>
 			/// <para>香蕉猛猿</para>
-			/// <para>[x]After you summon aBeast in combat,triple its stats.</para>
-			/// <para>在战斗中，在你召唤一只野兽后，使其属性值变为三倍。</para>
+			/// <para>[x]After you summon aBeast in combat,triple its Attack.</para>
+			/// <para>在战斗中，在你召唤一只野兽后，使其攻击力变为三倍。</para>
 			/// </summary>
 			bananaslamma_BG26_802_G,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Banana Slammed</para>
 			/// <para>香蕉猛援</para>
-			/// <para>Stats set to {0}/{1}.</para>
-			/// <para>属性值变为{0}/{1}。</para>
+			/// <para>Attack set to {0}.</para>
+			/// <para>攻击力变为{0}。</para>
 			/// </summary>
 			bananaslammed,
 			/// <summary>
@@ -16050,16 +16186,16 @@ namespace HREngine.Bots
 			/// <para>随从 猎人 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Octosari, Wrap God</para>
 			/// <para>八爪巨怪，说唱卷王</para>
-			/// <para>[x]<b>Deathrattle:</b> Summon a @/@Tentacle. <i>(It gains +2/+2 permanently after you summona minion in combat!)</i></para>
-			/// <para><b>亡语：</b>召唤一个@/@的触手。<i>（在战斗中，在你召唤一个随从后，触手永久获得+2/+2！）</i></para>
+			/// <para>[x]<b>Deathrattle:</b> Summon a @/@Tentacle. <i>(It gains +4/+4 permanently after you summona minion in combat!)</i></para>
+			/// <para><b>亡语：</b>召唤一个@/@的触手。<i>（在战斗中，在你召唤一个随从后，触手永久获得+4/+4！）</i></para>
 			/// </summary>
 			octosariwrapgod,
 			/// <summary>
 			/// <para>随从 猎人 费用：0 攻击力：16 生命值：16</para>
 			/// <para>Octosari, Wrap God</para>
 			/// <para>八爪巨怪，说唱卷王</para>
-			/// <para>[x]<b>Deathrattle:</b> Summon a @/@Tentacle. <i>(It gains +4/+4 permanently after you summona minion in combat!)</i></para>
-			/// <para><b>亡语：</b>召唤一个@/@的触手。<i>（在战斗中，在你召唤一个随从后，触手永久获得+4/+4！）</i></para>
+			/// <para>[x]<b>Deathrattle:</b> Summon a @/@Tentacle. <i>(It gains +8/+8 permanently after you summona minion in combat!)</i></para>
+			/// <para><b>亡语：</b>召唤一个@/@的触手。<i>（在战斗中，在你召唤一个随从后，触手永久获得+8/+8！）</i></para>
 			/// </summary>
 			octosariwrapgod_BG26_804_G,
 			/// <summary>
@@ -16095,7 +16231,7 @@ namespace HREngine.Bots
 			/// </summary>
 			hummingbirdplayerenchantdnt,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：2 生命值：6</para>
+			/// <para>随从 牧师 费用：0 攻击力：3 生命值：6</para>
 			/// <para>Gunpowder Courier</para>
 			/// <para>火药运输工</para>
 			/// <para>[x]Whenever you spend 6 Gold,give your Pirates +{2} Attack.<i>({0} Gold left!)</i>@[x]Whenever you spend 6 Gold,give your Pirates +{2}/+{3}.<i>({0} Gold left!)</i></para>
@@ -16103,7 +16239,7 @@ namespace HREngine.Bots
 			/// </summary>
 			gunpowdercourier,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：4 生命值：12</para>
+			/// <para>随从 牧师 费用：0 攻击力：6 生命值：12</para>
 			/// <para>Gunpowder Courier</para>
 			/// <para>火药运输工</para>
 			/// <para>[x]Whenever you spend 6 Gold,give your Pirates +{2} Attacktwice. <i>({0} Gold left!)</i>@[x]Whenever you spend 6 Gold,give your Pirates +{2}/+{3}twice. <i>({0} Gold left!)</i></para>
@@ -16167,7 +16303,7 @@ namespace HREngine.Bots
 			/// </summary>
 			serenaded,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：3 生命值：3</para>
+			/// <para>随从 牧师 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Underhanded Dealer</para>
 			/// <para>开挂荷官</para>
 			/// <para>After you gain Gold, gain +{0}/+{1}.</para>
@@ -16175,7 +16311,7 @@ namespace HREngine.Bots
 			/// </summary>
 			underhandeddealer,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 牧师 费用：0 攻击力：12 生命值：12</para>
 			/// <para>Underhanded Dealer</para>
 			/// <para>开挂荷官</para>
 			/// <para>After you gain Gold, gain +{0}/+{1} twice.</para>
@@ -16454,6 +16590,14 @@ namespace HREngine.Bots
 			/// <para>+{0}/+{1}。</para>
 			/// </summary>
 			solemn,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Warsong Inge</para>
+			/// <para>战歌因葛</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			warsonginge,
 			/// <summary>
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Major Hymn</para>
@@ -17378,7 +17522,7 @@ namespace HREngine.Bots
 			/// <para>随从 猎人 费用：0 攻击力：3 生命值：1</para>
 			/// <para>Sprightly Scarab</para>
 			/// <para>机变甲虫</para>
-			/// <para>[x]<b>Choose One -</b> Give a Beast+{0}/+{1} and <b>Reborn</b>;or +{2} Attack and <b>Windfury</b>.</para>
+			/// <para>[x]<b>Choose One -</b> Give a Beast+{0}/+{1} and <b>Reborn</b>; or+{2} Attack and <b>Windfury</b>.</para>
 			/// <para><b>抉择：</b>使一只野兽获得+{0}/+{1}和<b>复生</b>；或者+{2}攻击力和<b>风怒</b>。</para>
 			/// </summary>
 			sprightlyscarab,
@@ -17591,19 +17735,19 @@ namespace HREngine.Bots
 			/// </summary>
 			yaharr,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：3 生命值：4</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：5 生命值：6</para>
 			/// <para>Diremuck Forager</para>
 			/// <para>凶饿的觅食者</para>
-			/// <para>[x]<b>Start of Combat:</b> Give aminion in your hand+2/+2, then summon itfor this combat only.</para>
-			/// <para><b>战斗开始时：</b>使你手牌中的一张随从牌获得+2/+2并召唤它，其登场仅限本场战斗。</para>
+			/// <para><b>Start of Combat:</b> When you have space, summon the highest-Attack Murloc from your handfor this combat only.</para>
+			/// <para><b>战斗开始时：</b>当你有空位时，召唤你手牌中攻击力最高的鱼人，其登场仅限本场战斗。</para>
 			/// </summary>
 			diremuckforager,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：8</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：12</para>
 			/// <para>Diremuck Forager</para>
 			/// <para>凶饿的觅食者</para>
-			/// <para>[x]<b>Start of Combat:</b> Give aminion in your hand+4/+4, then summon itfor this combat only.</para>
-			/// <para><b>战斗开始时：</b>使你手牌中的一张随从牌获得+4/+4并召唤它，其登场仅限本场战斗。</para>
+			/// <para><b>Start of Combat:</b> When you have space, summon the two highest-Attack Murlocs from your handfor this combat only.</para>
+			/// <para><b>战斗开始时：</b>当你有空位时，召唤你手牌中攻击力最高的两个鱼人，其登场仅限本场战斗。</para>
 			/// </summary>
 			diremuckforager_BG27_556_G,
 			/// <summary>
@@ -17614,6 +17758,14 @@ namespace HREngine.Bots
 			/// <para>+{0}/+{1}。</para>
 			/// </summary>
 			foraged,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Diremuck Player Ench [DNT]</para>
+			/// <para>凶饿玩家附加效果[DNT]</para>
+			/// <para>Summon a minion when there is space</para>
+			/// <para>当有空位时召唤随从</para>
+			/// </summary>
+			diremuckplayerenchdnt,
 			/// <summary>
 			/// <para>随从 猎人 费用：0 攻击力：7 生命值：6</para>
 			/// <para>Niuzao</para>
@@ -17802,8 +17954,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>False Idols</para>
 			/// <para>虚妄神像</para>
-			/// <para>[x]You only need 2 copiesof a minion to make itGolden. Instead of a TripleReward, get a Tavern Coin.</para>
-			/// <para>你只需2个复制即可将随从变为金色。使用金色随从不会获取三连奖励，改为获取一张酒馆币。</para>
+			/// <para>[x]You only need 2 copies tomake minions Golden.They give Tavern Coinsinstead of Triple Rewards.</para>
+			/// <para>你只需2个复制即可将随从变为金色。使用金色随从不会获取三连奖励，改为获取酒馆币。</para>
 			/// </summary>
 			falseidols,
 			/// <summary>
@@ -18162,8 +18314,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>Path of the Treasure-Seeker</para>
 			/// <para>宝藏追寻者之路</para>
-			/// <para>After you <b>Refresh</b> 5 times, find the <b>Golden</b> Monkey! <i>(@ left!)</i></para>
-			/// <para>在你<b>刷新</b>5次后，找到<b>黄金</b>猿！<i>（还剩@次！）</i></para>
+			/// <para>Whenever you <b>Refresh</b> 5 times, find the <b>Golden</b> Monkey! <i>(@ left!)</i></para>
+			/// <para>每当你<b>刷新</b>5次，找到<b>黄金</b>猿！<i>（还剩@次！）</i></para>
 			/// </summary>
 			pathofthetreasureseeker,
 			/// <summary>
@@ -18274,8 +18426,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>Denathrius' Anima Reserves</para>
 			/// <para>德纳修斯的心能储备</para>
-			/// <para>[x]Quests and Rewards arein this game. All heroesare Sire Denathrius.</para>
-			/// <para>本局对战中有任务和奖励。所有英雄均为德纳修斯大帝。</para>
+			/// <para>Start with 'Whodunit?' as your second Hero Power.</para>
+			/// <para>对战开始时，将“悬案疑云”变为你的第二英雄技能</para>
 			/// </summary>
 			denathriusanimareserves,
 			/// <summary>
@@ -18514,8 +18666,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_QUEST_REWARD 中立 费用：0</para>
 			/// <para>Scepter of Guidance</para>
 			/// <para>指引之杖</para>
-			/// <para>The Tavern always offers 2 {0} when <b>Refreshed</b>.</para>
-			/// <para>当酒馆<b>刷新</b>时，总会提供2个{0}。</para>
+			/// <para>The Tavern always offers 2 {0} whenever it is <b>Refreshed</b>.</para>
+			/// <para>每当酒馆<b>刷新</b>时，总会提供2个{0}。</para>
 			/// </summary>
 			scepterofguidance,
 			/// <summary>
@@ -18943,7 +19095,7 @@ namespace HREngine.Bots
 			/// </summary>
 			rodeoperformer_BG28_550_G,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：5 生命值：7</para>
+			/// <para>随从 中立 费用：0 攻击力：5 生命值：6</para>
 			/// <para>Nalaa the Redeemer</para>
 			/// <para>救赎者娜拉</para>
 			/// <para>[x]Whenever you cast a Tavernspell, give a friendly minionof each type +{0}/+{1}.</para>
@@ -18951,7 +19103,7 @@ namespace HREngine.Bots
 			/// </summary>
 			nalaatheredeemer,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：10 生命值：14</para>
+			/// <para>随从 中立 费用：0 攻击力：10 生命值：12</para>
 			/// <para>Nalaa the Redeemer</para>
 			/// <para>救赎者娜拉</para>
 			/// <para>[x]Whenever you cast a Tavernspell, give a friendly minionof each type +{0}/+{1}.</para>
@@ -19002,16 +19154,16 @@ namespace HREngine.Bots
 			/// <para>随从 无效的 费用：0 攻击力：4 生命值：5</para>
 			/// <para>Land Lubber</para>
 			/// <para>旱地元素</para>
-			/// <para>The Tavern offers an extra Tavern spell after each <b>Refresh</b>.</para>
-			/// <para>在每次<b>刷新</b>后，酒馆额外提供一张酒馆法术牌。</para>
+			/// <para>The Tavern offers an extra Tavern spell whenever it is <b>Refreshed</b>.</para>
+			/// <para>每当酒馆<b>刷新</b>时，总会额外提供一张酒馆法术牌。</para>
 			/// </summary>
 			landlubber,
 			/// <summary>
 			/// <para>随从 无效的 费用：0 攻击力：8 生命值：10</para>
 			/// <para>Land Lubber</para>
 			/// <para>旱地元素</para>
-			/// <para>The Tavern offers 2 extra Tavern spells after each <b>Refresh</b>.</para>
-			/// <para>在每次<b>刷新</b>后，酒馆额外提供2张酒馆法术牌。</para>
+			/// <para>The Tavern offers 2 extra Tavern spells whenever it is <b>Refreshed</b>.</para>
+			/// <para>每当酒馆<b>刷新</b>时，总会额外提供2张酒馆法术牌。</para>
 			/// </summary>
 			landlubber_BG28_556_G,
 			/// <summary>
@@ -19226,8 +19378,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_SPELL 中立 费用：2</para>
 			/// <para>Butchering</para>
 			/// <para>宰割</para>
-			/// <para>[x]Destroy a friendlyUndead. Your Undeadhave extra Attack equalto its Tier this game.</para>
-			/// <para>消灭一个友方亡灵。在本局对战中，你的亡灵额外拥有等同于该随从等级的攻击力。</para>
+			/// <para>Destroy a friendly Undead. Your Undead have +{0} Attack this game <i>(wherever they are).</i>@Destroy a friendly Undead. Your Undead have +{0}/+{1} this game <i>(wherever they are).</i></para>
+			/// <para>消灭一个友方亡灵。在本局对战中，你的亡灵拥有+{0}攻击力<i>（无论它们在哪）。</i>@消灭一个友方亡灵。在本局对战中，你的亡灵拥有+{0}/+{1}<i>（无论它们在哪）。</i></para>
 			/// </summary>
 			butchering,
 			/// <summary>
@@ -19399,19 +19551,19 @@ namespace HREngine.Bots
 			/// </summary>
 			gemconfiscation,
 			/// <summary>
-			/// <para>随从 法师 费用：0 攻击力：4 生命值：4</para>
+			/// <para>随从 法师 费用：0 攻击力：6 生命值：5</para>
 			/// <para>Living Azerite</para>
 			/// <para>活化艾泽里特</para>
-			/// <para>Whenever you cast aTavern spell, give Elementals in the Tavern +1/+1 this game.</para>
-			/// <para>每当你施放一个酒馆法术，使酒馆中的元素在本局对战中获得+1/+1。</para>
+			/// <para>Whenever you cast a Tavern spell, give Elementals in the Tavern +{0}/+{1} this game.</para>
+			/// <para>每当你施放一个酒馆法术，使酒馆中的元素在本局对战中获得+{0}/+{1}。</para>
 			/// </summary>
 			livingazerite,
 			/// <summary>
-			/// <para>随从 法师 费用：0 攻击力：8 生命值：8</para>
+			/// <para>随从 法师 费用：0 攻击力：12 生命值：10</para>
 			/// <para>Living Azerite</para>
 			/// <para>活化艾泽里特</para>
-			/// <para>Whenever you cast aTavern spell, give Elementals in the Tavern +2/+2 this game.</para>
-			/// <para>每当你施放一个酒馆法术，使酒馆中的元素在本局对战中获得+2/+2。</para>
+			/// <para>Whenever you cast a Tavern spell, give Elementals in the Tavern +{0}/+{1} this game twice.</para>
+			/// <para>每当你施放一个酒馆法术，使酒馆中的元素在本局对战中获得+{0}/+{1}，触发两次。</para>
 			/// </summary>
 			livingazerite_BG28_707_G,
 			/// <summary>
@@ -19447,7 +19599,7 @@ namespace HREngine.Bots
 			/// </summary>
 			augmentedlaborer_BG28_740_G,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：2</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：1</para>
 			/// <para>Charging Czarina</para>
 			/// <para>蓄能女沙皇</para>
 			/// <para>[x]<b>Divine Shield</b>Whenever you cast a Tavernspell, give your minions with___<b>Divine Shield</b> +{0} Attack.</para>
@@ -19455,7 +19607,7 @@ namespace HREngine.Bots
 			/// </summary>
 			chargingczarina,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：4</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：2</para>
 			/// <para>Charging Czarina</para>
 			/// <para>蓄能女沙皇</para>
 			/// <para>[x]<b>Divine Shield</b>Whenever you cast a Tavernspell, give your minions with___<b>Divine Shield</b> +{0} Attack.</para>
@@ -19938,7 +20090,7 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：1</para>
 			/// <para>Lucky Roll</para>
 			/// <para>好运当投</para>
-			/// <para>Roll a 6-sided die.Gain that much Gold.<i>(Cannot be used again for that many turns!)</i></para>
+			/// <para>[x]Roll a 6-sided die.Gain that much Gold.<i>(Cannot be used againfor that many turns!)</i></para>
 			/// <para>投一枚6面骰，获得等量的铸币。<i>（在相应数量的回合内无法再次使用！）</i></para>
 			/// </summary>
 			luckyroll,
@@ -19946,7 +20098,7 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Lucky Roll</para>
 			/// <para>好运当投</para>
-			/// <para>Roll a 6-sided die.Gain that much Gold.<i>(Can be used againin @ |4(turn, turns)!)</i></para>
+			/// <para>[x]Roll a 6-sided die.Gain that much Gold.<i>(Can be used again in@ |4(turn, turns)!)</i></para>
 			/// <para>投一枚6面骰，获得等量的铸币。<i>（@回合后可以再次使用！）</i></para>
 			/// </summary>
 			luckyroll_BG28_HERO_400p2,
@@ -20246,6 +20398,38 @@ namespace HREngine.Bots
 			/// <para>吞食了随从的属性值。</para>
 			/// </summary>
 			eatyourwords,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：2 生命值：5</para>
+			/// <para>Very Hungry Winterfinner</para>
+			/// <para>巨饿冬鳍鱼人</para>
+			/// <para><b>Taunt</b>Whenever this takes damage, give a minion in your hand +2/+1.</para>
+			/// <para><b>嘲讽</b>。每当本随从受到伤害，使你手牌中的一张随从牌获得+2/+1。</para>
+			/// </summary>
+			veryhungrywinterfinner,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：4 生命值：10</para>
+			/// <para>Very Hungry Winterfinner</para>
+			/// <para>巨饿冬鳍鱼人</para>
+			/// <para><b>Taunt</b>Whenever this takes damage, give a minion in your hand +4/+2.</para>
+			/// <para><b>嘲讽</b>。每当本随从受到伤害，使你手牌中的一张随从牌获得+4/+2。</para>
+			/// </summary>
+			veryhungrywinterfinner_BG29_300_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Still Hungry</para>
+			/// <para>还是很饿</para>
+			/// <para>+4/+2.</para>
+			/// <para>+4/+2。</para>
+			/// </summary>
+			stillhungry,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Still Hungry</para>
+			/// <para>还是很饿</para>
+			/// <para>+2/+1.</para>
+			/// <para>+2/+1。</para>
+			/// </summary>
+			stillhungry_BG29_300e,
 			/// <summary>
 			/// <para>随从 牧师 费用：0 攻击力：4 生命值：2</para>
 			/// <para>Crow's Nest Sentry</para>
@@ -20559,19 +20743,19 @@ namespace HREngine.Bots
 			/// </summary>
 			misfit,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：8 生命值：6</para>
+			/// <para>随从 无效的 费用：0 攻击力：16 生命值：8</para>
 			/// <para>Nightbane, Ignited</para>
 			/// <para>骨火巨龙夜之魇</para>
-			/// <para><b>Taunt</b><b>Deathrattle:</b> Give 2 different friendly minions this minion's Attack.</para>
-			/// <para><b>嘲讽</b>。<b>亡语：</b>使2个不同的友方随从获得本随从的攻击力。</para>
+			/// <para><b>Taunt</b><b>Deathrattle:</b> Give {0} different friendly |4(minion, minions) this minion's Attack.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>使{0}个不同的友方随从获得本随从的攻击力。</para>
 			/// </summary>
 			nightbaneignited,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：16 生命值：12</para>
+			/// <para>随从 无效的 费用：0 攻击力：32 生命值：16</para>
 			/// <para>Nightbane, Ignited</para>
 			/// <para>骨火巨龙夜之魇</para>
-			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Give 2 differentfriendly minions this____minion's Attack, twice.</para>
-			/// <para><b>嘲讽</b>。<b>亡语：</b>使2个不同的友方随从获得本随从的攻击力，触发两次。</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Give {0} differentfriendly |4(minion, minions) this____minion's Attack, twice.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>使{0}个不同的友方随从获得本随从的攻击力，触发两次。</para>
 			/// </summary>
 			nightbaneignited_BG29_815_G,
 			/// <summary>
@@ -20610,16 +20794,16 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Mooneater's Champion</para>
 			/// <para>噬月者的勇士</para>
-			/// <para>After you play an odd-Tier card, give your odd-Tier minions +1/+1.</para>
-			/// <para>在你使用奇数等级的牌后，使你的奇数等级的随从获得+1/+1。</para>
+			/// <para>After you play an odd-Tier card, give your odd-Tier minions +{0}/+{1}.</para>
+			/// <para>在你使用奇数等级的牌后，使你的奇数等级的随从获得+{0}/+{1}。</para>
 			/// </summary>
 			mooneaterschampion,
 			/// <summary>
 			/// <para>随从 中立 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Mooneater's Champion</para>
 			/// <para>噬月者的勇士</para>
-			/// <para>After you play an odd-Tier card, give your odd-Tier minions +2/+2.</para>
-			/// <para>在你使用奇数等级的牌后，使你的奇数等级的随从获得+2/+2。</para>
+			/// <para>After you play an odd-Tier card, give your odd-Tier minions +{0}/+{1}.</para>
+			/// <para>在你使用奇数等级的牌后，使你的奇数等级的随从获得+{0}/+{1}。</para>
 			/// </summary>
 			mooneaterschampion_BG29_840_G,
 			/// <summary>
@@ -20791,7 +20975,7 @@ namespace HREngine.Bots
 			/// </summary>
 			macabre,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 中立 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Arid Atrocity</para>
 			/// <para>旱地凶怪</para>
 			/// <para>[x]<b>Deathrattle:</b> Summon a{0}/{1} Golem. <i>(Improved byeach friendly minion type__that died this combat!)</i></para>
@@ -20799,7 +20983,7 @@ namespace HREngine.Bots
 			/// </summary>
 			aridatrocity,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：12 生命值：12</para>
+			/// <para>随从 中立 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Arid Atrocity</para>
 			/// <para>旱地凶怪</para>
 			/// <para>[x]<b>Deathrattle:</b> Summon a{0}/{1} Golem. <i>(Improved byeach friendly minion type__that died this combat!)</i></para>
@@ -20807,7 +20991,7 @@ namespace HREngine.Bots
 			/// </summary>
 			aridatrocity_BG29_864_G,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：12 生命值：12</para>
+			/// <para>随从 中立 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Deserted Golem</para>
 			/// <para>荒弃魔像</para>
 			/// <para></para>
@@ -20823,7 +21007,7 @@ namespace HREngine.Bots
 			/// </summary>
 			atrocious,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 中立 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Deserted Golem</para>
 			/// <para>荒弃魔像</para>
 			/// <para></para>
@@ -20847,19 +21031,19 @@ namespace HREngine.Bots
 			/// </summary>
 			primemate_BG29_865_G,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：8 生命值：4</para>
+			/// <para>随从 牧师 费用：0 攻击力：7 生命值：3</para>
 			/// <para>Stellar Freebooter</para>
 			/// <para>星际海盗</para>
-			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Give a friendly__minion Health equal to___this minion's Attack.</para>
-			/// <para><b>嘲讽</b>。<b>亡语：</b>使一个友方随从获得等同于本随从攻击力的生命值。</para>
+			/// <para>[x]<b>Taunt</b>. <b>Deathrattle:</b> Giveanother friendly PirateHealth equal to thisminion's Attack.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>使另一个友方海盗获得等同于本随从攻击力的生命值。</para>
 			/// </summary>
 			stellarfreebooter,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：16 生命值：8</para>
+			/// <para>随从 牧师 费用：0 攻击力：14 生命值：6</para>
 			/// <para>Stellar Freebooter</para>
 			/// <para>星际海盗</para>
-			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Give a friendly__minion Health equal to this____minion's Attack, twice.</para>
-			/// <para><b>嘲讽</b>。<b>亡语：</b>使一个友方随从获得等同于本随从攻击力的生命值，触发两次。</para>
+			/// <para>[x]<b>Taunt</b>. <b>Deathrattle:</b> Giveanother friendly PirateHealth equal to this minion'sAttack, twice.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>使另一个友方海盗获得等同于本随从攻击力的生命值，触发两次。</para>
 			/// </summary>
 			stellarfreebooter_BG29_866_G,
 			/// <summary>
@@ -21258,16 +21442,16 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：0 攻击力：6 生命值：7</para>
 			/// <para>One-Amalgam Tour Group</para>
 			/// <para>融合独行团</para>
-			/// <para>Whenever you play a card, give friendly minions of its Tier or lower +1/+1.</para>
-			/// <para>每当你使用一张牌时，使等级与其相同或更低的友方随从获得+1/+1。</para>
+			/// <para>Whenever you play a card, give friendly minions of its Tier or lower +{0}/+{1}.</para>
+			/// <para>每当你使用一张牌时，使等级与其相同或更低的友方随从获得+{0}/+{1}。</para>
 			/// </summary>
 			oneamalgamtourgroup,
 			/// <summary>
 			/// <para>随从 中立 费用：0 攻击力：12 生命值：14</para>
 			/// <para>One-Amalgam Tour Group</para>
 			/// <para>融合独行团</para>
-			/// <para>Whenever you play a card, give friendly minions of its Tier or lower +2/+2.</para>
-			/// <para>每当你使用一张牌时，使等级与其相同或更低的友方随从获得+2/+2。</para>
+			/// <para>Whenever you play a card, give friendly minions of its Tier or lower +{0}/+{1}.</para>
+			/// <para>每当你使用一张牌时，使等级与其相同或更低的友方随从获得+{0}/+{1}。</para>
 			/// </summary>
 			oneamalgamtourgroup_BG30_102_G,
 			/// <summary>
@@ -21343,7 +21527,7 @@ namespace HREngine.Bots
 			/// </summary>
 			pilgrimp_BG30_106_G,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：9 生命值：1</para>
+			/// <para>随从 战士 费用：0 攻击力：7 生命值：1</para>
 			/// <para>Wannabe Gargoyle</para>
 			/// <para>仿效石像鬼</para>
 			/// <para><b>Reborn</b>This is <b>Reborn</b> with full Attack.</para>
@@ -21351,7 +21535,7 @@ namespace HREngine.Bots
 			/// </summary>
 			wannabegargoyle,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：18 生命值：2</para>
+			/// <para>随从 战士 费用：0 攻击力：14 生命值：2</para>
 			/// <para>Wannabe Gargoyle</para>
 			/// <para>仿效石像鬼</para>
 			/// <para><b>Reborn</b>This is <b>Reborn</b> with full Attack and Health.</para>
@@ -21474,40 +21658,40 @@ namespace HREngine.Bots
 			/// <para>随从 恶魔猎手 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Volcanic Visitor</para>
 			/// <para>火山访客</para>
-			/// <para>[x]<b>Spellcraft: Choose One -</b>Give your minions+3 Attack; or +3 Health.</para>
-			/// <para><b>塑造法术：抉择：</b>使你的随从获得+3攻击力；或者+3生命值。</para>
+			/// <para>[x]<b><b>Spellcraft:</b> Choose One -</b>Give your minions+4 Attack; or +4 Health.</para>
+			/// <para><b><b>塑造法术：</b>抉择：</b>使你的随从获得+4攻击力；或者+4生命值。</para>
 			/// </summary>
 			volcanicvisitor,
 			/// <summary>
 			/// <para>随从 恶魔猎手 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Volcanic Visitor</para>
 			/// <para>火山访客</para>
-			/// <para>[x]<b>Spellcraft: Choose One -</b>Give your minions+6 Attack; or +6 Health.</para>
-			/// <para><b>塑造法术：抉择：</b>使你的随从获得+6攻击力；或者+6生命值。</para>
+			/// <para>[x]<b><b>Spellcraft:</b> Choose One -</b>Give your minions+8 Attack; or +8 Health.</para>
+			/// <para><b><b>塑造法术：</b>抉择：</b>使你的随从获得+8攻击力；或者+8生命值。</para>
 			/// </summary>
 			volcanicvisitor_BG30_117_G,
 			/// <summary>
 			/// <para>法术 中立 费用：0</para>
 			/// <para>Escape Eruption</para>
 			/// <para>躲避喷发</para>
-			/// <para><b>Choose One -</b> Give your minions +6 Attack; or +6 Health.</para>
-			/// <para><b>抉择：</b>使你的随从获得+6攻击力；或者+6生命值。</para>
+			/// <para><b>Choose One -</b> Give your minions +8 Attack; or +8 Health.</para>
+			/// <para><b>抉择：</b>使你的随从获得+8攻击力；或者+8生命值。</para>
 			/// </summary>
 			escapeeruption,
 			/// <summary>
 			/// <para>法术 中立 费用：0</para>
 			/// <para>Trudge through Lava</para>
 			/// <para>趟过岩浆</para>
-			/// <para>Give your minions+6 Attack.</para>
-			/// <para>使你的随从获得+6攻击力。</para>
+			/// <para>Give your minions+8 Attack.</para>
+			/// <para>使你的随从获得+8攻击力。</para>
 			/// </summary>
 			trudgethroughlava,
 			/// <summary>
 			/// <para>法术 中立 费用：0</para>
 			/// <para>Use Supplies</para>
 			/// <para>运用补给</para>
-			/// <para>Give your minions+6 Health.</para>
-			/// <para>使你的随从获得+6生命值。</para>
+			/// <para>Give your minions+8 Health.</para>
+			/// <para>使你的随从获得+8生命值。</para>
 			/// </summary>
 			usesupplies,
 			/// <summary>
@@ -21522,24 +21706,24 @@ namespace HREngine.Bots
 			/// <para>法术 中立 费用：0</para>
 			/// <para>Escape Eruption</para>
 			/// <para>躲避喷发</para>
-			/// <para><b>Choose One -</b> Give your minions +3 Attack; or +3 Health.</para>
-			/// <para><b>抉择：</b>使你的随从获得+3攻击力；或者+3生命值。</para>
+			/// <para><b>Choose One -</b> Give your minions +4 Attack; or +4 Health.</para>
+			/// <para><b>抉择：</b>使你的随从获得+4攻击力；或者+4生命值。</para>
 			/// </summary>
 			escapeeruption_BG30_117t,
 			/// <summary>
 			/// <para>法术 中立 费用：0</para>
 			/// <para>Trudge through Lava</para>
 			/// <para>趟过岩浆</para>
-			/// <para>Give your minions+3 Attack.</para>
-			/// <para>使你的随从获得+3攻击力。</para>
+			/// <para>Give your minions+4 Attack.</para>
+			/// <para>使你的随从获得+4攻击力。</para>
 			/// </summary>
 			trudgethroughlava_BG30_117t2,
 			/// <summary>
 			/// <para>法术 中立 费用：0</para>
 			/// <para>Use Supplies</para>
 			/// <para>运用补给</para>
-			/// <para>Give your minions+3 Health.</para>
-			/// <para>使你的随从获得+3生命值。</para>
+			/// <para>Give your minions+4 Health.</para>
+			/// <para>使你的随从获得+4生命值。</para>
 			/// </summary>
 			usesupplies_BG30_117t3,
 			/// <summary>
@@ -21631,7 +21815,7 @@ namespace HREngine.Bots
 			/// </summary>
 			hotairsurveyor_BG30_121_G,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：8 生命值：6</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Mrglin' Burglar</para>
 			/// <para>鱼人蟊贼</para>
 			/// <para>[x]After you play a Murloc,give a friendly minion anda minion in your hand+{0}/+{1}.</para>
@@ -21639,7 +21823,7 @@ namespace HREngine.Bots
 			/// </summary>
 			mrglinburglar,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：16 生命值：12</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：20 生命值：20</para>
 			/// <para>Mrglin' Burglar</para>
 			/// <para>鱼人蟊贼</para>
 			/// <para>[x]After you play a Murloc,give a friendly minion anda minion in your hand+{0}/+{1}.</para>
@@ -21831,7 +22015,7 @@ namespace HREngine.Bots
 			/// </summary>
 			polishglass_BG30_128t2,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：6 生命值：10</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：10</para>
 			/// <para>Catacomb Crasher</para>
 			/// <para>古墓捣蛋鬼</para>
 			/// <para>[x]Whenever you would summona minion that doesn't fit in yourwarband, give your minions+{0}/+{1} permanently.</para>
@@ -21839,7 +22023,7 @@ namespace HREngine.Bots
 			/// </summary>
 			catacombcrasher,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：12 生命值：20</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：8 生命值：20</para>
 			/// <para>Catacomb Crasher</para>
 			/// <para>古墓捣蛋鬼</para>
 			/// <para>[x]Whenever you would summona minion that doesn't fit in yourwarband, give your minions+{0}/+{1} permanently.</para>
@@ -21919,7 +22103,7 @@ namespace HREngine.Bots
 			/// </summary>
 			cryfoul,
 			/// <summary>
-			/// <para>BATTLEGROUND_SPELL 中立 费用：3</para>
+			/// <para>BATTLEGROUND_SPELL 中立 费用：4</para>
 			/// <para>Knockoff Wisdomball</para>
 			/// <para>冒牌的智慧之球</para>
 			/// <para>Your next 2 <b>Refreshes</b> are helpful! <i>(@ left!)</i></para>
@@ -22034,8 +22218,8 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Fantastic Treasure</para>
 			/// <para>神奇宝藏</para>
-			/// <para>[x]On Turn 5, choose aLesser <b>Trinket</b> to buy.<i>({0} |4(turn, turns) left!)</i>@[x]On Turn 5, choose aLesser <b>Trinket</b> to buy.</para>
-			/// <para>在第5回合，选择一项小型<b>饰品</b>并购买。<i>（还剩{0}回合！）</i>@在第5回合，选择一项小型<b>饰品</b>并购买。</para>
+			/// <para>[x]On Turn 5, choose aLesser <b>Trinket</b> to buy.<i>({0} |4(turn, turns) left!)</i>@[x]On Turn 5, choose aLesser <b>Trinket</b> to buy.<i>(Done!)</i></para>
+			/// <para>在第5回合，选择一项小型<b>饰品</b>并购买。<i>（还剩{0}回合！）</i>@在第5回合，选择一项小型<b>饰品</b>并购买。<i>（已完成！）</i></para>
 			/// </summary>
 			fantastictreasure,
 			/// <summary>
@@ -22066,8 +22250,8 @@ namespace HREngine.Bots
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Gem in the Bank</para>
 			/// <para>罐储宝石</para>
-			/// <para><b>Deathrattle:</b> Get a <b>Blood Gem</b>.</para>
-			/// <para><b>亡语：</b>获取一张<b>鲜血宝石</b>。</para>
+			/// <para><b>Deathrattle:</b> Get 2 <b>Blood Gems</b>.</para>
+			/// <para><b>亡语：</b>获取2张<b>鲜血宝石</b>。</para>
 			/// </summary>
 			geminthebank,
 			/// <summary>
@@ -22176,6 +22360,14 @@ namespace HREngine.Bots
 			bloodgolem_BG30_MagicItem_442t_G,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
+			/// <para>Sticker Slammed</para>
+			/// <para>标签猛击</para>
+			/// <para>Stats set to {0}/{1}.</para>
+			/// <para>属性值变为{0}/{1}。</para>
+			/// </summary>
+			stickerslammed,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
 			/// <para>Power of the Nether</para>
 			/// <para>虚空之力</para>
 			/// <para>Stats increased by Nether Pendant.</para>
@@ -22206,6 +22398,14 @@ namespace HREngine.Bots
 			/// <para>诺米标签使酒馆中的元素属性值提高。</para>
 			/// </summary>
 			nomistickerplayerenchantdnt,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Glowing</para>
+			/// <para>发光</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			glowing,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Mystery Cube Player Ench [DNT]</para>
@@ -22384,6 +22584,14 @@ namespace HREngine.Bots
 			ceremonial,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
+			/// <para>Surveyor's Findings</para>
+			/// <para>测绘员的发现</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			surveyorsfindings,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
 			/// <para>Frosty Globe</para>
 			/// <para>冰霜球瓶</para>
 			/// <para><b>Deathrattle:</b> Summon a Flourishing Frostling.</para>
@@ -22466,16 +22674,16 @@ namespace HREngine.Bots
 			/// <para>随从 恶魔猎手 费用：0 攻击力：5 生命值：4</para>
 			/// <para>Groundbreaker</para>
 			/// <para>碎地者</para>
-			/// <para>[x]After you play a Naga, gain+{1}/+{1}. <i>(Improved byevery 4 spells you've castthis game!)</i>@[x]After you play a Naga,gain +{1}/+{1}.<i>(Cast {0}/4 spellsto improve!)</i></para>
-			/// <para>在你使用一张纳迦牌后，获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@在你使用一张纳迦牌后，获得+{1}/+{1}。<i>（施放{0}/4个法术即可提升！）</i></para>
+			/// <para>[x]After you play a Naga, gain+{1}/+{1}. <i>(Improved byevery 4 spells you've castthis game!)</i>@[x]After you play a Naga,gain +{1}/+{1}.<i>(Cast {2}/4 spellsto improve!)</i></para>
+			/// <para>在你使用一张纳迦牌后，获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@在你使用一张纳迦牌后，获得+{1}/+{1}。<i>（施放{2}/4个法术即可提升！）</i></para>
 			/// </summary>
 			groundbreaker,
 			/// <summary>
 			/// <para>随从 恶魔猎手 费用：0 攻击力：10 生命值：8</para>
 			/// <para>Groundbreaker</para>
 			/// <para>碎地者</para>
-			/// <para>[x]After you play a Naga, gain+{1}/+{1}. <i>(Improved byevery 4 spells you've castthis game!)</i>@[x]After you play a Naga,gain +{1}/+{1}.<i>(Cast {0}/4 spellsto improve!)</i></para>
-			/// <para>在你使用一张纳迦牌后，获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@在你使用一张纳迦牌后，获得+{1}/+{1}。<i>（施放{0}/4个法术即可提升！）</i></para>
+			/// <para>[x]After you play a Naga, gain+{1}/+{1}. <i>(Improved byevery 4 spells you've castthis game!)</i>@[x]After you play a Naga,gain +{1}/+{1}.<i>(Cast {2}/4 spellsto improve!)</i></para>
+			/// <para>在你使用一张纳迦牌后，获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@在你使用一张纳迦牌后，获得+{1}/+{1}。<i>（施放{2}/4个法术即可提升！）</i></para>
 			/// </summary>
 			groundbreaker_BG31_035_G,
 			/// <summary>
@@ -22735,15 +22943,15 @@ namespace HREngine.Bots
 			/// </summary>
 			franticalarmobot_BG31_170e,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Moonsteel Juggernaut</para>
 			/// <para>月铁毁灭战舰</para>
-			/// <para>At the end of your turn, get a {1}/{1} <b>Magnetic</b> Satellite and improve this.</para>
-			/// <para>在你的回合结束时，获取一张{1}/{1}的<b>磁力</b>卫星并提升此效果。</para>
+			/// <para>[x]At the end of your turn,get two {1}/{1} <b>Magnetic</b>Satellites and improvethis.</para>
+			/// <para>在你的回合结束时，获取两张{1}/{1}的<b>磁力</b>卫星并提升此效果。</para>
 			/// </summary>
 			moonsteeljuggernaut,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：12 生命值：12</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：16 生命值：16</para>
 			/// <para>Moonsteel Juggernaut</para>
 			/// <para>月铁毁灭战舰</para>
 			/// <para>[x]At the end of your turn,get two {1}/{1} <b>Magnetic</b>Satellites and improvethis.</para>
@@ -22751,7 +22959,7 @@ namespace HREngine.Bots
 			/// </summary>
 			moonsteeljuggernaut_BG31_171_G,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：12 生命值：12</para>
 			/// <para>Satellite</para>
 			/// <para>卫星</para>
 			/// <para><b>Magnetic</b></para>
@@ -22775,7 +22983,7 @@ namespace HREngine.Bots
 			/// </summary>
 			juggernaut,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：4</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Satellite</para>
 			/// <para>卫星</para>
 			/// <para><b>Magnetic</b></para>
@@ -22815,19 +23023,19 @@ namespace HREngine.Bots
 			/// </summary>
 			arcanevoltage,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：12</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Holo Rover</para>
 			/// <para>移动投影仪</para>
-			/// <para><b><b>Divine Shield</b></b><b>Rally:</b> Get a random <b>Magnetic</b> Mech.</para>
-			/// <para><b><b>圣盾</b>。</b><b>进击：</b>随机获取一张<b>磁力</b>机械牌。</para>
+			/// <para><b>Rally:</b> Get a random <b>Magnetic</b> Mech.</para>
+			/// <para><b>进击：</b>随机获取一张<b>磁力</b>机械牌。</para>
 			/// </summary>
 			holorover,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：24</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Holo Rover</para>
 			/// <para>移动投影仪</para>
-			/// <para><b><b>Divine Shield</b></b><b>Rally:</b> Get 2 random <b>Magnetic</b> Mechs.</para>
-			/// <para><b><b>圣盾</b>。</b><b>进击：</b>随机获取2张<b>磁力</b>机械牌。</para>
+			/// <para><b>Rally:</b> Get 2 random <b>Magnetic</b> Mechs.</para>
+			/// <para><b>进击：</b>随机获取2张<b>磁力</b>机械牌。</para>
 			/// </summary>
 			holorover_BG31_175_G,
 			/// <summary>
@@ -22871,7 +23079,7 @@ namespace HREngine.Bots
 			/// </summary>
 			booming,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：2 生命值：3</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：3 生命值：1</para>
 			/// <para>Mechagnome Interpreter</para>
 			/// <para>机械侏儒解译者</para>
 			/// <para>[x]Whenever you play or<b>Magnetize</b> a Mech,give it +{0}/+{1}.</para>
@@ -22879,7 +23087,7 @@ namespace HREngine.Bots
 			/// </summary>
 			mechagnomeinterpreter,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：6</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：2</para>
 			/// <para>Mechagnome Interpreter</para>
 			/// <para>机械侏儒解译者</para>
 			/// <para>[x]Whenever you play or<b>Magnetize</b> a Mech,give it +{0}/+{1}.</para>
@@ -22895,7 +23103,7 @@ namespace HREngine.Bots
 			/// </summary>
 			interpreted,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：1 生命值：5</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：3 生命值：7</para>
 			/// <para>Marquee Ticker</para>
 			/// <para>招牌计时机</para>
 			/// <para>[x]At the end of your turn, geta random Tavern spell.</para>
@@ -22903,7 +23111,7 @@ namespace HREngine.Bots
 			/// </summary>
 			marqueeticker,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：2 生命值：10</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：14</para>
 			/// <para>Marquee Ticker</para>
 			/// <para>招牌计时机</para>
 			/// <para>[x]At the end of your turn, get2 random Tavern spells.</para>
@@ -23176,12 +23384,12 @@ namespace HREngine.Bots
 			ominousseer_BG31_330_G,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
-			/// <para>Foretold</para>
-			/// <para>提前预言</para>
+			/// <para>Tavern spell discount</para>
+			/// <para>酒馆法术折扣</para>
 			/// <para>Your next Tavern spell costs less.</para>
 			/// <para>你的下一张酒馆法术牌消耗的铸币减少。</para>
 			/// </summary>
-			foretold,
+			tavernspelldiscount,
 			/// <summary>
 			/// <para>随从 无效的 费用：0 攻击力：4 生命值：9</para>
 			/// <para>Salty Hog</para>
@@ -23359,19 +23567,19 @@ namespace HREngine.Bots
 			/// </summary>
 			nestswarmer_BG31_807_G,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：2 生命值：8</para>
+			/// <para>随从 猎人 费用：0 攻击力：2 生命值：7</para>
 			/// <para>Runed Progenitor</para>
 			/// <para>符文虫祖</para>
-			/// <para>[x]<b>Avenge (3):</b> Your Beetleshave +2/+2 this game.<b>Deathrattle:</b> Summon a{0}/{1} Beetle.</para>
-			/// <para><b>复仇（3）：</b>在本局对战中，你的甲虫拥有+2/+2。<b>亡语：</b>召唤一只{0}/{1}的甲虫。</para>
+			/// <para>[x]<b>Avenge (3):</b> Your Beetleshave +{2}/+{3} this game.<b>Deathrattle:</b> Summon a{0}/{1} Beetle.</para>
+			/// <para><b>复仇（3）：</b>在本局对战中，你的甲虫拥有+{2}/+{3}。<b>亡语：</b>召唤一只{0}/{1}的甲虫。</para>
 			/// </summary>
 			runedprogenitor,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：4 生命值：16</para>
+			/// <para>随从 猎人 费用：0 攻击力：4 生命值：14</para>
 			/// <para>Runed Progenitor</para>
 			/// <para>符文虫祖</para>
-			/// <para>[x]<b>Avenge (3):</b> Your Beetleshave +4/+4 this game.<b>Deathrattle:</b> Summon two{0}/{1} Beetles.</para>
-			/// <para><b>复仇（3）：</b>在本局对战中，你的甲虫拥有+4/+4。<b>亡语：</b>召唤两只{0}/{1}的甲虫。</para>
+			/// <para>[x]<b>Avenge (3):</b> Your Beetleshave +{2}/+{3} this game.<b>Deathrattle:</b> Summon two{0}/{1} Beetles.</para>
+			/// <para><b>复仇（3）：</b>在本局对战中，你的甲虫拥有+{2}/+{3}。<b>亡语：</b>召唤两只{0}/{1}的甲虫。</para>
 			/// </summary>
 			runedprogenitor_BG31_808_G,
 			/// <summary>
@@ -23391,7 +23599,7 @@ namespace HREngine.Bots
 			/// </summary>
 			beetlearmyplayerenchantdnt,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：4 生命值：4</para>
+			/// <para>随从 猎人 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Turquoise Skitterer</para>
 			/// <para>绿松石飞掠虫</para>
 			/// <para>[x]<b>Deathrattle:</b> Your Beetleshave +{2}/+{3} this game.Summon a {0}/{1} Beetle.</para>
@@ -23399,7 +23607,7 @@ namespace HREngine.Bots
 			/// </summary>
 			turquoiseskitterer,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：8 生命值：8</para>
+			/// <para>随从 猎人 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Turquoise Skitterer</para>
 			/// <para>绿松石飞掠虫</para>
 			/// <para>[x]<b>Deathrattle:</b> Your Beetleshave +{2}/+{3} this game.Summon two {0}/{1}Beetles.</para>
@@ -23679,19 +23887,19 @@ namespace HREngine.Bots
 			/// </summary>
 			grittyheadhunter_BG31_822_G,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：3 生命值：5</para>
+			/// <para>随从 牧师 费用：0 攻击力：3 生命值：4</para>
 			/// <para>Dual-Wield Corsair</para>
 			/// <para>双持海盗</para>
-			/// <para>[x]Whenever you spend 5 Gold,give two friendly Pirates+4/+4. <i>(@ Gold left!)</i></para>
-			/// <para>每当你花掉5枚铸币，使两个友方海盗获得+4/+4。<i>（还剩@枚！）</i></para>
+			/// <para>[x]Whenever you spend 5 Gold,give two friendly Pirates+{2}/+{3}. <i>({0} Gold left!)</i></para>
+			/// <para>每当你花掉5枚铸币，使两个友方海盗获得+{2}/+{3}。<i>（还剩{0}枚！）</i></para>
 			/// </summary>
 			dualwieldcorsair,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：6 生命值：10</para>
+			/// <para>随从 牧师 费用：0 攻击力：6 生命值：8</para>
 			/// <para>Dual-Wield Corsair</para>
 			/// <para>双持海盗</para>
-			/// <para>[x]Whenever you spend 5 Gold,give two friendly Pirates+8/+8. <i>(@ Gold left!)</i></para>
-			/// <para>每当你花掉5枚铸币，使两个友方海盗获得+8/+8。<i>（还剩@枚！）</i></para>
+			/// <para>[x]Whenever you spend 5 Gold,give two friendly Pirates+{2}/+{3} twice.<i>({0} Gold left!)</i></para>
+			/// <para>每当你花掉5枚铸币，使两个友方海盗获得+{2}/+{3}，触发两次。<i>（还剩{0}枚！）</i></para>
 			/// </summary>
 			dualwieldcorsair_BG31_824_G,
 			/// <summary>
@@ -24194,7 +24402,7 @@ namespace HREngine.Bots
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Ashen Corruptor Player Ench [DNT]</para>
 			/// <para>Ashen Corruptor Player Ench [DNT]</para>
-			/// <para>Tracks shop buffs from Ashen Corrupter.[DNT]</para>
+			/// <para>Tracks shop buffs from Ashen Corruptor. [DNT]</para>
 			/// <para>Tracks shop buffs from Ashen Corrupter.[DNT]</para>
 			/// </summary>
 			ashencorruptorplayerenchdnt,
@@ -24482,16 +24690,16 @@ namespace HREngine.Bots
 			/// <para>随从 恶魔猎手 费用：0 攻击力：2 生命值：2</para>
 			/// <para>Thaumaturgist</para>
 			/// <para>杂耍奇术师</para>
-			/// <para>[x]<b>Spellcraft:</b> Give a minion+{1}/+{1} until next turn.<i>(Improved by every 4 spells________you've cast this game!)</i>_____@[x]<b>Spellcraft:</b> Give a minion+{1}/+{1} until next turn.<i>(Cast {0}/4 spellsto improve!)</i></para>
-			/// <para><b>塑造法术：</b>直到下个回合，使一个随从获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@<b>塑造法术：</b>直到下个回合，使一个随从获得+{1}/+{1}。<i>（施放{0}/4个法术即可提升！）</i></para>
+			/// <para>[x]<b>Spellcraft:</b> Give a minion+{1}/+{1} until next turn.<i>(Improved by every 4 spells________you've cast this game!)</i>_____@[x]<b>Spellcraft:</b> Give a minion+{1}/+{1} until next turn.<i>(Cast {2}/4 spellsto improve!)</i></para>
+			/// <para><b>塑造法术：</b>直到下个回合，使一个随从获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@<b>塑造法术：</b>直到下个回合，使一个随从获得+{1}/+{1}。<i>（施放{2}/4个法术即可提升！）</i></para>
 			/// </summary>
 			thaumaturgist,
 			/// <summary>
 			/// <para>随从 恶魔猎手 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Thaumaturgist</para>
 			/// <para>杂耍奇术师</para>
-			/// <para>[x]<b>Spellcraft:</b> Give a minion+{1}/+{1} until next turn.<i>(Improved by every 4 spells________you've cast this game!)</i>_____@[x]<b>Spellcraft:</b> Give a minion+{1}/+{1} until next turn.<i>(Cast {0}/4 spellsto improve!)</i></para>
-			/// <para><b>塑造法术：</b>直到下个回合，使一个随从获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@<b>塑造法术：</b>直到下个回合，使一个随从获得+{1}/+{1}。<i>（施放{0}/4个法术即可提升！）</i></para>
+			/// <para>[x]<b>Spellcraft:</b> Give a minion+{1}/+{1} until next turn.<i>(Improved by every 4 spells________you've cast this game!)</i>_____@[x]<b>Spellcraft:</b> Give a minion+{1}/+{1} until next turn.<i>(Cast {2}/4 spellsto improve!)</i></para>
+			/// <para><b>塑造法术：</b>直到下个回合，使一个随从获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@<b>塑造法术：</b>直到下个回合，使一个随从获得+{1}/+{1}。<i>（施放{2}/4个法术即可提升！）</i></para>
 			/// </summary>
 			thaumaturgist_BG31_924_G,
 			/// <summary>
@@ -24522,16 +24730,16 @@ namespace HREngine.Bots
 			/// <para>随从 恶魔猎手 费用：0 攻击力：4 生命值：3</para>
 			/// <para>Showy Cyclist</para>
 			/// <para>显眼的骑手</para>
-			/// <para>[x]<b>Deathrattle:</b> Give your Naga+{1}/+{1}. <i>(Improved byevery 4 spells you'vecast this game!)</i>@[x]<b>Deathrattle:</b> Giveyour Naga +{1}/+{1}.<i>(Cast {0}/4 spellsto improve!)</i></para>
-			/// <para><b>亡语：</b>使你的纳迦获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@<b>亡语：</b>使你的纳迦获得+{1}/+{1}。<i>（施放{0}/4个法术即可提升！）</i></para>
+			/// <para>[x]<b>Deathrattle:</b> Give your Naga+{1}/+{1}. <i>(Improved byevery 4 spells you'vecast this game!)</i>@[x]<b>Deathrattle:</b> Giveyour Naga +{1}/+{1}.<i>(Cast {2}/4 spellsto improve!)</i></para>
+			/// <para><b>亡语：</b>使你的纳迦获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@<b>亡语：</b>使你的纳迦获得+{1}/+{1}。<i>（施放{2}/4个法术即可提升！）</i></para>
 			/// </summary>
 			showycyclist,
 			/// <summary>
 			/// <para>随从 恶魔猎手 费用：0 攻击力：8 生命值：6</para>
 			/// <para>Showy Cyclist</para>
 			/// <para>显眼的骑手</para>
-			/// <para>[x]<b>Deathrattle:</b> Give your Naga+{1}/+{1}. <i>(Improved byevery 4 spells you'vecast this game!)</i>@[x]<b>Deathrattle:</b> Giveyour Naga +{1}/+{1}.<i>(Cast {0}/4 spellsto improve!)</i></para>
-			/// <para><b>亡语：</b>使你的纳迦获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@<b>亡语：</b>使你的纳迦获得+{1}/+{1}。<i>（施放{0}/4个法术即可提升！）</i></para>
+			/// <para>[x]<b>Deathrattle:</b> Give your Naga+{1}/+{1}. <i>(Improved byevery 4 spells you'vecast this game!)</i>@[x]<b>Deathrattle:</b> Giveyour Naga +{1}/+{1}.<i>(Cast {2}/4 spellsto improve!)</i></para>
+			/// <para><b>亡语：</b>使你的纳迦获得+{1}/+{1}。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@<b>亡语：</b>使你的纳迦获得+{1}/+{1}。<i>（施放{2}/4个法术即可提升！）</i></para>
 			/// </summary>
 			showycyclist_BG31_925_G,
 			/// <summary>
@@ -24546,16 +24754,16 @@ namespace HREngine.Bots
 			/// <para>随从 恶魔猎手 费用：0 攻击力：2 生命值：6</para>
 			/// <para>Arcane Cannoneer</para>
 			/// <para>奥术火炮手</para>
-			/// <para>[x]Whenever this attacks, deal{1} damage to the target.<i>(Improved by every 4 spells________you've cast this game!)</i>_____@[x]Whenever this attacks, deal{1} damage to the target.<i>(Cast {0}/4 spellsto improve!)</i></para>
-			/// <para>每当本随从攻击时，对目标造成{1}点伤害。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@每当本随从攻击时，对目标造成{1}点伤害。<i>（施放{0}/4个法术即可提升！）</i></para>
+			/// <para>[x]Whenever this attacks, deal{1} damage to the target.<i>(Improved by every 4 spells________you've cast this game!)</i>_____@[x]Whenever this attacks, deal{1} damage to the target.<i>(Cast {2}/4 spellsto improve!)</i></para>
+			/// <para>每当本随从攻击时，对目标造成{1}点伤害。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@每当本随从攻击时，对目标造成{1}点伤害。<i>（施放{2}/4个法术即可提升！）</i></para>
 			/// </summary>
 			arcanecannoneer,
 			/// <summary>
 			/// <para>随从 恶魔猎手 费用：0 攻击力：4 生命值：12</para>
 			/// <para>Arcane Cannoneer</para>
 			/// <para>奥术火炮手</para>
-			/// <para>[x]Whenever this attacks, deal{1} damage to the target.<i>(Improved by every 4 spells________you've cast this game!)</i>_____@[x]Whenever this attacks, deal{1} damage to the target.<i>(Cast {0}/4 spellsto improve!)</i></para>
-			/// <para>每当本随从攻击时，对目标造成{1}点伤害。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@每当本随从攻击时，对目标造成{1}点伤害。<i>（施放{0}/4个法术即可提升！）</i></para>
+			/// <para>[x]Whenever this attacks, deal{1} damage to the target.<i>(Improved by every 4 spells________you've cast this game!)</i>_____@[x]Whenever this attacks, deal{1} damage to the target.<i>(Cast {2}/4 spellsto improve!)</i></para>
+			/// <para>每当本随从攻击时，对目标造成{1}点伤害。<i>（在本局对战中，你每施放4个法术都会提升！）</i>@每当本随从攻击时，对目标造成{1}点伤害。<i>（施放{2}/4个法术即可提升！）</i></para>
 			/// </summary>
 			arcanecannoneer_BG31_928_G,
 			/// <summary>
@@ -24578,8 +24786,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>Lay of the Land</para>
 			/// <para>地势走向</para>
-			/// <para>The Tavern offers 1 extra Tavern spell after each <b>Refresh</b>.</para>
-			/// <para>在每次<b>刷新</b>后，酒馆额外提供1张酒馆法术牌。</para>
+			/// <para>The Tavern offers an extra Tavern spell whenever it is <b>Refreshed</b>.</para>
+			/// <para>每当酒馆<b>刷新</b>时，总会额外提供一张酒馆法术牌。</para>
 			/// </summary>
 			layoftheland,
 			/// <summary>
@@ -24626,8 +24834,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>Marin's Treasure Box</para>
 			/// <para>马林的宝藏匣</para>
-			/// <para>[x]Trinkets are inthis game. All heroesare Marin the Manager.</para>
-			/// <para>本局对战中有饰品。所有英雄均为经理马林。</para>
+			/// <para>All heroes are Marin the Manager. Make 'Growing Collection' your second Hero Power.</para>
+			/// <para>所有英雄均为经理马林。将“藏品增生”变为你的第二英雄技能。</para>
 			/// </summary>
 			marinstreasurebox,
 			/// <summary>
@@ -25871,7 +26079,7 @@ namespace HREngine.Bots
 			/// </summary>
 			larva_BG31_HERO_811t_G,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 中立 费用：0 攻击力：3 生命值：3</para>
 			/// <para>Nightmare Par-tea Guest</para>
 			/// <para>梦魇茶客</para>
 			/// <para><b>Battlecry and Deathrattle:</b> Get a Misplaced Tea Set.</para>
@@ -25879,7 +26087,7 @@ namespace HREngine.Bots
 			/// </summary>
 			nightmareparteaguest,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：12 生命值：12</para>
+			/// <para>随从 中立 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Nightmare Par-tea Guest</para>
 			/// <para>梦魇茶客</para>
 			/// <para><b>Battlecry and Deathrattle:</b> Get 2 Misplaced Tea Sets.</para>
@@ -25887,7 +26095,7 @@ namespace HREngine.Bots
 			/// </summary>
 			nightmareparteaguest_BG32_111_G,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：2 生命值：1</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：2</para>
 			/// <para>Metallic Hunter</para>
 			/// <para>钢铁猎人</para>
 			/// <para>[x]<b>Deathrattle:</b> Get aPointy Arrow.</para>
@@ -25895,7 +26103,7 @@ namespace HREngine.Bots
 			/// </summary>
 			metallichunter,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：2</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：4</para>
 			/// <para>Metallic Hunter</para>
 			/// <para>钢铁猎人</para>
 			/// <para>[x]<b>Deathrattle:</b> Get 2Pointy Arrows.</para>
@@ -26063,7 +26271,7 @@ namespace HREngine.Bots
 			/// </summary>
 			caughtprey,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：3 生命值：8</para>
+			/// <para>随从 猎人 费用：0 攻击力：3 生命值：12</para>
 			/// <para>Silky Shimmermoth</para>
 			/// <para>丝柔烁光蛾</para>
 			/// <para>[x]Whenever this takes damage,your Beetles have +{2}/+{3}this game. <b>Deathrattle:</b> Summona {0}/{1} Beetle.</para>
@@ -26071,10 +26279,10 @@ namespace HREngine.Bots
 			/// </summary>
 			silkyshimmermoth,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：6 生命值：16</para>
+			/// <para>随从 猎人 费用：0 攻击力：6 生命值：24</para>
 			/// <para>Silky Shimmermoth</para>
 			/// <para>丝柔烁光蛾</para>
-			/// <para>[x]Whenever this takes damage,your Beetles have +{2}/+{3}this game. <b>Deathrattle:</b> Summontwo {0}/{1} Beetle.</para>
+			/// <para>[x]Whenever this takes damage,your Beetles have +{2}/+{3}this game. <b>Deathrattle:</b> Summontwo {0}/{1} Beetles.</para>
 			/// <para>每当本随从受到伤害，在本局对战中，你的甲虫拥有+{2}/+{3}。<b>亡语：</b>召唤两只{0}/{1}的甲虫。</para>
 			/// </summary>
 			silkyshimmermoth_BG32_204_G,
@@ -26127,7 +26335,7 @@ namespace HREngine.Bots
 			/// </summary>
 			thievingrascal_BG32_232_G,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：5 生命值：3</para>
+			/// <para>随从 牧师 费用：0 攻击力：5 生命值：4</para>
 			/// <para>Dastardly Drust</para>
 			/// <para>卑鄙的德鲁斯特</para>
 			/// <para>[x]Whenever you get a Pirate,give your minions +{0}/+{1}.Give Golden ones+{2}/+{3} instead.</para>
@@ -26135,7 +26343,7 @@ namespace HREngine.Bots
 			/// </summary>
 			dastardlydrust,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：10 生命值：6</para>
+			/// <para>随从 牧师 费用：0 攻击力：10 生命值：8</para>
 			/// <para>Dastardly Drust</para>
 			/// <para>卑鄙的德鲁斯特</para>
 			/// <para>[x]Whenever you get a Pirate,give your minions +{0}/+{1}.Give Golden ones+{2}/+{3} instead.</para>
@@ -26239,19 +26447,19 @@ namespace HREngine.Bots
 			/// </summary>
 			giantdewdrop_BG32_237t2,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：2 生命值：9</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：2 生命值：7</para>
 			/// <para>Drustfallen Butcher</para>
 			/// <para>德鲁斯特堕落屠夫</para>
-			/// <para><b>Avenge (4):</b> Get a Butchering.</para>
-			/// <para><b>复仇（4）：</b>获取一张宰割。</para>
+			/// <para><b>Avenge ({0}):</b> Get a Butchering.</para>
+			/// <para><b>复仇（{0}）：</b>获取一张宰割。</para>
 			/// </summary>
 			drustfallenbutcher,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：18</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：14</para>
 			/// <para>Drustfallen Butcher</para>
 			/// <para>德鲁斯特堕落屠夫</para>
-			/// <para><b>Avenge (4):</b> Get 2 Butcherings.</para>
-			/// <para><b>复仇（4）：</b>获取2张宰割。</para>
+			/// <para><b>Avenge ({0}):</b> Get 2 Butcherings.</para>
+			/// <para><b>复仇（{0}）：</b>获取2张宰割。</para>
 			/// </summary>
 			drustfallenbutcher_BG32_324_G,
 			/// <summary>
@@ -26554,32 +26762,32 @@ namespace HREngine.Bots
 			/// <para>随从 德鲁伊 费用：0 攻击力：2 生命值：8</para>
 			/// <para>Dreaming Thornweaver</para>
 			/// <para>睡梦织棘者</para>
-			/// <para>[x]<b>Avenge (4):</b> Your <b>Blood Gems</b>give an extra +1 Healththis game. <i>(Swaps toAttack next turn!)</i>@[x]<b>Avenge (4):</b> Your <b>Blood Gems</b>give an extra +1 Attackthis game. <i>(Swaps toHealth next turn!)</i></para>
-			/// <para><b>复仇（4）：</b>在本局对战中，你的<b>鲜血宝石</b>使随从额外获得+1生命值。<i>（下回合切换为攻击力！）</i>@<b>复仇（4）：</b>在本局对战中，你的<b>鲜血宝石</b>使随从额外获得+1攻击力。<i>（下回合切换为生命值！）</i></para>
+			/// <para>[x]<b>Avenge ({0}):</b> Your<b>Blood Gems</b> give an extra+{1} Health this game.@[x]<b>Avenge ({0}):</b> Your <b>Blood Gems</b>give an extra +{1} Attackthis game. <i>(Swaps toHealth next turn!)</i></para>
+			/// <para><b>复仇（{0}）：</b>在本局对战中，你的<b>鲜血宝石</b>使随从额外获得+{1}生命值。@<b>复仇（{0}）：</b>在本局对战中，你的<b>鲜血宝石</b>使随从额外获得+{1}攻击力。<i>（下回合切换为生命值！）</i></para>
 			/// </summary>
 			dreamingthornweaver,
 			/// <summary>
 			/// <para>随从 德鲁伊 费用：0 攻击力：4 生命值：16</para>
 			/// <para>Dreaming Thornweaver</para>
 			/// <para>睡梦织棘者</para>
-			/// <para>[x]<b>Avenge (4):</b> Your <b>Blood Gems</b>give an extra +2 Healththis game. <i>(Swaps toAttack next turn!)</i>@[x]<b>Avenge (4):</b> Your <b>Blood Gems</b>give an extra +2 Attackthis game. <i>(Swaps toHealth next turn!)</i></para>
-			/// <para><b>复仇（4）：</b>在本局对战中，你的<b>鲜血宝石</b>使随从额外获得+2生命值。<i>（下回合切换为攻击力！）</i>@<b>复仇（4）：</b>在本局对战中，你的<b>鲜血宝石</b>使随从额外获得+2攻击力。<i>（下回合切换为生命值！）</i></para>
+			/// <para>[x]<b>Avenge ({0}):</b> Your<b>Blood Gems</b> give an extra+{1} Health this game.@[x]<b>Avenge ({0}):</b> Your <b>Blood Gems</b>give an extra +{1} Attackthis game. <i>(Swaps toHealth next turn!)</i></para>
+			/// <para><b>复仇（{0}）：</b>在本局对战中，你的<b>鲜血宝石</b>使随从额外获得+{1}生命值。@<b>复仇（{0}）：</b>在本局对战中，你的<b>鲜血宝石</b>使随从额外获得+{1}攻击力。<i>（下回合切换为生命值！）</i></para>
 			/// </summary>
 			dreamingthornweaver_BG32_433_G,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：3 生命值：4</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：5 生命值：2</para>
 			/// <para>Skulking Bristlemane</para>
 			/// <para>潜藏的刺鬃野猪人</para>
-			/// <para>[x]<b>Start of Combat:</b> This playsa <b>Blood Gem</b> on adjacentminions.</para>
-			/// <para><b>战斗开始时：</b>本随从对相邻的随从各使用一张<b>鲜血宝石</b>。</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> This plays apermanent <b>Blood Gem</b>on adjacent minions.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>本随从对相邻的随从各使用一张永久的<b>鲜血宝石</b>。</para>
 			/// </summary>
 			skulkingbristlemane,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：6 生命值：8</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：10 生命值：4</para>
 			/// <para>Skulking Bristlemane</para>
 			/// <para>潜藏的刺鬃野猪人</para>
-			/// <para>[x]<b>Start of Combat:</b> This plays2 <b>Blood Gems</b> on adjacentminions.</para>
-			/// <para><b>战斗开始时：</b>本随从对相邻的随从各使用2张<b>鲜血宝石</b>。</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> This plays 2permanent <b>Blood Gems</b>on adjacent minions.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>本随从对相邻的随从各使用2张永久的<b>鲜血宝石</b>。</para>
 			/// </summary>
 			skulkingbristlemane_BG32_434_G,
 			/// <summary>
@@ -26607,10 +26815,10 @@ namespace HREngine.Bots
 			/// </summary>
 			aligntheelementsplayerenchdnt,
 			/// <summary>
-			/// <para>BATTLEGROUND_SPELL 中立 费用：2</para>
+			/// <para>BATTLEGROUND_SPELL 中立 费用：1</para>
 			/// <para>Shifting Tide</para>
 			/// <para>变换之潮</para>
-			/// <para>[x]Give a minion +{0}/+{1}twice. If it's a Naga, repeat this.</para>
+			/// <para>[x]Give a minion +{0}/+{1}twice. If it's a Naga,repeat this.</para>
 			/// <para>使一个随从获得+{0}/+{1}，触发两次。如果该随从是纳迦，重复此效果。</para>
 			/// </summary>
 			shiftingtide,
@@ -26639,7 +26847,7 @@ namespace HREngine.Bots
 			/// </summary>
 			firescalehoarder_BG32_820_G,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：7 生命值：6</para>
+			/// <para>随从 无效的 费用：0 攻击力：6 生命值：5</para>
 			/// <para>Felfire Conjurer</para>
 			/// <para>邪火咒龙</para>
 			/// <para>[x]At the end of your turn,your Tavern spells givean extra +{0}/+{1}this game.</para>
@@ -26647,7 +26855,7 @@ namespace HREngine.Bots
 			/// </summary>
 			felfireconjurer,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：14 生命值：12</para>
+			/// <para>随从 无效的 费用：0 攻击力：12 生命值：10</para>
 			/// <para>Felfire Conjurer</para>
 			/// <para>邪火咒龙</para>
 			/// <para>[x]At the end of your turn,your Tavern spells givean extra +{0}/+{1}this game.</para>
@@ -26658,16 +26866,16 @@ namespace HREngine.Bots
 			/// <para>随从 战士 费用：0 攻击力：8 生命值：5</para>
 			/// <para>Fire-forged Evoker</para>
 			/// <para>火铸唤魔师</para>
-			/// <para>[x]<b>Start of Combat:</b> Give your Dragons +{0}/+{1}.After you cast a Tavernspell, improve this.</para>
-			/// <para><b>战斗开始时：</b>使你的龙获得+{0}/+{1}。在你施放一个酒馆法术后，提升此效果。</para>
+			/// <para>[x]<b>Start of Combat:</b> Give yourDragons +{0}/+{1}.Improves permanently after____you cast a Tavern spell.</para>
+			/// <para><b>战斗开始时：</b>使你的龙获得+{0}/+{1}。在你施放一个酒馆法术后永久提升此效果。</para>
 			/// </summary>
 			fireforgedevoker,
 			/// <summary>
 			/// <para>随从 战士 费用：0 攻击力：16 生命值：10</para>
 			/// <para>Fire-forged Evoker</para>
 			/// <para>火铸唤魔师</para>
-			/// <para>[x]<b>Start of Combat:</b> Give your Dragons +{0}/+{1}.After you cast a Tavernspell, improve this.</para>
-			/// <para><b>战斗开始时：</b>使你的龙获得+{0}/+{1}。在你施放一个酒馆法术后，提升此效果。</para>
+			/// <para>[x]<b>Start of Combat:</b> Give yourDragons +{0}/+{1}.Improves permanently after____you cast a Tavern spell.</para>
+			/// <para><b>战斗开始时：</b>使你的龙获得+{0}/+{1}。在你施放一个酒馆法术后永久提升此效果。</para>
 			/// </summary>
 			fireforgedevoker_BG32_822_G,
 			/// <summary>
@@ -26887,7 +27095,7 @@ namespace HREngine.Bots
 			/// </summary>
 			frostforged,
 			/// <summary>
-			/// <para>随从 法师 费用：0 攻击力：5 生命值：4</para>
+			/// <para>随从 法师 费用：0 攻击力：6 生命值：5</para>
 			/// <para>Unleashed Mana Surge</para>
 			/// <para>狂放的法力涌流</para>
 			/// <para>After you play an Elemental, give your Elementals +{0}/+{1}.</para>
@@ -26895,7 +27103,7 @@ namespace HREngine.Bots
 			/// </summary>
 			unleashedmanasurge,
 			/// <summary>
-			/// <para>随从 法师 费用：0 攻击力：10 生命值：8</para>
+			/// <para>随从 法师 费用：0 攻击力：12 生命值：10</para>
 			/// <para>Unleashed Mana Surge</para>
 			/// <para>狂放的法力涌流</para>
 			/// <para>After you play an Elemental, give your Elementals +{0}/+{1} twice.</para>
@@ -26999,6 +27207,14 @@ namespace HREngine.Bots
 			/// </summary>
 			ashencorruptor_BG32_873_G,
 			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Ashen</para>
+			/// <para>灰烬</para>
+			/// <para>Stats increased by Ashen Corruptor.</para>
+			/// <para>灰烬腐蚀者使其属性值提高。</para>
+			/// </summary>
+			ashen,
+			/// <summary>
 			/// <para>随从 巫妖王 费用：0 攻击力：6 生命值：3</para>
 			/// <para>Friendly Geist</para>
 			/// <para>友善的恶鬼</para>
@@ -27015,7 +27231,7 @@ namespace HREngine.Bots
 			/// </summary>
 			friendlygeist_BG32_880_G,
 			/// <summary>
-			/// <para>随从 术士 费用：0 攻击力：5 生命值：4</para>
+			/// <para>随从 术士 费用：0 攻击力：5 生命值：3</para>
 			/// <para>Shadowdancer</para>
 			/// <para>影舞者</para>
 			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Get a Staffof Enrichment.</para>
@@ -27023,7 +27239,7 @@ namespace HREngine.Bots
 			/// </summary>
 			shadowdancer,
 			/// <summary>
-			/// <para>随从 术士 费用：0 攻击力：10 生命值：8</para>
+			/// <para>随从 术士 费用：0 攻击力：10 生命值：6</para>
 			/// <para>Shadowdancer</para>
 			/// <para>影舞者</para>
 			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Get 2 Staffsof Enrichment.</para>
@@ -27082,16 +27298,16 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>Greater Pouches</para>
 			/// <para>大型口袋</para>
-			/// <para>On Turns 8 and 9, buy a Greater <b>Trinket</b>. There are no Lesser <b>Trinkets</b> in this game.</para>
-			/// <para>在第8回合和第9回合各购买一项大型<b>饰品</b>。本局对战中没有小型<b>饰品</b>。</para>
+			/// <para>Start with 'Growing Collection' as your second Hero Power.</para>
+			/// <para>对战开始时，将“藏品增生”变为你的第二英雄技能。</para>
 			/// </summary>
 			greaterpouches,
 			/// <summary>
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>Lesser Pouches</para>
 			/// <para>小型口袋</para>
-			/// <para>On Turns 6 and 7, buy a Lesser <b>Trinket</b>. There are no Greater <b>Trinkets</b> in this game.</para>
-			/// <para>在第6回合和第7回合各购买一项小型<b>饰品</b>。本局对战中没有大型<b>饰品</b>。</para>
+			/// <para>Start with 'Fantastic Treasure' as your second Hero Power.</para>
+			/// <para>对战开始时，将“神奇宝藏”变为你的第二英雄技能。</para>
 			/// </summary>
 			lesserpouches,
 			/// <summary>
@@ -27170,8 +27386,8 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Growing Collection</para>
 			/// <para>藏品增生</para>
-			/// <para>[x]On Turn 8, choose aGreater <b>Trinket</b> to buy.<i>({0} |4(turn, turns) left!)</i>@[x]On Turn 8, choose aGreater <b>Trinket</b> to buy.</para>
-			/// <para>在第8回合，选择一项大型<b>饰品</b>并购买。<i>（还剩{0}回合！）</i>@在第8回合，选择一项大型<b>饰品</b>并购买。</para>
+			/// <para>[x]On Turn 8, choose aGreater <b>Trinket</b> to buy.<i>({0} |4(turn, turns) left!)</i>@[x]On Turn 8, choose aGreater <b>Trinket</b> to buy.<i>(Done!)</i></para>
+			/// <para>在第8回合，选择一项大型<b>饰品</b>并购买。<i>（还剩{0}回合！）</i>@在第8回合，选择一项大型<b>饰品</b>并购买。<i>（已完成！）</i></para>
 			/// </summary>
 			growingcollection,
 			/// <summary>
@@ -27730,16 +27946,16 @@ namespace HREngine.Bots
 			/// <para>随从 战士 费用：0 攻击力：3 生命值：10</para>
 			/// <para>Charmwing</para>
 			/// <para>魅惑之翼</para>
-			/// <para>[x]<b>Rally:</b> Give {0} friendly Dragonsthis minion's Health<i>(except Charmwing)</i>.</para>
-			/// <para><b>进击：</b>使{0}条友方的龙获得本随从的生命值<i>（魅惑之翼除外）</i>。</para>
+			/// <para>[x]<b>Rally:</b> Give {0} friendly Dragonsthis minion's maximum Health<i>(except Charmwing)</i>.</para>
+			/// <para><b>进击：</b>使{0}条友方的龙获得本随从的生命值上限<i>（魅惑之翼除外）</i>。</para>
 			/// </summary>
 			charmwing,
 			/// <summary>
 			/// <para>随从 战士 费用：0 攻击力：6 生命值：20</para>
 			/// <para>Charmwing</para>
 			/// <para>魅惑之翼</para>
-			/// <para>[x]<b>Rally:</b> Give {0} friendlyDragons this minion'sHealth, twice <i>(exceptCharmwing)</i>.</para>
-			/// <para><b>进击：</b>使{0}条友方的龙获得本随从的生命值，触发两次<i>（魅惑之翼除外）</i>。</para>
+			/// <para>[x]<b>Rally:</b> Give {0} friendlyDragons this minion'smaximum Health, twice<i>(except Charmwing)</i>.</para>
+			/// <para><b>进击：</b>使{0}条友方的龙获得本随从的生命值上限，触发两次<i>（魅惑之翼除外）</i>。</para>
 			/// </summary>
 			charmwing_BG33_240_G,
 			/// <summary>
@@ -27751,19 +27967,19 @@ namespace HREngine.Bots
 			/// </summary>
 			charmed_BG33_240e,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：3 生命值：4</para>
+			/// <para>随从 战士 费用：0 攻击力：4 生命值：3</para>
 			/// <para>Sleepy Supporter</para>
 			/// <para>贪睡的援护巨龙</para>
-			/// <para><b>Rally:</b> Give another random friendly Dragon +{0}/+{1}.</para>
-			/// <para><b>进击：</b>随机使另一条友方的龙获得+{0}/+{1}。</para>
+			/// <para><b>Rally:</b> Give the minion to the right of this +{0}/+{1}.</para>
+			/// <para><b>进击：</b>使本随从右边的随从获得+{0}/+{1}。</para>
 			/// </summary>
 			sleepysupporter,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：6 生命值：8</para>
+			/// <para>随从 战士 费用：0 攻击力：8 生命值：6</para>
 			/// <para>Sleepy Supporter</para>
 			/// <para>贪睡的援护巨龙</para>
-			/// <para><b>Rally:</b> Give another random friendly Dragon +{0}/+{1}.</para>
-			/// <para><b>进击：</b>随机使另一条友方的龙获得+{0}/+{1}。</para>
+			/// <para><b>Rally:</b> Give the minion to the right of this +{0}/+{1}.</para>
+			/// <para><b>进击：</b>使本随从右边的随从获得+{0}/+{1}。</para>
 			/// </summary>
 			sleepysupporter_BG33_241_G,
 			/// <summary>
@@ -27791,7 +28007,7 @@ namespace HREngine.Bots
 			/// </summary>
 			nimblehatchling_BG33_244_G,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：3 生命值：7</para>
+			/// <para>随从 战士 费用：0 攻击力：3 生命值：5</para>
 			/// <para>Twilight Watcher</para>
 			/// <para>暮光守望巨龙</para>
 			/// <para>Whenever a friendly Dragon attacks, give your Dragons +{0}/+{1}.</para>
@@ -27799,7 +28015,7 @@ namespace HREngine.Bots
 			/// </summary>
 			twilightwatcher,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：6 生命值：14</para>
+			/// <para>随从 战士 费用：0 攻击力：6 生命值：10</para>
 			/// <para>Twilight Watcher</para>
 			/// <para>暮光守望巨龙</para>
 			/// <para>Whenever a friendly Dragon attacks, give your Dragons +{0}/+{1}.</para>
@@ -27954,7 +28170,7 @@ namespace HREngine.Bots
 			/// <para>随从 萨满祭司 费用：0 攻击力：1 生命值：10</para>
 			/// <para>Bile Spitter</para>
 			/// <para>怒胆喷毒鱼人</para>
-			/// <para>[x]<b>Venomous</b> <b>Rally:</b> Give another friendlyMurloc <b>Venomous</b>.</para>
+			/// <para>[x]<b>Venomous</b><b>Rally:</b> Give another friendlyMurloc <b>Venomous</b>.</para>
 			/// <para><b>烈毒</b>。<b>进击：</b>使另一个友方鱼人获得<b>烈毒</b>。</para>
 			/// </summary>
 			bilespitter,
@@ -27962,7 +28178,7 @@ namespace HREngine.Bots
 			/// <para>随从 萨满祭司 费用：0 攻击力：2 生命值：20</para>
 			/// <para>Bile Spitter</para>
 			/// <para>怒胆喷毒鱼人</para>
-			/// <para>[x]<b>Venomous</b> <b>Rally:</b> Give 2 other friendlyMurlocs <b>Venomous</b>.</para>
+			/// <para>[x]<b>Venomous</b><b>Rally:</b> Give 2 other friendlyMurlocs <b>Venomous</b>.</para>
 			/// <para><b>烈毒</b>。<b>进击：</b>使2个其他友方鱼人获得<b>烈毒</b>。</para>
 			/// </summary>
 			bilespitter_BG33_318_G,
@@ -28030,6 +28246,22 @@ namespace HREngine.Bots
 			/// <para>+{0}/+{1}。</para>
 			/// </summary>
 			primeval,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：0 攻击力：2 生命值：6</para>
+			/// <para>Dustbone Devastator</para>
+			/// <para>尘骨毁灭者</para>
+			/// <para><b>Rally:</b> Your Undead have+{0} Attack this game <i>(wherever they are).</i></para>
+			/// <para><b>进击：</b>在本局对战中，你的亡灵拥有+{0}攻击力<i>（无论它们在哪）。</i></para>
+			/// </summary>
+			dustbonedevastator,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：12</para>
+			/// <para>Dustbone Devastator</para>
+			/// <para>尘骨毁灭者</para>
+			/// <para><b>Rally:</b> Your Undead have+{0} Attack this game <i>(wherever they are).</i></para>
+			/// <para><b>进击：</b>在本局对战中，你的亡灵拥有+{0}攻击力<i>（无论它们在哪）。</i></para>
+			/// </summary>
+			dustbonedevastator_BG33_323_G,
 			/// <summary>
 			/// <para>随从 圣骑士 费用：0 攻击力：2 生命值：4</para>
 			/// <para>Geared Guard</para>
@@ -28135,7 +28367,7 @@ namespace HREngine.Bots
 			/// </summary>
 			experttechnician_BG33_370_G,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：8 生命值：8</para>
+			/// <para>随从 无效的 费用：0 攻击力：10 生命值：10</para>
 			/// <para>P-0UL-TR-0N</para>
 			/// <para>P-0UL-TR-0N护巢机</para>
 			/// <para>[x]<b>Avenge ({0}):</b> Gain<b>Divine Shield</b> and attackimmediately.</para>
@@ -28143,7 +28375,7 @@ namespace HREngine.Bots
 			/// </summary>
 			p0ultr0n,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：16 生命值：16</para>
+			/// <para>随从 无效的 费用：0 攻击力：20 生命值：20</para>
 			/// <para>P-0UL-TR-0N</para>
 			/// <para>P-0UL-TR-0N护巢机</para>
 			/// <para>[x]<b>Avenge ({0}):</b> Gain<b>Divine Shield</b> and attackimmediately, twice.</para>
@@ -28330,24 +28562,24 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：2</para>
 			/// <para>Divine Sparkbot</para>
 			/// <para>神圣火花机器人</para>
-			/// <para><b>Divine Shield</b>, <b>Taunt</b> <b>Deathrattle:</b> Get a Sanctify.</para>
-			/// <para><b>圣盾</b>。<b>嘲讽</b>。<b>亡语：</b>获取一张圣洁庇护。</para>
+			/// <para><b>Taunt</b>, <b>Divine Shield</b> <b>Deathrattle:</b> Get a Sanctify.</para>
+			/// <para><b>嘲讽</b>。<b>圣盾</b>。<b>亡语：</b>获取一张圣洁庇护。</para>
 			/// </summary>
 			divinesparkbot,
 			/// <summary>
 			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：4</para>
 			/// <para>Divine Sparkbot</para>
 			/// <para>神圣火花机器人</para>
-			/// <para><b>Divine Shield</b>, <b>Taunt</b> <b>Deathrattle:</b> Get 2 Sanctifies.</para>
-			/// <para><b>圣盾</b>。<b>嘲讽</b>。<b>亡语：</b>获取2张圣洁庇护。</para>
+			/// <para><b>Taunt</b>, <b>Divine Shield</b> <b>Deathrattle:</b> Get 2 Sanctifies.</para>
+			/// <para><b>嘲讽</b>。<b>圣盾</b>。<b>亡语：</b>获取2张圣洁庇护。</para>
 			/// </summary>
 			divinesparkbot_BG33_809_G,
 			/// <summary>
 			/// <para>BATTLEGROUND_SPELL 中立 费用：2</para>
 			/// <para>Healthy Bounty</para>
 			/// <para>生命悬赏令</para>
-			/// <para>Give three friendly minions +{1} Health.@Give three friendly minions +{0}/+{1}.</para>
-			/// <para>使三个友方随从获得+{1}生命值。@使三个友方随从获得+{0}/+{1}。</para>
+			/// <para>Give four friendly minions +{1} Health.@Give four friendly minions +{0}/+{1}.</para>
+			/// <para>使四个友方随从获得+{1}生命值。@使四个友方随从获得+{0}/+{1}。</para>
 			/// </summary>
 			healthybounty,
 			/// <summary>
@@ -28362,8 +28594,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_SPELL 中立 费用：2</para>
 			/// <para>Hostile Bounty</para>
 			/// <para>敌对悬赏令</para>
-			/// <para>Give three friendly minions +{0} Attack.@Give three friendly minions +{0}/+{1}.</para>
-			/// <para>使三个友方随从获得+{0}攻击力。@使三个友方随从获得+{0}/+{1}。</para>
+			/// <para>Give four friendly minions +{0} Attack.@Give four friendly minions +{0}/+{1}.</para>
+			/// <para>使四个友方随从获得+{0}攻击力。@使四个友方随从获得+{0}/+{1}。</para>
 			/// </summary>
 			hostilebounty,
 			/// <summary>
@@ -28431,7 +28663,7 @@ namespace HREngine.Bots
 			/// </summary>
 			raptorsrevenge,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：5 生命值：5</para>
+			/// <para>随从 牧师 费用：0 攻击力：1 生命值：1</para>
 			/// <para>Lost City Looter</para>
 			/// <para>失落之城掠夺者</para>
 			/// <para>[x]<b>Taunt</b>At the end of your turn,get a random <b>Bounty</b>.</para>
@@ -28439,7 +28671,7 @@ namespace HREngine.Bots
 			/// </summary>
 			lostcitylooter,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：10 生命值：10</para>
+			/// <para>随从 牧师 费用：0 攻击力：2 生命值：2</para>
 			/// <para>Lost City Looter</para>
 			/// <para>失落之城掠夺者</para>
 			/// <para>[x]<b>Taunt</b>_At the end of your turn,___get 2 random <b>Bounties</b>.</para>
@@ -28479,18 +28711,18 @@ namespace HREngine.Bots
 			/// </summary>
 			bigwigbandit_BG33_822_G,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：4 生命值：6</para>
+			/// <para>随从 牧师 费用：0 攻击力：4 生命值：5</para>
 			/// <para>Sky Admiral Rogers</para>
 			/// <para>空军上将罗杰斯</para>
-			/// <para>[x]After you spend{2} Gold, get a random<b>Bounty</b>. <i>({0} left!)</i></para>
+			/// <para>[x]After you spend{2} Gold, get a random<b>Bounty</b>. <i>({0} Gold left!)</i></para>
 			/// <para>在你花掉{2}枚铸币后，随机获取一张<b>悬赏令</b>。<i>（还剩{0}枚！）</i></para>
 			/// </summary>
 			skyadmiralrogers,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：8 生命值：12</para>
+			/// <para>随从 牧师 费用：0 攻击力：8 生命值：10</para>
 			/// <para>Sky Admiral Rogers</para>
 			/// <para>空军上将罗杰斯</para>
-			/// <para>[x]After you spend{2} Gold, get two random<b>Bounties</b>. <i>({0} left!)</i></para>
+			/// <para>[x]After you spend{2} Gold, get two random<b>Bounties</b>. <i>({0} Gold left!)</i></para>
 			/// <para>在你花掉{2}枚铸币后，随机获取两张<b>悬赏令</b>。<i>（还剩{0}枚！）</i></para>
 			/// </summary>
 			skyadmiralrogers_BG33_823_G,
@@ -28607,7 +28839,7 @@ namespace HREngine.Bots
 			/// </summary>
 			azsharancutlassier_BG33_830_G,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：3 生命值：3</para>
+			/// <para>随从 猎人 费用：0 攻击力：4 生命值：4</para>
 			/// <para>Stomping Stegodon</para>
 			/// <para>重踏剑龙</para>
 			/// <para>[x]<b>Rally:</b> Give your otherBeasts +{0} Attack andthis <b>Rally</b>.@[x]<b>Rally:</b> Give your otherBeasts +{0}/+{1} andthis <b>Rally</b>.</para>
@@ -28615,7 +28847,7 @@ namespace HREngine.Bots
 			/// </summary>
 			stompingstegodon,
 			/// <summary>
-			/// <para>随从 猎人 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 猎人 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Stomping Stegodon</para>
 			/// <para>重踏剑龙</para>
 			/// <para>[x]<b>Rally:</b> Give your otherBeasts +{0} Attack andthis <b>Rally</b>.@[x]<b>Rally:</b> Give your otherBeasts +{0}/+{1} andthis <b>Rally</b>.</para>
@@ -28834,24 +29066,24 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Hog Watcher</para>
 			/// <para>护猪牧人</para>
-			/// <para><b>Battlecry:</b> Give a Quilboar <b>Divine Shield</b>.</para>
-			/// <para><b>战吼：</b>使一个野猪人获得<b>圣盾</b>。</para>
+			/// <para>[x]<b>Battlecry:</b> Get a <b>BloodGem</b> that also gives a__Quilboar <b>Divine Shield</b>.</para>
+			/// <para><b>战吼：</b>获取一张<b>鲜血宝石</b>。该宝石还能使野猪人获得<b>圣盾</b>。</para>
 			/// </summary>
 			hogwatcher,
 			/// <summary>
 			/// <para>随从 中立 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Hog Watcher</para>
 			/// <para>护猪牧人</para>
-			/// <para><b>Battlecry:</b> Give 2 Quilboar <b>Divine Shield</b>.</para>
-			/// <para><b>战吼：</b>使2个野猪人获得<b>圣盾</b>。</para>
+			/// <para>[x]<b>Battlecry:</b> Get 2 <b>BloodGems</b> that also give a__Quilboar <b>Divine Shield</b>.</para>
+			/// <para><b>战吼：</b>获取2张<b>鲜血宝石</b>。该宝石还能使野猪人获得<b>圣盾</b>。</para>
 			/// </summary>
 			hogwatcher_BG33_888_G,
 			/// <summary>
 			/// <para>随从 萨满祭司 费用：0 攻击力：1 生命值：1</para>
 			/// <para>Magicfin Apprentice</para>
 			/// <para>魔鳍学徒</para>
-			/// <para><b>Battlecry:</b> Cast {0}. <i>(This minion can't be tripled.)</i></para>
-			/// <para><b>战吼：</b>施放{0}。<i>（本随从无法三连。）</i></para>
+			/// <para><b>Battlecry:</b> This casts {0}. <i>(This minion can't be tripled.)</i></para>
+			/// <para><b>战吼：</b>本随从施放{0}。<i>（本随从无法三连。）</i></para>
 			/// </summary>
 			magicfinapprentice,
 			/// <summary>
@@ -29154,7 +29386,7 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Stoneshell Guardian</para>
 			/// <para>石壳守卫</para>
-			/// <para>[x]The first Triple Reward youplay each turn <b><b>Discover</b>s</b>from Golden minons.<i>({0} left!)</i></para>
+			/// <para>[x]The first Triple Reward youplay each turn <b><b>Discover</b>s</b>from Golden minions.<i>({0} left!)</i></para>
 			/// <para>每回合中，你使用的第一张三连奖励会<b><b>发现</b></b>金色随从。<i>（还剩{0}张！）</i></para>
 			/// </summary>
 			stoneshellguardian,
@@ -29162,7 +29394,7 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Stoneshell Guardian</para>
 			/// <para>石壳守卫</para>
-			/// <para>[x]The first two Triple Rewardsyou play each turn <b>Discover</b>from Golden minons.<i>({0} left!)</i></para>
+			/// <para>[x]The first two Triple Rewardsyou play each turn <b>Discover</b>from Golden minions.<i>({0} left!)</i></para>
 			/// <para>每回合中，你使用的前两张三连奖励会<b>发现</b>金色随从。<i>（还剩{0}张！）</i></para>
 			/// </summary>
 			stoneshellguardian_BG33_HERO_000_Buddy_G,
@@ -29370,16 +29602,16 @@ namespace HREngine.Bots
 			/// <para>随从 萨满祭司 费用：0 攻击力：3 生命值：4</para>
 			/// <para>Expert Aviator</para>
 			/// <para>飞行专家</para>
-			/// <para>[x]<b>Rally:</b> Give the left-mostminion in your hand +{0}/+{1}and summon it for thiscombat only.</para>
-			/// <para><b>进击：</b>使你手牌中最左边的随从牌获得+{0}/+{1}并召唤它，其登场仅限本场战斗。</para>
+			/// <para>[x]<b>Rally:</b> Summon the highest-Attack minion from your__hand for this combat only.</para>
+			/// <para><b>进击：</b>召唤你手牌中攻击力最高的随从，其登场仅限本场战斗。</para>
 			/// </summary>
 			expertaviator,
 			/// <summary>
 			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：8</para>
 			/// <para>Expert Aviator</para>
 			/// <para>飞行专家</para>
-			/// <para>[x]<b>Rally:</b> Give the left-mostminion in your hand +{0}/+{1}and summon it for thiscombat only.</para>
-			/// <para><b>进击：</b>使你手牌中最左边的随从牌获得+{0}/+{1}并召唤它，其登场仅限本场战斗。</para>
+			/// <para>[x]<b>Rally:</b> Summon the 2highest-Attack minions from your hand for thiscombat only.</para>
+			/// <para><b>进击：</b>召唤你手牌中攻击力最高的2个随从，其登场仅限本场战斗。</para>
 			/// </summary>
 			expertaviator_BG34_140_G,
 			/// <summary>
@@ -29415,19 +29647,19 @@ namespace HREngine.Bots
 			/// </summary>
 			enthusiastic,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：2</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：8 生命值：3</para>
 			/// <para>Dramaloc</para>
 			/// <para>戏剧鱼人</para>
-			/// <para><b>Deathrattle:</b> Give {0} other friendly Murlocs the Attack of the highest-Attack minion in your hand.</para>
-			/// <para><b>亡语：</b>使{0}个其他友方鱼人获得你手牌中攻击力最高的随从牌的攻击力。</para>
+			/// <para>[x]<b>Rally:</b> Give {0} friendly Murlocsthe stats of the highest-Attackminion in your hand<i>(except Dramaloc)</i>.</para>
+			/// <para><b>进击：</b>使{0}个友方鱼人获得你手牌中攻击力最高的随从牌的属性值<i>（戏剧鱼人除外）</i>。</para>
 			/// </summary>
 			dramaloc,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：20 生命值：4</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：16 生命值：6</para>
 			/// <para>Dramaloc</para>
 			/// <para>戏剧鱼人</para>
-			/// <para>[x]<b>Deathrattle:</b> Give {0} otherfriendly Murlocs the Attack ofthe highest-Attack minion inyour hand, twice.</para>
-			/// <para><b>亡语：</b>使{0}个其他友方鱼人获得你手牌中攻击力最高的随从牌的攻击力，触发两次。</para>
+			/// <para>[x]<b>Rally:</b> Give {0} friendly Murlocsthe stats of the highest-Attackminion in your hand, twice<i>(except Dramaloc)</i>.</para>
+			/// <para><b>进击：</b>使{0}个友方鱼人获得你手牌中攻击力最高的随从牌的属性值，触发两次<i>（戏剧鱼人除外）</i>。</para>
 			/// </summary>
 			dramaloc_BG34_143_G,
 			/// <summary>
@@ -29623,35 +29855,35 @@ namespace HREngine.Bots
 			/// </summary>
 			apexisguardian_BG34_173_G,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：2 生命值：6</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：5 生命值：12</para>
 			/// <para>Magic Metalheap</para>
 			/// <para>魔法堆料机</para>
-			/// <para>Whenever a minion is <b>Magnetized</b> to this, get a random Tavern spell.</para>
-			/// <para>每当一个随从被<b>磁力吸附</b>到本随从上，随机获取一张酒馆法术牌。</para>
+			/// <para>Whenever a minion is <b>Magnetized</b>, get a random Tavern spell.</para>
+			/// <para>每当一个随从被<b>磁力吸附</b>，随机获取一张酒馆法术牌。</para>
 			/// </summary>
 			magicmetalheap,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：12</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：10 生命值：24</para>
 			/// <para>Magic Metalheap</para>
 			/// <para>魔法堆料机</para>
-			/// <para>Whenever a minion is <b>Magnetized</b> to this, get 2 random Tavern spells.</para>
-			/// <para>每当一个随从被<b>磁力吸附</b>到本随从上，随机获取2张酒馆法术牌。</para>
+			/// <para>Whenever a minion is <b>Magnetized</b>, get 2 random Tavern spells.</para>
+			/// <para>每当一个随从被<b>磁力吸附</b>，随机获取2张酒馆法术牌。</para>
 			/// </summary>
 			magicmetalheap_BG34_174_G,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：5</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：7</para>
 			/// <para>Junk Jouster</para>
 			/// <para>废铁枪骑士</para>
-			/// <para>Whenever a minion is <b>Magnetized</b> to this, give your minions +{0}/+{1}.</para>
-			/// <para>每当一个随从被<b>磁力吸附</b>到本随从上，使你的随从获得+{0}/+{1}。</para>
+			/// <para>After you <b>Magnetize</b> a minion, give your minions +{0}/+{1}.</para>
+			/// <para>在你<b>磁力吸附</b>一个随从后，使你的随从获得+{0}/+{1}。</para>
 			/// </summary>
 			junkjouster,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：12 生命值：10</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：16 生命值：14</para>
 			/// <para>Junk Jouster</para>
 			/// <para>废铁枪骑士</para>
-			/// <para>Whenever a minion is <b>Magnetized</b> to this, give your minions +{0}/+{1}.</para>
-			/// <para>每当一个随从被<b>磁力吸附</b>到本随从上，使你的随从获得+{0}/+{1}。</para>
+			/// <para>After you <b>Magnetize</b> a minion, give your minions +{0}/+{1}.</para>
+			/// <para>在你<b>磁力吸附</b>一个随从后，使你的随从获得+{0}/+{1}。</para>
 			/// </summary>
 			junkjouster_BG34_175_G,
 			/// <summary>
@@ -29663,7 +29895,7 @@ namespace HREngine.Bots
 			/// </summary>
 			jousted,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：2 生命值：8</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：9</para>
 			/// <para>Metal Dispenser</para>
 			/// <para>金属派送机</para>
 			/// <para>[x]<b>Divine Shield</b><b>Avenge ({0}):</b> <b>Magnetize</b> arandom Volumizer to this.Get a copy of it.</para>
@@ -29671,7 +29903,7 @@ namespace HREngine.Bots
 			/// </summary>
 			metaldispenser,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：16</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：18</para>
 			/// <para>Metal Dispenser</para>
 			/// <para>金属派送机</para>
 			/// <para>[x]<b>Divine Shield</b><b>Avenge ({0}):</b> <b>Magnetize</b> arandom Volumizer to this.Get 2 copies of it.</para>
@@ -29710,6 +29942,22 @@ namespace HREngine.Bots
 			/// <para>当你出售本随从时，获取2张酒馆币。</para>
 			/// </summary>
 			mintedcorsair_BG34_230_G,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：0 攻击力：3 生命值：4</para>
+			/// <para>Old Soul</para>
+			/// <para>古老之魂</para>
+			/// <para>After {1} friendly minions die while this is in your hand, make this Golden. <i>({0} left!)</i></para>
+			/// <para>当本随从在你手牌中时，在{1}个友方随从死亡后，将本随从变为金色。<i>（还剩{0}个！）</i></para>
+			/// </summary>
+			oldsoul,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：0 攻击力：6 生命值：8</para>
+			/// <para>Old Soul</para>
+			/// <para>古老之魂</para>
+			/// <para>After {1} friendly minions die while this is in your hand, make this Golden. <i>(Done!)</i></para>
+			/// <para>当本随从在你手牌中时，在{1}个友方随从死亡后，将本随从变为金色。<i>（已完成！）</i></para>
+			/// </summary>
+			oldsoul_BG34_231_G,
 			/// <summary>
 			/// <para>随从 牧师 费用：0 攻击力：3 生命值：5</para>
 			/// <para>Industrious Deckhand</para>
@@ -29842,7 +30090,7 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Highkeeper Ra</para>
 			/// <para>莱，至高守护者</para>
-			/// <para><b>Battlecry, Deathrattle and Rally:</b> Get a random Tier 6 minion.</para>
+			/// <para><b>Battlecry, Deathrattle, and Rally:</b> Get a random Tier 6 minion.</para>
 			/// <para><b>战吼，亡语，进击：</b>随机获取一张等级6的随从牌。</para>
 			/// </summary>
 			highkeeperra,
@@ -29850,7 +30098,7 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：0 攻击力：12 生命值：12</para>
 			/// <para>Highkeeper Ra</para>
 			/// <para>莱，至高守护者</para>
-			/// <para>[x]<b>Battlecry, Deathrattle andRally:</b> Get two randomTier 6 minions.</para>
+			/// <para>[x]<b>Battlecry, Deathrattle, andRally:</b> Get two randomTier 6 minions.</para>
 			/// <para><b>战吼，亡语，进击：</b>随机获取两张等级6的随从牌。</para>
 			/// </summary>
 			highkeeperra_BG34_319_G,
@@ -29983,7 +30231,7 @@ namespace HREngine.Bots
 			/// </summary>
 			whelpbuffplayerenchantdnt,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：2 生命值：9</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：8</para>
 			/// <para>Eternal Tycoon</para>
 			/// <para>永恒大亨</para>
 			/// <para><b>Avenge ({0}):</b> Summon an Eternal Knight. It attacks immediately.</para>
@@ -29991,7 +30239,7 @@ namespace HREngine.Bots
 			/// </summary>
 			eternaltycoon,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：18</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：8 生命值：16</para>
 			/// <para>Eternal Tycoon</para>
 			/// <para>永恒大亨</para>
 			/// <para>[x]<b>Avenge ({0}):</b> Summon a__Golden Eternal Knight.___It attacks immediately.</para>
@@ -30066,8 +30314,8 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_SPELL 中立 费用：1</para>
 			/// <para>Easterly Winds</para>
 			/// <para>乘借东风</para>
-			/// <para>[x]After the Tavern is<b>Refreshed</b> this game,give its right-mostminion +{0}/+{1}.</para>
-			/// <para>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中最右边的随从获得+{0}/+{1}。</para>
+			/// <para>[x]After the Tavernis <b>Refreshed</b> this game,give a random minionin it +{0}/+{1}.</para>
+			/// <para>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中一个随机随从获得+{0}/+{1}。</para>
 			/// </summary>
 			easterlywinds,
 			/// <summary>
@@ -30231,6 +30479,142 @@ namespace HREngine.Bots
 			/// </summary>
 			whelpwatcher_BG34_631_G,
 			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：2 生命值：8</para>
+			/// <para>Incubation Researcher</para>
+			/// <para>孵化研究员</para>
+			/// <para><b>Avenge ({0}):</b> Get a random <b>Chromadrake</b>.</para>
+			/// <para><b>复仇（{0}）：</b>随机获取一张<b>多彩幼龙</b>。</para>
+			/// </summary>
+			incubationresearcher,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：4 生命值：16</para>
+			/// <para>Incubation Researcher</para>
+			/// <para>孵化研究员</para>
+			/// <para><b>Avenge ({0}):</b> Get 2 random <b>Chromadrakes</b>.</para>
+			/// <para><b>复仇（{0}）：</b>随机获取2张<b>多彩幼龙</b>。</para>
+			/// </summary>
+			incubationresearcher_BG34_632_G,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：7 生命值：4</para>
+			/// <para>Draconic Warden</para>
+			/// <para>龙族看护员</para>
+			/// <para><b>Battlecry and Deathrattle:</b> Get a random <b>Chromadrake</b>.</para>
+			/// <para><b>战吼，亡语：</b>随机获取一张<b>多彩幼龙</b>。</para>
+			/// </summary>
+			draconicwarden,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：14 生命值：8</para>
+			/// <para>Draconic Warden</para>
+			/// <para>龙族看护员</para>
+			/// <para><b>Battlecry and Deathrattle:</b> Get 2 random <b>Chromadrakes</b>.</para>
+			/// <para><b>战吼，亡语：</b>随机获取2张<b>多彩幼龙</b>。</para>
+			/// </summary>
+			draconicwarden_BG34_633_G,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：8 生命值：8</para>
+			/// <para>Blue Chromadrake</para>
+			/// <para>蓝色多彩幼龙</para>
+			/// <para>[x]<b>Battlecry:</b> Get two random{0}-Cost Tavern spells.</para>
+			/// <para><b>战吼：</b>随机获取两张消耗{0}枚铸币的酒馆法术牌。</para>
+			/// </summary>
+			bluechromadrake,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：4 生命值：4</para>
+			/// <para>Blue Chromadrake</para>
+			/// <para>蓝色多彩幼龙</para>
+			/// <para>[x]<b>Battlecry:</b> Get a random{0}-Cost Tavern spell.</para>
+			/// <para><b>战吼：</b>随机获取一张消耗{0}枚铸币的酒馆法术牌。</para>
+			/// </summary>
+			bluechromadrake_BG34_634t,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：8 生命值：12</para>
+			/// <para>Black Chromadrake</para>
+			/// <para>黑色多彩幼龙</para>
+			/// <para><b>Battlecry:</b> Your Tavern spells give an extra +{0} Health this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，你的酒馆法术使随从额外获得+{0}生命值。</para>
+			/// </summary>
+			blackchromadrake,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：4 生命值：6</para>
+			/// <para>Black Chromadrake</para>
+			/// <para>黑色多彩幼龙</para>
+			/// <para><b>Battlecry:</b> Your Tavern spells give an extra +{0} Health this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，你的酒馆法术使随从额外获得+{0}生命值。</para>
+			/// </summary>
+			blackchromadrake_BG34_635t,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：6 生命值：10</para>
+			/// <para>Green Chromadrake</para>
+			/// <para>绿色多彩幼龙</para>
+			/// <para><b>Battlecry:</b> Give your other Dragons +{0}/+{1}.</para>
+			/// <para><b>战吼：</b>使你的其他龙获得+{0}/+{1}。</para>
+			/// </summary>
+			greenchromadrake,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：3 生命值：5</para>
+			/// <para>Green Chromadrake</para>
+			/// <para>绿色多彩幼龙</para>
+			/// <para><b>Battlecry:</b> Give your other Dragons +{0}/+{1}.</para>
+			/// <para><b>战吼：</b>使你的其他龙获得+{0}/+{1}。</para>
+			/// </summary>
+			greenchromadrake_BG34_636t,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：10 生命值：6</para>
+			/// <para>Bronze Chromadrake</para>
+			/// <para>青铜多彩幼龙</para>
+			/// <para><b>Battlecry:</b> Give your other Dragons +{0}/+{1}.</para>
+			/// <para><b>战吼：</b>使你的其他龙获得+{0}/+{1}。</para>
+			/// </summary>
+			bronzechromadrake,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Chromatic</para>
+			/// <para>多彩</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			chromatic,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：5 生命值：3</para>
+			/// <para>Bronze Chromadrake</para>
+			/// <para>青铜多彩幼龙</para>
+			/// <para><b>Battlecry:</b> Give your other Dragons +{0}/+{1}.</para>
+			/// <para><b>战吼：</b>使你的其他龙获得+{0}/+{1}。</para>
+			/// </summary>
+			bronzechromadrake_BG34_637t,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：12 生命值：8</para>
+			/// <para>Red Chromadrake</para>
+			/// <para>红色多彩幼龙</para>
+			/// <para><b>Battlecry:</b> Your Tavern spells give an extra +{0} Attack this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，你的酒馆法术使随从额外获得+{0}攻击力。</para>
+			/// </summary>
+			redchromadrake,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：6 生命值：4</para>
+			/// <para>Red Chromadrake</para>
+			/// <para>红色多彩幼龙</para>
+			/// <para><b>Battlecry:</b> Your Tavern spells give an extra +{0} Attack this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，你的酒馆法术使随从额外获得+{0}攻击力。</para>
+			/// </summary>
+			redchromadrake_BG34_638t,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：0 生命值：5</para>
+			/// <para>Egg of the Endtimes</para>
+			/// <para>末世龙蛋</para>
+			/// <para>[x]After this is in your hand for{1} |4 (turn, turns), choose a Tier 6Dragon to hatch into.<i>({0} |4(turn, turns) left!)</i></para>
+			/// <para>在本牌在你手牌中{1}回合后，选择一条等级6的龙并孵化为所选的龙。<i>（还剩{0}回合！）</i></para>
+			/// </summary>
+			eggoftheendtimes,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：0 生命值：10</para>
+			/// <para>Egg of the Endtimes</para>
+			/// <para>末世龙蛋</para>
+			/// <para>[x]After this is in your hand for{1} |4(turn, turns), choose a GoldenTier 6 Dragon to hatch into.<i>({0} |4(turn, turns) left!)</i></para>
+			/// <para>在本牌在你手牌中{1}回合后，选择一条等级6的金色的龙并孵化为所选的龙。<i>（还剩{0}回合！）</i></para>
+			/// </summary>
+			eggoftheendtimes_BG34_639_G,
+			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Hot Rod</para>
 			/// <para>火热</para>
@@ -30319,7 +30703,7 @@ namespace HREngine.Bots
 			/// </summary>
 			quilledcabbie_BG34_681_G,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：5 生命值：3</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：6 生命值：2</para>
 			/// <para>Razorfen Flapper</para>
 			/// <para>剃刀沼泽舞扇者</para>
 			/// <para><b>Deathrattle:</b> Get a Blood Gem Barrage.</para>
@@ -30327,7 +30711,7 @@ namespace HREngine.Bots
 			/// </summary>
 			razorfenflapper,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：10 生命值：6</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：12 生命值：4</para>
 			/// <para>Razorfen Flapper</para>
 			/// <para>剃刀沼泽舞扇者</para>
 			/// <para><b>Deathrattle:</b> Get 2 Blood Gem Barrages.</para>
@@ -30335,7 +30719,7 @@ namespace HREngine.Bots
 			/// </summary>
 			razorfenflapper_BG34_682_G,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：5 生命值：2</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：5 生命值：3</para>
 			/// <para>Briarback Drummer</para>
 			/// <para>棘背鼓手</para>
 			/// <para><b>Battlecry:</b> Get a Blood Gem Barrage.</para>
@@ -30343,7 +30727,7 @@ namespace HREngine.Bots
 			/// </summary>
 			briarbackdrummer,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：10 生命值：4</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：10 生命值：6</para>
 			/// <para>Briarback Drummer</para>
 			/// <para>棘背鼓手</para>
 			/// <para><b>Battlecry:</b> Get 2 Blood Gem Barrages.</para>
@@ -30383,6 +30767,22 @@ namespace HREngine.Bots
 			/// </summary>
 			bloodgembarrageplayerenchdnt,
 			/// <summary>
+			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：2</para>
+			/// <para>Plaguerunner</para>
+			/// <para>疫病行尸</para>
+			/// <para>[x]<b>Deathrattle:</b> Your Undead have+{0} Attack this game, whereverthey are. <i>(+{1} if this diedoutside combat!)</i></para>
+			/// <para><b>亡语：</b>在本局对战中，你的亡灵拥有+{0}攻击力，无论它们在哪。<i>（如果本随从在战斗之外死亡，改为+{1}！）</i></para>
+			/// </summary>
+			plaguerunner,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：0 攻击力：8 生命值：4</para>
+			/// <para>Plaguerunner</para>
+			/// <para>疫病行尸</para>
+			/// <para>[x]<b>Deathrattle:</b> Your Undead have+{0} Attack this game, whereverthey are. <i>(+{1} if this diedoutside combat!)</i></para>
+			/// <para><b>亡语：</b>在本局对战中，你的亡灵拥有+{0}攻击力，无论它们在哪。<i>（如果本随从在战斗之外死亡，改为+{1}！）</i></para>
+			/// </summary>
+			plaguerunner_BG34_690_G,
+			/// <summary>
 			/// <para>随从 巫妖王 费用：0 攻击力：3 生命值：2</para>
 			/// <para>Embalming Expert</para>
 			/// <para>防腐专家</para>
@@ -30407,7 +30807,7 @@ namespace HREngine.Bots
 			/// </summary>
 			embalmed_BG34_691e,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：3 生命值：8</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：3 生命值：10</para>
 			/// <para>Forsaken Weaver</para>
 			/// <para>被遗忘者纺织工</para>
 			/// <para>[x]After you cast a Tavernspell, your Undead have+{0} Attack this game<i>(wherever they are)</i>.</para>
@@ -30415,7 +30815,7 @@ namespace HREngine.Bots
 			/// </summary>
 			forsakenweaver,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：6 生命值：16</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：6 生命值：20</para>
 			/// <para>Forsaken Weaver</para>
 			/// <para>被遗忘者纺织工</para>
 			/// <para>[x]After you cast a Tavernspell, your Undead have+{0} Attack this game<i>(wherever they are)</i>.</para>
@@ -30455,7 +30855,7 @@ namespace HREngine.Bots
 			/// </summary>
 			ghostlyymirjar_BG34_697_G,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：7 生命值：4</para>
+			/// <para>随从 战士 费用：0 攻击力：5 生命值：3</para>
 			/// <para>Twilight Broodmother</para>
 			/// <para>暮光巢母</para>
 			/// <para>[x]<b>Deathrattle:</b> Summon 2Twilight Hatchlings.Give them <b>Taunt</b>.</para>
@@ -30463,7 +30863,7 @@ namespace HREngine.Bots
 			/// </summary>
 			twilightbroodmother,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：14 生命值：8</para>
+			/// <para>随从 战士 费用：0 攻击力：10 生命值：6</para>
 			/// <para>Twilight Broodmother</para>
 			/// <para>暮光巢母</para>
 			/// <para>[x]<b>Deathrattle:</b> Summon 4Twilight Hatchlings.Give them <b>Taunt</b>.</para>
@@ -30494,6 +30894,30 @@ namespace HREngine.Bots
 			/// <para>+{0}/+{1}。</para>
 			/// </summary>
 			stunted,
+			/// <summary>
+			/// <para>随从 无效的 费用：0 攻击力：5 生命值：5</para>
+			/// <para>Dead Sea Ravager</para>
+			/// <para>死海破坏者</para>
+			/// <para><b>Rally:</b> Give {0} other friendly minions this minion's Attack.</para>
+			/// <para><b>进击：</b>使{0}个其他友方随从获得本随从的攻击力。</para>
+			/// </summary>
+			deadsearavager,
+			/// <summary>
+			/// <para>随从 无效的 费用：0 攻击力：10 生命值：10</para>
+			/// <para>Dead Sea Ravager</para>
+			/// <para>死海破坏者</para>
+			/// <para><b>Rally:</b> Give {0} other friendly minions this minion's Attack, twice.</para>
+			/// <para><b>进击：</b>使{0}个其他友方随从获得本随从的攻击力，触发两次。</para>
+			/// </summary>
+			deadsearavager_BG34_765_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Ravaged</para>
+			/// <para>破坏</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			ravaged,
 			/// <summary>
 			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Photobomber</para>
@@ -30536,20 +30960,20 @@ namespace HREngine.Bots
 			felhorned,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
-			/// <para>I'm Always Right</para>
-			/// <para>酒馆庇右</para>
+			/// <para>Eastern Winds</para>
+			/// <para>东风</para>
 			/// <para>+{0}/+{1}.</para>
 			/// <para>+{0}/+{1}。</para>
 			/// </summary>
-			imalwaysright,
+			easternwinds,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
-			/// <para>Right-most Tavern Minion Buff Player Ench [DNT]</para>
-			/// <para>Right-most Tavern Minion Buff Player Ench [DNT]</para>
-			/// <para>The right-most minion in the Tavern has increased stats.</para>
-			/// <para>酒馆中最右边的随从拥有的属性值提高。</para>
+			/// <para>Random minion Tavern Minion Buff Player Ench [DNT]</para>
+			/// <para>碎击碎从酒馆增益玩家附加效果[DNT]</para>
+			/// <para>A random minion in the Tavern gains stats.</para>
+			/// <para>酒馆中的一个随机随从获得属性值。</para>
 			/// </summary>
-			rightmosttavernminionbuffplayerenchdnt,
+			randomminiontavernminionbuffplayerenchdnt,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Tavern Feast</para>
@@ -30570,32 +30994,32 @@ namespace HREngine.Bots
 			/// <para>随从 法师 费用：0 攻击力：6 生命值：1</para>
 			/// <para>Waveling</para>
 			/// <para>幼体水波</para>
-			/// <para>[x]<b>Deathrattle:</b> After the Tavernis <b>Refreshed</b> this game,give its right-mostminion +{0}/+{1}.</para>
-			/// <para><b>亡语：</b>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中最右边的随从获得+{0}/+{1}。</para>
+			/// <para>[x]<b>Deathrattle:</b> After the Tavernis <b>Refreshed</b> this game,give a random minionin it +{0}/+{1}.</para>
+			/// <para><b>亡语：</b>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中一个随机随从获得+{0}/+{1}。</para>
 			/// </summary>
 			waveling,
 			/// <summary>
 			/// <para>随从 法师 费用：0 攻击力：12 生命值：2</para>
 			/// <para>Waveling</para>
 			/// <para>幼体水波</para>
-			/// <para>[x]<b>Deathrattle:</b> After the Tavernis <b>Refreshed</b> this game,give its right-most minion+{0}/+{1} twice.</para>
-			/// <para><b>亡语：</b>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中最右边的随从获得+{0}/+{1}，触发两次。</para>
+			/// <para>[x]<b>Deathrattle:</b> After the Tavernis <b>Refreshed</b> this game,give a random minionin it +{0}/+{1} twice.</para>
+			/// <para><b>亡语：</b>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中一个随机随从获得+{0}/+{1}，触发两次。</para>
 			/// </summary>
 			waveling_BG34_856_G,
 			/// <summary>
 			/// <para>随从 法师 费用：0 攻击力：8 生命值：8</para>
 			/// <para>Acid Rainfall</para>
 			/// <para>酸雨元素</para>
-			/// <para>[x]After you <b>Refresh</b> {1} times,gain the stats of theright-most minion in theTavern. <i>({0} left!)</i></para>
-			/// <para>在你<b>刷新</b>{1}次后，获得酒馆中最右边的随从的属性值。<i>（还剩{0}次！）</i></para>
+			/// <para>[x]After the Tavern is<b>Refreshed</b> {1} times, gainthe stats of its right-mostminion. <i>({0} left!)</i></para>
+			/// <para>在酒馆<b>刷新</b>{1}次后，获得酒馆中最右边的随从的属性值。<i>（还剩{0}次！）</i></para>
 			/// </summary>
 			acidrainfall,
 			/// <summary>
 			/// <para>随从 法师 费用：0 攻击力：16 生命值：16</para>
 			/// <para>Acid Rainfall</para>
 			/// <para>酸雨元素</para>
-			/// <para>[x]After you <b>Refresh</b> {1} times,gain double the stats of theright-most minion in theTavern. <i>({0} left!)</i></para>
-			/// <para>在你<b>刷新</b>{1}次后，获得酒馆中最右边的随从的双倍属性值。<i>（还剩{0}次！）</i></para>
+			/// <para>[x]After the Tavern is<b>Refreshed</b> {1} times, gaindouble the stats of its right-____most minion. <i>({0} left!)</i></para>
+			/// <para>在酒馆<b>刷新</b>{1}次后，获得酒馆中最右边的随从的双倍属性值。<i>（还剩{0}次！）</i></para>
 			/// </summary>
 			acidrainfall_BG34_857_G,
 			/// <summary>
@@ -30610,32 +31034,32 @@ namespace HREngine.Bots
 			/// <para>随从 法师 费用：0 攻击力：3 生命值：6</para>
 			/// <para>Air Revenant</para>
 			/// <para>空气亡魂</para>
-			/// <para>After you spend {2} Gold, get Easterly Winds.<i>({0} left!)</i></para>
-			/// <para>在你花掉{2}枚铸币后，获取一张乘借东风。<i>（还剩{0}枚！）</i></para>
+			/// <para>After you spend {2} Gold, cast Easterly Winds.<i>({0} left!)</i></para>
+			/// <para>在你花掉{2}枚铸币后，施放乘借东风。<i>（还剩{0}枚！）</i></para>
 			/// </summary>
 			airrevenant,
 			/// <summary>
 			/// <para>随从 法师 费用：0 攻击力：6 生命值：12</para>
 			/// <para>Air Revenant</para>
 			/// <para>空气亡魂</para>
-			/// <para>After you spend {2} Gold, get two Easterly Winds.<i>({0} left!)</i></para>
-			/// <para>在你花掉{2}枚铸币后，获取两张乘借东风。<i>（还剩{0}枚！）</i></para>
+			/// <para>After you spend {2} Gold, cast two Easterly Winds.<i>({0} left!)</i></para>
+			/// <para>在你花掉{2}枚铸币后，施放两张乘借东风。<i>（还剩{0}枚！）</i></para>
 			/// </summary>
 			airrevenant_BG34_858_G,
 			/// <summary>
 			/// <para>随从 法师 费用：0 攻击力：4 生命值：4</para>
 			/// <para>En-Djinn Blazer</para>
 			/// <para>爆焰灯神</para>
-			/// <para>[x]<b>Battlecry:</b> After the Tavernis <b>Refreshed</b> this game,give its right-mostminion +{0}/+{1}.</para>
-			/// <para><b>战吼：</b>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中最右边的随从获得+{0}/+{1}。</para>
+			/// <para>[x]<b>Battlecry:</b> After the Tavernis <b>Refreshed</b> this game,give a random minionin it +{0}/+{1}.</para>
+			/// <para><b>战吼：</b>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中一个随机随从获得+{0}/+{1}。</para>
 			/// </summary>
 			endjinnblazer,
 			/// <summary>
 			/// <para>随从 法师 费用：0 攻击力：8 生命值：8</para>
 			/// <para>En-Djinn Blazer</para>
 			/// <para>爆焰灯神</para>
-			/// <para>[x]<b>Battlecry:</b> After the Tavernis <b>Refreshed</b> this game,give its right-most minion+{0}/+{1} twice.</para>
-			/// <para><b>战吼：</b>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中最右边的随从获得+{0}/+{1}，触发两次。</para>
+			/// <para>[x]<b>Battlecry:</b> After the Tavernis <b>Refreshed</b> this game,give a random minionin it +{0}/+{1} twice.</para>
+			/// <para><b>战吼：</b>在本局对战中，在酒馆<b>刷新</b>后，使酒馆中一个随机随从获得+{0}/+{1}，触发两次。</para>
 			/// </summary>
 			endjinnblazer_BG34_865_G,
 			/// <summary>
@@ -30670,6 +31094,86 @@ namespace HREngine.Bots
 			/// <para>攻击力变为{0}。</para>
 			/// </summary>
 			bronzeflight,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：2 生命值：1</para>
+			/// <para>Tide Raiser</para>
+			/// <para>赶潮纳迦</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Cast ShiftingTide on an adjacentminion.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>对一个相邻的随从施放变换之潮。</para>
+			/// </summary>
+			tideraiser,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：4 生命值：2</para>
+			/// <para>Tide Raiser</para>
+			/// <para>赶潮纳迦</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Cast ShiftingTide on adjacentminions.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>对相邻的随从施放变换之潮。</para>
+			/// </summary>
+			tideraiser_BG34_920_G,
+			/// <summary>
+			/// <para>随从 无效的 费用：0 攻击力：5 生命值：10</para>
+			/// <para>Ring Bearer</para>
+			/// <para>护戒纳迦</para>
+			/// <para>[x]Whenever a friendly minionattacks, cast Shiny Ring.</para>
+			/// <para>每当一个友方随从攻击时，施放闪亮的戒指。</para>
+			/// </summary>
+			ringbearer,
+			/// <summary>
+			/// <para>随从 无效的 费用：0 攻击力：10 生命值：20</para>
+			/// <para>Ring Bearer</para>
+			/// <para>护戒纳迦</para>
+			/// <para>[x]Whenever a friendly minionattacks, cast Shiny Ringtwice.</para>
+			/// <para>每当一个友方随从攻击时，施放闪亮的戒指，触发两次。</para>
+			/// </summary>
+			ringbearer_BG34_921_G,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：2 生命值：7</para>
+			/// <para>Maelstrom Emergent</para>
+			/// <para>大漩涡涌流纳迦</para>
+			/// <para>Your Tavern spells cast an extra time in combat.</para>
+			/// <para>在战斗中，你的酒馆法术会额外施放一次。</para>
+			/// </summary>
+			maelstromemergent,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：4 生命值：14</para>
+			/// <para>Maelstrom Emergent</para>
+			/// <para>大漩涡涌流纳迦</para>
+			/// <para>Your Tavern spells cast 2 extra times in combat.</para>
+			/// <para>在战斗中，你的酒馆法术会额外施放2次。</para>
+			/// </summary>
+			maelstromemergent_BG34_922_G,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：3 生命值：5</para>
+			/// <para>Seafloor Recruiter</para>
+			/// <para>海床招募者</para>
+			/// <para><b>Rally:</b> Cast Chef's Choice on the minion to the right.</para>
+			/// <para><b>进击：</b>对本随从右边的随从施放主厨甄选。</para>
+			/// </summary>
+			seafloorrecruiter,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：6 生命值：10</para>
+			/// <para>Seafloor Recruiter</para>
+			/// <para>海床招募者</para>
+			/// <para><b>Rally:</b> Cast Chef's Choice on the minion to the right twice.</para>
+			/// <para><b>进击：</b>对本随从右边的随从施放主厨甄选，触发两次。</para>
+			/// </summary>
+			seafloorrecruiter_BG34_925_G,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：3 生命值：3</para>
+			/// <para>Ruthless Queensguard</para>
+			/// <para>无情的女王护卫</para>
+			/// <para><b>Battlecry, Deathrattle, and Rally:</b> Cast Queen's Command.</para>
+			/// <para><b>战吼，亡语，进击：</b>施放女王的命令。</para>
+			/// </summary>
+			ruthlessqueensguard,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：6 生命值：6</para>
+			/// <para>Ruthless Queensguard</para>
+			/// <para>无情的女王护卫</para>
+			/// <para><b>Battlecry, Deathrattle, and Rally:</b> Cast Queen's Command twice.</para>
+			/// <para><b>战吼，亡语，进击：</b>施放女王的命令，触发两次。</para>
+			/// </summary>
+			ruthlessqueensguard_BG34_926_G,
 			/// <summary>
 			/// <para>随从 恶魔猎手 费用：0 攻击力：2 生命值：3</para>
 			/// <para>Profound Thinker</para>
@@ -30841,9 +31345,9 @@ namespace HREngine.Bots
 			/// <summary>
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>Unforeseen Portal</para>
-			/// <para>难测的传送门</para>
-			/// <para>Visit an extra <b>Timewarp</b> on a random turn this game.</para>
-			/// <para>在本局对战中，在某个随机回合额外前往一次<b>时空扭曲</b>。</para>
+			/// <para>意外的传送门</para>
+			/// <para>[x]Visit a <b>Timewarp</b> on arandom turn this game.</para>
+			/// <para>在本局对战中，在某个随机回合前往一次<b>时空扭曲</b>。</para>
 			/// </summary>
 			unforeseenportal,
 			/// <summary>
@@ -31103,7 +31607,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpeddragonling_BG34_Giant_029_G,
 			/// <summary>
-			/// <para>随从 猎人 费用：2 攻击力：3 生命值：3</para>
+			/// <para>随从 猎人 费用：1 攻击力：3 生命值：3</para>
 			/// <para>Timewarped Leapfrogger</para>
 			/// <para>时空扭曲跳蛙骑士</para>
 			/// <para>[x]<b>Taunt</b>, <b>Reborn</b><b>Deathrattle:</b> Give a friendlyBeast +1/+1 andthis <b>Deathrattle</b>.</para>
@@ -31111,7 +31615,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedleapfrogger,
 			/// <summary>
-			/// <para>随从 猎人 费用：2 攻击力：6 生命值：6</para>
+			/// <para>随从 猎人 费用：1 攻击力：6 生命值：6</para>
 			/// <para>Timewarped Leapfrogger</para>
 			/// <para>时空扭曲跳蛙骑士</para>
 			/// <para>[x]<b>Taunt</b>, <b>Reborn</b><b>Deathrattle:</b> Give a friendlyBeast +2/+2 andthis <b>Deathrattle</b>.</para>
@@ -31535,7 +32039,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedbristler_BG34_Giant_104_G,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：1 攻击力：7 生命值：5</para>
+			/// <para>随从 德鲁伊 费用：2 攻击力：7 生命值：5</para>
 			/// <para>Timewarped Twirler</para>
 			/// <para>时空扭曲套索牛仔</para>
 			/// <para>After you play a <b>Blood Gem</b> on this, cast Blood Gem Barrage.</para>
@@ -31543,7 +32047,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedtwirler,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：1 攻击力：14 生命值：10</para>
+			/// <para>随从 德鲁伊 费用：2 攻击力：14 生命值：10</para>
 			/// <para>Timewarped Twirler</para>
 			/// <para>时空扭曲套索牛仔</para>
 			/// <para>After you play a <b>Blood Gem</b> on this, cast Blood Gem Barrage twice.</para>
@@ -31711,7 +32215,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedmurky_BG34_Giant_206_G,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：1 攻击力：7 生命值：3</para>
+			/// <para>随从 萨满祭司 费用：1 攻击力：10 生命值：5</para>
 			/// <para>Timewarped Murcules</para>
 			/// <para>时空扭曲摩拉克力斯</para>
 			/// <para>[x]<b>Divine Shield</b>Whenever this kills a minion,give the left-most minion inyour hand +{0}/+{1}.</para>
@@ -31719,7 +32223,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedmurcules,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：1 攻击力：14 生命值：6</para>
+			/// <para>随从 萨满祭司 费用：1 攻击力：20 生命值：10</para>
 			/// <para>Timewarped Murcules</para>
 			/// <para>时空扭曲摩拉克力斯</para>
 			/// <para>[x]<b>Divine Shield</b>Whenever this kills a minion,give the left-most minion inyour hand +{0}/+{1}.</para>
@@ -32002,16 +32506,16 @@ namespace HREngine.Bots
 			/// <para>随从 术士 费用：2 攻击力：7 生命值：7</para>
 			/// <para>Timewarped Kil'jaeden</para>
 			/// <para>时空扭曲基尔加丹</para>
-			/// <para>The Tavern offers two extra Demons with +{0}/+{0}after each <b>Refresh.</b> <i>(Upgrades each turn!)</i></para>
-			/// <para>在每次<b>刷新</b>后，酒馆额外提供两个具有+{0}/+{0}的恶魔。<i>（每回合都会升级！）</i></para>
+			/// <para>[x]The Tavern offers two extraDemons with +{0}/+{0}whenever it is <b><b>Refreshed</b>.</b>__<i>(Upgrades each turn!)</i></para>
+			/// <para>每当酒馆<b><b>刷新</b></b>，酒馆额外提供两个具有+{0}/+{0}的恶魔。<i>（每回合都会升级！）</i></para>
 			/// </summary>
 			timewarpedkiljaeden,
 			/// <summary>
 			/// <para>随从 术士 费用：2 攻击力：14 生命值：14</para>
 			/// <para>Timewarped Kil'jaeden</para>
 			/// <para>时空扭曲基尔加丹</para>
-			/// <para>The Tavern offers two extra Demons with +{0}/+{0}after each <b>Refresh.</b> <i>(Upgrades each turn!)</i></para>
-			/// <para>在每次<b>刷新</b>后，酒馆额外提供两个具有+{0}/+{0}的恶魔。<i>（每回合都会升级！）</i></para>
+			/// <para>[x]The Tavern offers two extraDemons with +{0}/+{0}whenever it is <b><b>Refreshed</b>.</b>__<i>(Upgrades each turn!)</i></para>
+			/// <para>每当酒馆<b><b>刷新</b></b>，酒馆额外提供两个具有+{0}/+{0}的恶魔。<i>（每回合都会升级！）</i></para>
 			/// </summary>
 			timewarpedkiljaeden_BG34_Giant_313_G,
 			/// <summary>
@@ -32074,7 +32578,7 @@ namespace HREngine.Bots
 			/// <para>随从 萨满祭司 费用：2 攻击力：4 生命值：9</para>
 			/// <para>Timewarped Painter</para>
 			/// <para>时空扭曲鱼人画家</para>
-			/// <para>[x]At the end of your turn, giveadjacent minions +{0}/+{1}.After you play a card from Tier 3or below improve this.</para>
+			/// <para>[x]At the end of your turn, giveadjacent minions +{0}/+{1}.After you play a card from Tier 3or below, improve this.</para>
 			/// <para>在你的回合结束时，使相邻的随从获得+{0}/+{1}。在你使用一张等级3或以下的牌后提升此效果。</para>
 			/// </summary>
 			timewarpedpainter,
@@ -32082,7 +32586,7 @@ namespace HREngine.Bots
 			/// <para>随从 萨满祭司 费用：2 攻击力：8 生命值：18</para>
 			/// <para>Timewarped Painter</para>
 			/// <para>时空扭曲鱼人画家</para>
-			/// <para>[x]At the end of your turn, giveadjacent minions +{0}/+{1}.After you play a card from Tier 3or below improve this.</para>
+			/// <para>[x]At the end of your turn, giveadjacent minions +{0}/+{1}.After you play a card from Tier 3or below, improve this.</para>
 			/// <para>在你的回合结束时，使相邻的随从获得+{0}/+{1}。在你使用一张等级3或以下的牌后提升此效果。</para>
 			/// </summary>
 			timewarpedpainter_BG34_Giant_319_G,
@@ -32250,16 +32754,16 @@ namespace HREngine.Bots
 			/// <para>随从 巫妖王 费用：1 攻击力：1 生命值：1</para>
 			/// <para>Timewarped Radio Star</para>
 			/// <para>时空扭曲电台明星</para>
-			/// <para>[x]<b>Deathrattle:</b> Get a copy ofthe minion that killedthis with full Healthand enchantments.</para>
-			/// <para><b>亡语：</b>获取击杀本随从的随从的一张复制。复制具有所有生命值和附加效果。</para>
+			/// <para>[x]<b>Deathrattle:</b> Get a copy ofthe enemy minion that killedthis with full Healthand enchantments.</para>
+			/// <para><b>亡语：</b>获取击杀本随从的敌方随从的一张复制。复制具有所有生命值和附加效果。</para>
 			/// </summary>
 			timewarpedradiostar,
 			/// <summary>
 			/// <para>随从 巫妖王 费用：1 攻击力：2 生命值：2</para>
 			/// <para>Timewarped Radio Star</para>
 			/// <para>时空扭曲电台明星</para>
-			/// <para>[x]<b>Deathrattle:</b> Get 2 copies ofthe minion that killedthis with full Healthand enchantments.</para>
-			/// <para><b>亡语：</b>获取击杀本随从的随从的2张复制。复制具有所有生命值和附加效果。</para>
+			/// <para>[x]<b>Deathrattle:</b> Get 2 copies ofthe enemy minion that killedthis with full Healthand enchantments.</para>
+			/// <para><b>亡语：</b>获取击杀本随从的敌方随从的2张复制。复制具有所有生命值和附加效果。</para>
 			/// </summary>
 			timewarpedradiostar_BG34_Giant_330_G,
 			/// <summary>
@@ -32567,7 +33071,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedvaelastrasz_BG34_Giant_585_G,
 			/// <summary>
-			/// <para>随从 法师 费用：2 攻击力：6 生命值：5</para>
+			/// <para>随从 法师 费用：1 攻击力：6 生命值：5</para>
 			/// <para>Timewarped Snow Elemental</para>
 			/// <para>时空扭曲冰雪元素</para>
 			/// <para>[x]The Tavern offers an extra<b>Frozen</b> Elemental_whenever it is <b>Refreshed</b>.</para>
@@ -32575,7 +33079,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedsnowelemental,
 			/// <summary>
-			/// <para>随从 法师 费用：2 攻击力：12 生命值：10</para>
+			/// <para>随从 法师 费用：1 攻击力：12 生命值：10</para>
 			/// <para>Timewarped Snow Elemental</para>
 			/// <para>时空扭曲冰雪元素</para>
 			/// <para>[x]The Tavern offers 2 extra<b>Frozen</b> Elementals_whenever it is <b>Refreshed</b>.</para>
@@ -32759,7 +33263,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedmothership_BG34_Giant_598_G,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：1 攻击力：7 生命值：5</para>
+			/// <para>随从 圣骑士 费用：2 攻击力：7 生命值：5</para>
 			/// <para>Timewarped Whirl-O-Tron</para>
 			/// <para>时空扭曲飓风机甲</para>
 			/// <para>[x]<b>Start of Combat:</b> Copy yourtwo left-most <b>Deathrattles</b><i>(except otherWhirl-O-Trons)</i>.</para>
@@ -32767,7 +33271,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedwhirlotron,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：1 攻击力：14 生命值：10</para>
+			/// <para>随从 圣骑士 费用：2 攻击力：14 生命值：10</para>
 			/// <para>Timewarped Whirl-O-Tron</para>
 			/// <para>时空扭曲飓风机甲</para>
 			/// <para>[x]<b>Start of Combat:</b> Copy yourtwo left-most <b>Deathrattles</b>twice <i>(except otherWhirl-O-Trons)</i>.</para>
@@ -32903,19 +33407,35 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedelectron_BG34_Giant_610_G,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：2 攻击力：4 生命值：4</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：8</para>
+			/// <para>Satellite</para>
+			/// <para>卫星</para>
+			/// <para><b>Magnetic</b></para>
+			/// <para><b>磁力</b></para>
+			/// </summary>
+			satellite_BG34_Giant_610_Gt,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：4</para>
+			/// <para>Satellite</para>
+			/// <para>卫星</para>
+			/// <para><b>Magnetic</b></para>
+			/// <para><b>磁力</b></para>
+			/// </summary>
+			satellite_BG34_Giant_610t,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：2 攻击力：5 生命值：5</para>
 			/// <para>Timewarped Caretaker</para>
 			/// <para>时空扭曲看管者</para>
-			/// <para>[x]<b>Deathrattle:</b> Summon four 1/1Skeletons. Any that don't fitgive your Undead +{0} Attack this___game <i>(wherever they are)</i>.</para>
-			/// <para><b>亡语：</b>召唤四个1/1的骷髅。每有一个放不下的骷髅，使你的亡灵在本局对战中获得+{0}攻击力<i>（无论它们在哪）</i>。</para>
+			/// <para>[x]<b>Deathrattle:</b> Summon five 1/1Skeletons. Any that don't fitgive your Undead +{0} Attack this___game <i>(wherever they are)</i>.</para>
+			/// <para><b>亡语：</b>召唤五个1/1的骷髅。每有一个放不下的骷髅，使你的亡灵在本局对战中获得+{0}攻击力<i>（无论它们在哪）</i>。</para>
 			/// </summary>
 			timewarpedcaretaker,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：2 攻击力：8 生命值：8</para>
+			/// <para>随从 巫妖王 费用：2 攻击力：10 生命值：10</para>
 			/// <para>Timewarped Caretaker</para>
 			/// <para>时空扭曲看管者</para>
-			/// <para>[x]<b>Deathrattle:</b> Summon eight 1/1Skeletons. Any that don't fitgive your Undead +{0} Attack this___game <i>(wherever they are)</i>.</para>
-			/// <para><b>亡语：</b>召唤八个1/1的骷髅。每有一个放不下的骷髅，使你的亡灵在本局对战中获得+{0}攻击力<i>（无论它们在哪）</i>。</para>
+			/// <para>[x]<b>Deathrattle:</b> Summon ten 1/1Skeletons. Any that don't fitgive your Undead +{0} Attack this___game <i>(wherever they are)</i>.</para>
+			/// <para><b>亡语：</b>召唤十个1/1的骷髅。每有一个放不下的骷髅，使你的亡灵在本局对战中获得+{0}攻击力<i>（无论它们在哪）</i>。</para>
 			/// </summary>
 			timewarpedcaretaker_BG34_Giant_618_G,
 			/// <summary>
@@ -32951,7 +33471,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedgemsplitter_BG34_Giant_644_G,
 			/// <summary>
-			/// <para>随从 无效的 费用：2 攻击力：6 生命值：12</para>
+			/// <para>随从 无效的 费用：1 攻击力：6 生命值：12</para>
 			/// <para>Timewarped Deadstomper</para>
 			/// <para>时空扭曲暴亡龙践踏者</para>
 			/// <para>[x]After you summon a minion,give your minions+{0} Attack permanently.</para>
@@ -32959,7 +33479,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpeddeadstomper,
 			/// <summary>
-			/// <para>随从 无效的 费用：2 攻击力：12 生命值：24</para>
+			/// <para>随从 无效的 费用：1 攻击力：12 生命值：24</para>
 			/// <para>Timewarped Deadstomper</para>
 			/// <para>时空扭曲暴亡龙践踏者</para>
 			/// <para>[x]After you summon a minion,give your minions+{0} Attack permanently.</para>
@@ -33039,7 +33559,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedzerusactivationdnt,
 			/// <summary>
-			/// <para>随从 术士 费用：2 攻击力：12 生命值：12</para>
+			/// <para>随从 术士 费用：1 攻击力：12 生命值：12</para>
 			/// <para>Timewarped Icky Imp</para>
 			/// <para>时空扭曲粗鄙小鬼</para>
 			/// <para><b>Deathrattle:</b> Summon 2 Imps with this minion's maximum stats.</para>
@@ -33047,7 +33567,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedickyimp,
 			/// <summary>
-			/// <para>随从 术士 费用：2 攻击力：24 生命值：24</para>
+			/// <para>随从 术士 费用：1 攻击力：24 生命值：24</para>
 			/// <para>Timewarped Icky Imp</para>
 			/// <para>时空扭曲粗鄙小鬼</para>
 			/// <para><b>Deathrattle:</b> Summon 4 Imps with this minion's maximum stats.</para>
@@ -33226,16 +33746,16 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：1 攻击力：2 生命值：2</para>
 			/// <para>Timewarped Lucky Egg</para>
 			/// <para>时空扭曲幸运彩蛋</para>
-			/// <para>[x]In two turns, <b>Discover</b> aGolden Tier 7 minion totransform into.<i>({0} |4(turn, turns) left!)</i></para>
-			/// <para>两回合后，<b>发现</b>并变形成为一个等级7的金色随从。<i>（还剩{0}回合！）</i></para>
+			/// <para>[x]In two turns, choose from three Golden Tier 7 minions to transform into.<i>({0} |4(turn, turns) left!)</i></para>
+			/// <para>两回合后，从三个等级7的金色随从中选择一个并变形成为该随从。<i>（还剩{0}回合！）</i></para>
 			/// </summary>
 			timewarpedluckyegg,
 			/// <summary>
 			/// <para>随从 中立 费用：1 攻击力：4 生命值：4</para>
 			/// <para>Timewarped Lucky Egg</para>
 			/// <para>时空扭曲幸运彩蛋</para>
-			/// <para>[x]In two turns, <b>Discover</b> aGolden Tier 7 minion totransform into.<i>({0} |4(turn, turns) left!)</i></para>
-			/// <para>两回合后，<b>发现</b>并变形成为一个等级7的金色随从。<i>（还剩{0}回合！）</i></para>
+			/// <para>[x]In two turns, choose from three Golden Tier 7 minions to transform into.<i>({0} |4(turn, turns) left!)</i></para>
+			/// <para>两回合后，从三个等级7的金色随从中选择一个并变形成为该随从。<i>（还剩{0}回合！）</i></para>
 			/// </summary>
 			timewarpedluckyegg_BG34_Giant_683_G,
 			/// <summary>
@@ -33274,7 +33794,7 @@ namespace HREngine.Bots
 			/// <para>随从 猎人 费用：2 攻击力：7 生命值：7</para>
 			/// <para>Timewarped Nest Swarmer</para>
 			/// <para>时空扭曲巢穴群居虫</para>
-			/// <para>[x]<b>Battlecry, Deathrattle andRally:</b> Your Beetles have+{2}/+{3} this game. Summona {0}/{1} Beetle.</para>
+			/// <para>[x]<b>Battlecry, Deathrattle, andRally:</b> Your Beetles have+{2}/+{3} this game. Summona {0}/{1} Beetle.</para>
 			/// <para><b>战吼，亡语，进击：</b>在本局对战中，你的甲虫拥有+{2}/+{3}。召唤一只{0}/{1}的甲虫。</para>
 			/// </summary>
 			timewarpednestswarmer,
@@ -33282,7 +33802,7 @@ namespace HREngine.Bots
 			/// <para>随从 猎人 费用：2 攻击力：14 生命值：14</para>
 			/// <para>Timewarped Nest Swarmer</para>
 			/// <para>时空扭曲巢穴群居虫</para>
-			/// <para>[x]<b>Battlecry, Deathrattle andRally:</b> Your Beetles have+{2}/+{3} this game. Summontwo {0}/{1} Beetles.</para>
+			/// <para>[x]<b>Battlecry, Deathrattle, andRally:</b> Your Beetles have+{2}/+{3} this game. Summontwo {0}/{1} Beetles.</para>
 			/// <para><b>战吼，亡语，进击：</b>在本局对战中，你的甲虫拥有+{2}/+{3}。召唤两只{0}/{1}的甲虫。</para>
 			/// </summary>
 			timewarpednestswarmer_BG34_Giant_687_G,
@@ -33358,6 +33878,22 @@ namespace HREngine.Bots
 			/// <para><b>刷新</b>酒馆，使其中变为酒馆法术牌。</para>
 			/// </summary>
 			manaperminute,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Mister Clocksworth</para>
+			/// <para>钟表先生克劳沃斯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			misterclocksworth,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：0</para>
+			/// <para>Double Time</para>
+			/// <para>双倍速</para>
+			/// <para>[x]You only need 2 copies of aminion to make it Golden.Golden minions give TavernCoins instead of Triple Rewards.</para>
+			/// <para>你只需2个复制即可将随从变为金色。使用金色随从不会获取三连奖励，改为获取酒馆币。</para>
+			/// </summary>
+			doubletime,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Morchie</para>
@@ -33535,7 +34071,7 @@ namespace HREngine.Bots
 			/// </summary>
 			lawofthejungle,
 			/// <summary>
-			/// <para>随从 术士 费用：2 攻击力：7 生命值：13</para>
+			/// <para>随从 术士 费用：1 攻击力：7 生命值：13</para>
 			/// <para>Timewarped Overfiend</para>
 			/// <para>时空扭曲大恶魔</para>
 			/// <para>[x]After you buy a card,give your Demons+{0}/+{1}.</para>
@@ -33543,7 +34079,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedoverfiend,
 			/// <summary>
-			/// <para>随从 术士 费用：2 攻击力：14 生命值：26</para>
+			/// <para>随从 术士 费用：1 攻击力：14 生命值：26</para>
 			/// <para>Timewarped Overfiend</para>
 			/// <para>时空扭曲大恶魔</para>
 			/// <para>[x]After you buy a card,give your Demons+{0}/+{1}.</para>
@@ -33754,8 +34290,8 @@ namespace HREngine.Bots
 			/// <para>随从 牧师 费用：2 攻击力：28 生命值：12</para>
 			/// <para>Timewarped Raider</para>
 			/// <para>时空扭曲劫掠者</para>
-			/// <para>After you play a card from Tier 4 or above, give your Pirates +{0}/+{1}.</para>
-			/// <para>在你使用一张等级4或以上的牌后，使你的海盗获得+{0}/+{1}。</para>
+			/// <para>[x]After you play a card fromTier 4 or above, give yourPirates +{0}/+{1} twice.</para>
+			/// <para>在你使用一张等级4或以上的牌后，使你的海盗获得+{0}/+{1}，触发两次。</para>
 			/// </summary>
 			timewarpedraider_BG34_PreMadeChamp_065_G,
 			/// <summary>
@@ -33815,7 +34351,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedbandit_BG34_PreMadeChamp_078_G,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：1 攻击力：12 生命值：8</para>
+			/// <para>随从 巫妖王 费用：2 攻击力：12 生命值：8</para>
 			/// <para>Timewarped Anub'arak</para>
 			/// <para>时空扭曲阿努巴拉克</para>
 			/// <para>After you play an Undead, your Undead have an extra +{0} Attack this game.</para>
@@ -33823,7 +34359,7 @@ namespace HREngine.Bots
 			/// </summary>
 			timewarpedanubarak,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：1 攻击力：24 生命值：16</para>
+			/// <para>随从 巫妖王 费用：2 攻击力：24 生命值：16</para>
 			/// <para>Timewarped Anub'arak</para>
 			/// <para>时空扭曲阿努巴拉克</para>
 			/// <para>After you play an Undead, your Undead have an extra +{0} Attack this game.</para>
@@ -34034,7 +34570,7 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_SPELL 中立 费用：3</para>
 			/// <para>Timewarped Master Thief</para>
 			/// <para>时空扭曲大劫案</para>
-			/// <para>[x]<b>Discover</b> a minion from your warband <i>last game!</i>It keeps its stats and<b><b>Bonus Keyword</b>s</b>.</para>
+			/// <para>[x]<b>Discover</b> a minion fromyour warband <i>last game!</i>It keeps its stats and<b><b>Bonus Keyword</b>s</b>.</para>
 			/// <para>从你<i>上一局对战</i>的战队中<b>发现</b>一个随从，并保留其属性值和<b><b>额外关键词</b></b>。</para>
 			/// </summary>
 			timewarpedmasterthief,
@@ -34210,7 +34746,7 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_SPELL 中立 费用：1</para>
 			/// <para>Timewarped Thief</para>
 			/// <para>时空扭曲窃取</para>
-			/// <para>[x]<b>Discover</b> a minion from your warband <i>last game!</i>Set its stats to {0}/{1}.</para>
+			/// <para>[x]<b>Discover</b> a minion fromyour warband <i>last game!</i>Set its stats to {0}/{1}.</para>
 			/// <para>从你<i>上一局对战</i>的战队中<b>发现</b>一个随从，并将其属性值变为{0}/{1}。</para>
 			/// </summary>
 			timewarpedthief,
@@ -34262,6 +34798,1174 @@ namespace HREngine.Bots
 			/// <para>从4个大型<b>饰品</b>中选择一项并购买。</para>
 			/// </summary>
 			buyagreatertrinket,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：5 生命值：5</para>
+			/// <para>Determined Defender</para>
+			/// <para>坚定的防御者</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Give adjacentminions +{0}/+{1}and <b>Taunt</b>.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>使相邻的随从获得+{0}/+{1}和<b>嘲讽</b>。</para>
+			/// </summary>
+			determineddefender,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：10 生命值：10</para>
+			/// <para>Determined Defender</para>
+			/// <para>坚定的防御者</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Give adjacentminions +{0}/+{1}and <b>Taunt</b>.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>使相邻的随从获得+{0}/+{1}和<b>嘲讽</b>。</para>
+			/// </summary>
+			determineddefender_BG35_122_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Determination</para>
+			/// <para>坚定不移</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			determination,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：6 生命值：10</para>
+			/// <para>Cataclysmic Harbinger</para>
+			/// <para>灾变先锋</para>
+			/// <para>[x]At the end of your turn,get a copy of the lastTavern spell you cast.</para>
+			/// <para>在你的回合结束时，获取你施放的上一个酒馆法术的一张复制。</para>
+			/// </summary>
+			cataclysmicharbinger,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：12 生命值：20</para>
+			/// <para>Cataclysmic Harbinger</para>
+			/// <para>灾变先锋</para>
+			/// <para>[x]At the end of your turn,get 2 copies of the lastTavern spell you cast.</para>
+			/// <para>在你的回合结束时，获取你施放的上一个酒馆法术的2张复制。</para>
+			/// </summary>
+			cataclysmicharbinger_BG35_123_G,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：5 生命值：3</para>
+			/// <para>Mama Mrrglton</para>
+			/// <para>莫格顿大妈</para>
+			/// <para>[x]<b>Battlecry:</b> Give your otherMurlocs +{0} Attack.<i>(Improved by each Mrrglton____you played this game!)</i></para>
+			/// <para><b>战吼：</b>使你的其他鱼人获得+{0}攻击力。<i>（在本局对战中你每使用过一张莫格顿家的鱼人牌都会提升！）</i></para>
+			/// </summary>
+			mamamrrglton,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：6</para>
+			/// <para>Mama Mrrglton</para>
+			/// <para>莫格顿大妈</para>
+			/// <para>[x]<b>Battlecry:</b> Give your otherMurlocs +{0} Attack.<i>(Improved by each Mrrglton____you played this game!)</i></para>
+			/// <para><b>战吼：</b>使你的其他鱼人获得+{0}攻击力。<i>（在本局对战中你每使用过一张莫格顿家的鱼人牌都会提升！）</i></para>
+			/// </summary>
+			mamamrrglton_BG35_140_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Meet the Mrrgltons</para>
+			/// <para>相亲相爱莫格顿</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			meetthemrrgltons,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：3 生命值：5</para>
+			/// <para>Papa Mrrglton</para>
+			/// <para>莫格顿老爹</para>
+			/// <para>[x]<b>Battlecry:</b> Give your otherMurlocs +{0} Health.<i>(Improved by each Mrrglton____you played this game!)</i></para>
+			/// <para><b>战吼：</b>使你的其他鱼人获得+{0}生命值。<i>（在本局对战中你每使用过一张莫格顿家的鱼人牌都会提升！）</i></para>
+			/// </summary>
+			papamrrglton,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：10</para>
+			/// <para>Papa Mrrglton</para>
+			/// <para>莫格顿老爹</para>
+			/// <para>[x]<b>Battlecry:</b> Give your otherMurlocs +{0} Health.<i>(Improved by each Mrrglton____you played this game!)</i></para>
+			/// <para><b>战吼：</b>使你的其他鱼人获得+{0}生命值。<i>（在本局对战中你每使用过一张莫格顿家的鱼人牌都会提升！）</i></para>
+			/// </summary>
+			papamrrglton_BG35_141_G,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：5 生命值：5</para>
+			/// <para>Cousin Errgl</para>
+			/// <para>厄戈尔表弟</para>
+			/// <para>[x]At the end of your turn,get a Mama Mrrglton or aPapa Mrrglton.</para>
+			/// <para>在你的回合结束时，获取一张莫格顿大妈或莫格顿老爹。</para>
+			/// </summary>
+			cousinerrgl,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：10</para>
+			/// <para>Cousin Errgl</para>
+			/// <para>厄戈尔表弟</para>
+			/// <para>[x]At the end of your turn,get a Mama Mrrglton anda Papa Mrrglton.</para>
+			/// <para>在你的回合结束时，获取莫格顿大妈和莫格顿老爹各一张。</para>
+			/// </summary>
+			cousinerrgl_BG35_142_G,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：3 生命值：2</para>
+			/// <para>Deepwater Chieftain</para>
+			/// <para>深水酋长</para>
+			/// <para><b>Battlecry and Deathrattle:</b> Get a Deepwater Clan.</para>
+			/// <para><b>战吼，亡语：</b>获取一张深水族群。</para>
+			/// </summary>
+			deepwaterchieftain,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：4</para>
+			/// <para>Deepwater Chieftain</para>
+			/// <para>深水酋长</para>
+			/// <para><b>Battlecry and Deathrattle:</b> Get 2 Deepwater Clans.</para>
+			/// <para><b>战吼，亡语：</b>获取2张深水族群。</para>
+			/// </summary>
+			deepwaterchieftain_BG35_143_G,
+			/// <summary>
+			/// <para>BATTLEGROUND_SPELL 中立 费用：2</para>
+			/// <para>Deepwater Clan</para>
+			/// <para>深水族群</para>
+			/// <para>Give a minion +{0}/+{1}. Give your Murlocs +{0}/+{1}.</para>
+			/// <para>使一个随从获得+{0}/+{1}。使你的鱼人获得+{0}/+{1}。</para>
+			/// </summary>
+			deepwaterclan,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>In Deep Water</para>
+			/// <para>身处深水</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			indeepwater,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：3 生命值：4</para>
+			/// <para>Laboratory Assistant</para>
+			/// <para>实验室助理</para>
+			/// <para><b>Battlecry:</b> Add a <b>Fodder</b> to your next {0} <b>Refreshes</b>.</para>
+			/// <para><b>战吼：</b>在你的下{0}次<b>刷新</b>中各添加一个恶魔<b>饲料</b>。</para>
+			/// </summary>
+			laboratoryassistant,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：6 生命值：8</para>
+			/// <para>Laboratory Assistant</para>
+			/// <para>实验室助理</para>
+			/// <para><b>Battlecry:</b> Add two <b>Fodders</b> to your next 3 <b>Refreshes</b>.</para>
+			/// <para><b>战吼：</b>在你的下3次<b>刷新</b>中各添加两个恶魔<b>饲料</b>。</para>
+			/// </summary>
+			laboratoryassistant_BG35_150_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Fodder Player Enchant [DNT]</para>
+			/// <para>饲料玩家附加效果[DNT]</para>
+			/// <para>Tracks Fodders in your next 3 <b>Refreshes</b>.</para>
+			/// <para>记录你下3次<b>刷新</b>中的饲料。</para>
+			/// </summary>
+			fodderplayerenchantdnt,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：2 生命值：2</para>
+			/// <para>Demon Fodder</para>
+			/// <para>恶魔饲料</para>
+			/// <para>While this is in the Tavern,it feeds itself to a random friendly demon and refills the slot.</para>
+			/// <para>当本随从在酒馆中时，会将自身随机喂给一个友方恶魔，并填补空位。</para>
+			/// </summary>
+			demonfodder,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：4 生命值：4</para>
+			/// <para>Demon Fodder</para>
+			/// <para>恶魔饲料</para>
+			/// <para>While this is in the Tavern,it feeds itself to a random friendly demon for doublestats and refills the slot.</para>
+			/// <para>当本随从在酒馆中时，会将自身随机喂给一个友方恶魔使其获得双倍属性值，并填补空位。</para>
+			/// </summary>
+			demonfodder_BG35_150t_G,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：5 生命值：6</para>
+			/// <para>Woodland Defiler</para>
+			/// <para>林地亵渎者</para>
+			/// <para>[x]At the end of your turn,add a <b>Fodder</b> to your next{0} <b>Refreshes</b>.</para>
+			/// <para>在你的回合结束时，在你的下{0}次<b>刷新</b>中各添加一个恶魔<b>饲料</b>。</para>
+			/// </summary>
+			woodlanddefiler,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：10 生命值：12</para>
+			/// <para>Woodland Defiler</para>
+			/// <para>林地亵渎者</para>
+			/// <para>[x]At the end of your turn,add two <b>Fodders</b> to yournext {0} <b>Refreshes</b>.</para>
+			/// <para>在你的回合结束时，在你的下{0}次<b>刷新</b>中各添加两个恶魔<b>饲料</b>。</para>
+			/// </summary>
+			woodlanddefiler_BG35_151_G,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：7 生命值：7</para>
+			/// <para>Void Pup Trainer</para>
+			/// <para>虚空幼犬训练师</para>
+			/// <para>[x]<b>Battlecry:</b> Give minions inthe Tavern from Tier 3and below +{0}/+{1}this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，使酒馆中等级3或以下的随从获得+{0}/+{1}。</para>
+			/// </summary>
+			voidpuptrainer,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：14 生命值：14</para>
+			/// <para>Void Pup Trainer</para>
+			/// <para>虚空幼犬训练师</para>
+			/// <para>[x]<b>Battlecry:</b> Give minions inthe Tavern from Tier 3and below +{0}/+{1}this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，使酒馆中等级3或以下的随从获得+{0}/+{1}。</para>
+			/// </summary>
+			voidpuptrainer_BG35_152_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Tier 3 and Below Buffed</para>
+			/// <para>等级3及以下增益</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			tier3andbelowbuffed,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Tier 3 and Below Shop Buff Player Enchant (DNT)</para>
+			/// <para>等级3或以下商店增益玩家附加效果（DNT）</para>
+			/// <para>Minions in the Tavern from Tier 3 and below have increased stats. (DNT)</para>
+			/// <para>酒馆中等级3或以下的随从拥有的属性值提高。（DNT）</para>
+			/// </summary>
+			tier3andbelowshopbuffplayerenchantdnt,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：9 生命值：7</para>
+			/// <para>Consummate Conqueror</para>
+			/// <para>食力征服者</para>
+			/// <para>Whenever a minion is consumed, give minions in the Tavern +{0}/+{1} this turn.</para>
+			/// <para>每当一个随从被吞食，在本回合中使酒馆中的随从获得+{0}/+{1}。</para>
+			/// </summary>
+			consummateconqueror,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：18 生命值：14</para>
+			/// <para>Consummate Conqueror</para>
+			/// <para>食力征服者</para>
+			/// <para>Whenever a minion is consumed, give minions in the Tavern +{0}/+{1} this turn.</para>
+			/// <para>每当一个随从被吞食，在本回合中使酒馆中的随从获得+{0}/+{1}。</para>
+			/// </summary>
+			consummateconqueror_BG35_153_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Conquered</para>
+			/// <para>被征服</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			conquered,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Consummate Conqueror Player Ench (DNT)</para>
+			/// <para>食力征服者玩家附加效果[DNT]</para>
+			/// <para>Stats increased by Consummate Conqueror.</para>
+			/// <para>食力征服者使其属性值提高。</para>
+			/// </summary>
+			consummateconquerorplayerenchdnt,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：8 生命值：8</para>
+			/// <para>Twisted Wrathguard</para>
+			/// <para>扭曲的愤怒卫士</para>
+			/// <para>After you sell a minion, add a <b>Fodder</b> to yournext <b>Refresh</b>.</para>
+			/// <para>在你出售一个随从后，在你的下一次<b>刷新</b>中添加一个恶魔<b>饲料</b>。</para>
+			/// </summary>
+			twistedwrathguard,
+			/// <summary>
+			/// <para>随从 术士 费用：0 攻击力：16 生命值：16</para>
+			/// <para>Twisted Wrathguard</para>
+			/// <para>扭曲的愤怒卫士</para>
+			/// <para>After you sell a minion, add two <b>Fodders</b> to yournext <b>Refresh</b>.</para>
+			/// <para>在你出售一个随从后，在你的下一次<b>刷新</b>中添加两个恶魔<b>饲料</b>。</para>
+			/// </summary>
+			twistedwrathguard_BG35_155_G,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：0 攻击力：6 生命值：6</para>
+			/// <para>Skeletal Strafer</para>
+			/// <para>骷髅狂射手</para>
+			/// <para>At the end of your turn,give your minions +{1}/+{1}.<b>Avenge ({0}):</b> Improve this permanently.</para>
+			/// <para>在你的回合结束时，使你的随从获得+{1}/+{1}。<b>复仇（{0}）：</b>永久提升此效果。</para>
+			/// </summary>
+			skeletalstrafer,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：0 攻击力：12 生命值：12</para>
+			/// <para>Skeletal Strafer</para>
+			/// <para>骷髅狂射手</para>
+			/// <para>At the end of your turn,give your minions +{1}/+{1}.<b>Avenge ({0}):</b> Improve this permanently.</para>
+			/// <para>在你的回合结束时，使你的随从获得+{1}/+{1}。<b>复仇（{0}）：</b>永久提升此效果。</para>
+			/// </summary>
+			skeletalstrafer_BG35_334_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Strafing</para>
+			/// <para>狂射</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			strafing,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：2 生命值：2</para>
+			/// <para>Alert Alarmist</para>
+			/// <para>通报警告机</para>
+			/// <para><b>Taunt</b><b>Deathrattle:</b> The next Tavern spell you buy costs ({0}) less.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>你购买的下一张酒馆法术牌消耗的铸币减少（{0}）枚。</para>
+			/// </summary>
+			alertalarmist,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：4</para>
+			/// <para>Alert Alarmist</para>
+			/// <para>通报警告机</para>
+			/// <para><b>Taunt</b><b>Deathrattle:</b> The next Tavern spell you buy costs ({0}) less.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>你购买的下一张酒馆法术牌消耗的铸币减少（{0}）枚。</para>
+			/// </summary>
+			alertalarmist_BG35_340_G,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：3 生命值：5</para>
+			/// <para>Enchanted Sentinel</para>
+			/// <para>附魔哨卫</para>
+			/// <para><b>Magnetic</b>Your Tavern spells givean extra +{1}/+{2}.</para>
+			/// <para><b>磁力</b>。你的酒馆法术使随从额外获得+{1}/+{2}。</para>
+			/// </summary>
+			enchantedsentinel,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：10</para>
+			/// <para>Enchanted Sentinel</para>
+			/// <para>附魔哨卫</para>
+			/// <para><b>Magnetic</b>Your Tavern spells givean extra +{1}/+{2}.</para>
+			/// <para><b>磁力</b>。你的酒馆法术使随从额外获得+{1}/+{2}。</para>
+			/// </summary>
+			enchantedsentinel_BG35_341_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Enchanted Sentinel</para>
+			/// <para>附魔哨卫</para>
+			/// <para>Your Tavern spells give an extra +{0}/+{1}.</para>
+			/// <para>你的酒馆法术使随从额外获得+{0}/+{1}。</para>
+			/// </summary>
+			enchantedsentinel_BG35_341e,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：2</para>
+			/// <para>Falling Sky Golem</para>
+			/// <para>坠落的飞天魔像</para>
+			/// <para><b>Divine Shield</b>. Has +{0}/+{1} for each <b>Deathrattle</b> you've triggered this game <i>(wherever this is).</i></para>
+			/// <para><b>圣盾</b>。在本局对战中，你每触发过一次<b>亡语</b>，便拥有+{0}/+{1}<i>（无论本随从在哪）。</i></para>
+			/// </summary>
+			fallingskygolem,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：4</para>
+			/// <para>Falling Sky Golem</para>
+			/// <para>坠落的飞天魔像</para>
+			/// <para><b>Divine Shield</b>. Has +{0}/+{1} for each <b>Deathrattle</b> you've triggered this game <i>(wherever this is).</i></para>
+			/// <para><b>圣盾</b>。在本局对战中，你每触发过一次<b>亡语</b>，便拥有+{0}/+{1}<i>（无论本随从在哪）。</i></para>
+			/// </summary>
+			fallingskygolem_BG35_342_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>The Sky is Falling</para>
+			/// <para>飞天顿地</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			theskyisfalling,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：4 生命值：5</para>
+			/// <para>Earthsong Shaman</para>
+			/// <para>大地之歌萨满祭司</para>
+			/// <para>[x]<b>Windfury</b>. At the end of yourturn, this plays a <b>Blood Gem</b> onyour minions. Repeat for each____<b>Bonus Keyword</b> this has.</para>
+			/// <para><b>风怒</b>。在你的回合结束时，本随从对你的所有随从各使用一张<b>鲜血宝石</b>。本随从每拥有一个<b>额外关键词</b>，重复一次。</para>
+			/// </summary>
+			earthsongshaman,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：8 生命值：10</para>
+			/// <para>Earthsong Shaman</para>
+			/// <para>大地之歌萨满祭司</para>
+			/// <para>[x]<b>Windfury</b>. At the end of yourturn, this plays 2 <b>Blood Gems</b> onyour minions. Repeat for each____<b>Bonus Keyword</b> this has.</para>
+			/// <para><b>风怒</b>。在你的回合结束时，本随从对你的所有随从各使用2张<b>鲜血宝石</b>。本随从每拥有一个<b>额外关键词</b>，重复一次。</para>
+			/// </summary>
+			earthsongshaman_BG35_431_G,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：3 生命值：2</para>
+			/// <para>Bristleback Bully</para>
+			/// <para>刺背恶霸</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Get a<b>Blood Gem</b> that also givesa Quilboar <b>Taunt</b>.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>获取一张<b>鲜血宝石</b>。该宝石还能使野猪人获得<b>嘲讽</b>。</para>
+			/// </summary>
+			bristlebackbully,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：6 生命值：4</para>
+			/// <para>Bristleback Bully</para>
+			/// <para>刺背恶霸</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Get 2<b>Blood Gems</b> that also givea Quilboar <b>Taunt</b>.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>获取2张<b>鲜血宝石</b>。该宝石还能使野猪人获得<b>嘲讽</b>。</para>
+			/// </summary>
+			bristlebackbully_BG35_432_G,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：3 生命值：7</para>
+			/// <para>Redtusk Thornraiser</para>
+			/// <para>赤牙荆棘培育师</para>
+			/// <para>At the end of your turn, get a <b>Blood Gem</b> that also gives a Quilboar <b>Reborn</b>.</para>
+			/// <para>在你的回合结束时，获取一张<b>鲜血宝石</b>。该宝石还能使野猪人获得<b>复生</b>。</para>
+			/// </summary>
+			redtuskthornraiser,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：6 生命值：14</para>
+			/// <para>Redtusk Thornraiser</para>
+			/// <para>赤牙荆棘培育师</para>
+			/// <para>At the end of your turn, get 2 <b>Blood Gems</b> that also give a Quilboar <b>Reborn</b>.</para>
+			/// <para>在你的回合结束时，获取2张<b>鲜血宝石</b>。该宝石还能使野猪人获得<b>复生</b>。</para>
+			/// </summary>
+			redtuskthornraiser_BG35_433_G,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：5 生命值：7</para>
+			/// <para>Hired Ritualist</para>
+			/// <para>受雇的祭师</para>
+			/// <para>Once per turn, after a <b>Blood Gem</b> is played on this, gain {1} Gold.</para>
+			/// <para>每回合一次：在<b>鲜血宝石</b>被用于本随从后，获得{1}枚铸币。</para>
+			/// </summary>
+			hiredritualist,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：10 生命值：14</para>
+			/// <para>Hired Ritualist</para>
+			/// <para>受雇的祭师</para>
+			/// <para>Once per turn, after a <b>Blood Gem</b> is played on this, gain {1} Gold.</para>
+			/// <para>每回合一次：在<b>鲜血宝石</b>被用于本随从后，获得{1}枚铸币。</para>
+			/// </summary>
+			hiredritualist_BG35_434_G,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：7 生命值：8</para>
+			/// <para>Vinespeaker</para>
+			/// <para>藤语野猪人</para>
+			/// <para>[x]After a friendly <b>Deathrattle</b>minion dies, your <b>Blood Gems</b>give an extra +{0} Attackthis game.</para>
+			/// <para>在一个友方<b>亡语</b>随从死亡后，你的<b>鲜血宝石</b>会在本局对战中使随从额外获得+{0}攻击力。</para>
+			/// </summary>
+			vinespeaker,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：0 攻击力：14 生命值：16</para>
+			/// <para>Vinespeaker</para>
+			/// <para>藤语野猪人</para>
+			/// <para>[x]After a friendly <b>Deathrattle</b>minion dies, your <b>Blood Gems</b>give an extra +{0} Attackthis game.</para>
+			/// <para>在一个友方<b>亡语</b>随从死亡后，你的<b>鲜血宝石</b>会在本局对战中使随从额外获得+{0}攻击力。</para>
+			/// </summary>
+			vinespeaker_BG35_437_G,
+			/// <summary>
+			/// <para>随从 猎人 费用：0 攻击力：2 生命值：8</para>
+			/// <para>Wyvern Outrider</para>
+			/// <para>双足飞龙前锋</para>
+			/// <para>[x]Whenever this takesdamage, gain a free<b>Refresh</b>. <i>({0} timesper turn.)</i>@[x]Whenever this takesdamage, gain a free<b>Refresh</b>. <i>({0} left!)</i></para>
+			/// <para>每当本随从受到伤害，获得一次免费的<b>刷新</b>。<i>（每回合限{0}次。）</i>@每当本随从受到伤害，获得一次免费的<b>刷新</b>。<i>（还剩{0}次！）</i></para>
+			/// </summary>
+			wyvernoutrider,
+			/// <summary>
+			/// <para>随从 猎人 费用：0 攻击力：4 生命值：16</para>
+			/// <para>Wyvern Outrider</para>
+			/// <para>双足飞龙前锋</para>
+			/// <para>[x]Whenever this takesdamage, gain two free<b>Refreshes</b>. <i>({0} timesper turn.)</i>@[x]Whenever this takesdamage, gain two free<b>Refreshes</b>. <i>({0} left!)</i></para>
+			/// <para>每当本随从受到伤害，获得两次免费的<b>刷新</b>。<i>（每回合限{0}次。）</i>@每当本随从受到伤害，获得两次免费的<b>刷新</b>。<i>（还剩{0}次！）</i></para>
+			/// </summary>
+			wyvernoutrider_BG35_601_G,
+			/// <summary>
+			/// <para>随从 猎人 费用：0 攻击力：3 生命值：8</para>
+			/// <para>Lurking Leviathan</para>
+			/// <para>深潜巨兽</para>
+			/// <para>Whenever you summon a Beast, give it +{1}_Attack and improve this permanently.</para>
+			/// <para>每当你召唤野兽时，使其获得+{1}攻击力并永久提升此效果。</para>
+			/// </summary>
+			lurkingleviathan,
+			/// <summary>
+			/// <para>随从 猎人 费用：0 攻击力：6 生命值：16</para>
+			/// <para>Lurking Leviathan</para>
+			/// <para>深潜巨兽</para>
+			/// <para>Whenever you summon a Beast, give it +{1}_Attack and improve this permanently.</para>
+			/// <para>每当你召唤野兽时，使其获得+{1}攻击力并永久提升此效果。</para>
+			/// </summary>
+			lurkingleviathan_BG35_602_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Leviathan's Wrath</para>
+			/// <para>巨兽之怒</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			leviathanswrath,
+			/// <summary>
+			/// <para>随从 猎人 费用：0 攻击力：4 生命值：6</para>
+			/// <para>Sewer Lord</para>
+			/// <para>下水道老鼠头目</para>
+			/// <para>[x]<b>Deathrattle:</b> Summon twoSewer Rats that summon_2/3 Turtles with <b>Taunt</b>.</para>
+			/// <para><b>亡语：</b>召唤两只下水道老鼠。下水道老鼠能召唤2/3并具有<b>嘲讽</b>的乌龟。</para>
+			/// </summary>
+			sewerlord,
+			/// <summary>
+			/// <para>随从 猎人 费用：0 攻击力：8 生命值：12</para>
+			/// <para>Sewer Lord</para>
+			/// <para>下水道老鼠头目</para>
+			/// <para>[x]<b>Deathrattle:</b> Summon twoGolden Sewer Rats thatsummon 4/6 Turtleswith <b>Taunt</b>.</para>
+			/// <para><b>亡语：</b>召唤两只金色下水道老鼠。金色下水道老鼠能召唤4/6并具有<b>嘲讽</b>的乌龟。</para>
+			/// </summary>
+			sewerlord_BG35_604_G,
+			/// <summary>
+			/// <para>随从 牧师 费用：0 攻击力：6 生命值：6</para>
+			/// <para>Ship Jumper</para>
+			/// <para>跳船海盗</para>
+			/// <para>[x]<b>Rally:</b> Summon a Sky Piratewith this minion's Attack toattack the target first.</para>
+			/// <para><b>进击：</b>召唤一个具有本随从攻击力的空中海盗，并使其率先攻击目标。</para>
+			/// </summary>
+			shipjumper,
+			/// <summary>
+			/// <para>随从 牧师 费用：0 攻击力：12 生命值：12</para>
+			/// <para>Ship Jumper</para>
+			/// <para>跳船海盗</para>
+			/// <para>[x]<b>Rally:</b> Summon a Sky Piratewith double this minion'sAttack to attack thetarget first.</para>
+			/// <para><b>进击：</b>召唤一个具有本随从双倍攻击力的空中海盗，并使其率先攻击目标。</para>
+			/// </summary>
+			shipjumper_BG35_700_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Jump!</para>
+			/// <para>跳！</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			jump,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Jumped Ship</para>
+			/// <para>跳帮</para>
+			/// <para>Stats set to {0}/{1}.</para>
+			/// <para>属性值变为{0}/{1}。</para>
+			/// </summary>
+			jumpedship,
+			/// <summary>
+			/// <para>随从 牧师 费用：0 攻击力：6 生命值：6</para>
+			/// <para>Brazen Buccaneer</para>
+			/// <para>无耻的海盗</para>
+			/// <para>[x]At the end of your turn, giveyour left-most Pirate +{0}/+{1}.Repeat for each card youplayed this turn. <i>({2})</i></para>
+			/// <para>在你的回合结束时，使你最左边的海盗获得+{0}/+{1}。在本回合中你每使用过一张牌，重复一次。<i>（重复{2}次）</i></para>
+			/// </summary>
+			brazenbuccaneer,
+			/// <summary>
+			/// <para>随从 牧师 费用：0 攻击力：12 生命值：12</para>
+			/// <para>Brazen Buccaneer</para>
+			/// <para>无耻的海盗</para>
+			/// <para>[x]At the end of your turn, giveyour left-most Pirate +{0}/+{1}.Repeat for each card youplayed this turn. <i>({2})</i></para>
+			/// <para>在你的回合结束时，使你最左边的海盗获得+{0}/+{1}。在本回合中你每使用过一张牌，重复一次。<i>（重复{2}次）</i></para>
+			/// </summary>
+			brazenbuccaneer_BG35_701_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Brazen</para>
+			/// <para>卑劣</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			brazen,
+			/// <summary>
+			/// <para>随从 牧师 费用：0 攻击力：7 生命值：3</para>
+			/// <para>Roving Sailor</para>
+			/// <para>浪荡水手</para>
+			/// <para>[x]<b>Battlecry:</b> Give a friendlyminion +{0}/+{1}.__<i>(Improved by each Tavern________spell you cast this turn!)</i>____</para>
+			/// <para><b>战吼：</b>使一个友方随从获得+{0}/+{1}。<i>（在本回合中，你每施放过一个酒馆法术都会提升！）</i></para>
+			/// </summary>
+			rovingsailor,
+			/// <summary>
+			/// <para>随从 牧师 费用：0 攻击力：14 生命值：6</para>
+			/// <para>Roving Sailor</para>
+			/// <para>浪荡水手</para>
+			/// <para>[x]<b>Battlecry:</b> Give a friendlyminion +{0}/+{1} twice.<i>(Improved by each Tavern________spell you cast this turn!)</i>____</para>
+			/// <para><b>战吼：</b>使一个友方随从获得+{0}/+{1}，触发两次。<i>（在本回合中，你每施放过一个酒馆法术都会提升！）</i></para>
+			/// </summary>
+			rovingsailor_BG35_702_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Roving</para>
+			/// <para>浪荡</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			roving,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：2 生命值：3</para>
+			/// <para>Gluttonous Trogg</para>
+			/// <para>贪吃的穴居人</para>
+			/// <para>Once you buy 4 cards,gain +{1}/+{2}. <i>({0} left!)</i>@Once you buy 4 cards,gain +{1}/+{2}. <i>(Done!)</i></para>
+			/// <para>一旦你购买了4张牌，获得+{1}/+{2}。<i>（还剩{0}张！）</i>@一旦你购买了4张牌，获得+{1}/+{2}。<i>（已完成！）</i></para>
+			/// </summary>
+			gluttonoustrogg,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：4 生命值：6</para>
+			/// <para>Gluttonous Trogg</para>
+			/// <para>贪吃的穴居人</para>
+			/// <para>Once you buy 4 cards,gain +{1}/+{2}. <i>({0} left!)</i>@Once you buy 4 cards,gain +{1}/+{2}. <i>(Done!)</i></para>
+			/// <para>一旦你购买了4张牌，获得+{1}/+{2}。<i>（还剩{0}张！）</i>@一旦你购买了4张牌，获得+{1}/+{2}。<i>（已完成！）</i></para>
+			/// </summary>
+			gluttonoustrogg_BG35_801_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Gluttony</para>
+			/// <para>暴食</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			gluttony,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Swamped</para>
+			/// <para>沉溺沼泽</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			swamped_BG35_809e,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：3 生命值：3</para>
+			/// <para>Scarlet Survivor</para>
+			/// <para>血色幸存飞龙</para>
+			/// <para>Once this reaches {0} Attack, gain <b>Divine Shield</b>.@Once this reaches {0} Attack, gain <b>Divine Shield</b>. <i>(Done!)</i></para>
+			/// <para>一旦本随从的攻击力达到{0}点，获得<b>圣盾</b>。@一旦本随从的攻击力达到{0}点，获得<b>圣盾</b>。<i>（已完成！）</i></para>
+			/// </summary>
+			scarletsurvivor,
+			/// <summary>
+			/// <para>随从 战士 费用：0 攻击力：6 生命值：6</para>
+			/// <para>Scarlet Survivor</para>
+			/// <para>血色幸存飞龙</para>
+			/// <para>Once this reaches {0} Attack, gain <b>Divine Shield</b>.@Once this reaches {0} Attack, gain <b>Divine Shield</b>. <i>(Done!)</i></para>
+			/// <para>一旦本随从的攻击力达到{0}点，获得<b>圣盾</b>。@一旦本随从的攻击力达到{0}点，获得<b>圣盾</b>。<i>（已完成！）</i></para>
+			/// </summary>
+			scarletsurvivor_BG35_814_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Survived</para>
+			/// <para>幸存</para>
+			/// <para><b>Divine Shield</b>.</para>
+			/// <para><b>圣盾</b>。</para>
+			/// </summary>
+			survived,
+			/// <summary>
+			/// <para>随从 法师 费用：0 攻击力：4 生命值：6</para>
+			/// <para>Leyline Surfacer</para>
+			/// <para>魔网浮灵</para>
+			/// <para><b>Battlecry and Deathrattle:</b> Get an Arcane Absorption.</para>
+			/// <para><b>战吼，亡语：</b>获取一张奥术吸收。</para>
+			/// </summary>
+			leylinesurfacer,
+			/// <summary>
+			/// <para>随从 法师 费用：0 攻击力：8 生命值：12</para>
+			/// <para>Leyline Surfacer</para>
+			/// <para>魔网浮灵</para>
+			/// <para><b>Battlecry and Deathrattle:</b> Get 2 Arcane Absorptions.</para>
+			/// <para><b>战吼，亡语：</b>获取2张奥术吸收。</para>
+			/// </summary>
+			leylinesurfacer_BG35_881_G,
+			/// <summary>
+			/// <para>随从 法师 费用：0 攻击力：5 生命值：7</para>
+			/// <para>Firelands Fugitive</para>
+			/// <para>火焰之地的逸火</para>
+			/// <para><b>Battlecry:</b> Get a Conflagration.</para>
+			/// <para><b>战吼：</b>获取一张燃焰。</para>
+			/// </summary>
+			firelandsfugitive,
+			/// <summary>
+			/// <para>随从 法师 费用：0 攻击力：10 生命值：14</para>
+			/// <para>Firelands Fugitive</para>
+			/// <para>火焰之地的逸火</para>
+			/// <para><b>Battlecry:</b> Get 2 Conflagrations.</para>
+			/// <para><b>战吼：</b>获取2张燃焰。</para>
+			/// </summary>
+			firelandsfugitive_BG35_882_G,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：6 生命值：6</para>
+			/// <para>Balinda Stonehearth</para>
+			/// <para>巴琳达·斯通赫尔斯</para>
+			/// <para>[x]Your spells that targetfriendly minions casttwice.</para>
+			/// <para>你的以友方随从为目标的法术会施放两次。</para>
+			/// </summary>
+			balindastonehearth_BG35_883,
+			/// <summary>
+			/// <para>随从 中立 费用：0 攻击力：12 生命值：12</para>
+			/// <para>Balinda Stonehearth</para>
+			/// <para>巴琳达·斯通赫尔斯</para>
+			/// <para>[x]Your spells that targetfriendly minions castthree times.</para>
+			/// <para>你的以友方随从为目标的法术会施放三次。</para>
+			/// </summary>
+			balindastonehearth_BG35_883_G,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：9 生命值：4</para>
+			/// <para>Ingenious Inventor</para>
+			/// <para>机巧发明机</para>
+			/// <para>[x]<b>Deathrattle:</b> Your Mechs have+{0} Attack this combat.<i>(Improved by each time you've<b>Magnetized</b> this game!)</i></para>
+			/// <para><b>亡语：</b>在本场战斗中，你的机械拥有+{0}攻击力。<i>（在本局对战中你每<b>磁力吸附</b>一次都会提升！）</i></para>
+			/// </summary>
+			ingeniousinventor,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：0 攻击力：18 生命值：8</para>
+			/// <para>Ingenious Inventor</para>
+			/// <para>机巧发明机</para>
+			/// <para>[x]<b>Deathrattle:</b> Your Mechs have+{0} Attack this combat.<i>(Improved by each time you've<b>Magnetized</b> this game!)</i></para>
+			/// <para><b>亡语：</b>在本场战斗中，你的机械拥有+{0}攻击力。<i>（在本局对战中你每<b>磁力吸附</b>一次都会提升！）</i></para>
+			/// </summary>
+			ingeniousinventor_BG35_890_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Ingenious</para>
+			/// <para>机巧</para>
+			/// <para>+{0}/+{1} for this combat only.</para>
+			/// <para>仅在本场战斗中+{0}/+{1}。</para>
+			/// </summary>
+			ingenious,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Ingenious Inventor Player Enchant</para>
+			/// <para>机巧发明机玩家附加效果</para>
+			/// <para>Your Mechs have increased stats for the rest of this combat.</para>
+			/// <para>在本场战斗中的剩余时间内，你的机械拥有的属性值提高。</para>
+			/// </summary>
+			ingeniousinventorplayerenchant,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：5 生命值：6</para>
+			/// <para>Tidecaller Prophet</para>
+			/// <para>招潮者先知</para>
+			/// <para>[x]Your Tavern spells give anextra +{1}/+{2} this turn. Afteryou play 2 Murlocs,_improve this. <i>({0} left!)</i></para>
+			/// <para>在本回合中，你的酒馆法术使随从额外获得+{1}/+{2}。在你使用2张鱼人牌后，提升此效果。<i>（还剩{0}张！）</i></para>
+			/// </summary>
+			tidecallerprophet,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：12</para>
+			/// <para>Tidecaller Prophet</para>
+			/// <para>招潮者先知</para>
+			/// <para>[x]Your Tavern spells give anextra +{1}/+{2} this turn. Afteryou play 2 Murlocs,_improve this. <i>({0} left!)</i></para>
+			/// <para>在本回合中，你的酒馆法术使随从额外获得+{1}/+{2}。在你使用2张鱼人牌后，提升此效果。<i>（还剩{0}张！）</i></para>
+			/// </summary>
+			tidecallerprophet_BG35_895_G,
+			/// <summary>
+			/// <para>BATTLEGROUND_SPELL 中立 费用：2</para>
+			/// <para>Conflagration</para>
+			/// <para>燃焰</para>
+			/// <para>Give a minion +{0}/+{1}. <i>(Improved by each Elemental you played this turn!)</i></para>
+			/// <para>使一个随从获得+{0}/+{1}。<i>（在本回合中，你每使用过一张元素牌都会提升！）</i></para>
+			/// </summary>
+			conflagration,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Conflagrated</para>
+			/// <para>焰燃</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			conflagrated,
+			/// <summary>
+			/// <para>BATTLEGROUND_SPELL 中立 费用：1</para>
+			/// <para>Arcane Absorption</para>
+			/// <para>奥术吸收</para>
+			/// <para>Give a friendly Elemental half the stats of the highest-Health minion in the Tavern.</para>
+			/// <para>使一个友方元素获得酒馆中生命值最高的随从的一半属性值。</para>
+			/// </summary>
+			arcaneabsorption,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Arcane Greed</para>
+			/// <para>奥术渴求</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			arcanegreed,
+			/// <summary>
+			/// <para>BATTLEGROUND_SPELL 中立 费用：2</para>
+			/// <para>Eonar's Favor</para>
+			/// <para>艾欧娜尔的眷顾</para>
+			/// <para>Choose a minion. Give minions of its type in the Tavern +{0}/+{1} this game.</para>
+			/// <para>选择一个随从。在本局对战中，使酒馆中该类型的随从获得+{0}/+{1}。</para>
+			/// </summary>
+			eonarsfavor,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：1 生命值：1</para>
+			/// <para>Abyssal Bruiser</para>
+			/// <para>深渊打手</para>
+			/// <para>[x]<b>Divine Shield</b>Has +{0}/+{1} for eachTavern spell you'vecast this game.</para>
+			/// <para><b>圣盾</b>。在本局对战中，你每施放一个酒馆法术，便拥有+{0}/+{1}。</para>
+			/// </summary>
+			abyssalbruiser,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：0 攻击力：2 生命值：2</para>
+			/// <para>Abyssal Bruiser</para>
+			/// <para>深渊打手</para>
+			/// <para>[x]<b>Divine Shield</b>Has +{0}/+{1} for eachTavern spell you'vecast this game.</para>
+			/// <para><b>圣盾</b>。在本局对战中，你每施放一个酒馆法术，便拥有+{0}/+{1}。</para>
+			/// </summary>
+			abyssalbruiser_BG35_921_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Abyssal Assault</para>
+			/// <para>深渊出击</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			abyssalassault,
+			/// <summary>
+			/// <para>BATTLEGROUND_SPELL 无效的 费用：2</para>
+			/// <para>Queen's Command</para>
+			/// <para>女王的命令</para>
+			/// <para>Give your minions +{0}/+{1}. Give all your Naga another +{0}/+{1}.</para>
+			/// <para>使你的随从获得+{0}/+{1}。使你的所有纳迦额外获得+{0}/+{1}。</para>
+			/// </summary>
+			queenscommand,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Azshara's Orders</para>
+			/// <para>艾萨拉的指令</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			azsharasorders,
+			/// <summary>
+			/// <para>BATTLEGROUND_SPELL 中立 费用：2</para>
+			/// <para>Might of Stormwind</para>
+			/// <para>暴风城之力</para>
+			/// <para>Give four random friendly minions +{0}/+{1}.</para>
+			/// <para>随机使四个友方随从获得+{0}/+{1}。</para>
+			/// </summary>
+			mightofstormwind,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Mighty</para>
+			/// <para>力量</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			mighty,
+			/// <summary>
+			/// <para>BATTLEGROUND_SPELL 中立 费用：1</para>
+			/// <para>Back to Back</para>
+			/// <para>背靠背</para>
+			/// <para>[x]Give a minion +{0}/+{1}.Your future Back to Backsgive an extra +{2}/+{3}.</para>
+			/// <para>使一个随从获得+{0}/+{1}。你此后的背靠背使随从额外获得+{2}/+{3}。</para>
+			/// </summary>
+			backtoback,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Got Your Back</para>
+			/// <para>掩护背后</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			gotyourback,
+			/// <summary>
+			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
+			/// <para>Fly the Flag</para>
+			/// <para>升起旗帜</para>
+			/// <para>[x]Every {1} turns, get a spellthat adds plain copies of aminion to YOUR minion pool.<i>({0} |4(turn, turns) left!)</i>@[x]Every {1} turns, get a spellthat adds plain copies of aminion to YOUR minion pool.<i>(Next turn!)</i></para>
+			/// <para>每{1}个回合，获取一张法术牌，该法术可以将一个随从的原始版复制加入你的随从池。<i>（还剩{0}回合！）</i>@每{1}个回合，获取一张法术牌，该法术可以将一个随从的原始版复制加入你的随从池。<i>（就是下回合！）</i></para>
+			/// </summary>
+			flytheflag,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Fly the Flag</para>
+			/// <para>升起旗帜</para>
+			/// <para>[x]Choose a minion.Add plain copies of it toYOUR minion pool.</para>
+			/// <para>选择一个随从，将它的原始版复制加入你的随从池。</para>
+			/// </summary>
+			flytheflag_BG35_Anomaly_001t,
+			/// <summary>
+			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
+			/// <para>Anomalous Cube</para>
+			/// <para>畸变魔方</para>
+			/// <para>[x]Start with 'Mystery Cube'as your second Hero Power.It unlocks on Turn 5.<i>({0} |4(turn, turns) left!)</i>@[x]Start with 'Mystery Cube'as your second Hero Power.It unlocks on Turn 5.<i>(Done!)</i></para>
+			/// <para>对战开始时，将“神秘魔方”变为你的第二英雄技能，该技能在第5回合解锁。<i>（还剩{0}回合！）</i>@对战开始时，将“神秘魔方”变为你的第二英雄技能，该技能在第5回合解锁。<i>（已完成！）</i></para>
+			/// </summary>
+			anomalouscube,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：0</para>
+			/// <para>Mystery Cube</para>
+			/// <para>神秘魔方</para>
+			/// <para>Each turn, choose from 2 new Lesser <b><b>Trinket</b>s</b> to replace this for free. <i>(Unlocks on Turn 5.)</i></para>
+			/// <para>每回合中，免费从2个新的小型<b><b>饰品</b></b>中选择一个以替换本饰品。<i>（第5回合解锁。）</i></para>
+			/// </summary>
+			mysterycube,
+			/// <summary>
+			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
+			/// <para>Anomalous Conflux</para>
+			/// <para>畸变流汇</para>
+			/// <para>Start with 'Warped Conflux' as your second Hero Power.</para>
+			/// <para>对战开始时，将“扭曲的时光流汇”变为你的第二英雄技能</para>
+			/// </summary>
+			anomalousconflux,
+			/// <summary>
+			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
+			/// <para>Anomalous Timeline</para>
+			/// <para>畸变时间线</para>
+			/// <para>Start with 'Alternate Timeline' as your second Hero Power.</para>
+			/// <para>对战开始时，将“平行时间线”变为你的第二英雄技能。</para>
+			/// </summary>
+			anomaloustimeline,
+			/// <summary>
+			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
+			/// <para>Anomalous Expedition</para>
+			/// <para>畸变远行</para>
+			/// <para>At the start of the game, <b>Discover</b> minions from Tiers 6, 4, and 2 to get at those Tiers.</para>
+			/// <para>对战开始时，<b>发现</b>等级6，4和2的随从各一个，当你达到对应等级时才可使用。</para>
+			/// </summary>
+			anomalousexpedition,
+			/// <summary>
+			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
+			/// <para>Lesser Fortune</para>
+			/// <para>小型占卜</para>
+			/// <para>Start with 'Lesser Crystal Ball' as your second Hero Power.</para>
+			/// <para>对战开始时，将“小型水晶球”变为你的第二英雄技能。</para>
+			/// </summary>
+			lesserfortune,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：0</para>
+			/// <para>Lesser Crystal Ball</para>
+			/// <para>小型水晶球</para>
+			/// <para>[x]When you buy a Lesser<b>Trinket</b>, this transformsinto a copy of it.</para>
+			/// <para>当你购买小型<b>饰品</b>时，本技能变形成为它的复制。</para>
+			/// </summary>
+			lessercrystalball,
+			/// <summary>
+			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
+			/// <para>Greater Fortune</para>
+			/// <para>大型占卜</para>
+			/// <para>Start with 'Greater Crystal Ball' as your second Hero Power.</para>
+			/// <para>对战开始时，将“大型水晶球”变为你的第二英雄技能。</para>
+			/// </summary>
+			greaterfortune,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：0</para>
+			/// <para>Greater Crystal Ball</para>
+			/// <para>大型水晶球</para>
+			/// <para>[x]When you buy a Greater<b>Trinket</b>, this transformsinto a copy of it.</para>
+			/// <para>当你购买大型<b>饰品</b>时，本技能变形成为它的复制。</para>
+			/// </summary>
+			greatercrystalball,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Genn, Worgen King</para>
+			/// <para>吉恩，狼人国王</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			gennworgenking,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：0</para>
+			/// <para>King of Duality</para>
+			/// <para>双面之王</para>
+			/// <para>On Turn 4, <b>Discover</b> two Hero Powers to replace this. <i>({0} |4(turn, turns) left!)</i>@On Turn 4, <b>Discover</b> two Hero Powers to replace this. <i>(Done!)</i></para>
+			/// <para>在第4回合，<b>发现</b>两项英雄技能以替换本技能。<i>（还剩{0}回合！）</i>@在第4回合，<b>发现</b>两项英雄技能以替换本技能。<i>（已完成！）</i></para>
+			/// </summary>
+			kingofduality,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Crystallized</para>
+			/// <para>晶化</para>
+			/// <para>Stats increased by Cursed Crystal.</para>
+			/// <para>被诅咒的水晶使其属性值提高。</para>
+			/// </summary>
+			crystallized,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Cursed Crystal Player Ench [DNT]</para>
+			/// <para>被诅咒的水晶玩家附加效果[DNT]</para>
+			/// <para>Tracks shop buffs from Cursed Crystal. [DNT]</para>
+			/// <para>记录被诅咒的水晶的酒馆增益[DNT]</para>
+			/// </summary>
+			cursedcrystalplayerenchdnt,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Defiled</para>
+			/// <para>亵渎</para>
+			/// <para>Stats increased by Defiler Portrait.</para>
+			/// <para>亵渎者肖像使其属性值提高。</para>
+			/// </summary>
+			defiled,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Copper Conduction</para>
+			/// <para>铜制导通</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			copperconduction,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Jailer Sticker</para>
+			/// <para>典狱长标签</para>
+			/// <para>Destroy a friendly Undead to get a random Undead.</para>
+			/// <para>消灭一个友方亡灵以随机获取一张亡灵牌。</para>
+			/// </summary>
+			jailersticker,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Fangs Out</para>
+			/// <para>露出獠牙</para>
+			/// <para>+{0}/+{1} for this combat only.</para>
+			/// <para>仅在本场战斗中+{0}/+{1}。</para>
+			/// </summary>
+			fangsout,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Fang Anklet Player Enchant [DNT]</para>
+			/// <para>獠牙脚链玩家附加效果[DNT]</para>
+			/// <para>Your Beasts have increased stats for the rest of this combat.</para>
+			/// <para>在本场战斗的剩余时间内，你的野兽拥有的属性值提高。</para>
+			/// </summary>
+			fangankletplayerenchantdnt,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Stego's Protection</para>
+			/// <para>重踏防护</para>
+			/// <para><b>Divine Shield</b>.</para>
+			/// <para><b>圣盾</b>。</para>
+			/// </summary>
+			stegosprotection,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Set Sail</para>
+			/// <para>启航</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			setsail,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Crow Stronger</para>
+			/// <para>越撬越棒</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			crowstronger,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Jailer Sticker</para>
+			/// <para>典狱长标签</para>
+			/// <para>Destroy a friendly Undead to get2 random Undead.</para>
+			/// <para>消灭一个友方亡灵以随机获取2张亡灵牌。</para>
+			/// </summary>
+			jailersticker_BG35_MagicItem_733t,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Skyward</para>
+			/// <para>飞天</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			skyward,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Skyward</para>
+			/// <para>飞天</para>
+			/// <para><b>Deathrattle:</b> Give your minions +3/+3 permanently.</para>
+			/// <para><b>亡语：</b>使你的随从永久获得+3/+3。</para>
+			/// </summary>
+			skyward_BG35_MagicItem_740e2,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Bubbled Up</para>
+			/// <para>泡泡武装</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			bubbledup_BG35_MagicItem_753e,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Dramatic</para>
+			/// <para>戏精</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			dramatic_BG35_MagicItem_754e,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Chillmere Mosaic</para>
+			/// <para>切米尔拼贴画</para>
+			/// <para>[x]<b>Refresh</b> the Tavern with<b>Battlecry</b> minions.They cost (1).</para>
+			/// <para><b>刷新</b>酒馆，使其中变为<b>战吼</b>随从牌。这些牌的消耗为（1）。</para>
+			/// </summary>
+			chillmeremosaic,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Triple Prize</para>
+			/// <para>三连奖品</para>
+			/// <para><b>Discover</b> a Tier 3 Darkmoon Prize.</para>
+			/// <para><b>发现</b>一个等级3的暗月奖品。</para>
+			/// </summary>
+			tripleprize,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Duplicating Lens</para>
+			/// <para>复映透镜</para>
+			/// <para>Choose a minion from Tier 3 or below. Get a plain copy of it.</para>
+			/// <para>选择一个等级3或以下的随从，获取一张该随从的原始版复制。</para>
+			/// </summary>
+			duplicatinglens,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Best of the Best</para>
+			/// <para>超凡绝顶</para>
+			/// <para>Stats set to {0}/{1}.</para>
+			/// <para>属性值变为{0}/{1}。</para>
+			/// </summary>
+			bestofthebest,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Double Stitch</para>
+			/// <para>双线缝合</para>
+			/// <para>Choose a friendly minion. Double its stats and lock it in your hand for 1 turn.</para>
+			/// <para>选择一个友方随从，使其属性值翻倍，并将其锁入你的手牌1个回合。</para>
+			/// </summary>
+			doublestitch,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Double Stitched</para>
+			/// <para>双线锁缝</para>
+			/// <para>Stats set to {0}/{1}.</para>
+			/// <para>属性值变为{0}/{1}。</para>
+			/// </summary>
+			doublestitched,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Lock Stitch</para>
+			/// <para></para>
+			/// <para>Locked.</para>
+			/// <para></para>
+			/// </summary>
+			lockstitch,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Cloud Serpent's Power</para>
+			/// <para>云端翔龙之力</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			cloudserpentspower,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Struck By Lightning</para>
+			/// <para>闪电击中</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			struckbylightning,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>How Ember-ressing</para>
+			/// <para>尴尬复燃</para>
+			/// <para>Stats set to {0}/{1}.</para>
+			/// <para>属性值变为{0}/{1}。</para>
+			/// </summary>
+			howemberressing,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Rampage</para>
+			/// <para>暴走</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			rampage,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Ophidian Staff</para>
+			/// <para>蛇首之杖</para>
+			/// <para>Give a Beast +2/+2 and <b>Reborn</b>.</para>
+			/// <para>使一只野兽获得+2/+2和<b>复生</b>。</para>
+			/// </summary>
+			ophidianstaff,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Ophidian</para>
+			/// <para>蛇首</para>
+			/// <para>+{0}/+{1} and <b>Reborn</b>.</para>
+			/// <para>+{0}/+{1}和<b>复生</b>。</para>
+			/// </summary>
+			ophidian,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Bewitched</para>
+			/// <para>魔力强体</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			bewitched,
 			/// <summary>
 			/// <para>随从 战士 费用：2 攻击力：3 生命值：2</para>
 			/// <para>Sparring Partner</para>
@@ -34389,23 +36093,7 @@ namespace HREngine.Bots
 			/// <para><b>Taunt</b>, <b>Divine Shield</b>.</para>
 			/// <para><b>嘲讽</b><b>圣盾</b></para>
 			/// </summary>
-			annoyomodule_BG_BOT_9112e,
-			/// <summary>
-			/// <para>附魔 中立 费用：0</para>
-			/// <para>Annoy-o-Module</para>
-			/// <para>吵吵模组</para>
-			/// <para><b>Taunt</b>, <b>Divine Shield</b>.</para>
-			/// <para><b>嘲讽</b><b>圣盾</b></para>
-			/// </summary>
 			annoyomodule_BG_BOT_911e,
-			/// <summary>
-			/// <para>附魔 中立 费用：0</para>
-			/// <para>Annoy-o-Module</para>
-			/// <para></para>
-			/// <para><b>Taunt</b></para>
-			/// <para></para>
-			/// </summary>
-			annoyomodule_BG_BOT_911e2,
 			/// <summary>
 			/// <para>随从 术士 费用：2 攻击力：2 生命值：4</para>
 			/// <para>Imp Gang Boss</para>
@@ -34422,6 +36110,30 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			imp,
+			/// <summary>
+			/// <para>随从 潜行者 费用：1 攻击力：0 生命值：1</para>
+			/// <para>Imprisoned Homunculus</para>
+			/// <para>被禁锢的矮劣魔</para>
+			/// <para>In 2 turns, gain +5/+6 and <b>Taunt</b>. <i>({0} left)</i></para>
+			/// <para>2回合后，获得+5/+6和<b>嘲讽</b>。<i>（还剩{0}回合）</i></para>
+			/// </summary>
+			imprisonedhomunculus,
+			/// <summary>
+			/// <para>随从 潜行者 费用：1 攻击力：0 生命值：2</para>
+			/// <para>Imprisoned Homunculus</para>
+			/// <para>被禁锢的矮劣魔</para>
+			/// <para>In 2 turns, gain +10/+12 and <b>Taunt</b>. <i>({0} left)</i></para>
+			/// <para>2回合后，获得+10/+12和<b>嘲讽</b>。<i>（还剩{0}回合）</i></para>
+			/// </summary>
+			imprisonedhomunculus_BG_BT_258_G,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Imprisoned</para>
+			/// <para>被禁锢</para>
+			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
+			/// <para><b>休眠</b>。@回合后唤醒。</para>
+			/// </summary>
+			imprisoned,
 			/// <summary>
 			/// <para>随从 巫妖王 费用：7 攻击力：7 生命值：5</para>
 			/// <para>Cursed Shadow</para>
@@ -34606,6 +36318,14 @@ namespace HREngine.Bots
 			/// <para><b>战吼：</b>使一个友方野兽获得+2/+2和<b>嘲讽</b>。</para>
 			/// </summary>
 			houndmaster,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Default +X/+Y Enchantment</para>
+			/// <para>默认+X/+Y 附加效果</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			defaultxyenchantment,
 			/// <summary>
 			/// <para>法术 中立 费用：1</para>
 			/// <para>Bananas</para>
@@ -34850,8 +36570,8 @@ namespace HREngine.Bots
 			/// <para>随从 术士 费用：5 攻击力：4 生命值：4</para>
 			/// <para>Floating Watcher</para>
 			/// <para>漂浮观察者</para>
-			/// <para>Whenever your hero takes damage on your turn, gain +2/+2.</para>
-			/// <para>每当你的英雄在你的回合受到伤害，便获得+2/+2。</para>
+			/// <para>Whenever your hero takes damage on your turn, gain +{0}/+{1}.</para>
+			/// <para>每当你的英雄在你的回合受到伤害，便获得+{0}/+{1}。</para>
 			/// </summary>
 			floatingwatcher,
 			/// <summary>
@@ -35141,7 +36861,7 @@ namespace HREngine.Bots
 			/// <para>Stats set to {0}/{1}.</para>
 			/// <para>属性值变为{0}/{1}。</para>
 			/// </summary>
-			bestofthebest,
+			bestofthebest_BG_SCH_149e,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Shop Buff Player Enchant (DNT)</para>
@@ -35367,7 +37087,7 @@ namespace HREngine.Bots
 			/// </summary>
 			amalgamofthedeep_BG_TSC_069_G,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：2 生命值：4</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：3 生命值：4</para>
 			/// <para>Ancestral Automaton</para>
 			/// <para>星元自动机</para>
 			/// <para>[x]Has +3/+2 for each otherAncestral Automaton you'vesummoned this game<i>(wherever this is)</i>.</para>
@@ -35375,7 +37095,7 @@ namespace HREngine.Bots
 			/// </summary>
 			ancestralautomaton,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：8</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：8</para>
 			/// <para>Ancestral Automaton</para>
 			/// <para>星元自动机</para>
 			/// <para>[x]Has +6/+4 for each otherAncestral Automaton you'vesummoned this game<i>(wherever this is)</i>.</para>
@@ -36442,16 +38162,16 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>Pooled Resources</para>
 			/// <para>资源汇集</para>
-			/// <para>You can send your Gold to your teammate.</para>
-			/// <para>你可以向你的队友发送铸币。</para>
+			/// <para>You can send up to2 Gold to your teammate each turn.</para>
+			/// <para>每回合中，你可以向你的队友发送最多2枚铸币。</para>
 			/// </summary>
 			pooledresources,
 			/// <summary>
 			/// <para>英雄技能 中立 费用：1</para>
 			/// <para>Pooled Resources</para>
 			/// <para>资源汇集</para>
-			/// <para>Your teammate gains 1 Gold.</para>
-			/// <para>你的队友获得1枚铸币。</para>
+			/// <para>Your teammate gains 1 Gold. <i>(Twice per turn.)</i>@Your teammate gains 1 Gold. <i>({0} left!)</i></para>
+			/// <para>你的队友获得1枚铸币。<i>（每回合限两次。）</i>@你的队友获得1枚铸币。<i>（还剩{0}次！）</i></para>
 			/// </summary>
 			pooledresources_BGDUO_Anomaly_007t,
 			/// <summary>
@@ -36566,6 +38286,14 @@ namespace HREngine.Bots
 			/// <para>在你的回合结束时，<b>传递</b>酒馆中等级最高的2个随从。</para>
 			/// </summary>
 			misterchu_BGDUO_HERO_104_Buddy_G,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Librarian Goya</para>
+			/// <para>图书馆员郭雅</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			librariangoya,
 			/// <summary>
 			/// <para>英雄技能 中立 费用：2</para>
 			/// <para>Efficient Exchange</para>
@@ -36871,7 +38599,7 @@ namespace HREngine.Bots
 			/// </summary>
 			goldrinnplayerenchantdnt,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：5 攻击力：3 生命值：2</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：3 生命值：2</para>
 			/// <para>Primalfin Lookout</para>
 			/// <para>蛮鱼斥候</para>
 			/// <para><b>Battlecry:</b> If you control another Murloc, <b>Discover</b> a_Murloc.</para>
@@ -36893,7 +38621,7 @@ namespace HREngine.Bots
 			/// <para>+{0}/+{1}.</para>
 			/// <para>+{0}/+{1}。</para>
 			/// </summary>
-			rampage,
+			rampage_BGS_021e,
 			/// <summary>
 			/// <para>随从 中立 费用：0 攻击力：11 生命值：22</para>
 			/// <para>Zapp Slywick</para>
@@ -36951,7 +38679,7 @@ namespace HREngine.Bots
 			/// </summary>
 			shifting_BGS_029e,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：3 生命值：4</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：4 生命值：4</para>
 			/// <para>King Bagurgle</para>
 			/// <para>拜戈尔格国王</para>
 			/// <para><b>Battlecry:</b> Give all other Murlocs in your hand and board +{0}/+{1}.</para>
@@ -37175,7 +38903,7 @@ namespace HREngine.Bots
 			/// </summary>
 			skypirate,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：3 生命值：2</para>
+			/// <para>随从 牧师 费用：0 攻击力：3 生命值：3</para>
 			/// <para>Goldgrubber</para>
 			/// <para>掘金者</para>
 			/// <para>[x]At the end of your turn,gain +{0}/+{1} for each__friendly Golden minion.</para>
@@ -37194,8 +38922,8 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：0 攻击力：3 生命值：2</para>
 			/// <para>Deflect-o-Bot</para>
 			/// <para>偏折机器人</para>
-			/// <para>[x]<b>Divine Shield</b>Whenever you summon a Mechduring combat, gain +2 Attackand <b>Divine Shield</b>.</para>
-			/// <para><b>圣盾</b>在战斗阶段中，每当你召唤一个机械，便获得+2攻击力和<b>圣盾</b>。</para>
+			/// <para>[x]<b>Divine Shield</b>Whenever you summon a Mechduring combat, gain +{0} Attackand <b>Divine Shield</b>.</para>
+			/// <para><b>圣盾</b>在战斗阶段中，每当你召唤一个机械，便获得+{0}攻击力和<b>圣盾</b>。</para>
 			/// </summary>
 			deflectobot,
 			/// <summary>
@@ -37303,7 +39031,7 @@ namespace HREngine.Bots
 			/// </summary>
 			lilhandofrag,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：4 生命值：4</para>
+			/// <para>随从 中立 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Nomi, Kitchen Nightmare</para>
 			/// <para>“厨房煞星”诺米</para>
 			/// <para>[x]After you play an Elemental,give Elementals in theTavern +{0}/+{1} this game.</para>
@@ -37482,8 +39210,8 @@ namespace HREngine.Bots
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Elemental Energy</para>
 			/// <para>元素能量</para>
-			/// <para>+1/+1.</para>
-			/// <para>+1/+1。</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
 			/// </summary>
 			elementalenergy,
 			/// <summary>
@@ -37573,7 +39301,7 @@ namespace HREngine.Bots
 			/// <para>Give all friendly minions Attack equal to your Tier.</para>
 			/// <para>使所有友方随从获得等同于你当前等级的攻击力。</para>
 			/// </summary>
-			mightofstormwind,
+			mightofstormwind_BGS_Treasures_007,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Might of Stormwind</para>
@@ -37842,10 +39570,18 @@ namespace HREngine.Bots
 			/// <para>法术 中立 费用：0</para>
 			/// <para>Repeat Customer</para>
 			/// <para>回头客</para>
-			/// <para>Return a friendly minion to your hand.</para>
-			/// <para>将一个友方随从移回你的手牌。</para>
+			/// <para>Return a friendly non-Golden minion to your hand. Give it +{0}/+{1}.</para>
+			/// <para>将一个非金色友方随从移回你的手牌，并使其获得+{0}/+{1}。</para>
 			/// </summary>
 			repeatcustomer,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Repeat Customer</para>
+			/// <para>回头客</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			repeatcustomer_BGS_Treasures_034e,
 			/// <summary>
 			/// <para>法术 中立 费用：0</para>
 			/// <para>All That Glitters</para>
@@ -39613,7 +41349,7 @@ namespace HREngine.Bots
 			/// <para>Kurtrus and Cariel are both <b>Immune</b> until your next turn.</para>
 			/// <para>直到你的下个回合，库尔特鲁斯和凯瑞尔<b>免疫</b>。</para>
 			/// </summary>
-			backtoback,
+			backtoback_BOM_04_BackToBack_004s,
 			/// <summary>
 			/// <para>附魔 恶魔猎手 费用：0</para>
 			/// <para>Strong Backs</para>
@@ -47055,6 +48791,14 @@ namespace HREngine.Bots
 			/// </summary>
 			tyrantus,
 			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：3 生命值：4</para>
+			/// <para>Spiritsinger Umbra</para>
+			/// <para>灵魂歌者安布拉</para>
+			/// <para>After you summon a minion, trigger its <b>Deathrattle</b> effect.</para>
+			/// <para>在你召唤一个随从后，触发其<b>亡语</b>。</para>
+			/// </summary>
+			spiritsingerumbra,
+			/// <summary>
 			/// <para>法术 圣骑士 费用：5</para>
 			/// <para>Solemn Vigil</para>
 			/// <para>严正警戒</para>
@@ -50253,7 +51997,7 @@ namespace HREngine.Bots
 			/// <para><b>Dormant</b> for 2 turns.<b>Taunt</b></para>
 			/// <para><b>休眠</b>2回合。<b>嘲讽</b></para>
 			/// </summary>
-			imprisonedhomunculus,
+			imprisonedhomunculus_BT_258,
 			/// <summary>
 			/// <para>随从 潜行者 费用：2 攻击力：1 生命值：4</para>
 			/// <para>Dragonmaw Sentinel</para>
@@ -51061,7 +52805,7 @@ namespace HREngine.Bots
 			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
 			/// <para><b>休眠</b>。@回合后唤醒。</para>
 			/// </summary>
-			imprisoned,
+			imprisoned_BT_737e,
 			/// <summary>
 			/// <para>法术 恶魔猎手 费用：3</para>
 			/// <para>Soul Cleave</para>
@@ -52359,7 +54103,7 @@ namespace HREngine.Bots
 			/// </summary>
 			darkscalebroodmother,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：1 攻击力：1 生命值：2</para>
+			/// <para>随从 德鲁伊 费用：1 攻击力：1 生命值：1</para>
 			/// <para>Crystalspine Cub</para>
 			/// <para>炫晶小熊</para>
 			/// <para>Whenever you spend your last Mana Crystal,gain +1/+1.</para>
@@ -52368,12 +54112,12 @@ namespace HREngine.Bots
 			crystalspinecub,
 			/// <summary>
 			/// <para>附魔 德鲁伊 费用：0</para>
-			/// <para>Crystalized</para>
-			/// <para>炫彩水晶</para>
+			/// <para>Crystallized</para>
+			/// <para>晶化</para>
 			/// <para>+1/+1.</para>
 			/// <para>+1/+1。</para>
 			/// </summary>
-			crystalized,
+			crystallized_CATA_130e,
 			/// <summary>
 			/// <para>随从 德鲁伊 费用：2 攻击力：2 生命值：2</para>
 			/// <para>Felwood Treant</para>
@@ -52415,7 +54159,7 @@ namespace HREngine.Bots
 			/// </summary>
 			iridescentglow,
 			/// <summary>
-			/// <para>法术 德鲁伊 费用：3</para>
+			/// <para>法术 德鲁伊 费用：4</para>
 			/// <para>Wildwood Circle</para>
 			/// <para>荒林怪圈</para>
 			/// <para>[x]<b>Shatter</b>. Summon two 2/2 Treants. Give yourminions "<b>Deathrattle:</b> Summon a 2/2 Treant."@[x]Summon two 2/2Treants. Give yourminions "<b>Deathrattle:</b>__Summon a 2/2 Treant."</para>
@@ -52431,7 +54175,7 @@ namespace HREngine.Bots
 			/// </summary>
 			wildwoodaura,
 			/// <summary>
-			/// <para>法术 德鲁伊 费用：3</para>
+			/// <para>法术 德鲁伊 费用：4</para>
 			/// <para>Wildwood Circle</para>
 			/// <para>荒林怪圈</para>
 			/// <para>[x]<b>Shattered</b>Summon two 2/2 Treants.</para>
@@ -52439,7 +54183,7 @@ namespace HREngine.Bots
 			/// </summary>
 			wildwoodcircle_CATA_134t,
 			/// <summary>
-			/// <para>法术 德鲁伊 费用：3</para>
+			/// <para>法术 德鲁伊 费用：4</para>
 			/// <para>Wildwood Circle</para>
 			/// <para>荒林怪圈</para>
 			/// <para><b>Shattered</b>Give your minions "<b>Deathrattle:</b> Summona 2/2 Treant."</para>
@@ -52495,7 +54239,7 @@ namespace HREngine.Bots
 			/// </summary>
 			azsharastriumph_CATA_136e,
 			/// <summary>
-			/// <para>法术 德鲁伊 费用：2</para>
+			/// <para>法术 德鲁伊 费用：3</para>
 			/// <para>Forest's Gift</para>
 			/// <para>森林赠礼</para>
 			/// <para>Give a friendly minion +1/+1 for each minion you control.</para>
@@ -52751,7 +54495,7 @@ namespace HREngine.Bots
 			/// </summary>
 			experimentalanimation,
 			/// <summary>
-			/// <para>随从 牧师 费用：3 攻击力：3 生命值：1</para>
+			/// <para>随从 牧师 费用：3 攻击力：4 生命值：1</para>
 			/// <para>Maniacal Follower</para>
 			/// <para>癫狂的追随者</para>
 			/// <para><b>Stealth</b><b>Deathrattle:</b> <b>Herald</b> {0}.</para>
@@ -53047,7 +54791,7 @@ namespace HREngine.Bots
 			/// </summary>
 			freefromcorruption,
 			/// <summary>
-			/// <para>随从 潜行者 费用：7 攻击力：4 生命值：8</para>
+			/// <para>随从 潜行者 费用：7 攻击力：5 生命值：9</para>
 			/// <para>The Black Blood</para>
 			/// <para>黑血</para>
 			/// <para>[x]<b>Colossal +3. </b>After you restore Healthto a character, attack arandom enemy minion.</para>
@@ -53055,7 +54799,7 @@ namespace HREngine.Bots
 			/// </summary>
 			theblackblood,
 			/// <summary>
-			/// <para>随从 潜行者 费用：3 攻击力：1 生命值：2</para>
+			/// <para>随从 潜行者 费用：2 攻击力：2 生命值：2</para>
 			/// <para>Black Blood's Body</para>
 			/// <para>黑血黏质</para>
 			/// <para>[x]At the end of your turn,restore #3 Health toa random damaged_friendly character.</para>
@@ -53063,7 +54807,7 @@ namespace HREngine.Bots
 			/// </summary>
 			blackbloodsbody,
 			/// <summary>
-			/// <para>随从 潜行者 费用：3 攻击力：1 生命值：2</para>
+			/// <para>随从 潜行者 费用：2 攻击力：2 生命值：2</para>
 			/// <para>Black Blood's Body</para>
 			/// <para>黑血黏质</para>
 			/// <para>[x]At the end of your turn,restore #3 Health toa random damaged_friendly character.</para>
@@ -53071,7 +54815,7 @@ namespace HREngine.Bots
 			/// </summary>
 			blackbloodsbody_CATA_300t2,
 			/// <summary>
-			/// <para>随从 潜行者 费用：3 攻击力：1 生命值：2</para>
+			/// <para>随从 潜行者 费用：2 攻击力：2 生命值：2</para>
 			/// <para>Black Blood's Body</para>
 			/// <para>黑血黏质</para>
 			/// <para>[x]At the end of your turn,restore #3 Health toa random damaged_friendly character.</para>
@@ -53442,16 +55186,16 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：4</para>
 			/// <para>Flight Maneuvers</para>
 			/// <para>飞龙机动</para>
-			/// <para>[x]<b>Shatter</b>Summon two 4/2 Drakes.Give your minions+1/+1 and <b>Divine Shield</b>.@[x]Summon two 4/2 Drakes.Give your minions+1/+1 and <b>Divine Shield</b>.</para>
-			/// <para><b>裂变</b>召唤两条4/2的幼龙。使你的随从获得+1/+1和<b>圣盾</b>。@召唤两条4/2的幼龙。使你的随从获得+1/+1和<b>圣盾</b>。</para>
+			/// <para>[x]<b>Shatter</b>. Summontwo 4/2 Drakes. Giveyour minions +1 Attackand <b>Divine Shield</b>.@Summon two 4/2 Drakes. Give your minions +1 Attack and <b>Divine Shield</b>.</para>
+			/// <para><b>裂变</b>召唤两条4/2的幼龙。使你的随从获得+1攻击力和<b>圣盾</b>。@召唤两条4/2的幼龙。使你的随从获得+1攻击力和<b>圣盾</b>。</para>
 			/// </summary>
 			flightmaneuvers,
 			/// <summary>
 			/// <para>附魔 圣骑士 费用：0</para>
 			/// <para>Courageous</para>
 			/// <para>英勇无畏</para>
-			/// <para>+1/+1 and <b>Divine Shield</b>.</para>
-			/// <para>+1/+1和<b>圣盾</b>。</para>
+			/// <para>+1 Attack and <b>Divine Shield</b>.</para>
+			/// <para>+1攻击力和<b>圣盾</b>。</para>
 			/// </summary>
 			courageous,
 			/// <summary>
@@ -53466,8 +55210,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：4</para>
 			/// <para>Flight Maneuvers</para>
 			/// <para>飞龙机动</para>
-			/// <para><b>Shattered</b>Give your minions +1/+1 and <b>Divine Shield</b>.</para>
-			/// <para><b>已裂变</b>使你的随从获得+1/+1和<b>圣盾</b>。</para>
+			/// <para><b>Shattered</b>. Give your minions +1 Attack and <b>Divine Shield</b>.</para>
+			/// <para><b>已裂变</b>使你的随从获得+1攻击力和<b>圣盾</b>。</para>
 			/// </summary>
 			flightmaneuvers_CATA_479t2,
 			/// <summary>
@@ -53730,8 +55474,8 @@ namespace HREngine.Bots
 			/// <para>随从 恶魔猎手 费用：6 攻击力：6 生命值：6</para>
 			/// <para>Nespirah, Unshackled</para>
 			/// <para>奈瑟匹拉，脱困古灵</para>
-			/// <para>[x]After you cast a Felspell, get a randomNaga. It costs (1).</para>
-			/// <para>在你施放一个邪能法术后，随机获取一张纳迦牌，其法力值消耗为（1）点。</para>
+			/// <para>After you cast a Fel spell, get a random non-<b>Colossal</b> Naga. It costs (1).</para>
+			/// <para>在你施放一个邪能法术后，随机获取一张非<b>巨型</b>的纳迦牌，其法力值消耗为（1）点。</para>
 			/// </summary>
 			nespirahunshackled,
 			/// <summary>
@@ -53850,8 +55594,8 @@ namespace HREngine.Bots
 			/// <para>随从 猎人 费用：3 攻击力：3 生命值：3</para>
 			/// <para>Stonetalon Striker</para>
 			/// <para>石爪打击者</para>
-			/// <para>[x]<b>Taunt</b><i>While in hand, playa Dragon to becomea 6/6 Dragon!</i></para>
-			/// <para><b>嘲讽</b>。<i>当本牌在你手中时，使用一张龙牌即可将本牌变为6/6的龙！</i></para>
+			/// <para>[x]<b>Taunt</b><i>(While in hand, playa Dragon to becomea 6/6 Dragon!)</i></para>
+			/// <para><b>嘲讽</b>。<i>（当本牌在你手中时，使用一张龙牌即可将本牌变为6/6的龙！）</i></para>
 			/// </summary>
 			stonetalonstriker,
 			/// <summary>
@@ -53866,8 +55610,8 @@ namespace HREngine.Bots
 			/// <para>随从 猎人 费用：6 攻击力：4 生命值：4</para>
 			/// <para>Ebonscale Scout</para>
 			/// <para>乌鳞斥候</para>
-			/// <para>[x]<b>Battlecry:</b> Deal damageequal to this minion's Attack.<i>(While in hand, play a Dragon to become an 8/8 Dragon.)</i></para>
-			/// <para><b>战吼：</b>造成等同于本随从攻击力的伤害。<i>当本牌在你手中时，使用一张龙牌即可将本牌变为8/8的龙！</i></para>
+			/// <para>[x]<b>Battlecry:</b> Deal damageequal to this minion's Attack.<i>(While in hand, play a Dragon to become an 8/8 Dragon!)</i></para>
+			/// <para><b>战吼：</b>造成等同于本随从攻击力的伤害。<i>（当本牌在你手中时，使用一张龙牌即可将本牌变为8/8的龙！）</i></para>
 			/// </summary>
 			ebonscalescout,
 			/// <summary>
@@ -53882,8 +55626,8 @@ namespace HREngine.Bots
 			/// <para>随从 猎人 费用：7 攻击力：6 生命值：6</para>
 			/// <para>Ebyssian</para>
 			/// <para>艾比西安</para>
-			/// <para>[x]<b>Battlecry:</b> Your Dragonshave <b>Rush</b> this game.<i>While in hand, play a Dragon tobecome a 12/12 Dragon!</i></para>
-			/// <para><b>战吼：</b>在本局对战中，你的龙拥有<b>突袭</b>。<i>当本牌在你手中时，使用一张龙牌即可将本牌变为12/12的龙！</i></para>
+			/// <para>[x]<b>Battlecry:</b> Your Dragonshave <b>Rush</b> this game.<i>(While in hand, play a Dragon tobecome a 12/12 Dragon!)</i></para>
+			/// <para><b>战吼：</b>在本局对战中，你的龙拥有<b>突袭</b>。<i>（当本牌在你手中时，使用一张龙牌即可将本牌变为12/12的龙！）</i></para>
 			/// </summary>
 			ebyssian,
 			/// <summary>
@@ -53938,8 +55682,8 @@ namespace HREngine.Bots
 			/// <para>法术 猎人 费用：2</para>
 			/// <para>Sylvanas's Triumph</para>
 			/// <para>希尔瓦娜斯的胜利</para>
-			/// <para>[x]Deal 3 damage.If you've playedanother copy of this, hit all enemies instead.</para>
-			/// <para>造成3点伤害。如果你使用过本牌的其他复制，改为对所有敌人造成伤害。</para>
+			/// <para>[x]Deal $3 damage.If you've playedanother copy of this, hit all enemies instead.</para>
+			/// <para>造成$3点伤害。如果你使用过本牌的其他复制，改为对所有敌人造成伤害。</para>
 			/// </summary>
 			sylvanasstriumph,
 			/// <summary>
@@ -54007,7 +55751,7 @@ namespace HREngine.Bots
 			/// </summary>
 			airsupport_CATA_564e,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：2 攻击力：0 生命值：3</para>
+			/// <para>随从 萨满祭司 费用：2 攻击力：0 生命值：2</para>
 			/// <para>Skywall Sentinel</para>
 			/// <para>天空之墙哨兵</para>
 			/// <para><b>Taunt</b><b>Battlecry:</b> <b>Herald</b> {0}.</para>
@@ -54218,8 +55962,8 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：4 攻击力：5 生命值：4</para>
 			/// <para>Genn, Cursed King</para>
 			/// <para>吉恩，咒厄国王</para>
-			/// <para>[x]While holding this, ifthe rest of your hand is alleven or all odd, transform_into the Worgen King.</para>
-			/// <para>当本牌在你手牌中时，如果你其他手牌的法力值消耗均为偶数或奇数，变形成为狼人国王。</para>
+			/// <para>[x]While holding this, if therest of your hand is all evenor all odd, transform intothe 6/5 Worgen King.</para>
+			/// <para>当本牌在你手牌中时，如果你其他手牌的法力值消耗均为偶数或奇数，变形成为6/5的狼人国王。</para>
 			/// </summary>
 			genncursedking,
 			/// <summary>
@@ -54237,7 +55981,7 @@ namespace HREngine.Bots
 			/// <para><b>Battlecry:</b> Upgrade your starting Hero Power.It costs (1).</para>
 			/// <para><b>战吼：</b>升级你的初始英雄技能，其法力值消耗为（1）点。</para>
 			/// </summary>
-			gennworgenking,
+			gennworgenking_CATA_615t,
 			/// <summary>
 			/// <para>随从 中立 费用：9 攻击力：8 生命值：8</para>
 			/// <para>Gronn Giant</para>
@@ -54299,7 +56043,7 @@ namespace HREngine.Bots
 			/// <para>Sheltered Survivor</para>
 			/// <para>避难的幸存者</para>
 			/// <para>[x]<b>Battlecry:</b> Choose acard in your hand toshuffle into your deck.Draw a card.</para>
-			/// <para><b>战吼；</b>选择一张你的手牌洗入你的牌库。抽一张牌。</para>
+			/// <para><b>战吼：</b>选择一张你的手牌洗入你的牌库。抽一张牌。</para>
 			/// </summary>
 			shelteredsurvivor,
 			/// <summary>
@@ -54323,7 +56067,7 @@ namespace HREngine.Bots
 			/// <para>Stormbinder</para>
 			/// <para>缚风者</para>
 			/// <para>[x]<b>Deathrattle:</b> Unlock your<b>Overloaded</b> Mana Crystals.<b>Overload:</b> (3)</para>
-			/// <para><b>亡语：</b>解锁你<b>过载</b>的法力水晶。<b>过载：</b>(3)</para>
+			/// <para><b>亡语：</b>解锁你<b>过载</b>的法力水晶。<b>过载：</b>（3）</para>
 			/// </summary>
 			stormbinder,
 			/// <summary>
@@ -54383,7 +56127,7 @@ namespace HREngine.Bots
 			/// </summary>
 			souldrain,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：4 攻击力：2 生命值：5</para>
+			/// <para>随从 巫妖王 费用：4 攻击力：3 生命值：5</para>
 			/// <para>Obsessive Technician</para>
 			/// <para>着魔的技师</para>
 			/// <para><b>Lifesteal</b><b>Battlecry:</b> <b>Herald</b> {0}.</para>
@@ -54525,7 +56269,167 @@ namespace HREngine.Bots
 			/// <para>Gain 1 Mana Crystal this turn only.</para>
 			/// <para>在本回合中，获得一个法力水晶。</para>
 			/// </summary>
+			thecoin_CATA_COIN2,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>The Coin</para>
+			/// <para>幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only.</para>
+			/// <para>在本回合中，获得一个法力水晶。</para>
+			/// </summary>
+			thecoin_CATA_COIN3,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>The Coin</para>
+			/// <para>幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only.</para>
+			/// <para>在本回合中，获得一个法力水晶。</para>
+			/// </summary>
+			thecoin_CATA_COIN4,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>The Coin</para>
+			/// <para>幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only.</para>
+			/// <para>在本回合中，获得一个法力水晶。</para>
+			/// </summary>
 			thecoin_CATA_COIN5,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>The Coin</para>
+			/// <para>幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only.</para>
+			/// <para>在本回合中，获得一个法力水晶。</para>
+			/// </summary>
+			thecoin_CATA_COIN6,
+			/// <summary>
+			/// <para>随从 中立 费用：6 攻击力：7 生命值：6</para>
+			/// <para>Primordial Lord</para>
+			/// <para>始源领主</para>
+			/// <para><b>Battlecry:</b> Get a random <b>Colossal</b> minionfrom the past.</para>
+			/// <para><b>战吼：</b>随机获取一张来自过去的<b>巨型</b>随从牌。</para>
+			/// </summary>
+			primordiallord,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Primordial</para>
+			/// <para>原初之形</para>
+			/// <para>Costs (0).</para>
+			/// <para>法力值消耗为（0）点。</para>
+			/// </summary>
+			primordial,
+			/// <summary>
+			/// <para>随从 术士 费用：4 攻击力：5 生命值：5</para>
+			/// <para>Destructive Phoenix</para>
+			/// <para>毁焚火凤</para>
+			/// <para>[x]<b>Battlecry:</b> Choose a card inyour hand to set on fire.In 3 turns, discard it and summon a copy of this.</para>
+			/// <para><b>战吼：</b>选择你手牌中的一张牌并点燃。在3回合后，弃掉选中的牌并召唤一个本随从的复制。</para>
+			/// </summary>
+			destructivephoenix,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>Destructive Phoenix Rising</para>
+			/// <para>毁焚火凤重生</para>
+			/// <para>This card is on fire!</para>
+			/// <para>这张牌着火了！</para>
+			/// </summary>
+			destructivephoenixrising,
+			/// <summary>
+			/// <para>随从 战士 费用：3 攻击力：4 生命值：3</para>
+			/// <para>Baleful Blazer</para>
+			/// <para>怨毒焰魔</para>
+			/// <para><b>Battlecry:</b> If you've played a Fire spell this turn, destroy a minion.</para>
+			/// <para><b>战吼：</b>如果你在本回合中施放过火焰法术，消灭一个随从。</para>
+			/// </summary>
+			balefulblazer,
+			/// <summary>
+			/// <para>法术 中立 费用：6</para>
+			/// <para>Dragon Soul, Shattered</para>
+			/// <para>破碎的巨龙之魂</para>
+			/// <para>[x]<b>Start of Game</b>:Break into 6 Essences.Adjoining Essencesare cast together.</para>
+			/// <para><b>对战开始时：</b>破碎成6份精华。所有接邻的精华会同时施放。</para>
+			/// </summary>
+			dragonsoulshattered,
+			/// <summary>
+			/// <para>法术 中立 费用：6</para>
+			/// <para>Red Aspect Essence</para>
+			/// <para>红色守护巨龙的精华</para>
+			/// <para>[x]Deal $8 damageto an enemy.Cast every adjoiningAspect Essence.</para>
+			/// <para>对一个敌人造成$8点伤害。施放所有接邻的守护巨龙的精华。</para>
+			/// </summary>
+			redaspectessence,
+			/// <summary>
+			/// <para>法术 中立 费用：6</para>
+			/// <para>Blue Aspect Essence</para>
+			/// <para>蓝色守护巨龙的精华</para>
+			/// <para>[x]Draw 3 spells.Cast every adjoiningAspect Essence.</para>
+			/// <para>抽三张法术牌。施放所有接邻的守护巨龙的精华。</para>
+			/// </summary>
+			blueaspectessence,
+			/// <summary>
+			/// <para>法术 中立 费用：6</para>
+			/// <para>Bronze Aspect Essence</para>
+			/// <para>青铜守护巨龙的精华</para>
+			/// <para>[x]Refresh 8 Mana Crystals.Cast every adjoiningAspect Essence.</para>
+			/// <para>复原八个法力水晶。施放所有接邻的守护巨龙的精华。</para>
+			/// </summary>
+			bronzeaspectessence,
+			/// <summary>
+			/// <para>法术 中立 费用：6</para>
+			/// <para>Black Aspect Essence</para>
+			/// <para>黑色守护巨龙的精华</para>
+			/// <para>[x]Gain 12 Armor.Cast every adjoiningAspect Essence.</para>
+			/// <para>获得12点护甲值。施放所有接邻的守护巨龙的精华。</para>
+			/// </summary>
+			blackaspectessence,
+			/// <summary>
+			/// <para>法术 中立 费用：6</para>
+			/// <para>Green Aspect Essence</para>
+			/// <para>绿色守护巨龙的精华</para>
+			/// <para>[x]Summon an 8/8 Dragon.Cast every adjoiningAspect Essence.</para>
+			/// <para>召唤一条8/8的龙。施放所有接邻的守护巨龙的精华。</para>
+			/// </summary>
+			greenaspectessence,
+			/// <summary>
+			/// <para>随从 中立 费用：8 攻击力：8 生命值：8</para>
+			/// <para>Searing Skystriker</para>
+			/// <para>灼热击天龙</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			searingskystriker,
+			/// <summary>
+			/// <para>法术 中立 费用：6</para>
+			/// <para>Storm Aspect Essence</para>
+			/// <para>风暴守护巨龙的精华</para>
+			/// <para>[x]Deal $4 damage toall enemy minions.Cast every adjoiningAspect Essence.</para>
+			/// <para>对所有敌方随从造成$4点伤害。施放所有接邻的守护巨龙的精华。</para>
+			/// </summary>
+			stormaspectessence,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：3 攻击力：4 生命值：3</para>
+			/// <para>Commissary Crook</para>
+			/// <para>店铺奸商</para>
+			/// <para>[x]<b>Prepare</b><b>Battlecry:</b> Spend all yourMana. Summon a random_minion of that Cost.</para>
+			/// <para><b>预备</b>。<b>战吼：</b>消耗你所有的法力值，随机召唤一个法力值消耗相同的随从。</para>
+			/// </summary>
+			commissarycrook,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：2 生命值：3</para>
+			/// <para>Tunneling Geomancer</para>
+			/// <para>坑道地卜师</para>
+			/// <para><b>Prepare</b><b>Spell Damage +1</b></para>
+			/// <para><b>预备</b>。<b>法术伤害+1</b></para>
+			/// </summary>
+			tunnelinggeomancer,
+			/// <summary>
+			/// <para>法术 牧师 费用：3</para>
+			/// <para>Deadly Bribe</para>
+			/// <para>致命贿赂</para>
+			/// <para>[x]Destroy a minion and giveyour opponent a Coin.<b>Combo:</b> You get one too.</para>
+			/// <para>消灭一个随从并使你的对手获得一张幸运币。<b>连击：</b>你也会获取一张。</para>
+			/// </summary>
+			deadlybribe,
 			/// <summary>
 			/// <para>随从 潜行者 费用：5 攻击力：5 生命值：5</para>
 			/// <para>Raza the Chained</para>
@@ -62330,8 +64234,8 @@ namespace HREngine.Bots
 			/// <para>法术 恶魔猎手 费用：0</para>
 			/// <para>Dispose of Evidence</para>
 			/// <para>处理证据</para>
-			/// <para>Give your hero +3 Attack this turn. Choose a card in your hand to shuffle into your deck.</para>
-			/// <para>在本回合中，使你的英雄获得+3攻击力。选择一张你的手牌洗入你的牌库。</para>
+			/// <para>Give your hero +3 Attack this turn. Pick from 3 cards in your hand to shuffle into your deck.</para>
+			/// <para>在本回合中，使你的英雄获得+3攻击力。从你的3张手牌中选择一张洗入你的牌库。</para>
 			/// </summary>
 			disposeofevidence,
 			/// <summary>
@@ -74842,8 +76746,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：3</para>
 			/// <para>Righteous Defense</para>
 			/// <para>正义防御</para>
-			/// <para>Set a minion's Attack and Health to 1. Give the stats it lost to a minion in your hand.</para>
-			/// <para>将一个随从的攻击力和生命值变为1，并使你手牌中的一张随从牌获得其失去的属性值。</para>
+			/// <para>[x]Set a minion's statsto 1/1. Give the statsit lost to a randomminion in your hand.</para>
+			/// <para>将一个随从的属性值变为1/1，并使你手牌中的一张随机随从牌获得其失去的属性值。</para>
 			/// </summary>
 			righteousdefense,
 			/// <summary>
@@ -83306,8 +85210,8 @@ namespace HREngine.Bots
 			/// <para>英雄技能 潜行者 费用：2</para>
 			/// <para>Blessing of the Moon</para>
 			/// <para>月亮的祝福</para>
-			/// <para>[x]Choose a playable Priestminion or spell to add toyour hand. It costs (@) less,but is <b>Temporary</b>.</para>
-			/// <para>选择一张可用的牧师随从牌或法术牌置入你的手牌，其法力值消耗减少（@）点，但为<b>临时</b>牌。</para>
+			/// <para>[x]Choose a playable Priestminion or spell to add toyour hand. It costs (<b>@</b>) less,but is <b>Temporary</b>.</para>
+			/// <para>选择一张可用的牧师随从牌或法术牌置入你的手牌，其法力值消耗减少（<b>@</b>）点，但为<b>临时</b>牌。</para>
 			/// </summary>
 			blessingofthemoon,
 			/// <summary>
@@ -83351,7 +85255,7 @@ namespace HREngine.Bots
 			/// </summary>
 			succumbtomadness,
 			/// <summary>
-			/// <para>随从 战士 费用：1 攻击力：2 生命值：1</para>
+			/// <para>随从 战士 费用：1 攻击力：1 生命值：1</para>
 			/// <para>Darkrider</para>
 			/// <para>黑暗的龙骑士</para>
 			/// <para><b>Battlecry:</b> If you're holdinga Dragon, <b>Discover</b> a Dragonwith a <b>Dark Gift</b>.</para>
@@ -83543,7 +85447,7 @@ namespace HREngine.Bots
 			/// </summary>
 			weaverofthecycle,
 			/// <summary>
-			/// <para>法术 潜行者 费用：7</para>
+			/// <para>法术 潜行者 费用：6</para>
 			/// <para>Moonwell</para>
 			/// <para>月亮井</para>
 			/// <para>Deal $4 damage to all enemy characters. Restore #4 Health to all friendly characters.</para>
@@ -84490,16 +86394,16 @@ namespace HREngine.Bots
 			/// <para>随从 德鲁伊 费用：5 攻击力：5 生命值：6</para>
 			/// <para>Hamuul Runetotem</para>
 			/// <para>哈缪尔·符文图腾</para>
-			/// <para>[x]<b>Start of Game:</b> If each spellin your deck is Nature, <b>Imbue</b>your Hero Power. Repeat this every 2 spells you cast.</para>
-			/// <para><b>对战开始时：</b>如果你套牌中的每张法术牌均为自然法术，<b>灌注</b>你的英雄技能。你每施放2个法术，重复此效果。</para>
+			/// <para>[x]<b>Start of Game:</b> If each spellin your deck is Nature, <b>Imbue</b>your Hero Power. Repeat this every 3 spells you cast.</para>
+			/// <para><b>对战开始时：</b>如果你套牌中的每张法术牌均为自然法术，<b>灌注</b>你的英雄技能。你每施放3个法术，重复此效果。</para>
 			/// </summary>
 			hamuulrunetotem_EDR_845,
 			/// <summary>
 			/// <para>附魔 德鲁伊 费用：0</para>
 			/// <para>Runetotem's Favor</para>
 			/// <para>符文图腾的赐福</para>
-			/// <para>After you cast two spells, <b>Imbue</b> your Hero Power. <i>(@ left!)</i></para>
-			/// <para>在你施放两个法术后，<b>灌注</b>你的英雄技能<i>（还剩@个！）</i></para>
+			/// <para>After you cast three spells, <b>Imbue</b> your Hero Power. <i>(@ left!)</i></para>
+			/// <para>在你施放三个法术后，<b>灌注</b>你的英雄技能<i>（还剩@个！）</i></para>
 			/// </summary>
 			runetotemsfavor,
 			/// <summary>
@@ -85018,8 +86922,8 @@ namespace HREngine.Bots
 			/// <para>英雄技能 牧师 费用：1</para>
 			/// <para>Blessing of the Bronze</para>
 			/// <para>青铜龙的祝福</para>
-			/// <para>[x]<b>Rewind</b>Get a random minionfrom another class.It costs (@) less.</para>
-			/// <para><b>回溯</b>随机获取一张另一职业的随从牌，其法力值消耗减少（@）点。</para>
+			/// <para>[x]<b>Rewind</b>Get a random minionfrom another class.It costs (<b>@</b>) less.</para>
+			/// <para><b>回溯</b>随机获取一张另一职业的随从牌，其法力值消耗减少（<b>@</b>）点。</para>
 			/// </summary>
 			blessingofthebronze,
 			/// <summary>
@@ -85058,8 +86962,8 @@ namespace HREngine.Bots
 			/// <para>英雄技能 巫妖王 费用：0</para>
 			/// <para>Blessing of the Infinite</para>
 			/// <para>永恒龙的祝福</para>
-			/// <para><b>Passive</b>The first Undead youplay each turn gains+@ Attack.</para>
-			/// <para><b>被动</b>每回合中，你使用的第一张亡灵牌获得+@攻击力。</para>
+			/// <para><b>Passive</b>The first Undead youplay each turn gains+<b>@</b> Attack.</para>
+			/// <para><b>被动</b>每回合中，你使用的第一张亡灵牌获得+<b>@</b>攻击力。</para>
 			/// </summary>
 			blessingoftheinfinite,
 			/// <summary>
@@ -85455,7 +87359,7 @@ namespace HREngine.Bots
 			/// </summary>
 			aberrant,
 			/// <summary>
-			/// <para>随从 中立 费用：7 攻击力：6 生命值：8</para>
+			/// <para>随从 中立 费用：7 攻击力：5 生命值：8</para>
 			/// <para>Prescient Slitherdrake</para>
 			/// <para>先觉蜿变幼龙</para>
 			/// <para>[x]<b>Elusive</b>Costs (3) less if you're_holding another Dragon.</para>
@@ -91485,7 +93389,7 @@ namespace HREngine.Bots
 			/// <para>Your minions are 5/5.</para>
 			/// <para>你的所有随从变为5/5。</para>
 			/// </summary>
-			crystallized,
+			crystallized_FB_Champs_UNG_067t1e,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Crystallized</para>
@@ -95066,8 +96970,8 @@ namespace HREngine.Bots
 			/// <para>法术 潜行者 费用：2</para>
 			/// <para>Lightspeed</para>
 			/// <para>光速</para>
-			/// <para>Give a minion+1/+2 and <b>Rush</b>.Repeatable this turn.</para>
-			/// <para>使一个随从获得+1/+2和<b>突袭</b>。在本回合可以重复使用。</para>
+			/// <para><b>Echo</b>Give a minion +1/+2 and <b>Rush</b>.</para>
+			/// <para><b>回响</b>使一个随从获得+1/+2和<b>突袭</b>。</para>
 			/// </summary>
 			lightspeed,
 			/// <summary>
@@ -96437,7 +98341,7 @@ namespace HREngine.Bots
 			/// <para>Increased Health.</para>
 			/// <para>生命值提高。</para>
 			/// </summary>
-			bewitched,
+			bewitched_GIL_507e,
 			/// <summary>
 			/// <para>随从 术士 费用：3 攻击力：2 生命值：4</para>
 			/// <para>Duskbat</para>
@@ -96575,7 +98479,7 @@ namespace HREngine.Bots
 			/// </summary>
 			murksparkeel,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：1 攻击力：0 生命值：1</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：0 生命值：1</para>
 			/// <para>Witch's Apprentice</para>
 			/// <para>女巫的学徒</para>
 			/// <para><b>Taunt</b><b>Battlecry:</b> Add a random Shaman spell to your hand.</para>
@@ -98765,7 +100669,7 @@ namespace HREngine.Bots
 			/// <para><b>Passive</b>After you cast your first spell in a turn, cast a copy of it(<i>targets chosen randomly</i>).</para>
 			/// <para><b>被动</b>在一回合中当你施放第一个法术后，施放一个该法术的复制<i>（目标随机而定）</i>。</para>
 			/// </summary>
-			doubletime,
+			doubletime_GILA_913,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Double Time Player Enchant</para>
@@ -102088,6 +103992,38 @@ namespace HREngine.Bots
 			tankup_HERO_01bp2,
 			/// <summary>
 			/// <para>英雄 战士 费用：0</para>
+			/// <para>Hatchling Wrathion</para>
+			/// <para>破壳宝宝拉希奥</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			hatchlingwrathion,
+			/// <summary>
+			/// <para>英雄 战士 费用：0</para>
+			/// <para>Gazlowe</para>
+			/// <para>加兹鲁维</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			gazlowe_HERO_01bt,
+			/// <summary>
+			/// <para>英雄技能 战士 费用：2</para>
+			/// <para>Armor Up!</para>
+			/// <para>全副武装！</para>
+			/// <para><b>Hero Power</b>Gain $d2 Armor.</para>
+			/// <para><b>英雄技能</b>获得$d2点护甲值。</para>
+			/// </summary>
+			armorup_HERO_01bthp,
+			/// <summary>
+			/// <para>英雄技能 战士 费用：2</para>
+			/// <para>Tank Up!</para>
+			/// <para>铜墙铁壁！</para>
+			/// <para><b>Hero Power</b>Gain $d4 Armor.</para>
+			/// <para><b>英雄技能</b>获得$d4点护甲值。</para>
+			/// </summary>
+			tankup_HERO_01bthp2,
+			/// <summary>
+			/// <para>英雄 战士 费用：0</para>
 			/// <para>Deathwing</para>
 			/// <para>死亡之翼</para>
 			/// <para></para>
@@ -102904,6 +104840,14 @@ namespace HREngine.Bots
 			junglejaminzah,
 			/// <summary>
 			/// <para>英雄 萨满祭司 费用：0</para>
+			/// <para>Earthen Ring Akama</para>
+			/// <para>大地之环的阿卡玛</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			earthenringakama,
+			/// <summary>
+			/// <para>英雄 萨满祭司 费用：0</para>
 			/// <para>Tavern Rastakhan</para>
 			/// <para>酒馆拉斯塔哈</para>
 			/// <para></para>
@@ -102950,6 +104894,38 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			dragonscarredthrall,
+			/// <summary>
+			/// <para>英雄 萨满祭司 费用：0</para>
+			/// <para>Al'Akir</para>
+			/// <para>奥拉基尔</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			alakir,
+			/// <summary>
+			/// <para>英雄技能 萨满祭司 费用：2</para>
+			/// <para>Totemic Call</para>
+			/// <para>图腾召唤</para>
+			/// <para><b>Hero Power</b>Summon a random basic Totem.</para>
+			/// <para><b>英雄技能</b>随机召唤一个基础图腾。</para>
+			/// </summary>
+			totemiccall_HERO_02buhp,
+			/// <summary>
+			/// <para>英雄技能 萨满祭司 费用：2</para>
+			/// <para>Totemic Slam</para>
+			/// <para>图腾崇拜</para>
+			/// <para><b>Hero Power</b>Summon a Totem of your choice.</para>
+			/// <para><b>英雄技能</b>召唤一个你想要的图腾。</para>
+			/// </summary>
+			totemicslam_HERO_02buhp2,
+			/// <summary>
+			/// <para>英雄 萨满祭司 费用：0</para>
+			/// <para>Vashj Fatale</para>
+			/// <para>蛇蝎美人瓦丝琪</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			vashjfatale,
 			/// <summary>
 			/// <para>英雄 萨满祭司 费用：0</para>
 			/// <para>Eternalflame Ragnaros</para>
@@ -103702,6 +105678,38 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			ladysinestra,
+			/// <summary>
+			/// <para>英雄 牧师 费用：0</para>
+			/// <para>Mathias Shaw</para>
+			/// <para>马迪亚斯·肖尔</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			mathiasshaw,
+			/// <summary>
+			/// <para>英雄技能 牧师 费用：2</para>
+			/// <para>Dagger Mastery</para>
+			/// <para>匕首精通</para>
+			/// <para><b>Hero Power</b>Equip a 1/2 Dagger.</para>
+			/// <para><b>英雄技能</b>装备一把1/2的匕首。</para>
+			/// </summary>
+			daggermastery_HERO_03bmhp,
+			/// <summary>
+			/// <para>英雄技能 牧师 费用：2</para>
+			/// <para>Poisoned Daggers</para>
+			/// <para>浸毒匕首</para>
+			/// <para><b>Hero Power</b>Equip a 2/2 Weapon.</para>
+			/// <para><b>英雄技能</b>装备一把2/2的匕首。</para>
+			/// </summary>
+			poisoneddaggers_HERO_03bmhp2,
+			/// <summary>
+			/// <para>英雄 牧师 费用：0</para>
+			/// <para>Dalaran Warden Maiev</para>
+			/// <para>达拉然典狱官玛维</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			dalaranwardenmaiev,
 			/// <summary>
 			/// <para>英雄 牧师 费用：0</para>
 			/// <para>Beast Tess</para>
@@ -104463,6 +106471,30 @@ namespace HREngine.Bots
 			/// </summary>
 			infiltratorgelbin,
 			/// <summary>
+			/// <para>英雄 圣骑士 费用：0</para>
+			/// <para>Lightlord Ragnaros</para>
+			/// <para>光耀之主拉格纳罗斯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			lightlordragnaros,
+			/// <summary>
+			/// <para>英雄技能 圣骑士 费用：2</para>
+			/// <para>Reinforce</para>
+			/// <para>援军</para>
+			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// </summary>
+			reinforce_HERO_04bohp,
+			/// <summary>
+			/// <para>英雄技能 圣骑士 费用：2</para>
+			/// <para>The Silver Hand</para>
+			/// <para>白银之手</para>
+			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// </summary>
+			thesilverhand_HERO_04bohp2,
+			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
@@ -104480,12 +106512,68 @@ namespace HREngine.Bots
 			thesilverhand_HERO_04bp2,
 			/// <summary>
 			/// <para>英雄 圣骑士 费用：0</para>
+			/// <para>High Commander Beatrix</para>
+			/// <para>高阶指挥官碧阿崔克丝</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			highcommanderbeatrix,
+			/// <summary>
+			/// <para>英雄技能 圣骑士 费用：2</para>
+			/// <para>Reinforce</para>
+			/// <para>援军</para>
+			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// </summary>
+			reinforce_HERO_04bqhp,
+			/// <summary>
+			/// <para>英雄技能 圣骑士 费用：2</para>
+			/// <para>The Silver Hand</para>
+			/// <para>白银之手</para>
+			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// </summary>
+			thesilverhand_HERO_04bqhp2,
+			/// <summary>
+			/// <para>英雄 圣骑士 费用：0</para>
+			/// <para>Detective Turalyon</para>
+			/// <para>大侦探图拉扬</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			detectiveturalyon,
+			/// <summary>
+			/// <para>英雄 圣骑士 费用：0</para>
 			/// <para>Finley & Metzen</para>
 			/// <para>芬利与梅森</para>
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
 			finleymetzen,
+			/// <summary>
+			/// <para>英雄 圣骑士 费用：0</para>
+			/// <para>Corrupted Leeroy</para>
+			/// <para>腐化的火车王</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			corruptedleeroy,
+			/// <summary>
+			/// <para>英雄技能 圣骑士 费用：2</para>
+			/// <para>Reinforce</para>
+			/// <para>援军</para>
+			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// </summary>
+			reinforce_HERO_04bxhp,
+			/// <summary>
+			/// <para>英雄技能 圣骑士 费用：2</para>
+			/// <para>The Silver Hand</para>
+			/// <para>白银之手</para>
+			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// </summary>
+			thesilverhand_HERO_04bxhp2,
 			/// <summary>
 			/// <para>英雄 圣骑士 费用：0</para>
 			/// <para>Sir Annoy-O</para>
@@ -105303,6 +107391,14 @@ namespace HREngine.Bots
 			/// </summary>
 			ballistashot_HERO_05bnhp2,
 			/// <summary>
+			/// <para>英雄 猎人 费用：0</para>
+			/// <para>Volcanic Krush</para>
+			/// <para>火山暴龙克鲁什</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			volcanickrush,
+			/// <summary>
 			/// <para>英雄技能 猎人 费用：2</para>
 			/// <para>Steady Shot</para>
 			/// <para>稳固射击</para>
@@ -106015,6 +108111,14 @@ namespace HREngine.Bots
 			/// </summary>
 			assassinleyara,
 			/// <summary>
+			/// <para>英雄 德鲁伊 费用：0</para>
+			/// <para>Firelands Malfurion</para>
+			/// <para>火焰之地的玛法里奥</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			firelandsmalfurion,
+			/// <summary>
 			/// <para>英雄技能 德鲁伊 费用：2</para>
 			/// <para>Shapeshift</para>
 			/// <para>变形</para>
@@ -106030,6 +108134,38 @@ namespace HREngine.Bots
 			/// <para><b>英雄技能</b>本回合+$a2攻击力。+$d2护甲值。</para>
 			/// </summary>
 			direshapeshift_HERO_06bp2,
+			/// <summary>
+			/// <para>英雄 德鲁伊 费用：0</para>
+			/// <para>Dragonqueen Alexstrasza</para>
+			/// <para>红龙女王阿莱克丝塔萨</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			dragonqueenalexstrasza_HERO_06bw,
+			/// <summary>
+			/// <para>英雄技能 德鲁伊 费用：2</para>
+			/// <para>Shapeshift</para>
+			/// <para>变形</para>
+			/// <para><b>Hero Power</b>+$a1 Attack this turn.+$d1 Armor.</para>
+			/// <para><b>英雄技能</b>本回合+$a1攻击力。+$d1护甲值。</para>
+			/// </summary>
+			shapeshift_HERO_06bwhp,
+			/// <summary>
+			/// <para>英雄技能 德鲁伊 费用：2</para>
+			/// <para>Dire Shapeshift</para>
+			/// <para>恐怖变形</para>
+			/// <para><b>Hero Power</b>+$a2 Attack this turn.+$d2 Armor.</para>
+			/// <para><b>英雄技能</b>本回合+$a2攻击力。+$d2护甲值。</para>
+			/// </summary>
+			direshapeshift_HERO_06bwhp2,
+			/// <summary>
+			/// <para>英雄 德鲁伊 费用：0</para>
+			/// <para>Zin-Azshari Faelin</para>
+			/// <para>辛艾萨莉的费林</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			zinazsharifaelin_HERO_06bx,
 			/// <summary>
 			/// <para>英雄 德鲁伊 费用：0</para>
 			/// <para>Shan'do Malfurion</para>
@@ -106653,7 +108789,7 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
-			spiritsingerumbra,
+			spiritsingerumbra_HERO_07bb,
 			/// <summary>
 			/// <para>英雄技能 术士 费用：2</para>
 			/// <para>Life Tap</para>
@@ -106856,12 +108992,52 @@ namespace HREngine.Bots
 			soultap_HERO_07bp2,
 			/// <summary>
 			/// <para>英雄 术士 费用：0</para>
-			/// <para>Nefarious Nemsy</para>
-			/// <para>邪恶的奈姆希</para>
+			/// <para>Mistress Nagmara</para>
+			/// <para>娜玛拉小姐</para>
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
-			nefariousnemsy,
+			mistressnagmara,
+			/// <summary>
+			/// <para>英雄技能 术士 费用：2</para>
+			/// <para>Life Tap</para>
+			/// <para>生命分流</para>
+			/// <para><b>Hero Power</b>Draw a card and take $2_damage.</para>
+			/// <para><b>英雄技能</b>抽一张牌并受到$2点伤害。</para>
+			/// </summary>
+			lifetap_HERO_07brhp,
+			/// <summary>
+			/// <para>英雄技能 术士 费用：2</para>
+			/// <para>Soul Tap</para>
+			/// <para>灵魂分流</para>
+			/// <para><b>Hero Power</b>Draw a card.</para>
+			/// <para><b>英雄技能</b>抽一张牌。</para>
+			/// </summary>
+			soultap_HERO_07brhp2,
+			/// <summary>
+			/// <para>英雄 术士 费用：0</para>
+			/// <para>Twilight God Cho'gall</para>
+			/// <para>暮光之神古加尔</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			twilightgodchogall,
+			/// <summary>
+			/// <para>英雄技能 术士 费用：2</para>
+			/// <para>Life Tap</para>
+			/// <para>生命分流</para>
+			/// <para><b>Hero Power</b>Draw a card and take $2_damage.</para>
+			/// <para><b>英雄技能</b>抽一张牌并受到$2点伤害。</para>
+			/// </summary>
+			lifetap_HERO_07bshp,
+			/// <summary>
+			/// <para>英雄技能 术士 费用：2</para>
+			/// <para>Soul Tap</para>
+			/// <para>灵魂分流</para>
+			/// <para><b>Hero Power</b>Draw a card.</para>
+			/// <para><b>英雄技能</b>抽一张牌。</para>
+			/// </summary>
+			soultap_HERO_07bshp2,
 			/// <summary>
 			/// <para>英雄 术士 费用：0</para>
 			/// <para>Murozond the Inevitable</para>
@@ -107856,6 +110032,70 @@ namespace HREngine.Bots
 			dragonswornvarden,
 			/// <summary>
 			/// <para>英雄 法师 费用：0</para>
+			/// <para>Tarecgosa</para>
+			/// <para>泰蕾苟萨</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			tarecgosa_HERO_08ce,
+			/// <summary>
+			/// <para>英雄技能 法师 费用：2</para>
+			/// <para>Fireblast</para>
+			/// <para>火焰冲击</para>
+			/// <para><b>Hero Power</b>Deal $1 damage.</para>
+			/// <para><b>英雄技能</b>造成$1点伤害。</para>
+			/// </summary>
+			fireblast_HERO_08cehp,
+			/// <summary>
+			/// <para>英雄技能 法师 费用：2</para>
+			/// <para>Fireblast Rank 2</para>
+			/// <para>二级火焰冲击</para>
+			/// <para><b>Hero Power</b>Deal $2 damage.</para>
+			/// <para><b>英雄技能</b>造成$2点伤害。</para>
+			/// </summary>
+			fireblastrank2_HERO_08cehp2,
+			/// <summary>
+			/// <para>英雄 法师 费用：0</para>
+			/// <para>Dragonqueen Alexstrasza</para>
+			/// <para>红龙女王阿莱克丝塔萨</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			dragonqueenalexstrasza_HERO_08ch,
+			/// <summary>
+			/// <para>英雄技能 法师 费用：2</para>
+			/// <para>Fireblast</para>
+			/// <para>火焰冲击</para>
+			/// <para><b>Hero Power</b>Deal $1 damage.</para>
+			/// <para><b>英雄技能</b>造成$1点伤害。</para>
+			/// </summary>
+			fireblast_HERO_08chhp,
+			/// <summary>
+			/// <para>英雄技能 法师 费用：2</para>
+			/// <para>Fireblast Rank 2</para>
+			/// <para>二级火焰冲击</para>
+			/// <para><b>Hero Power</b>Deal $2 damage.</para>
+			/// <para><b>英雄技能</b>造成$2点伤害。</para>
+			/// </summary>
+			fireblastrank2_HERO_08chhp2,
+			/// <summary>
+			/// <para>英雄 法师 费用：0</para>
+			/// <para>"Murozond" A. F. Kay</para>
+			/// <para>“姆诺兹多”挂机的阿凯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			murozondafkay,
+			/// <summary>
+			/// <para>英雄 法师 费用：0</para>
+			/// <para>Adventure Beauty Reno</para>
+			/// <para>俊美冒险者雷诺</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			adventurebeautyreno,
+			/// <summary>
+			/// <para>英雄 法师 费用：0</para>
 			/// <para>Celeste</para>
 			/// <para>星界灵龙</para>
 			/// <para></para>
@@ -108607,6 +110847,30 @@ namespace HREngine.Bots
 			/// </summary>
 			twilightcultistwhitemane,
 			/// <summary>
+			/// <para>英雄 潜行者 费用：0</para>
+			/// <para>G'huun</para>
+			/// <para>戈霍恩</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			ghuun,
+			/// <summary>
+			/// <para>英雄技能 潜行者 费用：2</para>
+			/// <para>Lesser Heal</para>
+			/// <para>次级治疗术</para>
+			/// <para><b>Hero Power</b>Restore #2 Health.</para>
+			/// <para><b>英雄技能</b>恢复#2点生命值。</para>
+			/// </summary>
+			lesserheal_HERO_09bnhp,
+			/// <summary>
+			/// <para>英雄技能 潜行者 费用：2</para>
+			/// <para>Heal</para>
+			/// <para>治疗术</para>
+			/// <para><b>Hero Power</b>Restore #4 Health.</para>
+			/// <para><b>英雄技能</b>恢复#4点生命值。</para>
+			/// </summary>
+			heal_HERO_09bnhp2,
+			/// <summary>
 			/// <para>英雄技能 潜行者 费用：2</para>
 			/// <para>Lesser Heal</para>
 			/// <para>次级治疗术</para>
@@ -109344,12 +111608,44 @@ namespace HREngine.Bots
 			felwoodprotectoraranna,
 			/// <summary>
 			/// <para>英雄 恶魔猎手 费用：0</para>
+			/// <para>Kayn Sunfury</para>
+			/// <para>凯恩·日怒</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			kaynsunfury_HERO_10bk,
+			/// <summary>
+			/// <para>英雄技能 恶魔猎手 费用：1</para>
+			/// <para>Demon Claws</para>
+			/// <para>恶魔之爪</para>
+			/// <para>[x]<b>Hero Power</b>+$a1 Attack this turn.</para>
+			/// <para><b>英雄技能</b>在本回合中+$a1攻击力。</para>
+			/// </summary>
+			demonclaws_HERO_10bkhp,
+			/// <summary>
+			/// <para>英雄技能 恶魔猎手 费用：1</para>
+			/// <para>Demon's Bite</para>
+			/// <para>恶魔之咬</para>
+			/// <para>[x]<b>Hero Power</b>+$a2 Attack this turn.</para>
+			/// <para><b>英雄技能</b>在本回合中+$a2攻击力。</para>
+			/// </summary>
+			demonsbite_HERO_10bkhp2,
+			/// <summary>
+			/// <para>英雄 恶魔猎手 费用：0</para>
 			/// <para>Gunglaive Kurtrus</para>
 			/// <para>枪刃库尔特鲁斯</para>
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
 			gunglaivekurtrus_HERO_10bm,
+			/// <summary>
+			/// <para>英雄 恶魔猎手 费用：0</para>
+			/// <para>Victorious Kailene</para>
+			/// <para>得胜的凯琳</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			victoriouskailene,
 			/// <summary>
 			/// <para>英雄技能 恶魔猎手 费用：1</para>
 			/// <para>Demon Claws</para>
@@ -147018,7 +149314,7 @@ namespace HREngine.Bots
 			/// <para>法术 中立 费用：3</para>
 			/// <para>Wondrous Wand</para>
 			/// <para>奇迹之杖</para>
-			/// <para>Draw 3 cards.Set their Cost to 1.</para>
+			/// <para>Draw 3 cards.Set their Cost to (1).</para>
 			/// <para>抽三张牌，这些牌的法力值消耗变为（1）点。</para>
 			/// </summary>
 			wondrouswand,
@@ -147077,7 +149373,7 @@ namespace HREngine.Bots
 			/// <para>Whenever your opponent casts a spell, gain +1/+1.</para>
 			/// <para>每当你的对手施放一个法术，便获得+1/+1。</para>
 			/// </summary>
-			gluttonoustrogg,
+			gluttonoustrogg_LOOTA_109,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Delicious Magic</para>
@@ -179223,6 +181519,398 @@ namespace HREngine.Bots
 			/// </summary>
 			chicken_Mekka4t,
 			/// <summary>
+			/// <para>随从 德鲁伊 费用：1 攻击力：6 生命值：6</para>
+			/// <para>Ash Worm</para>
+			/// <para>灰烬虫</para>
+			/// <para>[x]Starts <b>Dormant</b>.When your board isfull, awaken.</para>
+			/// <para>起始<b>休眠</b>状态。当你的面板占满时唤醒。</para>
+			/// </summary>
+			ashworm,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Burrowed</para>
+			/// <para>钻地</para>
+			/// <para><b>Dormant</b>. Awaken when your board is full.</para>
+			/// <para><b>休眠</b>。当你的面板占满时唤醒。</para>
+			/// </summary>
+			burrowed_MEND_040e2,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：5 攻击力：3 生命值：7</para>
+			/// <para>Wizened Wildspeaker</para>
+			/// <para>年迈的荒语者</para>
+			/// <para>[x]<b>Taunt</b><b>Battlecry:</b> If you didn't playa minion last turn, refresh3 Mana Crystals.</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>如果你在上回合没有使用随从牌，复原三个法力水晶。</para>
+			/// </summary>
+			wizenedwildspeaker,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：9</para>
+			/// <para>Lifebloom</para>
+			/// <para>生命绽放</para>
+			/// <para>[x]Restore #8 Health toall friendly characters.Summon two random8-Cost minions.</para>
+			/// <para>为所有友方角色恢复#8点生命值。随机召唤两个法力值消耗为（8）的随从。</para>
+			/// </summary>
+			lifebloom_MEND_042,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：3</para>
+			/// <para>Heartroot Stones</para>
+			/// <para>根心之石</para>
+			/// <para>Draw a card and gain 3 Armor. If you didn't play a minionlast turn, do it again.</para>
+			/// <para>抽一张牌并获得3点护甲值。如果你在上回合没有使用随从牌，重复一次。</para>
+			/// </summary>
+			heartrootstones,
+			/// <summary>
+			/// <para>地标 德鲁伊 费用：2</para>
+			/// <para>Tranquil Clearing</para>
+			/// <para>宁静旷林</para>
+			/// <para>[x]Give a minion +2Health and <b>Taunt</b>.It falls asleep until theend of your next turn.</para>
+			/// <para>使一个随从获得+2生命值和<b>嘲讽</b>。直到你的下个回合结束，该随从会陷入沉睡。</para>
+			/// </summary>
+			tranquilclearing,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Tranquil Sleep</para>
+			/// <para></para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			tranquilsleep,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Tranquil Strength</para>
+			/// <para>宁静之力</para>
+			/// <para>This minion has +2 Health and <b>Taunt</b>.</para>
+			/// <para>本随从拥有+2生命值和<b>嘲讽</b>。</para>
+			/// </summary>
+			tranquilstrength,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：4 攻击力：4 生命值：4</para>
+			/// <para>Seeding Dragon</para>
+			/// <para>播种的绿龙</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Get a random__Dragon. It costs (2) less.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>随机获取一张龙牌，其法力值消耗减少（2）点。</para>
+			/// </summary>
+			seedingdragon,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：7 攻击力：4 生命值：4</para>
+			/// <para>Bashana Runetotem</para>
+			/// <para>巴珊娜·符文图腾</para>
+			/// <para>[x]<b>Battlecry:</b> Get three2/2 Treants. Carve 12Mana worth of Naturespells into them.</para>
+			/// <para><b>战吼：</b>获取三张2/2的树人，并在这些树人身上刻下总计消耗12点法力值的自然法术。</para>
+			/// </summary>
+			bashanarunetotem,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：1 攻击力：2 生命值：2</para>
+			/// <para>Treant</para>
+			/// <para>树人</para>
+			/// <para><b>Battlecry:</b> Cast {0}.</para>
+			/// <para><b>战吼：</b>施放{0}。</para>
+			/// </summary>
+			treant_MEND_046t,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：3 生命值：3</para>
+			/// <para>Cultivating Sprite</para>
+			/// <para>育植林精</para>
+			/// <para>[x]<b>Battlecry:</b> Get a 3-CostBulb that casts three_random 1-Cost spells._It upgrades each turn.</para>
+			/// <para><b>战吼：</b>获取一张法力值消耗为（3）的花苞。花苞可以随机施放三个法力值消耗为（1）的法术，且每回合都会升级。</para>
+			/// </summary>
+			cultivatingsprite,
+			/// <summary>
+			/// <para>法术 中立 费用：3</para>
+			/// <para>Blooming Bulb</para>
+			/// <para>焕烂花苞</para>
+			/// <para>[x]Cast three random@-Cost spells.<i>(Upgrades each turn!)</i></para>
+			/// <para>随机施放三个法力值消耗为（@）的法术。<i>（每回合都会升级！）</i></para>
+			/// </summary>
+			bloomingbulb,
+			/// <summary>
+			/// <para>法术 猎人 费用：1</para>
+			/// <para>Tame Pet</para>
+			/// <para>驯服宠物</para>
+			/// <para>[x]Replace your futureAnimal Companions withrandom Beasts that cost(1) more. Draw a card.</para>
+			/// <para>将你此后的动物伙伴替换为法力值消耗增加（1）点的随机野兽。抽一张牌。</para>
+			/// </summary>
+			tamepet,
+			/// <summary>
+			/// <para>随从 猎人 费用：4 攻击力：2 生命值：2</para>
+			/// <para>Spiritspeaker</para>
+			/// <para>灵语猎手</para>
+			/// <para><b>Battlecry:</b> Choose an Animal Companion to_summon.</para>
+			/// <para><b>战吼：</b>选择并召唤一个动物伙伴。</para>
+			/// </summary>
+			spiritspeaker,
+			/// <summary>
+			/// <para>随从 猎人 费用：4 攻击力：3 生命值：3</para>
+			/// <para>Wasteland Vanguard</para>
+			/// <para>废土先锋</para>
+			/// <para>[x]<b>Battlecry:</b> Deal 3 damagesplit among all enemies.If any die, deal 3 more.</para>
+			/// <para><b>战吼：</b>造成3点伤害，分配到所有敌人身上。如果有敌人死亡，再造成3点。</para>
+			/// </summary>
+			wastelandvanguard,
+			/// <summary>
+			/// <para>随从 猎人 费用：2 攻击力：2 生命值：3</para>
+			/// <para>Migrating Elekk</para>
+			/// <para>迁徙的雷象</para>
+			/// <para>[x]<b>Taunt. Battlecry:</b> Replace yourfuture Animal Companionswith random Beasts thatcost (1) more.</para>
+			/// <para><b>嘲讽。战吼：</b>将你此后的动物伙伴替换为法力值消耗增加（1）点的随机野兽。</para>
+			/// </summary>
+			migratingelekk,
+			/// <summary>
+			/// <para>随从 猎人 费用：5 攻击力：4 生命值：6</para>
+			/// <para>Talya Earthstrider</para>
+			/// <para>塔雅·陆行</para>
+			/// <para>[x]<b>Battlecry:</b> Your cardsthat summon AnimalCompanions summon1 more this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，你的召唤动物伙伴的卡牌多召唤一个伙伴。</para>
+			/// </summary>
+			talyaearthstrider,
+			/// <summary>
+			/// <para>法术 猎人 费用：2</para>
+			/// <para>Nurturing Nature</para>
+			/// <para>滋养自然</para>
+			/// <para>[x]Give a friendlyBeast +2/+2.Give a random Beastin your hand +2/+2.</para>
+			/// <para>使一只友方野兽获得+2/+2。随机使你手牌中的一张野兽牌获得+2/+2。</para>
+			/// </summary>
+			nurturingnature,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>One with Nature</para>
+			/// <para>自然之道</para>
+			/// <para>+2/+2.</para>
+			/// <para>+2/+2。</para>
+			/// </summary>
+			onewithnature,
+			/// <summary>
+			/// <para>法术 猎人 费用：7</para>
+			/// <para>Roam Free</para>
+			/// <para>自由漫步</para>
+			/// <para>[x]Replace your future AnimalCompanions with randomBeasts that cost (2) more.Choose one to summon.</para>
+			/// <para>将你此后的动物伙伴替换为法力值消耗增加（2）点的随机野兽。选择并召唤一个动物伙伴。</para>
+			/// </summary>
+			roamfree,
+			/// <summary>
+			/// <para>法术 法师 费用：4</para>
+			/// <para>Bursting Leyline</para>
+			/// <para>迸发魔网</para>
+			/// <para>[x]Deal ${0} damage to arandom enemy minion.Excess damage hitsthe enemy hero.@[x]Deal ${0} damage to arandom enemy minion,{1} times. Excess damagehits the enemy hero.</para>
+			/// <para>随机对一个敌方随从造成${0}点伤害，超过目标生命值的伤害会命中敌方英雄。@随机对一个敌方随从造成${0}点伤害，触发{1}次。超过目标生命值的伤害会命中敌方英雄。</para>
+			/// </summary>
+			burstingleyline,
+			/// <summary>
+			/// <para>随从 法师 费用：3 攻击力：4 生命值：2</para>
+			/// <para>Ley Walker</para>
+			/// <para>魔力行者</para>
+			/// <para>[x]<b>Battlecry:</b> Your Leylinescost (1) less this game.<b>Deathrattle:</b> Get arandom Leyline.</para>
+			/// <para><b>战吼：</b>在本局对战中，你的魔网牌法力值消耗减少（1）点。<b>亡语：</b>随机获取一张魔网牌。</para>
+			/// </summary>
+			leywalker,
+			/// <summary>
+			/// <para>附魔 法师 费用：0</para>
+			/// <para>Unblock Leyline</para>
+			/// <para>解封魔网</para>
+			/// <para>Cost Reduced.</para>
+			/// <para>法力值消耗减少。</para>
+			/// </summary>
+			unblockleyline,
+			/// <summary>
+			/// <para>附魔 法师 费用：0</para>
+			/// <para>Empower Leyline</para>
+			/// <para>强化魔网</para>
+			/// <para>Effects Increased.</para>
+			/// <para>效果已提高。</para>
+			/// </summary>
+			empowerleyline,
+			/// <summary>
+			/// <para>法术 法师 费用：5</para>
+			/// <para>Crystallized Leyline</para>
+			/// <para>晶化魔网</para>
+			/// <para>[x]Summon a random{0}-Cost minion.@Summon a random{0}-Cost minion,{1} times.</para>
+			/// <para>随机召唤一个法力值消耗为（{0}）的随从。@随机召唤一个法力值消耗为（{0}）的随从，触发{1}次。</para>
+			/// </summary>
+			crystallizedleyline,
+			/// <summary>
+			/// <para>随从 法师 费用：4 攻击力：3 生命值：5</para>
+			/// <para>Surge Needle</para>
+			/// <para>湍流之针</para>
+			/// <para>[x]<b>Battlecry:</b> Your Leylinestrigger an additionaltime this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，你的魔网牌额外触发一次。</para>
+			/// </summary>
+			surgeneedle,
+			/// <summary>
+			/// <para>法术 法师 费用：2</para>
+			/// <para>Leyline Nexus</para>
+			/// <para>魔网枢纽</para>
+			/// <para>[x]Draw a card.It costs ({0}) less.@[x]Draw {1} cards.They cost ({0}) less.</para>
+			/// <para>抽一张牌，其法力值消耗减少（{0}）点。@抽{1}张牌，其法力值消耗减少（{0}）点。</para>
+			/// </summary>
+			leylinenexus,
+			/// <summary>
+			/// <para>附魔 法师 费用：0</para>
+			/// <para>Nexus Power</para>
+			/// <para>枢纽之力</para>
+			/// <para>Cost reduced.</para>
+			/// <para>法力值消耗减少。</para>
+			/// </summary>
+			nexuspower,
+			/// <summary>
+			/// <para>法术 法师 费用：6</para>
+			/// <para>The Arcanomicon</para>
+			/// <para>魔网地图</para>
+			/// <para>Get all 3 Leylines.Choose an upgradefor your Leylines.</para>
+			/// <para>获取全部三张魔网牌。为你的魔网选择一项升级。</para>
+			/// </summary>
+			thearcanomicon,
+			/// <summary>
+			/// <para>法术 法师 费用：0</para>
+			/// <para>Energize</para>
+			/// <para>充能</para>
+			/// <para>[x]Your Leylines triggeran additional timethis game.</para>
+			/// <para>在本局对战中，你的魔网牌额外触发一次。</para>
+			/// </summary>
+			energize,
+			/// <summary>
+			/// <para>法术 法师 费用：0</para>
+			/// <para>Unblock</para>
+			/// <para>导通</para>
+			/// <para>Your Leylines cost (2) less this game.</para>
+			/// <para>在本局对战中，你的魔网牌的法力值消耗减少（2）点。</para>
+			/// </summary>
+			unblock,
+			/// <summary>
+			/// <para>法术 法师 费用：0</para>
+			/// <para>Empower</para>
+			/// <para>强化</para>
+			/// <para>[x]Increase the effectsof your Leylines by 2this game.</para>
+			/// <para>在本局对战中，你的魔网牌的效果提高2。</para>
+			/// </summary>
+			empower,
+			/// <summary>
+			/// <para>随从 法师 费用：2 攻击力：2 生命值：3</para>
+			/// <para>Mystic Runesaber</para>
+			/// <para>秘魔刃豹</para>
+			/// <para>[x]<b>Elusive</b><b>Battlecry:</b> Increase theeffects of your Leylinesby 1 this game.</para>
+			/// <para><b>扰魔</b>。<b>战吼：</b>在本局对战中，你的魔网牌的效果提高1。</para>
+			/// </summary>
+			mysticrunesaber,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：2 攻击力：2 生命值：1</para>
+			/// <para>Brash Battlemaster</para>
+			/// <para>莽撞的战场军官</para>
+			/// <para>[x]<b>Rush</b> <b>Deathrattle:</b> Give yourSilver Hand Recruits+1 Attack this game.</para>
+			/// <para><b>突袭</b>。<b>亡语：</b>在本局对战中，使你的白银之手新兵获得+1攻击力。</para>
+			/// </summary>
+			brashbattlemaster,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Recruit's Might</para>
+			/// <para>新兵的力量</para>
+			/// <para>For the rest of the game, your Silver Hand Recruits have +1 Attack.</para>
+			/// <para>在本局对战的剩余时间内，你的白银之手新兵拥有+1攻击力。</para>
+			/// </summary>
+			recruitsmight,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Might</para>
+			/// <para>勇力</para>
+			/// <para>+1 Attack</para>
+			/// <para>+1攻击力</para>
+			/// </summary>
+			might,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：3 攻击力：3 生命值：1</para>
+			/// <para>Resilient Savior</para>
+			/// <para>坚定的救援者</para>
+			/// <para>[x]<b>Divine Shield</b>After this loses <b>Divine Shield</b>,give your Silver Hand Recruits+1 Health this game.</para>
+			/// <para><b>圣盾</b>。在本随从失去<b>圣盾</b>后，在本局对战中，使你的白银之手新兵获得+1生命值。</para>
+			/// </summary>
+			resilientsavior,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Recruit's Resilience</para>
+			/// <para>新兵的坚韧</para>
+			/// <para>For the rest of the game, your Silver Hand Recruits have +1 Health.</para>
+			/// <para>在本局对战的剩余时间内，你的白银之手新兵拥有+1生命值。</para>
+			/// </summary>
+			recruitsresilience,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Resilience</para>
+			/// <para>坚韧</para>
+			/// <para>+1 Health</para>
+			/// <para>+1生命值</para>
+			/// </summary>
+			resilience_MEND_801e2,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：2</para>
+			/// <para>Convalescence</para>
+			/// <para>休养</para>
+			/// <para>Summon two 1/1 Silver Hand Recruits with <b>Divine Shield</b>.</para>
+			/// <para>召唤两个1/1并具有<b>圣盾</b>的白银之手新兵。</para>
+			/// </summary>
+			convalescence,
+			/// <summary>
+			/// <para>武器 圣骑士 费用：5 攻击力：3 耐久度：0</para>
+			/// <para>Emboldening Blade</para>
+			/// <para>砺胆重剑</para>
+			/// <para>[x]<b>Battlecry:</b> Give yourSilver Hand Recruits+1/+1 this game.</para>
+			/// <para><b>战吼：</b>在本局对战中，使你的白银之手新兵获得+1/+1。</para>
+			/// </summary>
+			emboldeningblade,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Emboldened</para>
+			/// <para>胆气雄壮</para>
+			/// <para>For the rest of the game, your Silver Hand Recruits have +1/+1.</para>
+			/// <para>在本局对战的剩余时间内，你的白银之手新兵拥有+1/+1。</para>
+			/// </summary>
+			emboldened_MEND_803e,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Emboldened</para>
+			/// <para>胆气雄壮</para>
+			/// <para>+1/+1</para>
+			/// <para>+1/+1</para>
+			/// </summary>
+			emboldened_MEND_803e2,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：5 攻击力：5 生命值：6</para>
+			/// <para>Arator the Redeemer</para>
+			/// <para>救赎者阿拉托尔</para>
+			/// <para>[x]<b>Battlecry:</b> Double thestats of all friendlySilver Hand Recruitsand give them <b>Taunt</b>.</para>
+			/// <para><b>战吼：</b>使所有友方白银之手新兵的属性值翻倍并使其获得<b>嘲讽</b>。</para>
+			/// </summary>
+			aratortheredeemer,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>True Strength</para>
+			/// <para>真正的力量</para>
+			/// <para>Stats Doubled and <b>Taunt</b>.</para>
+			/// <para>属性值翻倍且<b>嘲讽</b>。</para>
+			/// </summary>
+			truestrength,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：3</para>
+			/// <para>Charity</para>
+			/// <para>捐助</para>
+			/// <para>Get copies of all friendly minions that died this turn. Give them +3/+3.</para>
+			/// <para>获取在本回合中死亡的所有友方随从的复制，并使其获得+3/+3。</para>
+			/// </summary>
+			charity,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Charity Case</para>
+			/// <para>捐助物资箱</para>
+			/// <para>+3/+3.</para>
+			/// <para>+3/+3。</para>
+			/// </summary>
+			charitycase,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：4</para>
+			/// <para>Teamwork</para>
+			/// <para>团队协作</para>
+			/// <para>[x]Summon and getfour 1/1 SilverHand Recruits.</para>
+			/// <para>召唤并获取四个1/1的白银之手新兵。</para>
+			/// </summary>
+			teamwork_MEND_900,
+			/// <summary>
 			/// <para>随从 巫妖王 费用：3 攻击力：2 生命值：1</para>
 			/// <para>Toysnatching Geist</para>
 			/// <para>玩具盗窃恶鬼</para>
@@ -179298,8 +181986,8 @@ namespace HREngine.Bots
 			/// <para>法术 巫妖王 费用：4</para>
 			/// <para>Helm of Humiliation</para>
 			/// <para>屈辱头盔</para>
-			/// <para>Give a minion -5/-5. Give a minion in your hand +5/+5.</para>
-			/// <para>使一个随从获得-5/-5。使你手牌中的一张随从牌获得+5/+5。</para>
+			/// <para>Give a minion -5/-5. Give a random minion in your hand +5/+5.</para>
+			/// <para>使一个随从获得-5/-5。随机使你手牌中的一张随从牌获得+5/+5。</para>
 			/// </summary>
 			helmofhumiliation,
 			/// <summary>
@@ -181225,7 +183913,7 @@ namespace HREngine.Bots
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Play This Turn Enchantment</para>
-			/// <para>Play This Turn Enchantment</para>
+			/// <para></para>
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
@@ -188597,7 +191285,7 @@ namespace HREngine.Bots
 			/// <para>Increased Durability.</para>
 			/// <para>耐久度提高。</para>
 			/// </summary>
-			mighty,
+			mighty_PVPDR_Finley_T3e,
 			/// <summary>
 			/// <para>随从 萨满祭司 费用：5 攻击力：4 生命值：4</para>
 			/// <para>Jr. Scout</para>
@@ -193482,8 +196170,8 @@ namespace HREngine.Bots
 			/// <para>法术 恶魔猎手 费用：0</para>
 			/// <para>Dispose of Evidence</para>
 			/// <para>处理证据</para>
-			/// <para>Give your hero +3 Attack this turn. Choose a card in your hand to shuffle into your deck.</para>
-			/// <para>在本回合中，使你的英雄获得+3攻击力。选择一张你的手牌洗入你的牌库。</para>
+			/// <para>Give your hero +3 Attack this turn. Pick from 3 cards in your hand to shuffle into your deck.</para>
+			/// <para>在本回合中，使你的英雄获得+3攻击力。从你的3张手牌中选择一张洗入你的牌库。</para>
 			/// </summary>
 			disposeofevidence_REV_507,
 			/// <summary>
@@ -194986,7 +197674,7 @@ namespace HREngine.Bots
 			/// <para>法术 巫妖王 费用：2</para>
 			/// <para>Plague Strike</para>
 			/// <para>凋零打击</para>
-			/// <para>Deal $3 damage to a minion. If it dies, summon a 2/2 Zombiewith <b>Rush</b>.</para>
+			/// <para>Deal $3 damage to a minion. If it dies, summon a 2/2 Zombie with <b>Rush</b>.</para>
 			/// <para>对一个随从造成$3点伤害。如果该随从死亡，召唤一个2/2并具有<b>突袭</b>的僵尸。</para>
 			/// </summary>
 			plaguestrike,
@@ -197066,8 +199754,8 @@ namespace HREngine.Bots
 			/// <para>随从 法师 费用：9 攻击力：5 生命值：7</para>
 			/// <para>Grand Magister Rommath</para>
 			/// <para>大法师罗曼斯</para>
-			/// <para>[x]<b>Battlecry:</b> Recast each spellyou've cast this game thatdidn't start in your deck.</para>
-			/// <para><b>战吼：</b>再次施放你在本局对战中施放的每个套牌之外的法术。</para>
+			/// <para>[x]<b>Battlecry:</b> Recast each spellyou've cast this game thatdidn't start in your deck.<i>(Once per game)</i></para>
+			/// <para><b>战吼：</b>再次施放你在本局对战中施放的每个套牌之外的法术。<i>（每局对战限一次）</i></para>
 			/// </summary>
 			grandmagisterrommath,
 			/// <summary>
@@ -198754,7 +201442,7 @@ namespace HREngine.Bots
 			/// <para>法术 巫妖王 费用：2</para>
 			/// <para>Plague Strike</para>
 			/// <para>凋零打击</para>
-			/// <para>Deal $3 damage to a minion. If it dies, summon a 2/2 Zombiewith <b>Rush</b>.</para>
+			/// <para>Deal $3 damage to a minion. If it dies, summon a 2/2 Zombie with <b>Rush</b>.</para>
 			/// <para>对一个随从造成$3点伤害。如果该随从死亡，召唤一个2/2并具有<b>突袭</b>的僵尸。</para>
 			/// </summary>
 			plaguestrike_RLK_Prologue_RLK_018,
@@ -210685,7 +213373,7 @@ namespace HREngine.Bots
 			/// <para><i>Though an infrequent and rather disruptive visitor, Errgl is always welcome at the Mrrglton household.</i></para>
 			/// <para><i>厄戈尔虽说是位破坏力惊人的稀客，但总能受到莫格顿家的欢迎。</i></para>
 			/// </summary>
-			cousinerrgl,
+			cousinerrgl_Story_11_Errgl_009hb,
 			/// <summary>
 			/// <para>随从 中立 费用：4 攻击力：3 生命值：6</para>
 			/// <para>Excavation Specialist</para>
@@ -212629,7 +215317,7 @@ namespace HREngine.Bots
 			/// <para>[x]<b>Lorebook</b><i>Click on this to read it.</i>Lasts one turn.</para>
 			/// <para><b>故事书</b><i>点击这里来阅读。</i>持续一回合。</para>
 			/// </summary>
-			meetthemrrgltons,
+			meetthemrrgltons_Story_11_Mission9b_Lorebook1,
 			/// <summary>
 			/// <para>随从 中立 费用：2 攻击力：2 生命值：1</para>
 			/// <para>A Note on the Compass</para>
@@ -217336,6 +220024,14 @@ namespace HREngine.Bots
 			timeheistedwin,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
+			/// <para>Investigator Edwin</para>
+			/// <para>调查员艾德温</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			investigatoredwin,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
 			/// <para>Galakrond</para>
 			/// <para>迦拉克隆</para>
 			/// <para></para>
@@ -217936,6 +220632,14 @@ namespace HREngine.Bots
 			georgethefated,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
+			/// <para>George the Reunited</para>
+			/// <para>重逢旧友的乔治</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			georgethereunited,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
 			/// <para>A. F. Kay</para>
 			/// <para>挂机的阿凯</para>
 			/// <para></para>
@@ -218045,7 +220749,7 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
-			murozondafkay,
+			murozondafkay_TB_BaconShop_HERO_16_SKIN_J,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Millificent Manastorm</para>
@@ -218118,6 +220822,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			timewalkermillificent,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Blackrock Millificent</para>
+			/// <para>黑石米尔菲斯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			blackrockmillificent,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Patches the Pirate</para>
@@ -218206,6 +220918,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			elekkvoljin,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Dissident Vol'jin</para>
+			/// <para>异见首领沃金</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			dissidentvoljin,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>The Great Akazamzarak</para>
@@ -218574,6 +221294,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			sindragosatherestored,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Sindragosa the Worldbreaker</para>
+			/// <para>灭世者辛达苟萨</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			sindragosatheworldbreaker,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Sindragosa</para>
@@ -219176,6 +221904,14 @@ namespace HREngine.Bots
 			lichkingderyl,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
+			/// <para>"Deathwing" Deryl</para>
+			/// <para>“死亡之翼”达瑞尔</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			deathwingderyl,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
 			/// <para>Lord Jaraxxus</para>
 			/// <para>加拉克苏斯大王</para>
 			/// <para></para>
@@ -219310,6 +222046,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			boomfistmukla,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Guerilla Mukla</para>
+			/// <para>游击勇士穆克拉</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			guerillamukla,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Pyramad</para>
@@ -219525,7 +222269,7 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
-			adventurebeautyreno,
+			adventurebeautyreno_TB_BaconShop_HERO_41_SKIN_E,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Scrapper Reno</para>
@@ -219750,6 +222494,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			shadowlandssylvanas,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Sniper Sylvanas</para>
+			/// <para>狙击射手希尔瓦娜斯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			snipersylvanas,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Arch-Villain Rafaam</para>
@@ -220078,6 +222830,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			nelthariontheearthwarder,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Deathwing Triumphant</para>
+			/// <para>胜利者死亡之翼</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			deathwingtriumphant,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Ysera</para>
@@ -220504,12 +223264,28 @@ namespace HREngine.Bots
 			firespinneraranna,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
-			/// <para>Fire Spinner Aranna (Unleashed)</para>
+			/// <para>Fire Spinner Aranna, Unleashed</para>
 			/// <para>释放自我的飞旋火舞阿兰娜</para>
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
 			firespinnerarannaunleashed,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Rebel Aranna</para>
+			/// <para>反抗者阿兰娜</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			rebelaranna,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Rebel Aranna, Unleashed</para>
+			/// <para>释放自我的反抗者阿兰娜</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			rebelarannaunleashed,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Aranna, Unleashed</para>
@@ -220872,6 +223648,14 @@ namespace HREngine.Bots
 			confettihooktusk,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
+			/// <para>Rescuer Hooktusk</para>
+			/// <para>搜救者钩牙</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			rescuerhooktusk,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
 			/// <para>Skycap'n Kragg</para>
 			/// <para>天空上尉库拉格</para>
 			/// <para></para>
@@ -220882,16 +223666,16 @@ namespace HREngine.Bots
 			/// <para>随从 无效的 费用：0 攻击力：5 生命值：3</para>
 			/// <para>Sharkbait</para>
 			/// <para>鲨鱼饵</para>
-			/// <para>When you sell this, <b>Refresh</b> your Hero Power.</para>
-			/// <para>当你出售本随从时，<b>复原</b>你的英雄技能。</para>
+			/// <para>When you sell this, refresh your Hero Power.</para>
+			/// <para>当你出售本随从时，复原你的英雄技能。</para>
 			/// </summary>
 			sharkbait_TB_BaconShop_HERO_68_Buddy,
 			/// <summary>
 			/// <para>随从 无效的 费用：0 攻击力：10 生命值：6</para>
 			/// <para>Sharkbait</para>
 			/// <para>鲨鱼饵</para>
-			/// <para>When you sell this, <b>Refresh</b> your Hero Power.</para>
-			/// <para>当你出售本随从时，<b>复原</b>你的英雄技能。</para>
+			/// <para>When you sell this, refresh your Hero Power.</para>
+			/// <para>当你出售本随从时，复原你的英雄技能。</para>
 			/// </summary>
 			sharkbait_TB_BaconShop_HERO_68_Buddy_G,
 			/// <summary>
@@ -221086,6 +223870,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			mrbigglesbot,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Eldritch Bigglesworth</para>
+			/// <para>诡异小猫比格沃斯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			eldritchbigglesworth,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Jandice Barov</para>
@@ -221312,6 +224104,14 @@ namespace HREngine.Bots
 			tirnennomu,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
+			/// <para>Felwarden Omu</para>
+			/// <para>邪林守护者欧穆</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			felwardenomu,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
 			/// <para>Rakanishu</para>
 			/// <para>拉卡尼休</para>
 			/// <para></para>
@@ -221392,12 +224192,20 @@ namespace HREngine.Bots
 			orgrimmarrakanishu,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
+			/// <para>Firelands Rakanishu</para>
+			/// <para>火焰之地的拉卡尼休</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			firelandsrakanishu,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
 			/// <para>Al'Akir</para>
 			/// <para>奥拉基尔</para>
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
-			alakir,
+			alakir_TB_BaconShop_HERO_76,
 			/// <summary>
 			/// <para>随从 法师 费用：0 攻击力：5 生命值：2</para>
 			/// <para>Spirit of Air</para>
@@ -221526,6 +224334,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			beachchenvaala,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Firefighter Chenvaala</para>
+			/// <para>消防员齐恩瓦拉</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			firefighterchenvaala,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Silas Darkmoon</para>
@@ -221680,6 +224496,14 @@ namespace HREngine.Bots
 			dunedwellerzephrys,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
+			/// <para>Conclave Zephrys</para>
+			/// <para>风之议会的杰弗里斯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			conclavezephrys,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
 			/// <para>Y'Shaarj</para>
 			/// <para>亚煞极</para>
 			/// <para></para>
@@ -221734,6 +224558,14 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			yshaarjthecorrupt,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Undead Y'shaarj</para>
+			/// <para>亡灵亚煞极</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			undeadyshaarj,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>N'Zoth</para>
@@ -222034,7 +224866,7 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：1</para>
 			/// <para>Galakrond's Greed</para>
 			/// <para>迦拉克隆的贪婪</para>
-			/// <para>Choose a minion in the Tavern. Then choose a higher Tier minion to replace it.</para>
+			/// <para>[x]Choose a minion in theTavern. Then choose ahigher Tier minion toreplace it.</para>
 			/// <para>选择酒馆中的一个随从，另选一个更高等级的随从将其替换。</para>
 			/// </summary>
 			galakrondsgreed,
@@ -222674,8 +225506,8 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Clairvoyance</para>
 			/// <para>洞察未来</para>
-			/// <para>[x]Your first <b>Refresh</b>each turn is free.</para>
-			/// <para>每回合中，你的第一次<b>刷新</b>免费。</para>
+			/// <para>At the start of your turn, gain a free <b>Refresh</b>.</para>
+			/// <para>在你的回合开始时，获得一次免费的<b>刷新</b>。</para>
 			/// </summary>
 			clairvoyance,
 			/// <summary>
@@ -223286,6 +226118,22 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			chihuwrathion,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Mistress Nagmara</para>
+			/// <para>娜玛拉小姐</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			mistressnagmara_TB_BaconShopBob_SKIN_BX,
+			/// <summary>
+			/// <para>英雄 中立 费用：0</para>
+			/// <para>Boss Mida</para>
+			/// <para>大老板米达</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			bossmida,
 			/// <summary>
 			/// <para>英雄 中立 费用：0</para>
 			/// <para>Dragonspeaker Bob</para>
@@ -224007,7 +226855,7 @@ namespace HREngine.Bots
 			/// </summary>
 			kangorsapprentice_TB_BaconUps_087,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：5 攻击力：6 生命值：4</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：4</para>
 			/// <para>Primalfin Lookout</para>
 			/// <para>蛮鱼斥候</para>
 			/// <para>[x]<b>Battlecry:</b> If you controlanother Murloc,<b>Discover</b> 2_Murlocs.</para>
@@ -224087,15 +226935,7 @@ namespace HREngine.Bots
 			/// </summary>
 			annoyomodule_TB_BaconUps_099,
 			/// <summary>
-			/// <para>附魔 中立 费用：0</para>
-			/// <para>Annoy-o-Module</para>
-			/// <para>吵吵模组</para>
-			/// <para><b>Taunt</b>, <b>Divine Shield</b>.</para>
-			/// <para><b>嘲讽</b>。<b>圣盾</b></para>
-			/// </summary>
-			annoyomodule_TB_BaconUps_099e,
-			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：8</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：8 生命值：8</para>
 			/// <para>King Bagurgle</para>
 			/// <para>拜戈尔格国王</para>
 			/// <para><b>Battlecry:</b> Give all other Murlocs in your hand and board +{0}/+{1}.</para>
@@ -224106,8 +226946,8 @@ namespace HREngine.Bots
 			/// <para>随从 术士 费用：5 攻击力：8 生命值：8</para>
 			/// <para>Floating Watcher</para>
 			/// <para>漂浮观察者</para>
-			/// <para>Whenever your hero takes damage on your turn, gain +4/+4.</para>
-			/// <para>每当你的英雄在你的回合受到伤害，便获得+4/+4。</para>
+			/// <para>Whenever your hero takes damage on your turn, gain +{0}/+{1}.</para>
+			/// <para>每当你的英雄在你的回合受到伤害，便获得+{0}/+{1}。</para>
 			/// </summary>
 			floatingwatcher_TB_BaconUps_101,
 			/// <summary>
@@ -224186,8 +227026,8 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：0 攻击力：6 生命值：4</para>
 			/// <para>Deflect-o-Bot</para>
 			/// <para>偏折机器人</para>
-			/// <para>[x]<b>Divine Shield</b>Whenever you summon a Mechduring combat, gain +4 Attackand <b>Divine Shield</b>.</para>
-			/// <para><b>圣盾</b>在战斗阶段中，每当你召唤一个机械，便获得+4攻击力和<b>圣盾</b>。</para>
+			/// <para>[x]<b>Divine Shield</b>Whenever you summon a Mechduring combat, gain +{0} Attackand <b>Divine Shield</b>.</para>
+			/// <para><b>圣盾</b>在战斗阶段中，每当你召唤一个机械，便获得+{0}攻击力和<b>圣盾</b>。</para>
 			/// </summary>
 			deflectobot_TB_BaconUps_123,
 			/// <summary>
@@ -224223,7 +227063,7 @@ namespace HREngine.Bots
 			/// </summary>
 			freedealinggambler_TB_BaconUps_127,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：6 生命值：4</para>
+			/// <para>随从 牧师 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Goldgrubber</para>
 			/// <para>掘金者</para>
 			/// <para>[x]At the end of your turn,gain +{0}/+{1} for each__friendly Golden minion.</para>
@@ -224471,7 +227311,7 @@ namespace HREngine.Bots
 			/// </summary>
 			lilrag_TB_BaconUps_200,
 			/// <summary>
-			/// <para>随从 中立 费用：0 攻击力：8 生命值：8</para>
+			/// <para>随从 中立 费用：0 攻击力：12 生命值：12</para>
 			/// <para>Nomi, Kitchen Nightmare</para>
 			/// <para>“厨房煞星”诺米</para>
 			/// <para>[x]After you play an Elemental,give Elementals in theTavern +{0}/+{1} this game.</para>
@@ -224490,8 +227330,8 @@ namespace HREngine.Bots
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Elemental Energy</para>
 			/// <para>元素能量</para>
-			/// <para>+2/+2.</para>
-			/// <para>+2/+2。</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
 			/// </summary>
 			elementalenergy_TB_Baconups_203e,
 			/// <summary>
@@ -229518,6 +232358,126 @@ namespace HREngine.Bots
 			/// <para><b>亡语：</b>抽一张牌。</para>
 			/// </summary>
 			repurposed,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Zerg Portal</para>
+			/// <para>异虫传送门</para>
+			/// <para>Your deck is replaced with an endless portal of Zerg cards.</para>
+			/// <para>你的牌库替换成了一座无尽的异虫牌传送门。</para>
+			/// </summary>
+			zergportal,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：2</para>
+			/// <para>Spawn Point</para>
+			/// <para>孵化点</para>
+			/// <para>Open a Spawning Pool.</para>
+			/// <para>开启一座孵化池。</para>
+			/// </summary>
+			spawnpoint,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Ragnaros Vigor</para>
+			/// <para>拉格纳罗斯的体力</para>
+			/// <para>Health Set to 50</para>
+			/// <para>生命值变为50</para>
+			/// </summary>
+			ragnarosvigor,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Deathwing's Vigor</para>
+			/// <para>死亡之翼的体力</para>
+			/// <para>Health Set to 50</para>
+			/// <para>生命值变为50</para>
+			/// </summary>
+			deathwingsvigor,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Turalyon's Vigor</para>
+			/// <para>图拉扬的体力</para>
+			/// <para>Health Set to 40</para>
+			/// <para>生命值变为40</para>
+			/// </summary>
+			turalyonsvigor,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Yogg's Vigor</para>
+			/// <para>尤格-萨隆的体力</para>
+			/// <para>Health Set to 60</para>
+			/// <para>生命值变为60</para>
+			/// </summary>
+			yoggsvigor,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Alexstrasza's Vigor</para>
+			/// <para>阿莱克丝塔萨的体力</para>
+			/// <para>Health Set to 40</para>
+			/// <para>生命值变为40</para>
+			/// </summary>
+			alexstraszasvigor,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Kerrigan's Vigor</para>
+			/// <para>凯瑞甘的体力</para>
+			/// <para>Health Set to 40</para>
+			/// <para>生命值变为40</para>
+			/// </summary>
+			kerrigansvigor,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>I AM THE CATACLYSM!</para>
+			/// <para>吾即大灾变！</para>
+			/// <para>Your <b>Heralds</b> unleash a random Cataclysm!</para>
+			/// <para>你的<b>兆示</b>牌会随机释放一项灾变！</para>
+			/// </summary>
+			iamthecataclysm,
+			/// <summary>
+			/// <para>法术 法师 费用：5</para>
+			/// <para>The Gatling Wand</para>
+			/// <para>加特林法杖</para>
+			/// <para>[x]Deal $@ damage splitrandomly among all enemies<i>(improves for each spellyou've cast this game)</i>.</para>
+			/// <para>造成$@点伤害，随机分配到所有敌人身上<i>（在本局对战中你每施放一个法术都会提高）</i>。</para>
+			/// </summary>
+			thegatlingwand_TB_MSD_100,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：2</para>
+			/// <para>Shattering Claws</para>
+			/// <para>裂地之爪</para>
+			/// <para>+2 Attack this turn.</para>
+			/// <para>在本回合中，+2攻击力。</para>
+			/// </summary>
+			shatteringclaws,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Shatter Claws</para>
+			/// <para>裂地爪击</para>
+			/// <para>+2 Attack this turn.</para>
+			/// <para>在本回合中，+2攻击力。</para>
+			/// </summary>
+			shatterclaws,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：1</para>
+			/// <para>Weaken the Chains</para>
+			/// <para>松动枷锁</para>
+			/// <para>Add a 1/1 Chaotic Tendril to your hand.</para>
+			/// <para>将一张1/1的混乱触须置入你的手牌。</para>
+			/// </summary>
+			weakenthechains,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：2</para>
+			/// <para>Hand of Turalyon</para>
+			/// <para>图拉扬之手</para>
+			/// <para><b>Discover</b> a Holy spell.It Costs (1) less.</para>
+			/// <para><b>发现</b>一张神圣法术牌，其法力值消耗减少（1）点。</para>
+			/// </summary>
+			handofturalyon,
+			/// <summary>
+			/// <para>英雄技能 中立 费用：3</para>
+			/// <para>Breath of Binding</para>
+			/// <para>缚誓之息</para>
+			/// <para>Deal 1 damage to all enemies.</para>
+			/// <para>对所有敌人造成1点伤害。</para>
+			/// </summary>
+			breathofbinding,
 			/// <summary>
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Unite the Murlocs Enchant</para>
@@ -234965,7 +237925,7 @@ namespace HREngine.Bots
 			/// <para>[x]<b>Rewind</b>, <b>Rewind</b>, <b>Rewind</b><b>Battlecry:</b> Summon 2 random<b>Legendary</b> minions.</para>
 			/// <para><b>回溯</b>，<b>回溯</b>，<b>回溯</b><b>战吼：</b>随机召唤2个<b>传说</b>随从。</para>
 			/// </summary>
-			misterclocksworth,
+			misterclocksworth_TIME_038,
 			/// <summary>
 			/// <para>随从 中立 费用：8 攻击力：3 生命值：3</para>
 			/// <para>Mister Clocksworth</para>
@@ -235738,12 +238698,12 @@ namespace HREngine.Bots
 			/// <para>法术 恶魔猎手 费用：4</para>
 			/// <para>Hounds of Fury</para>
 			/// <para>怒火狱犬</para>
-			/// <para>[x]Summon two 3/3Demons. If your deck hasno minions, they attackthe lowest Health enemy.</para>
-			/// <para>召唤两个3/3的恶魔。如果你的牌库中没有随从牌，使其攻击生命值最低的敌人。</para>
+			/// <para>[x]Summon two 3/2Demons. If your deck hasno minions, they attackthe lowest Health enemy.</para>
+			/// <para>召唤两个3/2的恶魔。如果你的牌库中没有随从牌，使其攻击生命值最低的敌人。</para>
 			/// </summary>
 			houndsoffury,
 			/// <summary>
-			/// <para>随从 恶魔猎手 费用：3 攻击力：3 生命值：3</para>
+			/// <para>随从 恶魔猎手 费用：3 攻击力：3 生命值：2</para>
 			/// <para>Sargeran Felhound</para>
 			/// <para>萨格拉斯的地狱犬</para>
 			/// <para></para>
@@ -235751,7 +238711,7 @@ namespace HREngine.Bots
 			/// </summary>
 			sargeranfelhound,
 			/// <summary>
-			/// <para>随从 恶魔猎手 费用：3 攻击力：3 生命值：3</para>
+			/// <para>随从 恶魔猎手 费用：3 攻击力：3 生命值：2</para>
 			/// <para>Sargeran Felhound</para>
 			/// <para>萨格拉斯的地狱犬</para>
 			/// <para></para>
@@ -236535,7 +239495,7 @@ namespace HREngine.Bots
 			/// </summary>
 			loopingtimetarget,
 			/// <summary>
-			/// <para>法术 战士 费用：5</para>
+			/// <para>法术 战士 费用：6</para>
 			/// <para>Gladiatorial Combat</para>
 			/// <para>角斗开战</para>
 			/// <para>[x]Summon a randomminion from your deck.Summon a 5/5 Tiger with<b>Stealth</b> for your opponent.</para>
@@ -237154,16 +240114,16 @@ namespace HREngine.Bots
 			/// <para>法术 萨满祭司 费用：3</para>
 			/// <para>Flight of the Firehawk</para>
 			/// <para>火鹰飞翔</para>
-			/// <para>Draw two minions of different minion types. Give them +2/+2.</para>
-			/// <para>抽两张不同类型的随从牌，使其获得+2/+2。</para>
+			/// <para>Draw two minions of different minion types. Give them +1/+1.</para>
+			/// <para>抽两张不同类型的随从牌，使其获得+1/+1。</para>
 			/// </summary>
 			flightofthefirehawk,
 			/// <summary>
 			/// <para>附魔 萨满祭司 费用：0</para>
 			/// <para>Ignited</para>
 			/// <para>燃烧</para>
-			/// <para>+2/+2.</para>
-			/// <para>+2/+2。</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
 			/// </summary>
 			ignited_TLC_222e,
 			/// <summary>
@@ -238978,8 +241938,8 @@ namespace HREngine.Bots
 			/// <para>随从 潜行者 费用：6 攻击力：4 生命值：7</para>
 			/// <para>Gladesong Siren</para>
 			/// <para>林歌海妖</para>
-			/// <para><b>Lifesteal</b>Costs (1) if you'veplayed a Holy and Shadow spell this turn.</para>
-			/// <para><b>吸血</b>。如果你在本回合中使用过神圣和暗影法术牌，本牌的法力值消耗为（1）点。</para>
+			/// <para><b>Lifesteal</b>Costs (1) if you'vecast a Holy and Shadow spell this turn.</para>
+			/// <para><b>吸血</b>。如果你在本回合中施放过神圣和暗影法术，本牌的法力值消耗为（1）点。</para>
 			/// </summary>
 			gladesongsiren,
 			/// <summary>
@@ -249458,8 +252418,8 @@ namespace HREngine.Bots
 			/// <para>随从 战士 费用：3 攻击力：3 生命值：3</para>
 			/// <para>Steam Guardian</para>
 			/// <para>蒸汽守卫</para>
-			/// <para>[x]<b>Battlecry:</b> Draw a spell.Reduce the Cost of a Firespell in your hand by (1).</para>
-			/// <para><b>战吼：</b>抽一张法术牌。使你手牌中一张火焰法术牌的法力值消耗减少（1）点。</para>
+			/// <para><b>Battlecry:</b> Draw a spell. Reduce the Cost of a random Fire spell in your hand by (1).</para>
+			/// <para><b>战吼：</b>抽一张法术牌。随机使你手牌中一张火焰法术牌的法力值消耗减少（1）点。</para>
 			/// </summary>
 			steamguardian,
 			/// <summary>
@@ -253461,7 +256421,7 @@ namespace HREngine.Bots
 			/// <para>Costs (1) less.</para>
 			/// <para>法力值消耗减少（1）点。</para>
 			/// </summary>
-			charity,
+			charity_ULD_214e,
 			/// <summary>
 			/// <para>随从 中立 费用：7 攻击力：7 生命值：5</para>
 			/// <para>Wrapped Golem</para>
@@ -262450,8 +265410,8 @@ namespace HREngine.Bots
 			/// <para>法术 战士 费用：4</para>
 			/// <para>Char</para>
 			/// <para>炭火</para>
-			/// <para>Deal $7 damage to a minion. Give a minion in your hand stats equal to the excess damage.</para>
-			/// <para>对一个随从造成$7点伤害。使你手牌中的一张随从牌获得等同于超过目标生命值伤害的属性值。</para>
+			/// <para>[x]Deal $7 damage to a minion.Give a random minionin your hand stats equalto the excess damage.</para>
+			/// <para>对一个随从造成$7点伤害。随机使你手牌中的一张随从牌获得等同于超过目标生命值伤害的属性值。</para>
 			/// </summary>
 			@char,
 			/// <summary>
@@ -262586,7 +265546,7 @@ namespace HREngine.Bots
 			/// <para>法术 中立 费用：3</para>
 			/// <para>Wondrous Wand</para>
 			/// <para>奇迹之杖</para>
-			/// <para>Draw 3 cards.Set their Cost to 1.</para>
+			/// <para>Draw 3 cards.Set their Cost to (1).</para>
 			/// <para>抽三张牌，这些牌的法力值消耗变为（1）点。</para>
 			/// </summary>
 			wondrouswand_VAC_702t3,

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 战士 费用：5
+	//法术 战士 费用：6
 	//Gladiatorial Combat
 	//角斗开战
 	//[x]Summon a randomminion from your deck.Summon a 5/5 Tiger with<b>Stealth</b> for your opponent.

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：6 生命值：10
+	//随从 牧师 费用：0 攻击力：6 生命值：8
 	//Dual-Wield Corsair
 	//双持海盗
-	//[x]Whenever you spend 5 Gold,give two friendly Pirates+8/+8. <i>(@ Gold left!)</i>
-	//每当你花掉5枚铸币，使两个友方海盗获得+8/+8。<i>（还剩@枚！）</i>
+	//[x]Whenever you spend 5 Gold,give two friendly Pirates+{2}/+{3} twice.<i>({0} Gold left!)</i>
+	//每当你花掉5枚铸币，使两个友方海盗获得+{2}/+{3}，触发两次。<i>（还剩{0}枚！）</i>
 	class Sim_BG31_824_G : SimTemplate
 	{
 		

@@ -7,7 +7,7 @@ namespace HREngine.Bots
 	//随从 猎人 费用：2 攻击力：7 生命值：7
 	//Timewarped Nest Swarmer
 	//时空扭曲巢穴群居虫
-	//[x]<b>Battlecry, Deathrattle andRally:</b> Your Beetles have+{2}/+{3} this game. Summona {0}/{1} Beetle.
+	//[x]<b>Battlecry, Deathrattle, andRally:</b> Your Beetles have+{2}/+{3} this game. Summona {0}/{1} Beetle.
 	//<b>战吼，亡语，进击：</b>在本局对战中，你的甲虫拥有+{2}/+{3}。召唤一只{0}/{1}的甲虫。
 	class Sim_BG34_Giant_687 : SimTemplate
 	{

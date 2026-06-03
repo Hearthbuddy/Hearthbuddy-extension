@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 德鲁伊 费用：3
+	//法术 德鲁伊 费用：4
 	//Wildwood Circle
 	//荒林怪圈
 	//<b>Shattered</b>Give your minions "<b>Deathrattle:</b> Summona 2/2 Treant."

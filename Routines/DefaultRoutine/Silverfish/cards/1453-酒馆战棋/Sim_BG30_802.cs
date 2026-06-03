@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：3
+	//BATTLEGROUND_SPELL 中立 费用：4
 	//Knockoff Wisdomball
 	//冒牌的智慧之球
 	//Your next 2 <b>Refreshes</b> are helpful! <i>(@ left!)</i>

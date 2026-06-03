@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：3 生命值：8
+	//随从 猎人 费用：0 攻击力：3 生命值：12
 	//Silky Shimmermoth
 	//丝柔烁光蛾
 	//[x]Whenever this takes damage,your Beetles have +{2}/+{3}this game. <b>Deathrattle:</b> Summona {0}/{1} Beetle.

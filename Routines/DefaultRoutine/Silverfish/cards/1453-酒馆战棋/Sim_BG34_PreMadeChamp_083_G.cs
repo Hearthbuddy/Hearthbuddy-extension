@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：1 攻击力：24 生命值：16
+	//随从 巫妖王 费用：2 攻击力：24 生命值：16
 	//Timewarped Anub'arak
 	//时空扭曲阿努巴拉克
 	//After you play an Undead, your Undead have an extra +{0} Attack this game.

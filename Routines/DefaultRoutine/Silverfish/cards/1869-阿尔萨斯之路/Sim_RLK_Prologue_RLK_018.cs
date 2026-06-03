@@ -7,7 +7,7 @@ namespace HREngine.Bots
 	//法术 巫妖王 费用：2
 	//Plague Strike
 	//凋零打击
-	//Deal $3 damage to a minion. If it dies, summon a 2/2 Zombiewith <b>Rush</b>.
+	//Deal $3 damage to a minion. If it dies, summon a 2/2 Zombie with <b>Rush</b>.
 	//对一个随从造成$3点伤害。如果该随从死亡，召唤一个2/2并具有<b>突袭</b>的僵尸。
 	class Sim_RLK_Prologue_RLK_018 : SimTemplate
 	{

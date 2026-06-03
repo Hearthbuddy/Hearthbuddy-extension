@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：3 生命值：4
+	//随从 萨满祭司 费用：0 攻击力：5 生命值：6
 	//Diremuck Forager
 	//凶饿的觅食者
-	//[x]<b>Start of Combat:</b> Give aminion in your hand+2/+2, then summon itfor this combat only.
-	//<b>战斗开始时：</b>使你手牌中的一张随从牌获得+2/+2并召唤它，其登场仅限本场战斗。
+	//<b>Start of Combat:</b> When you have space, summon the highest-Attack Murloc from your handfor this combat only.
+	//<b>战斗开始时：</b>当你有空位时，召唤你手牌中攻击力最高的鱼人，其登场仅限本场战斗。
 	class Sim_BG27_556 : SimTemplate
 	{
 		

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：2 攻击力：12 生命值：12
+	//随从 术士 费用：1 攻击力：12 生命值：12
 	//Timewarped Icky Imp
 	//时空扭曲粗鄙小鬼
 	//<b>Deathrattle:</b> Summon 2 Imps with this minion's maximum stats.

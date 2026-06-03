@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：2 攻击力：0 生命值：3
+	//随从 萨满祭司 费用：2 攻击力：0 生命值：2
 	//Skywall Sentinel
 	//天空之墙哨兵
 	//<b>Taunt</b><b>Battlecry:</b> <b>Herald</b> {0}.

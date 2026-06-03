@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 德鲁伊 费用：0 攻击力：6 生命值：14
 	//Death's Head Sage
 	//亡首圣贤
-	//After you get a <b>Blood Gem</b>, get two extra.
-	//在你获取一张<b>鲜血宝石</b>后，额外获取两张。
+	//After you get a <b>Blood Gem</b>, get 2 extra copies of it.
+	//在你获取一张<b>鲜血宝石</b>后，额外获取2张该宝石的复制。
 	class Sim_BG20_HERO_103_Buddy_G : SimTemplate
 	{
 		

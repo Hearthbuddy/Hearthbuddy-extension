@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：10 生命值：6
+	//随从 牧师 费用：0 攻击力：10 生命值：8
 	//Dastardly Drust
 	//卑鄙的德鲁斯特
 	//[x]Whenever you get a Pirate,give your minions +{0}/+{1}.Give Golden ones+{2}/+{3} instead.

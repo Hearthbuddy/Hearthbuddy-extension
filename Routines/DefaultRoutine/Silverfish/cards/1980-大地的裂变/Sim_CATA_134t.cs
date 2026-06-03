@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 德鲁伊 费用：3
+	//法术 德鲁伊 费用：4
 	//Wildwood Circle
 	//荒林怪圈
 	//[x]<b>Shattered</b>Summon two 2/2 Treants.

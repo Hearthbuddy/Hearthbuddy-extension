@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：16 生命值：16
+	//随从 无效的 费用：0 攻击力：20 生命值：20
 	//P-0UL-TR-0N
 	//P-0UL-TR-0N护巢机
 	//[x]<b>Avenge ({0}):</b> Gain<b>Divine Shield</b> and attackimmediately, twice.

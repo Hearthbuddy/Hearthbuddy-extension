@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：6 生命值：8
+	//随从 萨满祭司 费用：0 攻击力：8 生命值：8
 	//King Bagurgle
 	//拜戈尔格国王
 	//<b>Battlecry:</b> Give all other Murlocs in your hand and board +{0}/+{1}.

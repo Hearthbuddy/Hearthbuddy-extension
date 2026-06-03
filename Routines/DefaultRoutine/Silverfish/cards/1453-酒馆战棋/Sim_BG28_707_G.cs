@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：8 生命值：8
+	//随从 法师 费用：0 攻击力：12 生命值：10
 	//Living Azerite
 	//活化艾泽里特
-	//Whenever you cast aTavern spell, give Elementals in the Tavern +2/+2 this game.
-	//每当你施放一个酒馆法术，使酒馆中的元素在本局对战中获得+2/+2。
+	//Whenever you cast a Tavern spell, give Elementals in the Tavern +{0}/+{1} this game twice.
+	//每当你施放一个酒馆法术，使酒馆中的元素在本局对战中获得+{0}/+{1}，触发两次。
 	class Sim_BG28_707_G : SimTemplate
 	{
 		

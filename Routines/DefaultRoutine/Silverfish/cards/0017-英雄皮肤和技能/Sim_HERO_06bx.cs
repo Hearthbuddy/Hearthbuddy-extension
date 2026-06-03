@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄 术士 费用：0
-	//Nefarious Nemsy
-	//邪恶的奈姆希
+	//英雄 德鲁伊 费用：0
+	//Zin-Azshari Faelin
+	//辛艾萨莉的费林
 	//
 	//
-	class Sim_HERO_07bq : SimTemplate
+	class Sim_HERO_06bx : SimTemplate
 	{
 		
 		

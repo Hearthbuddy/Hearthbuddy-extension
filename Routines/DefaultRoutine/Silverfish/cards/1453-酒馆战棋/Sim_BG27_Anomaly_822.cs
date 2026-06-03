@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//BATTLEGROUND_ANOMALY 中立 费用：0
 	//Denathrius' Anima Reserves
 	//德纳修斯的心能储备
-	//[x]Quests and Rewards arein this game. All heroesare Sire Denathrius.
-	//本局对战中有任务和奖励。所有英雄均为德纳修斯大帝。
+	//Start with 'Whodunit?' as your second Hero Power.
+	//对战开始时，将“悬案疑云”变为你的第二英雄技能
 	class Sim_BG27_Anomaly_822 : SimTemplate
 	{
 		

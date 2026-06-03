@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 中立 费用：0 攻击力：3 生命值：3
 	//Nightmare Par-tea Guest
 	//梦魇茶客
 	//<b>Battlecry and Deathrattle:</b> Get a Misplaced Tea Set.

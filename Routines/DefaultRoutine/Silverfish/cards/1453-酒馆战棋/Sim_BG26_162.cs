@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：5 生命值：4
+	//随从 法师 费用：0 攻击力：4 生命值：4
 	//Dancing Barnstormer
 	//农场热舞旋风
 	//[x]<b>Battlecry and Deathrattle:</b>Give Elementals in theTavern +{0}/+{1} thisgame.

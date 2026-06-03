@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 巫妖王 费用：0 攻击力：4 生命值：4
 	//Shadowy Construct
 	//阴暗构造体
-	//After a friendly minion dies, gain its maximum stats. <i>(Once per combat.)</i>
-	//在一个友方随从死亡后，获得其最大属性值。<i>（每场战斗限一次。）</i>
+	//Whenever a friendly minion dies, gain its maximum stats. <i>(Once per combat.)</i>
+	//每当一个友方随从死亡，获得其最大属性值。<i>（每场战斗限一次。）</i>
 	class Sim_BG25_HERO_103_Buddy : SimTemplate
 	{
 		

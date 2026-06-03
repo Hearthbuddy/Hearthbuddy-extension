@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：3 攻击力：3 生命值：3
+	//随从 恶魔猎手 费用：3 攻击力：3 生命值：2
 	//Sargeran Felhound
 	//萨格拉斯的地狱犬
 	//

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：2 生命值：10
+	//随从 圣骑士 费用：0 攻击力：6 生命值：14
 	//Marquee Ticker
 	//招牌计时机
 	//[x]At the end of your turn, get2 random Tavern spells.

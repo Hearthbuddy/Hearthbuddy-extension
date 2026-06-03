@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：4 生命值：4
+	//随从 猎人 费用：0 攻击力：5 生命值：5
 	//Turquoise Skitterer
 	//绿松石飞掠虫
 	//[x]<b>Deathrattle:</b> Your Beetleshave +{2}/+{3} this game.Summon a {0}/{1} Beetle.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：2 攻击力：14 生命值：26
+	//随从 术士 费用：1 攻击力：14 生命值：26
 	//Timewarped Overfiend
 	//时空扭曲大恶魔
 	//[x]After you buy a card,give your Demons+{0}/+{1}.

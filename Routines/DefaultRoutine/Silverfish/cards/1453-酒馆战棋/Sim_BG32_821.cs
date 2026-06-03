@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：7 生命值：6
+	//随从 无效的 费用：0 攻击力：6 生命值：5
 	//Felfire Conjurer
 	//邪火咒龙
 	//[x]At the end of your turn,your Tavern spells givean extra +{0}/+{1}this game.

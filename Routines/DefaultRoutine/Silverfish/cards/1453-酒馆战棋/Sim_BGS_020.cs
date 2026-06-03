@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：5 攻击力：3 生命值：2
+	//随从 萨满祭司 费用：0 攻击力：3 生命值：2
 	//Primalfin Lookout
 	//蛮鱼斥候
 	//<b>Battlecry:</b> If you control another Murloc, <b>Discover</b> a_Murloc.

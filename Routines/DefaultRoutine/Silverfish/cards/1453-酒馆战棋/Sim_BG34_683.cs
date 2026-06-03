@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：5 生命值：2
+	//随从 德鲁伊 费用：0 攻击力：5 生命值：3
 	//Briarback Drummer
 	//棘背鼓手
 	//<b>Battlecry:</b> Get a Blood Gem Barrage.

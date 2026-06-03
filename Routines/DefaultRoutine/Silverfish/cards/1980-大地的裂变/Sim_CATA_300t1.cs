@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 潜行者 费用：3 攻击力：1 生命值：2
+	//随从 潜行者 费用：2 攻击力：2 生命值：2
 	//Black Blood's Body
 	//黑血黏质
 	//[x]At the end of your turn,restore #3 Health toa random damaged_friendly character.

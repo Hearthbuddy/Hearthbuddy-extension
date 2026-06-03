@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：4
+	//英雄技能 中立 费用：3
 	//Build-An-Undead
 	//构造亡灵
 	//[x]Craft a custom Undead.<i>({0} |4(Creation, Creations) left!)</i>

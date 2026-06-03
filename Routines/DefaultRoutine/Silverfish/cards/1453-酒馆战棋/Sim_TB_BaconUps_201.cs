@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//Nomi, Kitchen Nightmare
 	//“厨房煞星”诺米
 	//[x]After you play an Elemental,give Elementals in theTavern +{0}/+{1} this game.

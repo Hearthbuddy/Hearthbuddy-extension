@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：1 攻击力：7 生命值：5
+	//随从 圣骑士 费用：2 攻击力：7 生命值：5
 	//Timewarped Whirl-O-Tron
 	//时空扭曲飓风机甲
 	//[x]<b>Start of Combat:</b> Copy yourtwo left-most <b>Deathrattles</b><i>(except otherWhirl-O-Trons)</i>.

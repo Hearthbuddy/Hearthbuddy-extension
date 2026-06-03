@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：4 生命值：6
+	//随从 圣骑士 费用：0 攻击力：6 生命值：2
 	//Mechagnome Interpreter
 	//机械侏儒解译者
 	//[x]Whenever you play or<b>Magnetize</b> a Mech,give it +{0}/+{1}.

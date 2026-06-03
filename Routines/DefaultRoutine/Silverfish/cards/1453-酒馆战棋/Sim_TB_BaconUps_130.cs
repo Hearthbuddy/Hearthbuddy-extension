@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：6 生命值：4
+	//随从 牧师 费用：0 攻击力：6 生命值：6
 	//Goldgrubber
 	//掘金者
 	//[x]At the end of your turn,gain +{0}/+{1} for each__friendly Golden minion.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：4 生命值：2
+	//随从 圣骑士 费用：0 攻击力：8 生命值：4
 	//Metallic Hunter
 	//钢铁猎人
 	//[x]<b>Deathrattle:</b> Get 2Pointy Arrows.

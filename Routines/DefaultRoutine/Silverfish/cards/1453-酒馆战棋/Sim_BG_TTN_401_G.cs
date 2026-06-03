@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：4 生命值：8
+	//随从 圣骑士 费用：0 攻击力：6 生命值：8
 	//Ancestral Automaton
 	//星元自动机
 	//[x]Has +6/+4 for each otherAncestral Automaton you'vesummoned this game<i>(wherever this is)</i>.

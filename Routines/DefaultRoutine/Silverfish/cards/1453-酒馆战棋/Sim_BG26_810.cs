@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：2 生命值：6
+	//随从 牧师 费用：0 攻击力：3 生命值：6
 	//Gunpowder Courier
 	//火药运输工
 	//[x]Whenever you spend 6 Gold,give your Pirates +{2} Attack.<i>({0} Gold left!)</i>@[x]Whenever you spend 6 Gold,give your Pirates +{2}/+{3}.<i>({0} Gold left!)</i>

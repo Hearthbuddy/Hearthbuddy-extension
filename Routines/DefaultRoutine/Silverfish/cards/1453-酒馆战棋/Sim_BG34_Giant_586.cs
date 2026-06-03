@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：2 攻击力：6 生命值：5
+	//随从 法师 费用：1 攻击力：6 生命值：5
 	//Timewarped Snow Elemental
 	//时空扭曲冰雪元素
 	//[x]The Tavern offers an extra<b>Frozen</b> Elemental_whenever it is <b>Refreshed</b>.

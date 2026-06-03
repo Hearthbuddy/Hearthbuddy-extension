@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：5 生命值：3
+	//随从 德鲁伊 费用：0 攻击力：6 生命值：2
 	//Razorfen Flapper
 	//剃刀沼泽舞扇者
 	//<b>Deathrattle:</b> Get a Blood Gem Barrage.

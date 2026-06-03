@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 潜行者 费用：7
+	//法术 潜行者 费用：6
 	//Moonwell
 	//月亮井
 	//Deal $4 damage to all enemy characters. Restore #4 Health to all friendly characters.

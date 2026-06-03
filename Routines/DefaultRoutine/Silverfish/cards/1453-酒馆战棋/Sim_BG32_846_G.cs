@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：10 生命值：8
+	//随从 法师 费用：0 攻击力：12 生命值：10
 	//Unleashed Mana Surge
 	//狂放的法力涌流
 	//After you play an Elemental, give your Elementals +{0}/+{1} twice.

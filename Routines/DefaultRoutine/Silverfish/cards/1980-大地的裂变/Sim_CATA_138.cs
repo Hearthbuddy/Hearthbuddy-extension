@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 德鲁伊 费用：2
+	//法术 德鲁伊 费用：3
 	//Forest's Gift
 	//森林赠礼
 	//Give a friendly minion +1/+1 for each minion you control.

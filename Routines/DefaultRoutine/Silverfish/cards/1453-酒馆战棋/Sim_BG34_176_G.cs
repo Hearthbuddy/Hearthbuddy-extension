@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：4 生命值：16
+	//随从 圣骑士 费用：0 攻击力：8 生命值：18
 	//Metal Dispenser
 	//金属派送机
 	//[x]<b>Divine Shield</b><b>Avenge ({0}):</b> <b>Magnetize</b> arandom Volumizer to this.Get 2 copies of it.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：2 攻击力：6 生命值：12
+	//随从 无效的 费用：1 攻击力：6 生命值：12
 	//Timewarped Deadstomper
 	//时空扭曲暴亡龙践踏者
 	//[x]After you summon a minion,give your minions+{0} Attack permanently.

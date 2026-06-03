@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 潜行者 费用：7 攻击力：4 生命值：8
+	//随从 潜行者 费用：7 攻击力：5 生命值：9
 	//The Black Blood
 	//黑血
 	//[x]<b>Colossal +3. </b>After you restore Healthto a character, attack arandom enemy minion.
