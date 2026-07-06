@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：10 生命值：6
+	//随从 战士 费用：0 攻击力：14 生命值：8
 	//Twilight Broodmother
 	//暮光巢母
 	//[x]<b>Deathrattle:</b> Summon 4Twilight Hatchlings.Give them <b>Taunt</b>.

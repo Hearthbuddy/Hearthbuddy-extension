@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：12 生命值：12
+	//随从 巫妖王 费用：0 攻击力：10 生命值：10
 	//Skeletal Strafer
 	//骷髅狂射手
 	//At the end of your turn,give your minions +{1}/+{1}.<b>Avenge ({0}):</b> Improve this permanently.

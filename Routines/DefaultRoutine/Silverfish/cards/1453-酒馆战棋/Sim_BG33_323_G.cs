@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：4 生命值：12
+	//随从 巫妖王 费用：0 攻击力：2 生命值：12
 	//Dustbone Devastator
 	//尘骨毁灭者
 	//<b>Rally:</b> Your Undead have+{0} Attack this game <i>(wherever they are).</i>

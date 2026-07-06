@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Glowing Cinder
 	//辐光余烬
 	//[x]<b>Deathrattle:</b> YourElementals give an extra+1 Health this game.
-	//<b>亡语：</b>在本局对战中，你元素使随从额外获得+1生命值。
+	//<b>亡语：</b>在本局对战中，你的元素使随从额外获得+1生命值。
 	class Sim_BG32_842 : SimTemplate
 	{
 		

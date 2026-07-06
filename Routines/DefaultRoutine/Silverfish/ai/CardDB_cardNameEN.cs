@@ -1354,8 +1354,8 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：3 攻击力：3 生命值：3</para>
 			/// <para>Silver Hand Regent</para>
 			/// <para>白银之手教官</para>
-			/// <para><b>Inspire:</b> Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>激励：</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Inspire:</b> Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>激励：</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			silverhandregent,
 			/// <summary>
@@ -6946,8 +6946,8 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：2 攻击力：1 生命值：3</para>
 			/// <para>Soldier's Caravan</para>
 			/// <para>士兵车队</para>
-			/// <para>[x]At the start of your turn,summon two 1/1Silver Hand Recruits.</para>
-			/// <para>在你的回合开始时，召唤两个1/1的白银之手新兵。</para>
+			/// <para>[x]At the start of your turn,summon two {0}Silver Hand Recruits.</para>
+			/// <para>在你的回合开始时，召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			soldierscaravan,
 			/// <summary>
@@ -15231,7 +15231,7 @@ namespace HREngine.Bots
 			/// </summary>
 			extragoldnextturndnt,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：5 生命值：5</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：6</para>
 			/// <para>Bream Counter</para>
 			/// <para>裁脍鱼人</para>
 			/// <para>While this is in your hand, after you play a Murloc, gain +{0}/+{1}.</para>
@@ -15239,7 +15239,7 @@ namespace HREngine.Bots
 			/// </summary>
 			breamcounter,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：10</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：12 生命值：12</para>
 			/// <para>Bream Counter</para>
 			/// <para>裁脍鱼人</para>
 			/// <para>While this is in your hand, after you play a Murloc, gain +{0}/+{1}.</para>
@@ -15399,7 +15399,7 @@ namespace HREngine.Bots
 			/// </summary>
 			bristlebach_BG26_157_G,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：2 生命值：5</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：2 生命值：3</para>
 			/// <para>Moon-Bacon Jazzer</para>
 			/// <para>暗膘爵士乐手</para>
 			/// <para>[x]<b>Battlecry:</b> Your <b>BloodGems</b> give an extra+1 Health this game.</para>
@@ -15407,7 +15407,7 @@ namespace HREngine.Bots
 			/// </summary>
 			moonbaconjazzer,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：4 生命值：10</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：4 生命值：6</para>
 			/// <para>Moon-Bacon Jazzer</para>
 			/// <para>暗膘爵士乐手</para>
 			/// <para>[x]<b>Battlecry:</b> Your <b>BloodGems</b> give an extra+2 Health this game.</para>
@@ -17954,7 +17954,7 @@ namespace HREngine.Bots
 			/// <para>BATTLEGROUND_ANOMALY 中立 费用：0</para>
 			/// <para>False Idols</para>
 			/// <para>虚妄神像</para>
-			/// <para>[x]You only need 2 copies tomake minions Golden.They give Tavern Coinsinstead of Triple Rewards.</para>
+			/// <para>[x]You only need 2 copies tomake minions Golden. They give Tavern Coinsinstead of Triple Rewards.</para>
 			/// <para>你只需2个复制即可将随从变为金色。使用金色随从不会获取三连奖励，改为获取酒馆币。</para>
 			/// </summary>
 			falseidols,
@@ -21799,7 +21799,7 @@ namespace HREngine.Bots
 			/// </summary>
 			coolcatch,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：4 生命值：8</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：3 生命值：7</para>
 			/// <para>Hot-Air Surveyor</para>
 			/// <para>热气球测绘员</para>
 			/// <para><b>Blood Gems</b> playedfrom your hand cast an extra time.</para>
@@ -21807,7 +21807,7 @@ namespace HREngine.Bots
 			/// </summary>
 			hotairsurveyor,
 			/// <summary>
-			/// <para>随从 德鲁伊 费用：0 攻击力：8 生命值：16</para>
+			/// <para>随从 德鲁伊 费用：0 攻击力：6 生命值：14</para>
 			/// <para>Hot-Air Surveyor</para>
 			/// <para>热气球测绘员</para>
 			/// <para><b>Blood Gems</b> played from your hand cast 2 extra times.</para>
@@ -23023,19 +23023,19 @@ namespace HREngine.Bots
 			/// </summary>
 			arcanevoltage,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：4</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：4 生命值：6</para>
 			/// <para>Holo Rover</para>
 			/// <para>移动投影仪</para>
-			/// <para><b>Rally:</b> Get a random <b>Magnetic</b> Mech.</para>
-			/// <para><b>进击：</b>随机获取一张<b>磁力</b>机械牌。</para>
+			/// <para>[x]<b>Divine Shield</b><b>Rally:</b> Get a random<b>Magnetic</b> Mech.</para>
+			/// <para><b>圣盾</b>。<b>进击：</b>随机获取一张<b>磁力</b>机械牌。</para>
 			/// </summary>
 			holorover,
 			/// <summary>
-			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：8</para>
+			/// <para>随从 圣骑士 费用：0 攻击力：8 生命值：12</para>
 			/// <para>Holo Rover</para>
 			/// <para>移动投影仪</para>
-			/// <para><b>Rally:</b> Get 2 random <b>Magnetic</b> Mechs.</para>
-			/// <para><b>进击：</b>随机获取2张<b>磁力</b>机械牌。</para>
+			/// <para>[x]<b>Divine Shield</b><b>Rally:</b> Get 2 random<b>Magnetic</b> Mechs.</para>
+			/// <para><b>圣盾</b>。<b>进击：</b>随机获取2张<b>磁力</b>机械牌。</para>
 			/// </summary>
 			holorover_BG31_175_G,
 			/// <summary>
@@ -27011,7 +27011,7 @@ namespace HREngine.Bots
 			/// <para>Sand Swirler</para>
 			/// <para>沙尘旋流</para>
 			/// <para>[x]<b>Battlecry:</b> Your Elementalsgive an extra +1 Attackthis game.</para>
-			/// <para><b>战吼：</b>在本局对战中，你元素使随从额外获得+1攻击力。</para>
+			/// <para><b>战吼：</b>在本局对战中，你的元素使随从额外获得+1攻击力。</para>
 			/// </summary>
 			sandswirler,
 			/// <summary>
@@ -27019,7 +27019,7 @@ namespace HREngine.Bots
 			/// <para>Sand Swirler</para>
 			/// <para>沙尘旋流</para>
 			/// <para>[x]<b>Battlecry:</b> Your Elementalsgive an extra +2 Attackthis game.</para>
-			/// <para><b>战吼：</b>在本局对战中，你元素使随从额外获得+2攻击力。</para>
+			/// <para><b>战吼：</b>在本局对战中，你的元素使随从额外获得+2攻击力。</para>
 			/// </summary>
 			sandswirler_BG32_841_G,
 			/// <summary>
@@ -27027,7 +27027,7 @@ namespace HREngine.Bots
 			/// <para>Glowing Cinder</para>
 			/// <para>辐光余烬</para>
 			/// <para>[x]<b>Deathrattle:</b> YourElementals give an extra+1 Health this game.</para>
-			/// <para><b>亡语：</b>在本局对战中，你元素使随从额外获得+1生命值。</para>
+			/// <para><b>亡语：</b>在本局对战中，你的元素使随从额外获得+1生命值。</para>
 			/// </summary>
 			glowingcinder,
 			/// <summary>
@@ -27035,7 +27035,7 @@ namespace HREngine.Bots
 			/// <para>Glowing Cinder</para>
 			/// <para>辐光余烬</para>
 			/// <para>[x]<b>Deathrattle:</b> YourElementals give an extra+2 Health this game.</para>
-			/// <para><b>亡语：</b>在本局对战中，你元素使随从额外获得+2生命值。</para>
+			/// <para><b>亡语：</b>在本局对战中，你的元素使随从额外获得+2生命值。</para>
 			/// </summary>
 			glowingcinder_BG32_842_G,
 			/// <summary>
@@ -28247,7 +28247,7 @@ namespace HREngine.Bots
 			/// </summary>
 			primeval,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：2 生命值：6</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：1 生命值：6</para>
 			/// <para>Dustbone Devastator</para>
 			/// <para>尘骨毁灭者</para>
 			/// <para><b>Rally:</b> Your Undead have+{0} Attack this game <i>(wherever they are).</i></para>
@@ -28255,7 +28255,7 @@ namespace HREngine.Bots
 			/// </summary>
 			dustbonedevastator,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：4 生命值：12</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：2 生命值：12</para>
 			/// <para>Dustbone Devastator</para>
 			/// <para>尘骨毁灭者</para>
 			/// <para><b>Rally:</b> Your Undead have+{0} Attack this game <i>(wherever they are).</i></para>
@@ -29119,7 +29119,7 @@ namespace HREngine.Bots
 			/// </summary>
 			flotsamflinger_BG33_892_G,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：3 生命值：8</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：2 生命值：7</para>
 			/// <para>Primitive Painter</para>
 			/// <para>原始鱼人画家</para>
 			/// <para>After you play a card from Tier 3 or below, give your Murlocs +{0}/+{1}.</para>
@@ -29127,7 +29127,7 @@ namespace HREngine.Bots
 			/// </summary>
 			primitivepainter,
 			/// <summary>
-			/// <para>随从 萨满祭司 费用：0 攻击力：6 生命值：16</para>
+			/// <para>随从 萨满祭司 费用：0 攻击力：4 生命值：14</para>
 			/// <para>Primitive Painter</para>
 			/// <para>原始鱼人画家</para>
 			/// <para>After you play a card from Tier 3 or below, give your Murlocs +{0}/+{1}.</para>
@@ -30855,7 +30855,7 @@ namespace HREngine.Bots
 			/// </summary>
 			ghostlyymirjar_BG34_697_G,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：5 生命值：3</para>
+			/// <para>随从 战士 费用：0 攻击力：7 生命值：4</para>
 			/// <para>Twilight Broodmother</para>
 			/// <para>暮光巢母</para>
 			/// <para>[x]<b>Deathrattle:</b> Summon 2Twilight Hatchlings.Give them <b>Taunt</b>.</para>
@@ -30863,7 +30863,7 @@ namespace HREngine.Bots
 			/// </summary>
 			twilightbroodmother,
 			/// <summary>
-			/// <para>随从 战士 费用：0 攻击力：10 生命值：6</para>
+			/// <para>随从 战士 费用：0 攻击力：14 生命值：8</para>
 			/// <para>Twilight Broodmother</para>
 			/// <para>暮光巢母</para>
 			/// <para>[x]<b>Deathrattle:</b> Summon 4Twilight Hatchlings.Give them <b>Taunt</b>.</para>
@@ -30895,7 +30895,7 @@ namespace HREngine.Bots
 			/// </summary>
 			stunted,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：5 生命值：5</para>
+			/// <para>随从 无效的 费用：0 攻击力：4 生命值：5</para>
 			/// <para>Dead Sea Ravager</para>
 			/// <para>死海破坏者</para>
 			/// <para><b>Rally:</b> Give {0} other friendly minions this minion's Attack.</para>
@@ -30903,7 +30903,7 @@ namespace HREngine.Bots
 			/// </summary>
 			deadsearavager,
 			/// <summary>
-			/// <para>随从 无效的 费用：0 攻击力：10 生命值：10</para>
+			/// <para>随从 无效的 费用：0 攻击力：8 生命值：10</para>
 			/// <para>Dead Sea Ravager</para>
 			/// <para>死海破坏者</para>
 			/// <para><b>Rally:</b> Give {0} other friendly minions this minion's Attack, twice.</para>
@@ -33890,7 +33890,7 @@ namespace HREngine.Bots
 			/// <para>英雄技能 中立 费用：0</para>
 			/// <para>Double Time</para>
 			/// <para>双倍速</para>
-			/// <para>[x]You only need 2 copies of aminion to make it Golden.Golden minions give TavernCoins instead of Triple Rewards.</para>
+			/// <para>[x]You only need 2 copies tomake minions Golden. They give Tavern Coinsinstead of Triple Rewards.</para>
 			/// <para>你只需2个复制即可将随从变为金色。使用金色随从不会获取三连奖励，改为获取酒馆币。</para>
 			/// </summary>
 			doubletime,
@@ -35063,7 +35063,7 @@ namespace HREngine.Bots
 			/// </summary>
 			twistedwrathguard_BG35_155_G,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：5 生命值：5</para>
 			/// <para>Skeletal Strafer</para>
 			/// <para>骷髅狂射手</para>
 			/// <para>At the end of your turn,give your minions +{1}/+{1}.<b>Avenge ({0}):</b> Improve this permanently.</para>
@@ -35071,7 +35071,7 @@ namespace HREngine.Bots
 			/// </summary>
 			skeletalstrafer,
 			/// <summary>
-			/// <para>随从 巫妖王 费用：0 攻击力：12 生命值：12</para>
+			/// <para>随从 巫妖王 费用：0 攻击力：10 生命值：10</para>
 			/// <para>Skeletal Strafer</para>
 			/// <para>骷髅狂射手</para>
 			/// <para>At the end of your turn,give your minions +{1}/+{1}.<b>Avenge ({0}):</b> Improve this permanently.</para>
@@ -35319,7 +35319,7 @@ namespace HREngine.Bots
 			/// </summary>
 			jumpedship,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：6 生命值：6</para>
+			/// <para>随从 牧师 费用：0 攻击力：5 生命值：6</para>
 			/// <para>Brazen Buccaneer</para>
 			/// <para>无耻的海盗</para>
 			/// <para>[x]At the end of your turn, giveyour left-most Pirate +{0}/+{1}.Repeat for each card youplayed this turn. <i>({2})</i></para>
@@ -35327,7 +35327,7 @@ namespace HREngine.Bots
 			/// </summary>
 			brazenbuccaneer,
 			/// <summary>
-			/// <para>随从 牧师 费用：0 攻击力：12 生命值：12</para>
+			/// <para>随从 牧师 费用：0 攻击力：10 生命值：12</para>
 			/// <para>Brazen Buccaneer</para>
 			/// <para>无耻的海盗</para>
 			/// <para>[x]At the end of your turn, giveyour left-most Pirate +{0}/+{1}.Repeat for each card youplayed this turn. <i>({2})</i></para>
@@ -35506,16 +35506,16 @@ namespace HREngine.Bots
 			/// <para>随从 萨满祭司 费用：0 攻击力：5 生命值：6</para>
 			/// <para>Tidecaller Prophet</para>
 			/// <para>招潮者先知</para>
-			/// <para>[x]Your Tavern spells give anextra +{1}/+{2} this turn. Afteryou play 2 Murlocs,_improve this. <i>({0} left!)</i></para>
-			/// <para>在本回合中，你的酒馆法术使随从额外获得+{1}/+{2}。在你使用2张鱼人牌后，提升此效果。<i>（还剩{0}张！）</i></para>
+			/// <para>[x]Your Tavern spells give anextra +{1}/+{2}. After youplay 2 Murlocs, improve for___this turn only. <i>({0} left!)</i></para>
+			/// <para>你的酒馆法术使随从额外获得+{1}/+{2}。在你使用2张鱼人牌后，在本回合中提升此效果。<i>（还剩{0}张！）</i></para>
 			/// </summary>
 			tidecallerprophet,
 			/// <summary>
 			/// <para>随从 萨满祭司 费用：0 攻击力：10 生命值：12</para>
 			/// <para>Tidecaller Prophet</para>
 			/// <para>招潮者先知</para>
-			/// <para>[x]Your Tavern spells give anextra +{1}/+{2} this turn. Afteryou play 2 Murlocs,_improve this. <i>({0} left!)</i></para>
-			/// <para>在本回合中，你的酒馆法术使随从额外获得+{1}/+{2}。在你使用2张鱼人牌后，提升此效果。<i>（还剩{0}张！）</i></para>
+			/// <para>[x]Your Tavern spells give anextra +{1}/+{2}. After youplay 2 Murlocs, improve for___this turn only. <i>({0} left!)</i></para>
+			/// <para>你的酒馆法术使随从额外获得+{1}/+{2}。在你使用2张鱼人牌后，在本回合中提升此效果。<i>（还剩{0}张！）</i></para>
 			/// </summary>
 			tidecallerprophet_BG35_895_G,
 			/// <summary>
@@ -35642,8 +35642,8 @@ namespace HREngine.Bots
 			/// <para>法术 中立 费用：0</para>
 			/// <para>Fly the Flag</para>
 			/// <para>升起旗帜</para>
-			/// <para>[x]Choose a minion.Add plain copies of it toYOUR minion pool.</para>
-			/// <para>选择一个随从，将它的原始版复制加入你的随从池。</para>
+			/// <para>[x]Choose a minion fromTier 6 or below.Add plain copies of it toYOUR minion pool.</para>
+			/// <para>选择一个等级6或以下的随从，将它的原始版复制加入你的随从池。</para>
 			/// </summary>
 			flytheflag_BG35_Anomaly_001t,
 			/// <summary>
@@ -35834,8 +35834,8 @@ namespace HREngine.Bots
 			/// <para>附魔 中立 费用：0</para>
 			/// <para>Skyward</para>
 			/// <para>飞天</para>
-			/// <para><b>Deathrattle:</b> Give your minions +3/+3 permanently.</para>
-			/// <para><b>亡语：</b>使你的随从永久获得+3/+3。</para>
+			/// <para><b>Deathrattle:</b> Give your minions +2/+2 permanently.</para>
+			/// <para><b>亡语：</b>使你的随从永久获得+2/+2。</para>
 			/// </summary>
 			skyward_BG35_MagicItem_740e2,
 			/// <summary>
@@ -54722,12 +54722,12 @@ namespace HREngine.Bots
 			/// <para>随从 中立 费用：1 攻击力：0 生命值：2</para>
 			/// <para>Twilight Egg</para>
 			/// <para>暮光龙卵</para>
-			/// <para>[x]<b>Deathrattle:</b> Summon a@/@ Whelp. <i>(Gains +1/+1__at the start of your turns!)__</i></para>
-			/// <para><b>亡语：</b>召唤一条@/@的雏龙。<i>（在你的回合开始时获得+1/+1！）</i></para>
+			/// <para>[x]<b>Deathrattle:</b> Summon a{0}/{1} Whelp. <i>(Gains +1/+1__at the start of your turns!)__</i></para>
+			/// <para><b>亡语：</b>召唤一条{0}/{1}的雏龙。<i>（在你的回合开始时获得+1/+1！）</i></para>
 			/// </summary>
 			twilightegg,
 			/// <summary>
-			/// <para>随从 中立 费用：2 攻击力：2 生命值：2</para>
+			/// <para>随从 中立 费用：2 攻击力：2 生命值：1</para>
 			/// <para>Accelerated Whelp</para>
 			/// <para>速生雏龙</para>
 			/// <para></para>
@@ -55122,7 +55122,7 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：4 攻击力：3 生命值：4</para>
 			/// <para>Spearheart Sentry</para>
 			/// <para>矛心哨卫</para>
-			/// <para>[x]At the end of your turn,get a random Holy Spell.Reduce its Cost by (3).</para>
+			/// <para>[x]At the end of your turn,get a random Holy spell.Reduce its Cost by (3).</para>
 			/// <para>在你的回合结束时，随机获取一张神圣法术牌，其法力值消耗减少（3）点。</para>
 			/// </summary>
 			spearheartsentry,
@@ -55695,7 +55695,7 @@ namespace HREngine.Bots
 			/// </summary>
 			reinforcementrallier,
 			/// <summary>
-			/// <para>法术 猎人 费用：3</para>
+			/// <para>法术 猎人 费用：4</para>
 			/// <para>Confront the Tol'vir</para>
 			/// <para>直面托维尔</para>
 			/// <para>[x]Replay each 1-Costcard you've playedthis game <i>(targetingenemies if possible.)</i></para>
@@ -57927,22 +57927,6 @@ namespace HREngine.Bots
 			/// </summary>
 			jadegolem,
 			/// <summary>
-			/// <para>随从 中立 费用：2 攻击力：2 生命值：2</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t02,
-			/// <summary>
-			/// <para>随从 中立 费用：3 攻击力：3 生命值：3</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t03,
-			/// <summary>
 			/// <para>随从 中立 费用：4 攻击力：4 生命值：4</para>
 			/// <para>Jade Golem</para>
 			/// <para>青玉魔像</para>
@@ -57950,22 +57934,6 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			jadegolem_CFM_712_t04,
-			/// <summary>
-			/// <para>随从 中立 费用：5 攻击力：5 生命值：5</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t05,
-			/// <summary>
-			/// <para>随从 中立 费用：6 攻击力：6 生命值：6</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t06,
 			/// <summary>
 			/// <para>随从 中立 费用：7 攻击力：7 生命值：7</para>
 			/// <para>Jade Golem</para>
@@ -57975,102 +57943,6 @@ namespace HREngine.Bots
 			/// </summary>
 			jadegolem_CFM_712_t07,
 			/// <summary>
-			/// <para>随从 中立 费用：8 攻击力：8 生命值：8</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t08,
-			/// <summary>
-			/// <para>随从 中立 费用：9 攻击力：9 生命值：9</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t09,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：10 生命值：10</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t10,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：11 生命值：11</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t11,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：12 生命值：12</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t12,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：13 生命值：13</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t13,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：14 生命值：14</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t14,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：15 生命值：15</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t15,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：16 生命值：16</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t16,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：17 生命值：17</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t17,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：18 生命值：18</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t18,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：19 生命值：19</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t19,
-			/// <summary>
 			/// <para>随从 中立 费用：10 攻击力：20 生命值：20</para>
 			/// <para>Jade Golem</para>
 			/// <para>青玉魔像</para>
@@ -58078,86 +57950,6 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			jadegolem_CFM_712_t20,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：21 生命值：21</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t21,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：22 生命值：22</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t22,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：23 生命值：23</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t23,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：24 生命值：24</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t24,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：25 生命值：25</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t25,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：26 生命值：26</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t26,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：27 生命值：27</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t27,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：28 生命值：28</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t28,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：29 生命值：29</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t29,
-			/// <summary>
-			/// <para>随从 中立 费用：10 攻击力：30 生命值：30</para>
-			/// <para>Jade Golem</para>
-			/// <para>青玉魔像</para>
-			/// <para></para>
-			/// <para></para>
-			/// </summary>
-			jadegolem_CFM_712_t30,
 			/// <summary>
 			/// <para>法术 德鲁伊 费用：3</para>
 			/// <para>Jade Blossom</para>
@@ -61682,8 +61474,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：3</para>
 			/// <para>Muster for Battle</para>
 			/// <para>作战动员</para>
-			/// <para>Summon three 1/1 Silver Hand Recruits. Equip a 1/4 Weapon.</para>
-			/// <para>召唤三个1/1的白银之手新兵，装备一把1/4的武器。</para>
+			/// <para>Summon three {0} Silver Hand Recruits. Equip a 1/4 Weapon.</para>
+			/// <para>召唤三个{0}的白银之手新兵，装备一把1/4的武器。</para>
 			/// </summary>
 			musterforbattle,
 			/// <summary>
@@ -62673,7 +62465,7 @@ namespace HREngine.Bots
 			/// <summary>
 			/// <para>法术 潜行者 费用：6</para>
 			/// <para>Embrace Darkness</para>
-			/// <para>黑暗之拥</para>
+			/// <para>拥抱黑暗</para>
 			/// <para>[x]Choose an enemy minion.At the start of your turn,gain control of it.</para>
 			/// <para>选择一个敌方随从。在你的回合开始时，获得该随从的控制权。</para>
 			/// </summary>
@@ -63642,8 +63434,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：4</para>
 			/// <para>Stand Against Darkness</para>
 			/// <para>惩黑除恶</para>
-			/// <para>Summon five 1/1 Silver Hand Recruits.</para>
-			/// <para>召唤五个1/1的白银之手新兵。</para>
+			/// <para>Summon five {0} Silver Hand Recruits.</para>
+			/// <para>召唤五个{0}的白银之手新兵。</para>
 			/// </summary>
 			standagainstdarkness,
 			/// <summary>
@@ -69098,56 +68890,56 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_CS2_101_H1_AT_132,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_CS2_101_H2,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_CS2_101_H2_AT_132,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_CS2_101_H3,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_CS2_101_H3_AT_132,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_CS2_101_H4,
 			/// <summary>
@@ -77218,8 +77010,8 @@ namespace HREngine.Bots
 			/// <para>法术 巫妖王 费用：2</para>
 			/// <para>Mining Casualties</para>
 			/// <para>采矿事故</para>
-			/// <para>Summon two 1/1 Silver Hand Recruits with "<b>Deathrattle:</b> Summona 1/1 Frail Ghoul".</para>
-			/// <para>召唤两个1/1并具有“<b>亡语：</b>召唤一个1/1的脆弱的食尸鬼”的白银之手新兵。</para>
+			/// <para>Summon two {0} Silver Hand Recruits with "<b>Deathrattle:</b> Summona 1/1 Frail Ghoul".</para>
+			/// <para>召唤两个{0}并具有“<b>亡语：</b>召唤一个1/1的脆弱的食尸鬼”的白银之手新兵。</para>
 			/// </summary>
 			miningcasualties,
 			/// <summary>
@@ -102714,8 +102506,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：3</para>
 			/// <para>Muster for Battle</para>
 			/// <para>作战动员</para>
-			/// <para>Summon three 1/1 Silver Hand Recruits. Equip a 1/4 Weapon.</para>
-			/// <para>召唤三个1/1的白银之手新兵，装备一把1/4的武器。</para>
+			/// <para>Summon three {0} Silver Hand Recruits. Equip a 1/4 Weapon.</para>
+			/// <para>召唤三个{0}的白银之手新兵，装备一把1/4的武器。</para>
 			/// </summary>
 			musterforbattle_GVG_061,
 			/// <summary>
@@ -104024,6 +103816,38 @@ namespace HREngine.Bots
 			tankup_HERO_01bthp2,
 			/// <summary>
 			/// <para>英雄 战士 费用：0</para>
+			/// <para>Dr. Boom</para>
+			/// <para>砰砰博士</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			drboom_HERO_01bw,
+			/// <summary>
+			/// <para>英雄技能 战士 费用：2</para>
+			/// <para>Armor Up!</para>
+			/// <para>全副武装！</para>
+			/// <para><b>Hero Power</b>Gain $d2 Armor.</para>
+			/// <para><b>英雄技能</b>获得$d2点护甲值。</para>
+			/// </summary>
+			armorup_HERO_01bwhp,
+			/// <summary>
+			/// <para>英雄技能 战士 费用：2</para>
+			/// <para>Tank Up!</para>
+			/// <para>铜墙铁壁！</para>
+			/// <para><b>Hero Power</b>Gain $d4 Armor.</para>
+			/// <para><b>英雄技能</b>获得$d4点护甲值。</para>
+			/// </summary>
+			tankup_HERO_01bwhp2,
+			/// <summary>
+			/// <para>英雄 战士 费用：0</para>
+			/// <para>Henchman Boulderfist</para>
+			/// <para>匪帮恶党石拳</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			henchmanboulderfist,
+			/// <summary>
+			/// <para>英雄 战士 费用：0</para>
 			/// <para>Deathwing</para>
 			/// <para>死亡之翼</para>
 			/// <para></para>
@@ -104968,12 +104792,44 @@ namespace HREngine.Bots
 			totemicslam_HERO_02bxhp2,
 			/// <summary>
 			/// <para>英雄 萨满祭司 费用：0</para>
+			/// <para>Wuxia Fireheart</para>
+			/// <para>武术教头火心</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			wuxiafireheart,
+			/// <summary>
+			/// <para>英雄技能 萨满祭司 费用：2</para>
+			/// <para>Totemic Call</para>
+			/// <para>图腾召唤</para>
+			/// <para><b>Hero Power</b>Summon a random basic Totem.</para>
+			/// <para><b>英雄技能</b>随机召唤一个基础图腾。</para>
+			/// </summary>
+			totemiccall_HERO_02bzhp,
+			/// <summary>
+			/// <para>英雄技能 萨满祭司 费用：2</para>
+			/// <para>Totemic Slam</para>
+			/// <para>图腾崇拜</para>
+			/// <para><b>Hero Power</b>Summon a Totem of your choice.</para>
+			/// <para><b>英雄技能</b>召唤一个你想要的图腾。</para>
+			/// </summary>
+			totemicslam_HERO_02bzhp2,
+			/// <summary>
+			/// <para>英雄 萨满祭司 费用：0</para>
 			/// <para>The Thunder King</para>
 			/// <para>雷电之王</para>
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
 			thethunderking,
+			/// <summary>
+			/// <para>英雄 萨满祭司 费用：0</para>
+			/// <para>Jailbird Inzah</para>
+			/// <para>囚徒因扎</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			jailbirdinzah,
 			/// <summary>
 			/// <para>英雄 萨满祭司 费用：0</para>
 			/// <para>Warchief Thrall</para>
@@ -105736,6 +105592,62 @@ namespace HREngine.Bots
 			poisoneddaggers_HERO_03bp2,
 			/// <summary>
 			/// <para>英雄 牧师 费用：0</para>
+			/// <para>Maiev, Hand of Vengeance</para>
+			/// <para>复仇之手玛维</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			maievhandofvengeance,
+			/// <summary>
+			/// <para>英雄技能 牧师 费用：2</para>
+			/// <para>Dagger Mastery</para>
+			/// <para>匕首精通</para>
+			/// <para><b>Hero Power</b>Equip a 1/2 Dagger.</para>
+			/// <para><b>英雄技能</b>装备一把1/2的匕首。</para>
+			/// </summary>
+			daggermastery_HERO_03bshp,
+			/// <summary>
+			/// <para>英雄技能 牧师 费用：2</para>
+			/// <para>Poisoned Daggers</para>
+			/// <para>浸毒匕首</para>
+			/// <para><b>Hero Power</b>Equip a 2/2 Weapon.</para>
+			/// <para><b>英雄技能</b>装备一把2/2的匕首。</para>
+			/// </summary>
+			poisoneddaggers_HERO_03bshp2,
+			/// <summary>
+			/// <para>英雄 牧师 费用：0</para>
+			/// <para>Mastermind Vanessa</para>
+			/// <para>主谋梵妮莎</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			mastermindvanessa,
+			/// <summary>
+			/// <para>英雄 牧师 费用：0</para>
+			/// <para>Aya Blackpaw</para>
+			/// <para>艾雅·黑掌</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			ayablackpaw_HERO_03by,
+			/// <summary>
+			/// <para>英雄技能 牧师 费用：2</para>
+			/// <para>Dagger Mastery</para>
+			/// <para>匕首精通</para>
+			/// <para><b>Hero Power</b>Equip a 1/2 Dagger.</para>
+			/// <para><b>英雄技能</b>装备一把1/2的匕首。</para>
+			/// </summary>
+			daggermastery_HERO_03byhp,
+			/// <summary>
+			/// <para>英雄技能 牧师 费用：2</para>
+			/// <para>Poisoned Daggers</para>
+			/// <para>浸毒匕首</para>
+			/// <para><b>Hero Power</b>Equip a 2/2 Weapon.</para>
+			/// <para><b>英雄技能</b>装备一把2/2的匕首。</para>
+			/// </summary>
+			poisoneddaggers_HERO_03byhp2,
+			/// <summary>
+			/// <para>英雄 牧师 费用：0</para>
 			/// <para>Nightslayer Valeera</para>
 			/// <para>夜幕杀手瓦莉拉</para>
 			/// <para></para>
@@ -106082,16 +105994,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04aibp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04aibp2,
 			/// <summary>
@@ -106154,16 +106066,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04aphp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04aphp2,
 			/// <summary>
@@ -106210,16 +106122,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04auhp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04auhp2,
 			/// <summary>
@@ -106258,16 +106170,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04ayhp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04ayhp2,
 			/// <summary>
@@ -106314,16 +106226,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bchp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bchp2,
 			/// <summary>
@@ -106338,16 +106250,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bdhp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bdhp2,
 			/// <summary>
@@ -106370,16 +106282,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bfhp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bfhp2,
 			/// <summary>
@@ -106394,16 +106306,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bghp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bghp2,
 			/// <summary>
@@ -106442,16 +106354,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bkhp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bkhp2,
 			/// <summary>
@@ -106482,32 +106394,32 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bohp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bohp2,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bp2,
 			/// <summary>
@@ -106522,16 +106434,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bqhp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bqhp2,
 			/// <summary>
@@ -106552,6 +106464,22 @@ namespace HREngine.Bots
 			finleymetzen,
 			/// <summary>
 			/// <para>英雄 圣骑士 费用：0</para>
+			/// <para>Sir Alarm-O</para>
+			/// <para>报报爵士</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			siralarmo,
+			/// <summary>
+			/// <para>英雄 圣骑士 费用：0</para>
+			/// <para>Runebound Beatrix</para>
+			/// <para>符文之缚碧阿崔克丝</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			runeboundbeatrix,
+			/// <summary>
+			/// <para>英雄 圣骑士 费用：0</para>
 			/// <para>Corrupted Leeroy</para>
 			/// <para>腐化的火车王</para>
 			/// <para></para>
@@ -106562,16 +106490,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04bxhp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04bxhp2,
 			/// <summary>
@@ -106602,16 +106530,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04ebp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04ebp2,
 			/// <summary>
@@ -106626,24 +106554,24 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04fbp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04fbp2,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce_Yrel</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforceyrel,
 			/// <summary>
@@ -106690,16 +106618,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04lbp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04lbp2,
 			/// <summary>
@@ -106770,16 +106698,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04ubp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04ubp2,
 			/// <summary>
@@ -106802,16 +106730,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>援军</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_HERO_04wbp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_HERO_04wbp2,
 			/// <summary>
@@ -107422,6 +107350,38 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			stormpikeexpeditiontavish,
+			/// <summary>
+			/// <para>英雄 猎人 费用：0</para>
+			/// <para>Wuxia Sylvanas</para>
+			/// <para>女侠希尔瓦娜斯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			wuxiasylvanas,
+			/// <summary>
+			/// <para>英雄技能 猎人 费用：2</para>
+			/// <para>Steady Shot</para>
+			/// <para>稳固射击</para>
+			/// <para><b>Hero Power</b>Deal $2 damage to the enemy hero.@<b>Hero Power</b>Deal $2 damage.</para>
+			/// <para><b>英雄技能</b>对敌方英雄造成$2点伤害。@<b>英雄技能</b>造成$2点伤害。</para>
+			/// </summary>
+			steadyshot_HERO_05bthp,
+			/// <summary>
+			/// <para>英雄技能 猎人 费用：2</para>
+			/// <para>Ballista Shot</para>
+			/// <para>弩炮射击</para>
+			/// <para><b>Hero Power</b>Deal $3 damage to the enemy hero.@<b>Hero Power</b>Deal $3 damage.</para>
+			/// <para><b>英雄技能</b>对敌方英雄造成$3点伤害。@<b>英雄技能</b>造成$3点伤害。</para>
+			/// </summary>
+			ballistashot_HERO_05bthp2,
+			/// <summary>
+			/// <para>英雄 猎人 费用：0</para>
+			/// <para>Prison Break Mukla</para>
+			/// <para>越狱的穆克拉</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			prisonbreakmukla,
 			/// <summary>
 			/// <para>英雄 猎人 费用：0</para>
 			/// <para>Sylvanas Windrunner</para>
@@ -108134,6 +108094,22 @@ namespace HREngine.Bots
 			/// <para><b>英雄技能</b>本回合+$a2攻击力。+$d2护甲值。</para>
 			/// </summary>
 			direshapeshift_HERO_06bp2,
+			/// <summary>
+			/// <para>英雄 德鲁伊 费用：0</para>
+			/// <para>Wuxia Elise</para>
+			/// <para>侠客伊莉斯</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			wuxiaelise,
+			/// <summary>
+			/// <para>英雄 德鲁伊 费用：0</para>
+			/// <para>Model Prisoner Faelin</para>
+			/// <para>标兵囚犯费林</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			modelprisonerfaelin,
 			/// <summary>
 			/// <para>英雄 德鲁伊 费用：0</para>
 			/// <para>Dragonqueen Alexstrasza</para>
@@ -108992,6 +108968,14 @@ namespace HREngine.Bots
 			soultap_HERO_07bp2,
 			/// <summary>
 			/// <para>英雄 术士 费用：0</para>
+			/// <para>Nefarious Nemsy</para>
+			/// <para>邪恶的奈姆希</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			nefariousnemsy,
+			/// <summary>
+			/// <para>英雄 术士 费用：0</para>
 			/// <para>Mistress Nagmara</para>
 			/// <para>娜玛拉小姐</para>
 			/// <para></para>
@@ -109062,6 +109046,22 @@ namespace HREngine.Bots
 			/// <para><b>英雄技能</b>抽一张牌。</para>
 			/// </summary>
 			soultap_HERO_07bthp2,
+			/// <summary>
+			/// <para>英雄 术士 费用：0</para>
+			/// <para>Escapee Zail</para>
+			/// <para>越狱的扎尔</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			escapeezail,
+			/// <summary>
+			/// <para>英雄 术士 费用：0</para>
+			/// <para>Gaolbreaker Godfrey</para>
+			/// <para>越狱者高弗雷</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			gaolbreakergodfrey,
 			/// <summary>
 			/// <para>英雄 术士 费用：0</para>
 			/// <para>Shadow Gul'dan</para>
@@ -110080,6 +110080,38 @@ namespace HREngine.Bots
 			fireblastrank2_HERO_08chhp2,
 			/// <summary>
 			/// <para>英雄 法师 费用：0</para>
+			/// <para>Millhouse Manastorm</para>
+			/// <para>米尔豪斯·法力风暴</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			millhousemanastorm,
+			/// <summary>
+			/// <para>英雄技能 法师 费用：2</para>
+			/// <para>Fireblast</para>
+			/// <para>火焰冲击</para>
+			/// <para><b>Hero Power</b>Deal $1 damage.</para>
+			/// <para><b>英雄技能</b>造成$1点伤害。</para>
+			/// </summary>
+			fireblast_HERO_08ckhp,
+			/// <summary>
+			/// <para>英雄技能 法师 费用：2</para>
+			/// <para>Fireblast Rank 2</para>
+			/// <para>二级火焰冲击</para>
+			/// <para><b>Hero Power</b>Deal $2 damage.</para>
+			/// <para><b>英雄技能</b>造成$2点伤害。</para>
+			/// </summary>
+			fireblastrank2_HERO_08ckhp2,
+			/// <summary>
+			/// <para>英雄 法师 费用：0</para>
+			/// <para>Dalaran Aegwynn</para>
+			/// <para>达拉然的艾格文</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			dalaranaegwynn,
+			/// <summary>
+			/// <para>英雄 法师 费用：0</para>
 			/// <para>"Murozond" A. F. Kay</para>
 			/// <para>“姆诺兹多”挂机的阿凯</para>
 			/// <para></para>
@@ -110920,6 +110952,62 @@ namespace HREngine.Bots
 			rapunzelxyrella_HERO_09br,
 			/// <summary>
 			/// <para>英雄 潜行者 费用：0</para>
+			/// <para>Info Broker Lazul</para>
+			/// <para>情报掮客拉祖尔</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			infobrokerlazul,
+			/// <summary>
+			/// <para>英雄 潜行者 费用：0</para>
+			/// <para>Unfettered Azalina</para>
+			/// <para>获释的阿扎莉娜</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			unfetteredazalina,
+			/// <summary>
+			/// <para>英雄技能 潜行者 费用：2</para>
+			/// <para>Lesser Heal</para>
+			/// <para>次级治疗术</para>
+			/// <para><b>Hero Power</b>Restore #2 Health.</para>
+			/// <para><b>英雄技能</b>恢复#2点生命值。</para>
+			/// </summary>
+			lesserheal_HERO_09bvhp,
+			/// <summary>
+			/// <para>英雄技能 潜行者 费用：2</para>
+			/// <para>Heal</para>
+			/// <para>治疗术</para>
+			/// <para><b>Hero Power</b>Restore #4 Health.</para>
+			/// <para><b>英雄技能</b>恢复#4点生命值。</para>
+			/// </summary>
+			heal_HERO_09bvhp2,
+			/// <summary>
+			/// <para>英雄 潜行者 费用：0</para>
+			/// <para>Maiev, Hand of Vengeance</para>
+			/// <para>复仇之手玛维</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			maievhandofvengeance_HERO_09bw,
+			/// <summary>
+			/// <para>英雄技能 潜行者 费用：2</para>
+			/// <para>Lesser Heal</para>
+			/// <para>次级治疗术</para>
+			/// <para><b>Hero Power</b>Restore #2 Health.</para>
+			/// <para><b>英雄技能</b>恢复#2点生命值。</para>
+			/// </summary>
+			lesserheal_HERO_09bwhp,
+			/// <summary>
+			/// <para>英雄技能 潜行者 费用：2</para>
+			/// <para>Heal</para>
+			/// <para>治疗术</para>
+			/// <para><b>Hero Power</b>Restore #4 Health.</para>
+			/// <para><b>英雄技能</b>恢复#4点生命值。</para>
+			/// </summary>
+			heal_HERO_09bwhp2,
+			/// <summary>
+			/// <para>英雄 潜行者 费用：0</para>
 			/// <para>King Anduin</para>
 			/// <para>安度因国王</para>
 			/// <para></para>
@@ -111672,6 +111760,38 @@ namespace HREngine.Bots
 			demonclaws_HERO_10bpe,
 			/// <summary>
 			/// <para>英雄 恶魔猎手 费用：0</para>
+			/// <para>Irida Sinseeker</para>
+			/// <para>伊莉达·寻罪</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			iridasinseeker,
+			/// <summary>
+			/// <para>英雄技能 恶魔猎手 费用：1</para>
+			/// <para>Demon Claws</para>
+			/// <para>恶魔之爪</para>
+			/// <para>[x]<b>Hero Power</b>+$a1 Attack this turn.</para>
+			/// <para><b>英雄技能</b>在本回合中+$a1攻击力。</para>
+			/// </summary>
+			demonclaws_HERO_10brhp,
+			/// <summary>
+			/// <para>英雄技能 恶魔猎手 费用：1</para>
+			/// <para>Demon's Bite</para>
+			/// <para>恶魔之咬</para>
+			/// <para>[x]<b>Hero Power</b>+$a2 Attack this turn.</para>
+			/// <para><b>英雄技能</b>在本回合中+$a2攻击力。</para>
+			/// </summary>
+			demonsbite_HERO_10brhp2,
+			/// <summary>
+			/// <para>英雄 恶魔猎手 费用：0</para>
+			/// <para>Unchained Omen</para>
+			/// <para>冲破束缚的年兽</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			unchainedomen,
+			/// <summary>
+			/// <para>英雄 恶魔猎手 费用：0</para>
 			/// <para>Demonbane Illidan</para>
 			/// <para>恶魔克星伊利丹</para>
 			/// <para></para>
@@ -112214,6 +112334,46 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// </summary>
 			arthasmenethil,
+			/// <summary>
+			/// <para>英雄 巫妖王 费用：0</para>
+			/// <para>Imprisoned Lana'thel</para>
+			/// <para>被禁锢的兰娜瑟尔</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			imprisonedlanathel,
+			/// <summary>
+			/// <para>英雄 巫妖王 费用：0</para>
+			/// <para>Prison Doctor Thal'ena</para>
+			/// <para>监狱医师萨安娜</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			prisondoctorthalena,
+			/// <summary>
+			/// <para>英雄技能 巫妖王 费用：2</para>
+			/// <para>Ghoul Charge</para>
+			/// <para>食尸鬼冲锋</para>
+			/// <para>[x]<b>Hero Power</b>Summon a 1/1 Ghoulwith <b>Charge</b>. It dies atend of turn.</para>
+			/// <para><b>英雄技能</b>召唤一个1/1并具有<b>冲锋</b>的食尸鬼。它会在回合结束时死亡。</para>
+			/// </summary>
+			ghoulcharge_HERO_11bdhp,
+			/// <summary>
+			/// <para>英雄技能 巫妖王 费用：2</para>
+			/// <para>Ghoul Frenzy</para>
+			/// <para>食尸鬼狂暴</para>
+			/// <para>[x]<b>Hero Power</b>Summon a 2/1 Ghoulwith <b>Charge</b>. It dies atend of turn.</para>
+			/// <para><b>英雄技能</b>召唤一个2/1并具有<b>冲锋</b>的食尸鬼。它会在回合结束时死亡。</para>
+			/// </summary>
+			ghoulfrenzy_HERO_11bdhp2,
+			/// <summary>
+			/// <para>英雄 巫妖王 费用：0</para>
+			/// <para>Judge Jailer</para>
+			/// <para>裁决官典狱长</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			judgejailer,
 			/// <summary>
 			/// <para>英雄技能 巫妖王 费用：2</para>
 			/// <para>Ghoul Charge</para>
@@ -114417,7 +114577,7 @@ namespace HREngine.Bots
 			/// <summary>
 			/// <para>法术 潜行者 费用：6</para>
 			/// <para>Embrace Darkness</para>
-			/// <para>黑暗之拥</para>
+			/// <para>拥抱黑暗</para>
 			/// <para>[x]Choose an enemy minion.At the start of your turn,gain control of it.</para>
 			/// <para>选择一个敌方随从。在你的回合开始时，获得该随从的控制权。</para>
 			/// </summary>
@@ -115314,8 +115474,8 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：2 攻击力：0 生命值：4</para>
 			/// <para>Jukebox Totem</para>
 			/// <para>点唱机图腾</para>
-			/// <para>[x]At the end of your turn,summon a 1/1 SilverHand Recruit.</para>
-			/// <para>在你的回合结束时，召唤一个1/1的白银之手新兵。</para>
+			/// <para>[x]At the end of your turn,summon a{1} {0} SilverHand Recruit.</para>
+			/// <para>在你的回合结束时，召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			jukeboxtotem,
 			/// <summary>
@@ -118749,7 +118909,7 @@ namespace HREngine.Bots
 			/// <para></para>
 			/// <para></para>
 			/// </summary>
-			millhousemanastorm,
+			millhousemanastorm_LETL_005H_01,
 			/// <summary>
 			/// <para>随从 无效的 费用：5 攻击力：6 生命值：69</para>
 			/// <para>Millhouse Manastorm</para>
@@ -181842,8 +182002,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：2</para>
 			/// <para>Convalescence</para>
 			/// <para>休养</para>
-			/// <para>Summon two 1/1 Silver Hand Recruits with <b>Divine Shield</b>.</para>
-			/// <para>召唤两个1/1并具有<b>圣盾</b>的白银之手新兵。</para>
+			/// <para>Summon two {0} Silver Hand Recruits with <b>Divine Shield</b>.</para>
+			/// <para>召唤两个{0}并具有<b>圣盾</b>的白银之手新兵。</para>
 			/// </summary>
 			convalescence,
 			/// <summary>
@@ -181906,8 +182066,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：4</para>
 			/// <para>Teamwork</para>
 			/// <para>团队协作</para>
-			/// <para>[x]Summon and getfour 1/1 SilverHand Recruits.</para>
-			/// <para>召唤并获取四个1/1的白银之手新兵。</para>
+			/// <para>[x]Summon and getfour {0} SilverHand Recruits.</para>
+			/// <para>召唤并获取四个{0}的白银之手新兵。</para>
 			/// </summary>
 			teamwork_MEND_900,
 			/// <summary>
@@ -185706,8 +185866,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：4</para>
 			/// <para>Stand Against Darkness</para>
 			/// <para>惩黑除恶</para>
-			/// <para>Summon five 1/1 Silver Hand Recruits.</para>
-			/// <para>召唤五个1/1的白银之手新兵。</para>
+			/// <para>Summon five {0} Silver Hand Recruits.</para>
+			/// <para>召唤五个{0}的白银之手新兵。</para>
 			/// </summary>
 			standagainstdarkness_OG_273,
 			/// <summary>
@@ -200722,8 +200882,8 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：2 攻击力：1 生命值：3</para>
 			/// <para>Soldier's Caravan</para>
 			/// <para>士兵车队</para>
-			/// <para>[x]At the start of your turn,summon two 1/1Silver Hand Recruits.</para>
-			/// <para>在你的回合开始时，召唤两个1/1的白银之手新兵。</para>
+			/// <para>[x]At the start of your turn,summon two {0}Silver Hand Recruits.</para>
+			/// <para>在你的回合开始时，召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			soldierscaravan_RLK_Prologue_BAR_871,
 			/// <summary>
@@ -201242,8 +201402,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：3</para>
 			/// <para>Muster for Battle</para>
 			/// <para>作战动员</para>
-			/// <para>Summon three 1/1 Silver Hand Recruits. Equip a 1/4 Weapon.</para>
-			/// <para>召唤三个1/1的白银之手新兵，装备一把1/4的武器。</para>
+			/// <para>Summon three {0} Silver Hand Recruits. Equip a 1/4 Weapon.</para>
+			/// <para>召唤三个{0}的白银之手新兵，装备一把1/4的武器。</para>
 			/// </summary>
 			musterforbattle_RLK_Prologue_GVG_061,
 			/// <summary>
@@ -201394,8 +201554,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：4</para>
 			/// <para>Stand Against Darkness</para>
 			/// <para>惩黑除恶</para>
-			/// <para>Summon five 1/1 Silver Hand Recruits.</para>
-			/// <para>召唤五个1/1的白银之手新兵。</para>
+			/// <para>Summon five {0} Silver Hand Recruits.</para>
+			/// <para>召唤五个{0}的白银之手新兵。</para>
 			/// </summary>
 			standagainstdarkness_RLK_Prologue_OG_273,
 			/// <summary>
@@ -202202,8 +202362,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：1</para>
 			/// <para>Lost in the Jungle</para>
 			/// <para>迷失丛林</para>
-			/// <para>Summon two 1/1 Silver Hand Recruits.</para>
-			/// <para>召唤两个1/1的白银之手新兵。</para>
+			/// <para>Summon two {0} Silver Hand Recruits.</para>
+			/// <para>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			lostinthejungle,
 			/// <summary>
@@ -202226,16 +202386,16 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：2</para>
 			/// <para>Air Raid</para>
 			/// <para>空中团战</para>
-			/// <para><b>Twinspell</b>Summon two 1/1 Silver_Hand Recruits with <b>Taunt</b>.</para>
-			/// <para><b>双生法术</b>召唤两个1/1并具有<b>嘲讽</b>的白银之手新兵。</para>
+			/// <para><b>Twinspell</b>Summon two {0} Silver_Hand Recruits with <b>Taunt</b>.</para>
+			/// <para><b>双生法术</b>召唤两个{0}并具有<b>嘲讽</b>的白银之手新兵。</para>
 			/// </summary>
 			airraid,
 			/// <summary>
 			/// <para>法术 圣骑士 费用：2</para>
 			/// <para>Air Raid</para>
 			/// <para>空中团战</para>
-			/// <para>Summon two 1/1 Silver Hand Recruits with <b>Taunt</b>.</para>
-			/// <para>召唤两个1/1并具有<b>嘲讽</b>的白银之手新兵。</para>
+			/// <para>Summon two {0} Silver Hand Recruits with <b>Taunt</b>.</para>
+			/// <para>召唤两个{0}并具有<b>嘲讽</b>的白银之手新兵。</para>
 			/// </summary>
 			airraid_RLK_Prologue_YOD_012ts,
 			/// <summary>
@@ -238730,16 +238890,16 @@ namespace HREngine.Bots
 			/// <para>地标 恶魔猎手 费用：6</para>
 			/// <para>The Eternal Hold</para>
 			/// <para>永时坚垒</para>
-			/// <para>[x]<b>Discover</b> any Demon thatcosts (5) or more. If yourdeck has no minions,your next one costs (0).</para>
-			/// <para><b>发现</b>一张法力值消耗大于或等于（5）点的任意恶魔牌。如果你的牌库中没有随从牌，你的下一张随从牌法力值消耗为（0）点。</para>
+			/// <para>[x]<b>Discover</b> any Demon thatcosts (5) or more. If yourdeck has no minions,your next one costs (1).</para>
+			/// <para><b>发现</b>一张法力值消耗大于或等于（5）点的任意恶魔牌。如果你的牌库中没有随从牌，你的下一张随从牌法力值消耗为（1）点。</para>
 			/// </summary>
 			theeternalhold,
 			/// <summary>
 			/// <para>附魔 恶魔猎手 费用：0</para>
 			/// <para>Jailbreak</para>
 			/// <para>越狱</para>
-			/// <para>Your next minion costs (0).</para>
-			/// <para>你的下一张随从牌的法力值消耗为（0）点。</para>
+			/// <para>Your next minion costs (1).</para>
+			/// <para>你的下一张随从牌的法力值消耗为（1）点。</para>
 			/// </summary>
 			jailbreak,
 			/// <summary>
@@ -240266,16 +240426,16 @@ namespace HREngine.Bots
 			/// <para>随从 德鲁伊 费用：3 攻击力：2 生命值：3</para>
 			/// <para>Hatchery Helper</para>
 			/// <para>孵化辅助师</para>
-			/// <para>[x]<b>Battlecry:</b> Give yourother minions with 2 or lessAttack +1/+2 and <b>Taunt</b>.</para>
-			/// <para><b>战吼：</b>使你的其他攻击力小于或等于2的随从获得+1/+2和<b>嘲讽</b>。</para>
+			/// <para>[x]<b>Battlecry:</b> Give yourother minions with 2 or lessAttack +1/+1 and <b>Taunt</b>.</para>
+			/// <para><b>战吼：</b>使你的其他攻击力小于或等于2的随从获得+1/+1和<b>嘲讽</b>。</para>
 			/// </summary>
 			hatcheryhelper,
 			/// <summary>
 			/// <para>附魔 德鲁伊 费用：0</para>
 			/// <para>Incubate</para>
 			/// <para>孵化</para>
-			/// <para>+1/+2 and <b>Taunt</b>.</para>
-			/// <para>+1/+2和<b>嘲讽</b>。</para>
+			/// <para>+1/+1 and <b>Taunt</b>.</para>
+			/// <para>+1/+1和<b>嘲讽</b>。</para>
 			/// </summary>
 			incubate,
 			/// <summary>
@@ -249074,7 +249234,7 @@ namespace HREngine.Bots
 			/// <para>随从 圣骑士 费用：3 攻击力：2 生命值：5</para>
 			/// <para>Shimmering Sunfish</para>
 			/// <para>闪光翻车鱼</para>
-			/// <para><b>Battlecry:</b> If you're holding a Holy Spell, gain <b>Taunt</b> and <b>Divine Shield</b>.</para>
+			/// <para><b>Battlecry:</b> If you're holding a Holy spell, gain <b>Taunt</b> and <b>Divine Shield</b>.</para>
 			/// <para><b>战吼：</b>如果你的手牌中有神圣法术牌，则获得<b>嘲讽</b>和<b>圣盾</b>。</para>
 			/// </summary>
 			shimmeringsunfish,
@@ -263554,8 +263714,8 @@ namespace HREngine.Bots
 			/// <para>武器 圣骑士 费用：6 攻击力：4 耐久度：0</para>
 			/// <para>Vinecleaver</para>
 			/// <para>斩棘刀</para>
-			/// <para>[x]After your hero attacks,summon two 1/1 SilverHand Recruits.</para>
-			/// <para>在你的英雄攻击后，召唤两个1/1的白银之手新兵。</para>
+			/// <para>[x]After your hero attacks,summon two {0} SilverHand Recruits.</para>
+			/// <para>在你的英雄攻击后，召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			vinecleaver,
 			/// <summary>
@@ -263650,8 +263810,8 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：1</para>
 			/// <para>Lost in the Jungle</para>
 			/// <para>迷失丛林</para>
-			/// <para>Summon two 1/1 Silver Hand Recruits.</para>
-			/// <para>召唤两个1/1的白银之手新兵。</para>
+			/// <para>Summon two {0} Silver Hand Recruits.</para>
+			/// <para>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			lostinthejungle_UNG_960,
 			/// <summary>
@@ -269938,16 +270098,16 @@ namespace HREngine.Bots
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>Reinforce</para>
 			/// <para>后援不断</para>
-			/// <para><b>Hero Power</b>Summon a 1/1 Silver Hand Recruit.</para>
-			/// <para><b>英雄技能</b>召唤一个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon a {0} Silver Hand Recruit.</para>
+			/// <para><b>英雄技能</b>召唤一个{0}的白银之手新兵。</para>
 			/// </summary>
 			reinforce_VAN_HERO_04bp,
 			/// <summary>
 			/// <para>英雄技能 圣骑士 费用：2</para>
 			/// <para>The Silver Hand</para>
 			/// <para>白银之手</para>
-			/// <para><b>Hero Power</b>Summon two 1/1 Recruits.</para>
-			/// <para><b>英雄技能</b>召唤两个1/1的白银之手新兵。</para>
+			/// <para><b>Hero Power</b>Summon two {0} Recruits.</para>
+			/// <para><b>英雄技能</b>召唤两个{0}的白银之手新兵。</para>
 			/// </summary>
 			thesilverhand_VAN_HERO_04bp2,
 			/// <summary>
@@ -275706,16 +275866,16 @@ namespace HREngine.Bots
 			/// <para>法术 圣骑士 费用：2</para>
 			/// <para>Air Raid</para>
 			/// <para>空中团战</para>
-			/// <para><b>Twinspell</b>Summon two 1/1 Silver_Hand Recruits with <b>Taunt</b>.</para>
-			/// <para><b>双生法术</b>召唤两个1/1并具有<b>嘲讽</b>的白银之手新兵。</para>
+			/// <para><b>Twinspell</b>Summon two {0} Silver_Hand Recruits with <b>Taunt</b>.</para>
+			/// <para><b>双生法术</b>召唤两个{0}并具有<b>嘲讽</b>的白银之手新兵。</para>
 			/// </summary>
 			airraid_YOD_012,
 			/// <summary>
 			/// <para>法术 圣骑士 费用：2</para>
 			/// <para>Air Raid</para>
 			/// <para>空中团战</para>
-			/// <para>Summon two 1/1 Silver Hand Recruits with <b>Taunt</b>.</para>
-			/// <para>召唤两个1/1并具有<b>嘲讽</b>的白银之手新兵。</para>
+			/// <para>Summon two {0} Silver Hand Recruits with <b>Taunt</b>.</para>
+			/// <para>召唤两个{0}并具有<b>嘲讽</b>的白银之手新兵。</para>
 			/// </summary>
 			airraid_YOD_012ts,
 			/// <summary>

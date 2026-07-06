@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：10 生命值：10
+	//随从 无效的 费用：0 攻击力：8 生命值：10
 	//Dead Sea Ravager
 	//死海破坏者
 	//<b>Rally:</b> Give {0} other friendly minions this minion's Attack, twice.

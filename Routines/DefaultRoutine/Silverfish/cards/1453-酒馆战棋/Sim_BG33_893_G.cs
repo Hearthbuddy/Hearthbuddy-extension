@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：6 生命值：16
+	//随从 萨满祭司 费用：0 攻击力：4 生命值：14
 	//Primitive Painter
 	//原始鱼人画家
 	//After you play a card from Tier 3 or below, give your Murlocs +{0}/+{1}.
