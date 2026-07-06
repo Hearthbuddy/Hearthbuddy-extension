@@ -89991,6 +89991,14 @@ namespace HREngine.Bots
 			/// </summary>
 			EX1_116t = 1912,
 			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Charged Guardian</para>
+			/// <para>充能护卫</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			EX1_118e2 = 125483,
+			/// <summary>
 			/// <para>法术 牧师 费用：2</para>
 			/// <para>Eviscerate</para>
 			/// <para>刺骨</para>
@@ -115342,6 +115350,2030 @@ namespace HREngine.Bots
 			/// <para><b>亡语：</b>将一张<b>冰封王座的骑士</b>牌置入你对手的手牌。</para>
 			/// </summary>
 			ICCA11_001 = 45696,
+			/// <summary>
+			/// <para>随从 中立 费用：6 攻击力：4 生命值：6</para>
+			/// <para>Sewer Imp</para>
+			/// <para>下水道小鬼</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Deal 2_damage to all enemies.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>对所有敌人造成2点伤害。</para>
+			/// </summary>
+			JAIL_007 = 123995,
+			/// <summary>
+			/// <para>随从 战士 费用：3 攻击力：1 生命值：6</para>
+			/// <para>Rioter</para>
+			/// <para>暴动匪徒</para>
+			/// <para>After a friendly minion survives damage,give it +1 Attack.</para>
+			/// <para>在一个友方随从受到伤害并存活下来后，使其获得+1攻击力。</para>
+			/// </summary>
+			JAIL_029 = 126094,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>RIOT!</para>
+			/// <para>暴动！</para>
+			/// <para>+1 Attack.</para>
+			/// <para>+1攻击力。</para>
+			/// </summary>
+			JAIL_029e = 126483,
+			/// <summary>
+			/// <para>随从 中立 费用：2 攻击力：4 生命值：4</para>
+			/// <para>Escape Artist</para>
+			/// <para>逃命专家</para>
+			/// <para>[x]After this attacks andsurvives, draw a card andescape the game!</para>
+			/// <para>在本随从攻击并存活下来后，抽一张牌并逃离对战！</para>
+			/// </summary>
+			JAIL_030 = 125643,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：3 攻击力：2 生命值：3</para>
+			/// <para>Vigilant Sentry</para>
+			/// <para>警戒哨卫</para>
+			/// <para>[x]<b>Taunt</b><b>Battlecry:</b> If your deck hasno Neutral cards, summon_two Vigilant Sentries.</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>如果你的牌库中没有中立卡牌，召唤两个警戒哨卫。</para>
+			/// </summary>
+			JAIL_035 = 125660,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：4 生命值：3</para>
+			/// <para>Violet Punisher</para>
+			/// <para>紫罗兰惩戒者</para>
+			/// <para>[x]<b>Battlecry:</b> Choose anenemy minion. Steal its<b>Bonus Effects</b> and gain_+1/+1 for each stolen.</para>
+			/// <para><b>战吼：</b>选择一个敌方随从，偷取其<b>额外效果</b>。每偷取一个，获得+1/+1。</para>
+			/// </summary>
+			JAIL_101 = 124003,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Always Punished</para>
+			/// <para>无期惩戒</para>
+			/// <para>+1/+1 and a stolen <b>Bonus Effect.</b></para>
+			/// <para>+1/+1并偷取<b>额外效果</b>。</para>
+			/// </summary>
+			JAIL_101e = 126481,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：9 攻击力：5 生命值：5</para>
+			/// <para>V'ama, Looming Death</para>
+			/// <para>瓦玛，死亡幽影</para>
+			/// <para><b>Battlecry:</b> Destroy allnon-Paladin minions.</para>
+			/// <para><b>战吼：</b>消灭所有非圣骑士随从。</para>
+			/// </summary>
+			JAIL_118 = 125462,
+			/// <summary>
+			/// <para>随从 法师 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Jailhouse Manastorm</para>
+			/// <para>米尔牢斯·法力风暴</para>
+			/// <para>[x]<b>Battlecry:</b> After you cast aspell this game, summona random minion of thesame Cost.</para>
+			/// <para><b>战吼：</b>在本局对战中，在你施放一个法术后，随机召唤一个法力值消耗相同的随从。</para>
+			/// </summary>
+			JAIL_122 = 126353,
+			/// <summary>
+			/// <para>附魔 法师 费用：0</para>
+			/// <para>Manastorm Summoning</para>
+			/// <para>法力风暴召唤</para>
+			/// <para>After you cast a spell, summon a minion of the same Cost.</para>
+			/// <para>在你施放一个法术后，召唤一个法力值消耗相同的随从。</para>
+			/// </summary>
+			JAIL_122e5 = 131290,
+			/// <summary>
+			/// <para>随从 法师 费用：5 攻击力：4 生命值：5</para>
+			/// <para>Breakout Architect</para>
+			/// <para>越狱构造师</para>
+			/// <para>[x]<b>Battlecry:</b> <b>Discover</b> a spellthat costs (5) or more. It_casts twice when played.</para>
+			/// <para><b>战吼：</b><b>发现</b>一张法力值消耗大于或等于（5）点的法术牌，该牌被使用时会施放两次。</para>
+			/// </summary>
+			JAIL_123 = 126354,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Breaking Out</para>
+			/// <para>生死逃亡</para>
+			/// <para>Casts twice.</para>
+			/// <para>施放两次。</para>
+			/// </summary>
+			JAIL_123e = 131299,
+			/// <summary>
+			/// <para>法术 法师 费用：1</para>
+			/// <para>Cold Snap</para>
+			/// <para>急速冷却</para>
+			/// <para><b>Freeze</b> an enemy.Get a randomFrost spell.</para>
+			/// <para><b>冻结</b>一个敌人。随机获取一张冰霜法术牌。</para>
+			/// </summary>
+			JAIL_125 = 126356,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：4</para>
+			/// <para>Infest the Scullery</para>
+			/// <para>污染厨房</para>
+			/// <para>Summon a random_@-Cost minion.<i>(Improved by your hero attacks this game.)</i></para>
+			/// <para>随机召唤一个法力值消耗为（@）的随从。<i>（在本局对战中你的英雄每攻击一次都会提升。）</i></para>
+			/// </summary>
+			JAIL_200 = 127815,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：0</para>
+			/// <para>Secret Ingredient</para>
+			/// <para>秘制配料</para>
+			/// <para><b>Choose One -</b>Give your hero +2 Attack this turn; or get a random Druid card.</para>
+			/// <para><b>抉择：</b>使你的英雄在本回合中获得+2攻击力；或者随机获取一张德鲁伊牌。</para>
+			/// </summary>
+			JAIL_201 = 127932,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：0</para>
+			/// <para>A Little of This</para>
+			/// <para>一点这个</para>
+			/// <para>Give your hero +2 Attack this turn.</para>
+			/// <para>在本回合中，使你的英雄获得+2攻击力。</para>
+			/// </summary>
+			JAIL_201a = 130019,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>A Little of This</para>
+			/// <para>一点这个</para>
+			/// <para>+2 Attack this turn.</para>
+			/// <para>在本回合中+2攻击力。</para>
+			/// </summary>
+			JAIL_201ae1 = 132947,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：0</para>
+			/// <para>A Dash of That</para>
+			/// <para>一点那个</para>
+			/// <para>Get a random Druid card.</para>
+			/// <para>随机获取一张德鲁伊牌。</para>
+			/// </summary>
+			JAIL_201b = 130020,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：1 攻击力：1 生命值：3</para>
+			/// <para>Spiderling</para>
+			/// <para>小蜘蛛</para>
+			/// <para>Your hero has +1 Attackon your turn.</para>
+			/// <para>你的英雄在你的回合拥有+1攻击力。</para>
+			/// </summary>
+			JAIL_202 = 127946,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Tiny Fangs</para>
+			/// <para>蜘蛛细牙</para>
+			/// <para>+1 Attack.</para>
+			/// <para>+1攻击力。</para>
+			/// </summary>
+			JAIL_202e = 127947,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：5 生命值：3</para>
+			/// <para>Solitary Prisoner</para>
+			/// <para>单监囚犯</para>
+			/// <para>Costs (2) if there are no minions on the battlefield.</para>
+			/// <para>如果战场上没有随从，本牌的法力值消耗为（2）点。</para>
+			/// </summary>
+			JAIL_204 = 127994,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：2 生命值：6</para>
+			/// <para>Rat Burglar</para>
+			/// <para>蟊贼脏鼠</para>
+			/// <para>[x]At the end of your turn,steal all cards that enteredyour opponent's handduring your turn.</para>
+			/// <para>在你的回合结束时，偷取所有在你的回合中进入对手手牌的牌。</para>
+			/// </summary>
+			JAIL_205 = 131316,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：2</para>
+			/// <para>Dark Bribe</para>
+			/// <para>黑暗贿赂</para>
+			/// <para>Draw 3 cards.Pick one to give toyour opponent.</para>
+			/// <para>抽三张牌，从中选择一张并交给你的对手。</para>
+			/// </summary>
+			JAIL_206 = 128019,
+			/// <summary>
+			/// <para>法术 牧师 费用：2</para>
+			/// <para>Nab</para>
+			/// <para>劫持</para>
+			/// <para>[x]Deal $3 damageto a minion. If it dies,shuffle a copy of it intoyour deck that costs (2).</para>
+			/// <para>对一个随从造成$3点伤害。如果该随从死亡，将一张该随从的法力值消耗为（2）的复制洗入你的牌库。</para>
+			/// </summary>
+			JAIL_225 = 125571,
+			/// <summary>
+			/// <para>随从 术士 费用：4 攻击力：2 生命值：6</para>
+			/// <para>Ancient Augur</para>
+			/// <para>上古预言师</para>
+			/// <para>[x]<b>Battlecry:</b> Look at 3 cardsin your opponent's hand_and secretly choose one.__<b>Deathrattle:</b> Discard it.</para>
+			/// <para><b>战吼：</b>检视你对手的3张手牌并秘密选择一张。<b>亡语：</b>弃掉所选的牌。</para>
+			/// </summary>
+			JAIL_303 = 125878,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>Eyes Without A Faceless</para>
+			/// <para>无面无眼</para>
+			/// <para><b>Deathrattle:</b> Destroy the chosen card.</para>
+			/// <para><b>亡语：</b>摧毁所选的牌。</para>
+			/// </summary>
+			JAIL_303e = 132685,
+			/// <summary>
+			/// <para>法术 战士 费用：3</para>
+			/// <para>Crowd Control</para>
+			/// <para>控制局面</para>
+			/// <para>[x]Deal $2 damageto all minions.If your deck has 25 ormore cards, deal $2 more.</para>
+			/// <para>对所有随从造成$2点伤害。如果你的牌库中有25张或以上的牌，再造成$2点。</para>
+			/// </summary>
+			JAIL_307 = 126100,
+			/// <summary>
+			/// <para>随从 战士 费用：4 攻击力：2 生命值：7</para>
+			/// <para>Scrappy Defender</para>
+			/// <para>顽强的防御者</para>
+			/// <para>[x]<b>Taunt</b>Has +5 Attack if your deckhas 25 or more cards.</para>
+			/// <para><b>嘲讽</b>。如果你的牌库中有25张或以上的牌，拥有+5攻击力。</para>
+			/// </summary>
+			JAIL_311 = 126104,
+			/// <summary>
+			/// <para>法术 法师 费用：2</para>
+			/// <para>Contraband Wands</para>
+			/// <para>私藏魔杖</para>
+			/// <para>Get 3 Arcane Missiles.</para>
+			/// <para>获取3张奥术飞弹。</para>
+			/// </summary>
+			JAIL_312 = 126109,
+			/// <summary>
+			/// <para>随从 法师 费用：5 攻击力：3 生命值：3</para>
+			/// <para>Bootleg Alchemist</para>
+			/// <para>偷贩炼金师</para>
+			/// <para>[x]<b>Battlecry:</b> Choose a card inyour hand. Transform it into_a spell that costs (5) more___<i>(keeps its original Cost).</i></para>
+			/// <para><b>战吼：</b>选择你手牌中的一张牌，将其变形成为法力值消耗大于或等于（5）点的法术牌<i>（保留其原始法力值消耗。）</i></para>
+			/// </summary>
+			JAIL_313 = 126111,
+			/// <summary>
+			/// <para>附魔 法师 费用：0</para>
+			/// <para>Bootleg</para>
+			/// <para>偷贩</para>
+			/// <para>Transformed and kept Cost.</para>
+			/// <para>变形后保留原消耗。</para>
+			/// </summary>
+			JAIL_313e = 131362,
+			/// <summary>
+			/// <para>法术 法师 费用：3</para>
+			/// <para>Mystic Misdirection</para>
+			/// <para>秘法误导</para>
+			/// <para>[x]<b>Secret:</b> When an enemyminion attacks, transformit into a 1/1 Sheep.</para>
+			/// <para><b>奥秘：</b>当一个敌方随从攻击时，将其变形成为1/1的绵羊。</para>
+			/// </summary>
+			JAIL_315 = 126113,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Disturbed Sanity</para>
+			/// <para>搅扰心志</para>
+			/// <para>Cost adjusted.</para>
+			/// <para>法力值消耗已调整。</para>
+			/// </summary>
+			JAIL_318e = 126121,
+			/// <summary>
+			/// <para>法术 法师 费用：1</para>
+			/// <para>The Skeleton Key</para>
+			/// <para>万能钥匙</para>
+			/// <para>[x]<b>Discover</b> a spell,or refresh your options<i>(20% chance to take 5damage each refresh!)</i></para>
+			/// <para><b>发现</b>一张法术牌，或者刷新你的选项<i>（每次刷新时有20%的几率会受到5点伤害！）</i></para>
+			/// </summary>
+			JAIL_319 = 126116,
+			/// <summary>
+			/// <para>附魔 法师 费用：0</para>
+			/// <para>Skeleton Key</para>
+			/// <para>万能钥匙</para>
+			/// <para>Transforming into a random spell that costs (2) less. <i>(Transforms after you play a card.)</i></para>
+			/// <para>随机变形成为一张法力值消耗减少（2）点的法术牌。<i>（在你使用一张牌后变形。）</i></para>
+			/// </summary>
+			JAIL_319e = 126251,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>Transform the Key!</para>
+			/// <para>钥匙变形！</para>
+			/// <para>Refresh your options. <i>(20% chance to take5 damage!)</i></para>
+			/// <para>刷新你的选项<i>（有20%的几率会受到5点伤害！）</i></para>
+			/// </summary>
+			JAIL_319t = 131199,
+			/// <summary>
+			/// <para>随从 法师 费用：4 攻击力：4 生命值：4</para>
+			/// <para>Tricksy Improviser</para>
+			/// <para>机灵的即兴舞者</para>
+			/// <para>[x]<b>Prepare</b><b>Battlecry:</b> If you've casta spell this turn, cast a_random Mage <b>Secret</b>.</para>
+			/// <para><b>预备</b>。<b>战吼：</b>如果你在本回合中施放过法术，随机施放一个法师<b>奥秘</b>。</para>
+			/// </summary>
+			JAIL_321 = 126253,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：6</para>
+			/// <para>Judgment</para>
+			/// <para>审判</para>
+			/// <para>[x]<b>Prepare</b>Choose a friendly minion.Set all minions' statsequal to that minion's.</para>
+			/// <para><b>预备</b>。选择一个友方随从，将所有随从的属性值变为与该随从相同。</para>
+			/// </summary>
+			JAIL_326 = 126616,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Judgment</para>
+			/// <para>审判</para>
+			/// <para>Stats set to another minion's.</para>
+			/// <para>变成另一随从的属性值。</para>
+			/// </summary>
+			JAIL_326e = 127146,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：3</para>
+			/// <para>Reinforcement Aura</para>
+			/// <para>援军光环</para>
+			/// <para>[x]At the end of your turn,summon a minion fromyour deck that costs (2)or less. Lasts @ turns.</para>
+			/// <para>在你的回合结束时，从你的牌库中召唤一个法力值消耗小于或等于（2）点的随从。持续@回合。</para>
+			/// </summary>
+			JAIL_327 = 126617,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：2 攻击力：2 生命值：2</para>
+			/// <para>Scarlet Bruiser</para>
+			/// <para>血色斗士</para>
+			/// <para>[x]<b>Deathrattle:</b> If your deckhas no Neutral cards, geta random Paladin card.It costs (2) less.</para>
+			/// <para><b>亡语：</b>如果你的牌库中没有中立卡牌，随机获取一张圣骑士牌，其法力值消耗减少（2）点。</para>
+			/// </summary>
+			JAIL_328 = 126618,
+			/// <summary>
+			/// <para>武器 圣骑士 费用：7 攻击力：3 耐久度：0</para>
+			/// <para>Truth Seeker</para>
+			/// <para>求真之锤</para>
+			/// <para>After your hero attacks, give your Paladin minions +2/+2.</para>
+			/// <para>在你的英雄攻击后，使你的圣骑士随从获得+2/+2。</para>
+			/// </summary>
+			JAIL_329 = 126619,
+			/// <summary>
+			/// <para>附魔 圣骑士 费用：0</para>
+			/// <para>Fire of Truth</para>
+			/// <para>真理之火</para>
+			/// <para>+2/+2.</para>
+			/// <para>+2/+2。</para>
+			/// </summary>
+			JAIL_329e = 131317,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：4 攻击力：3 生命值：3</para>
+			/// <para>Dalaran Champion</para>
+			/// <para>达拉然魔像勇士</para>
+			/// <para>[x]<b>Divine Shield</b>, <b>Taunt</b>Whenever this gains stats,gain an extra +1/+1<i>(wherever this is).</i></para>
+			/// <para><b>圣盾</b>。<b>嘲讽</b>。每当本随从获得属性值时，额外获得+1/+1<i>（无论本随从在哪）。</i></para>
+			/// </summary>
+			JAIL_330 = 126620,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Activated Combat Mode</para>
+			/// <para>战斗模式启动</para>
+			/// <para>+{0}/+{1}.</para>
+			/// <para>+{0}/+{1}。</para>
+			/// </summary>
+			JAIL_330e = 133047,
+			/// <summary>
+			/// <para>武器 战士 费用：1 攻击力：1 耐久度：0</para>
+			/// <para>Ball and Chain</para>
+			/// <para>铁球锁链</para>
+			/// <para><b>Deathrattle:</b>Give your damaged minions +1/+2.</para>
+			/// <para><b>亡语：</b>使你的受伤的随从获得+1/+2。</para>
+			/// </summary>
+			JAIL_376 = 126597,
+			/// <summary>
+			/// <para>附魔 战士 费用：0</para>
+			/// <para>Makeshift Weapon</para>
+			/// <para>临时武装</para>
+			/// <para>+1/+2.</para>
+			/// <para>+1/+2。</para>
+			/// </summary>
+			JAIL_376e = 127170,
+			/// <summary>
+			/// <para>法术 圣骑士 费用：2</para>
+			/// <para>Holy Bola!</para>
+			/// <para>神圣石索</para>
+			/// <para>Draw a card.If it costs (2) or less, draw another.</para>
+			/// <para>抽一张牌。如果该牌的法力值消耗小于或等于（2）点，再抽一张。</para>
+			/// </summary>
+			JAIL_377 = 126652,
+			/// <summary>
+			/// <para>随从 法师 费用：3 攻击力：3 生命值：4</para>
+			/// <para>Spire Security</para>
+			/// <para>尖塔保安</para>
+			/// <para>[x]<b>Battlecry:</b> Reveal a spell inyour deck. If it costs (5) ormore, deal 5 damage split___among enemy minions.</para>
+			/// <para><b>战吼：</b>揭示你牌库中的一张法术牌。如果其法力值消耗大于或等于（5）点，造成5点伤害，随机分配到所有敌方随从身上。</para>
+			/// </summary>
+			JAIL_379 = 126355,
+			/// <summary>
+			/// <para>武器 猎人 费用：1 攻击力：1 耐久度：0</para>
+			/// <para>Smuggled Shovel</para>
+			/// <para>私运的铁铲</para>
+			/// <para><b>Deathrattle:</b> Draw a spell that didn't start in your deck.</para>
+			/// <para><b>亡语：</b>抽一张你的套牌之外的法术牌。</para>
+			/// </summary>
+			JAIL_380 = 125996,
+			/// <summary>
+			/// <para>随从 战士 费用：8 攻击力：10 生命值：10</para>
+			/// <para>Chainbreaker Hogger</para>
+			/// <para>破链灾星霍格</para>
+			/// <para>[x]<b>Taunt</b><b>Start of Game:</b> Duplicateall other <b>Legendary</b> cardsin your deck.</para>
+			/// <para><b>嘲讽</b>。<b>对战开始时：</b>复制你套牌中所有其他<b>传说</b>卡牌。</para>
+			/// </summary>
+			JAIL_384 = 126002,
+			/// <summary>
+			/// <para>法术 战士 费用：1</para>
+			/// <para>Scramble for Gear</para>
+			/// <para>抢夺装备</para>
+			/// <para>Gain 2 Armor. Shuffle five Gear spells into your deck that give2 Armor when drawn.</para>
+			/// <para>获得2点护甲值。将五张夺得装备洗入你的牌库。当抽到夺得装备时，获得2点护甲值。</para>
+			/// </summary>
+			JAIL_386 = 125893,
+			/// <summary>
+			/// <para>法术 战士 费用：1</para>
+			/// <para>Found Gear!</para>
+			/// <para>夺得装备！</para>
+			/// <para><b>Casts When Drawn</b>Gain 2 Armor.</para>
+			/// <para><b>抽到时施放</b>获得2点护甲值。</para>
+			/// </summary>
+			JAIL_386t = 127174,
+			/// <summary>
+			/// <para>法术 战士 费用：2</para>
+			/// <para>Release the Beasts</para>
+			/// <para>释放野兽</para>
+			/// <para>[x]Give minions in_your hand +1/+1.<b>_Legendary</b> minions_get an extra +2/+1.</para>
+			/// <para>使你手牌中的随从牌获得+1/+1。<b>传说</b>随从牌额外获得+2/+1。</para>
+			/// </summary>
+			JAIL_387 = 126598,
+			/// <summary>
+			/// <para>附魔 战士 费用：0</para>
+			/// <para>Released</para>
+			/// <para>释放</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			JAIL_387e = 126599,
+			/// <summary>
+			/// <para>附魔 战士 费用：0</para>
+			/// <para>Legendary Prisoner</para>
+			/// <para>传说囚犯</para>
+			/// <para>+2/+1.</para>
+			/// <para>+2/+1。</para>
+			/// </summary>
+			JAIL_387e2 = 132710,
+			/// <summary>
+			/// <para>随从 猎人 费用：5 攻击力：5 生命值：4</para>
+			/// <para>Sewer Swimmer</para>
+			/// <para>下水道游水鳄</para>
+			/// <para>[x]<b>Prepare</b><b>Battlecry:</b> Trigger a friendly_minion's <b>Deathrattle.</b></para>
+			/// <para><b>预备</b>。<b>战吼：</b>触发一个友方随从的<b>亡语</b>。</para>
+			/// </summary>
+			JAIL_395 = 125934,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：5 攻击力：5 生命值：6</para>
+			/// <para>Commander Beatrix</para>
+			/// <para>指挥官碧阿崔克丝</para>
+			/// <para>[x]<b>Taunt</b>While building your deck,pick a 2-Cost minion. Ten_copies join your deck!</para>
+			/// <para><b>嘲讽</b>。构筑套牌时，选择一张法力值消耗为（2）的随从牌。它的十张复制会加入你的套牌！</para>
+			/// </summary>
+			JAIL_397 = 126621,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Straight to JAIL!!</para>
+			/// <para>打入牢房！</para>
+			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
+			/// <para><b>休眠</b>。@回合后唤醒。</para>
+			/// </summary>
+			JAIL_397e3 = 126934,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Straight to Jail!</para>
+			/// <para>打入牢房！</para>
+			/// <para>Can't be played for a turn.</para>
+			/// <para>在一回合内无法使用。</para>
+			/// </summary>
+			JAIL_397e4 = 126935,
+			/// <summary>
+			/// <para>随从 中立 费用：6 攻击力：6 生命值：6</para>
+			/// <para>IMPFERNAL!</para>
+			/// <para>小鬼地狱火！</para>
+			/// <para>[x]<b>Deathrattle:</b> Deal 3 damageto all other characters. <i>(Alsotriggers in hand or deck.)</i></para>
+			/// <para><b>亡语：</b>对所有其他角色造成3点伤害。<i>（在手牌或牌库中也能触发。）</i></para>
+			/// </summary>
+			JAIL_398 = 125918,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>Demonic Power</para>
+			/// <para>恶魔之能</para>
+			/// <para>Costs Health instead of Mana.</para>
+			/// <para>消耗生命值，而非法力值。</para>
+			/// </summary>
+			JAIL_398e = 127437,
+			/// <summary>
+			/// <para>随从 术士 费用：3 攻击力：2 生命值：5</para>
+			/// <para>Imp Gang Stooge</para>
+			/// <para>小鬼马仔</para>
+			/// <para>[x]<b>Taunt</b>. <b>Deathrattle:</b>Put a 9/9 Demon with<b>Taunt</b> and <b>Lifesteal</b> on thebottom of your deck.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>将一张9/9并具有<b>嘲讽</b>和<b>吸血</b>的恶魔置于你的牌库底。</para>
+			/// </summary>
+			JAIL_399 = 125917,
+			/// <summary>
+			/// <para>随从 术士 费用：9 攻击力：9 生命值：9</para>
+			/// <para>Grandmother Imp</para>
+			/// <para>小鬼奶奶</para>
+			/// <para><b>Taunt</b><b>Lifesteal</b></para>
+			/// <para><b>嘲讽</b>。<b>吸血</b></para>
+			/// </summary>
+			JAIL_399t1 = 127507,
+			/// <summary>
+			/// <para>随从 中立 费用：6 攻击力：4 生命值：4</para>
+			/// <para>Vanessa the Ringleader</para>
+			/// <para>大头目梵妮莎</para>
+			/// <para>[x]<b>Prepare</b>After you play a card, get arandom <b>Battlecry</b> minion.It costs (2) less.</para>
+			/// <para><b>预备</b>。在你使用一张牌后，随机获取一张<b>战吼</b>随从牌，其法力值消耗减少（2）点。</para>
+			/// </summary>
+			JAIL_407 = 124150,
+			/// <summary>
+			/// <para>随从 战士 费用：4 攻击力：3 生命值：3</para>
+			/// <para>Warptooth</para>
+			/// <para>突牙</para>
+			/// <para>[x]<b>Charge</b>. If three friendlycharacters take damage onone of your turns, summon__this from hand or deck.</para>
+			/// <para><b>冲锋</b>。如果在你的某个回合中有三个友方角色受到伤害，从手牌或牌库中召唤本随从。</para>
+			/// </summary>
+			JAIL_421 = 125803,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Warp Attack!</para>
+			/// <para>迁跃突击！</para>
+			/// <para>Summon Warptooth when there's space.</para>
+			/// <para>当有空位时召唤突牙。</para>
+			/// </summary>
+			JAIL_421e = 125843,
+			/// <summary>
+			/// <para>随从 潜行者 费用：7 攻击力：7 生命值：7</para>
+			/// <para>Azalina Soulsever</para>
+			/// <para>裂魂者阿扎莉娜</para>
+			/// <para>[x]Your deck is 20 cards, plus20 copied from your enemy.<b>Battlecry:</b> Draw untilyour hand is full.</para>
+			/// <para>你的套牌为20张牌，外加20张敌方卡牌的复制。<b>战吼：</b>抽牌，直到达到你的手牌上限。</para>
+			/// </summary>
+			JAIL_430 = 126055,
+			/// <summary>
+			/// <para>附魔 潜行者 费用：0</para>
+			/// <para>Severed Soul</para>
+			/// <para>分裂的灵魂</para>
+			/// <para>Copied Hint</para>
+			/// <para>复制的提示</para>
+			/// </summary>
+			JAIL_430e1 = 126380,
+			/// <summary>
+			/// <para>随从 潜行者 费用：2 攻击力：2 生命值：3</para>
+			/// <para>Mind Sweeper</para>
+			/// <para>心灵扫荡者</para>
+			/// <para>[x]<b>Battlecry:</b> If you played a copyof an opponent's card whileholding this, deal 2 damageto all enemy minions.</para>
+			/// <para><b>战吼：</b>如果你在本牌在你手牌中时使用过对手卡牌的复制，对所有敌方随从造成2点伤害。</para>
+			/// </summary>
+			JAIL_432 = 126122,
+			/// <summary>
+			/// <para>法术 潜行者 费用：5</para>
+			/// <para>Unshackle Soul</para>
+			/// <para>无拘之魂</para>
+			/// <para>[x]Destroy a minion.If you played a copy of anopponent's card whileholding this, this costs (1).</para>
+			/// <para>消灭一个随从。如果你在本牌在你手牌中时使用过对手卡牌的复制，本牌的法力值消耗为（1）点。</para>
+			/// </summary>
+			JAIL_433 = 126124,
+			/// <summary>
+			/// <para>随从 潜行者 费用：3 攻击力：4 生命值：3</para>
+			/// <para>Enthralled Shade</para>
+			/// <para>被奴役的影魔</para>
+			/// <para>[x]<b><b>Deathrattle:</b> </b>Reduce theCost of cards in your handthat were copied fromyour opponent by (1).</para>
+			/// <para><b><b>亡语：</b></b>使你手牌中从对手处复制的牌的法力值消耗减少（1）点。</para>
+			/// </summary>
+			JAIL_434 = 126127,
+			/// <summary>
+			/// <para>随从 战士 费用：7 攻击力：3 生命值：12</para>
+			/// <para>Rampaging Hound</para>
+			/// <para>狂乱的猎犬</para>
+			/// <para>[x]<b>Prepare</b><b>Battlecry:</b> Force all enemyminions to attack this.</para>
+			/// <para><b>预备</b>。<b>战吼：</b>迫使所有敌方随从攻击本随从。</para>
+			/// </summary>
+			JAIL_435 = 126136,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：2</para>
+			/// <para>Widow's Bite</para>
+			/// <para>毒蛛噬咬</para>
+			/// <para>Give your hero +1 Attack this turn. Gain 1 Armor. Add "Widow's Feast" to your hand.</para>
+			/// <para>在本回合中，使你的英雄获得+1攻击力。获得1点护甲值。将毒蛛美餐置入你的手牌。</para>
+			/// </summary>
+			JAIL_436 = 126180,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Threads</para>
+			/// <para>蛛丝</para>
+			/// <para>+1 Attack this turn.</para>
+			/// <para>在本回合中+1攻击力。</para>
+			/// </summary>
+			JAIL_436e = 126870,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Webs</para>
+			/// <para>蛛网</para>
+			/// <para>+2 Attack this turn.</para>
+			/// <para>在本回合中+2攻击力。</para>
+			/// </summary>
+			JAIL_436e2 = 126871,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Fates</para>
+			/// <para>丝网命运</para>
+			/// <para>+4 Attack this turn.</para>
+			/// <para>在本回合中+4攻击力。</para>
+			/// </summary>
+			JAIL_436e3 = 126872,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：2</para>
+			/// <para>Widow's Feast</para>
+			/// <para>毒蛛美餐</para>
+			/// <para>Give your hero +2 Attack this turn. Gain 2 Armor. Add "Widow's Banquet" to your hand.</para>
+			/// <para>在本回合中，使你的英雄获得+2攻击力。获得2点护甲值。将毒蛛盛宴置入你的手牌。</para>
+			/// </summary>
+			JAIL_436t = 126868,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：2</para>
+			/// <para>Widow's Banquet</para>
+			/// <para>毒蛛盛宴</para>
+			/// <para>Give your hero+4 Attack this turn.Gain 4 Armor.</para>
+			/// <para>在本回合中，使你的英雄获得+4攻击力。获得4点护甲值。</para>
+			/// </summary>
+			JAIL_436t2 = 126869,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：4 攻击力：2 生命值：7</para>
+			/// <para>Tower of Ghouls</para>
+			/// <para>累叠食尸鬼</para>
+			/// <para>After this minion takes damage, summon two 1/1 Frail Ghouls.</para>
+			/// <para>在本随从受到伤害后，召唤两个1/1的脆弱的食尸鬼。</para>
+			/// </summary>
+			JAIL_440 = 126252,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Ghoulish</para>
+			/// <para>食尸鬼化</para>
+			/// <para>Increased Stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			JAIL_440e = 128793,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：2</para>
+			/// <para>Drink Blood</para>
+			/// <para>饮血术</para>
+			/// <para><b>Lifesteal</b>Deal $3 damage to a minion. Refresh your Hero Power.</para>
+			/// <para><b>吸血</b>。对一个随从造成$3点伤害。复原你的英雄技能。</para>
+			/// </summary>
+			JAIL_441 = 126254,
+			/// <summary>
+			/// <para>附魔 巫妖王 费用：0</para>
+			/// <para>Botched Surgery</para>
+			/// <para>蹩脚的手术</para>
+			/// <para>Reduced Health.</para>
+			/// <para>生命值降低。</para>
+			/// </summary>
+			JAIL_4411e = 128376,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：1 攻击力：5 生命值：1</para>
+			/// <para>Disguised Doctor</para>
+			/// <para>伪装的医生</para>
+			/// <para>[x]Can be played on either side.<b>Deathrattle:</b> Shuffle 4 Blightsinto your deck that deal 2damage when drawn.</para>
+			/// <para>可以使用在对战面板的任意一侧。<b>亡语：</b>将4张疾疫牌洗入你的牌库。抽到疾疫牌时，造成2点伤害。</para>
+			/// </summary>
+			JAIL_442 = 126255,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：1</para>
+			/// <para>Detected!</para>
+			/// <para>被发现了！</para>
+			/// <para>This was played onthe friendly side.</para>
+			/// <para>本随从被使用在了友方一侧。</para>
+			/// </summary>
+			JAIL_442a = 126336,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：1</para>
+			/// <para>Disguised!</para>
+			/// <para>伪装成功！</para>
+			/// <para>This was played onthe enemy side.</para>
+			/// <para>本随从被使用在了敌方一侧。</para>
+			/// </summary>
+			JAIL_442b = 126337,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：7 攻击力：7 生命值：7</para>
+			/// <para>The Living Plague</para>
+			/// <para>活体疫病</para>
+			/// <para>[x]<b>Charge</b>. Instead of damagingheroes, this shuffles that manyBlights into their deck that deal_2 damage when drawn.</para>
+			/// <para><b>冲锋</b>。本随从攻击英雄时不会造成伤害，改为将与伤害等量的疾疫牌洗入其牌库。抽到疾疫牌时，造成2点伤害。</para>
+			/// </summary>
+			JAIL_443 = 126259,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：1</para>
+			/// <para>Blight</para>
+			/// <para>疾疫</para>
+			/// <para><b>Casts When Drawn</b>Deal 2 damageto your hero.</para>
+			/// <para><b>抽到时施放</b>对你的英雄造成2点伤害。</para>
+			/// </summary>
+			JAIL_443t = 129675,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：6 攻击力：6 生命值：4</para>
+			/// <para>Sawbones</para>
+			/// <para>锯骨巨魔</para>
+			/// <para>[x]<b>Prepare</b>. <b>Battlecry:</b> Destroyall your other minions. Drawa card and refresh a Mana___for each one destroyed.</para>
+			/// <para><b>预备</b>。<b>战吼：</b>消灭你的所有其他随从。每消灭一个，抽一张牌并复原一个法力水晶。</para>
+			/// </summary>
+			JAIL_444 = 126260,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：2</para>
+			/// <para>Bone Flurry</para>
+			/// <para>骨刃乱舞</para>
+			/// <para>[x]Deal $3 damage randomlysplit among enemies. If a friendly minion diedthis turn, deal $3 more.</para>
+			/// <para>造成$3点伤害，随机分配到所有敌人身上。如果在本回合中有友方随从死亡，再造成$3点。</para>
+			/// </summary>
+			JAIL_445 = 126261,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：5 攻击力：4 生命值：5</para>
+			/// <para>Blood Doctor Thal'ena</para>
+			/// <para>鲜血医师萨安娜</para>
+			/// <para><b>Battlecry:</b> Get asecond Hero Powerthat costs <b>Corpses</b>.</para>
+			/// <para><b>战吼：</b>获得一项消耗<b>残骸</b>的第二英雄技能。</para>
+			/// </summary>
+			JAIL_446 = 126365,
+			/// <summary>
+			/// <para>英雄技能 巫妖王 费用：3</para>
+			/// <para>Vampyr's Kiss</para>
+			/// <para>吸血鬼之吻</para>
+			/// <para>Give a minion +3 Attack.This costs <b>Corpses</b> instead of Mana.</para>
+			/// <para>使一个随从获得+3攻击力。本技能消耗<b>残骸</b>，而非法力值。</para>
+			/// </summary>
+			JAIL_446hp = 126366,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Vampyr's Kiss</para>
+			/// <para>吸血鬼之吻</para>
+			/// <para>+3 Attack</para>
+			/// <para>+3攻击力</para>
+			/// </summary>
+			JAIL_446hpe6 = 131005,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：4 生命值：4</para>
+			/// <para>Reckless Detective</para>
+			/// <para>鲁莽的侦探</para>
+			/// <para>[x]<b>Rush</b>. <b>Deathrattle:</b> GetDetective's Clothes thatgive +4/+4 and <b>Rush</b>.</para>
+			/// <para><b>突袭</b>。<b>亡语：</b>获取一张能使一个随从获得+4/+4和<b>突袭</b>的侦探服。</para>
+			/// </summary>
+			JAIL_447 = 126479,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Detective's Clothes</para>
+			/// <para>侦探服</para>
+			/// <para>+4/+4 and <b>Rush</b>.</para>
+			/// <para>+4/+4和<b>突袭</b>。</para>
+			/// </summary>
+			JAIL_447e = 126839,
+			/// <summary>
+			/// <para>法术 中立 费用：4</para>
+			/// <para>Detective's Clothes</para>
+			/// <para>侦探服</para>
+			/// <para>Give a minion+4/+4 and <b>Rush</b>.</para>
+			/// <para>使一个随从获得+4/+4和<b>突袭</b>。</para>
+			/// </summary>
+			JAIL_447t = 126480,
+			/// <summary>
+			/// <para>随从 潜行者 费用：6 攻击力：6 生命值：6</para>
+			/// <para>Karov the Broken</para>
+			/// <para>崩坏的卡洛夫</para>
+			/// <para><b>Deathrattle:</b> Get three1/1 copies of random<b>Legendary</b> minions. They cost (1).</para>
+			/// <para><b>亡语：</b>获取三张随机<b>传说</b>随从牌的1/1的复制，这些牌的法力值消耗为（1）点。</para>
+			/// </summary>
+			JAIL_448 = 126482,
+			/// <summary>
+			/// <para>附魔 潜行者 费用：0</para>
+			/// <para>Under Her Spell</para>
+			/// <para>法术影响</para>
+			/// <para>Cost and stats set to 1.</para>
+			/// <para>法力值消耗和属性值变为1。</para>
+			/// </summary>
+			JAIL_448e = 131586,
+			/// <summary>
+			/// <para>武器 巫妖王 费用：2 攻击力：1 耐久度：0</para>
+			/// <para>Corpse Cannon</para>
+			/// <para>残骸大炮</para>
+			/// <para>After your heroattacks, summon a1/1 Frail Ghoul.</para>
+			/// <para>在你的英雄攻击后，召唤一个1/1的脆弱的食尸鬼。</para>
+			/// </summary>
+			JAIL_450 = 126502,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：3</para>
+			/// <para>Blood Clone</para>
+			/// <para>鲜血克隆</para>
+			/// <para>[x]<b>Discover</b> a 5-Cost minion.Spend 5 <b>Corpses</b> tosummon a copy of it.</para>
+			/// <para><b>发现</b>一张法力值消耗为（5）的随从牌。消耗5份<b>残骸</b>，召唤一个该随从的复制。</para>
+			/// </summary>
+			JAIL_451 = 126503,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：1 攻击力：4 生命值：3</para>
+			/// <para>Disguised Detective</para>
+			/// <para>伪装的侦探</para>
+			/// <para>Can be played on either side. <b>Overload</b> thatplayer for (2).</para>
+			/// <para>可以使用在对战面板的任意一侧。使对应玩家<b>过载</b>（2）。</para>
+			/// </summary>
+			JAIL_452 = 126627,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：1</para>
+			/// <para>Detected!</para>
+			/// <para>被发现了！</para>
+			/// <para>This was played onthe friendly side.</para>
+			/// <para>本随从被使用在了友方一侧。</para>
+			/// </summary>
+			JAIL_452a = 130022,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：1</para>
+			/// <para>Disguised!</para>
+			/// <para>伪装成功！</para>
+			/// <para>This was played onthe enemy side.</para>
+			/// <para>本随从被使用在了敌方一侧。</para>
+			/// </summary>
+			JAIL_452b = 130023,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：3 生命值：4</para>
+			/// <para>Jailbird</para>
+			/// <para>狱中老鸟</para>
+			/// <para>[x]<b>Taunt</b>. When you_<b>Prepare</b> while holding this,reduce this card's Cost by_the same amount.</para>
+			/// <para><b>嘲讽</b>。当你在本牌在你手中时<b>预备</b>，本牌的法力值消耗也会等量减少。</para>
+			/// </summary>
+			JAIL_453 = 126666,
+			/// <summary>
+			/// <para>法术 巫妖王 费用：5</para>
+			/// <para>Emergency Surgery</para>
+			/// <para>紧急手术</para>
+			/// <para>[x]Choose an enemy minion. Summon three 3/1Undead with <b>Lifesteal</b>that attack it.</para>
+			/// <para>选择一个敌方随从。召唤三个3/1并具有<b>吸血</b>的亡灵攻击该随从。</para>
+			/// </summary>
+			JAIL_454 = 126911,
+			/// <summary>
+			/// <para>随从 巫妖王 费用：2 攻击力：3 生命值：1</para>
+			/// <para>Necronurse</para>
+			/// <para>通灵护士</para>
+			/// <para><b>Lifesteal</b></para>
+			/// <para><b>吸血</b></para>
+			/// </summary>
+			JAIL_454t = 126319,
+			/// <summary>
+			/// <para>随从 战士 费用：2 攻击力：2 生命值：4</para>
+			/// <para>Disguised Watchman</para>
+			/// <para>伪装的看守</para>
+			/// <para>Can be played on either side.<b>Battlecry:</b> Deal 1 damageto all other friendly minions, twice.</para>
+			/// <para>可以使用在对战面板的任意一侧。<b>战吼：</b>对所有其他友方随从造成1点伤害，触发两次。</para>
+			/// </summary>
+			JAIL_455 = 127260,
+			/// <summary>
+			/// <para>法术 战士 费用：1</para>
+			/// <para>Detected!</para>
+			/// <para>被发现了！</para>
+			/// <para>This was played onthe friendly side.</para>
+			/// <para>本随从被使用在了友方一侧。</para>
+			/// </summary>
+			JAIL_455a = 130024,
+			/// <summary>
+			/// <para>法术 战士 费用：1</para>
+			/// <para>Disguised!</para>
+			/// <para>伪装成功！</para>
+			/// <para>This was played onthe enemy side.</para>
+			/// <para>本随从被使用在了敌方一侧。</para>
+			/// </summary>
+			JAIL_455b = 130025,
+			/// <summary>
+			/// <para>随从 中立 费用：2 攻击力：2 生命值：3</para>
+			/// <para>P1CK-P0K3T</para>
+			/// <para>P1CK-P0K3T扒窃机</para>
+			/// <para><b>Battlecry:</b> If your deckhas 25 or more cards,draw a card.</para>
+			/// <para><b>战吼：</b>如果你的牌库中有25张或以上的牌，抽一张牌。</para>
+			/// </summary>
+			JAIL_456 = 127322,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：4 攻击力：3 生命值：3</para>
+			/// <para>Hijacked Securitybot</para>
+			/// <para>被破解的安保机器人</para>
+			/// <para><b>Prepare</b><b>Battlecry:</b> Give your other minions +1/+1.</para>
+			/// <para><b>预备</b>。<b>战吼：</b>使你的其他随从获得+1/+1。</para>
+			/// </summary>
+			JAIL_457 = 127688,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Hijacked</para>
+			/// <para>破解</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			JAIL_457e = 127689,
+			/// <summary>
+			/// <para>武器 萨满祭司 费用：4 攻击力：2 耐久度：0</para>
+			/// <para>Tiny Pal</para>
+			/// <para>小朋友</para>
+			/// <para>[x]<b>Battlecry:</b> Choose yourelemental ammunition!<i>(After your hero attacks,choose another).</i></para>
+			/// <para><b>战吼：</b>选择你的元素弹药！<i>（在你的英雄攻击后，另选一种。）</i></para>
+			/// </summary>
+			JAIL_458 = 127711,
+			/// <summary>
+			/// <para>武器 萨满祭司 费用：4 攻击力：2 耐久度：0</para>
+			/// <para>Tiny Pal</para>
+			/// <para>小朋友</para>
+			/// <para>[x]After your hero attacks,<b>Freeze</b> 2 other randomenemies. Choose__another ammunition.</para>
+			/// <para>在你的英雄攻击后，随机<b>冻结</b>2个其他敌人。另选一种元素弹药。</para>
+			/// </summary>
+			JAIL_458t1 = 127713,
+			/// <summary>
+			/// <para>武器 萨满祭司 费用：4 攻击力：2 耐久度：0</para>
+			/// <para>Tiny Pal</para>
+			/// <para>小朋友</para>
+			/// <para>[x]After your hero attacks,deal 1 damage to allenemies. Choose__another ammunition.</para>
+			/// <para>在你的英雄攻击后，对所有敌人造成1点伤害。另选一种元素弹药。</para>
+			/// </summary>
+			JAIL_458t2 = 127715,
+			/// <summary>
+			/// <para>武器 萨满祭司 费用：4 攻击力：2 耐久度：0</para>
+			/// <para>Tiny Pal</para>
+			/// <para>小朋友</para>
+			/// <para>After your hero attacks, summon a random 3-Cost minion. Give it <b>Taunt</b>. Choose another ammunition.</para>
+			/// <para>在你的英雄攻击后，随机召唤一个法力值消耗为（3）的随从，使其获得<b>嘲讽</b>。另选一种元素弹药。</para>
+			/// </summary>
+			JAIL_458t3 = 127716,
+			/// <summary>
+			/// <para>武器 萨满祭司 费用：4 攻击力：2 耐久度：0</para>
+			/// <para>Tiny Pal</para>
+			/// <para>小朋友</para>
+			/// <para>[x]After your hero attacks, get arandom <b>Battlecry</b> minion.It costs (2) less. Chooseanother ammunition.</para>
+			/// <para>在你的英雄攻击后，随机获取一张<b>战吼</b>随从牌，其法力值消耗减少（2）点。另选一种元素弹药。</para>
+			/// </summary>
+			JAIL_458t4 = 127717,
+			/// <summary>
+			/// <para>随从 中立 费用：7 攻击力：1 生命值：7</para>
+			/// <para>Arachnathid</para>
+			/// <para>蛛蝎</para>
+			/// <para><b>Rush</b>All friendly minionsare <b>Poisonous</b>.</para>
+			/// <para><b>突袭</b>。所有友方随从拥有<b>剧毒</b>。</para>
+			/// </summary>
+			JAIL_459 = 127996,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Arachnathid's Venom</para>
+			/// <para>蛛蝎之毒</para>
+			/// <para><b>Poisonous</b>.</para>
+			/// <para><b>剧毒</b>。</para>
+			/// </summary>
+			JAIL_459e = 127997,
+			/// <summary>
+			/// <para>随从 中立 费用：1 攻击力：1 生命值：2</para>
+			/// <para>Concealing Confection</para>
+			/// <para>匿凶蛋糕</para>
+			/// <para><b>Deathrattle:</b> Get arandom weapon.</para>
+			/// <para><b>亡语：</b>随机获取一张武器牌。</para>
+			/// </summary>
+			JAIL_460 = 128004,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：5 生命值：4</para>
+			/// <para>Disguised Executioner</para>
+			/// <para>伪装的行刑者</para>
+			/// <para>[x]Can be played on either side.<b>Battlecry:</b> Destroy a_random adjacent minion.</para>
+			/// <para>可以使用在对战面板的任意一侧。<b>战吼：</b>随机消灭一个相邻随从。</para>
+			/// </summary>
+			JAIL_461 = 128052,
+			/// <summary>
+			/// <para>法术 中立 费用：1</para>
+			/// <para>Detected!</para>
+			/// <para>被发现了！</para>
+			/// <para>This was played onthe friendly side.</para>
+			/// <para>本随从被使用在了友方一侧。</para>
+			/// </summary>
+			JAIL_461a = 130026,
+			/// <summary>
+			/// <para>法术 中立 费用：1</para>
+			/// <para>Disguised!</para>
+			/// <para>伪装成功！</para>
+			/// <para>This was played onthe enemy side.</para>
+			/// <para>本随从被使用在了敌方一侧。</para>
+			/// </summary>
+			JAIL_461b = 130027,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：5 生命值：2</para>
+			/// <para>Getaway Hogdriver</para>
+			/// <para>跑路狂猪</para>
+			/// <para><b>Battlecry:</b> Draw 2 cards.If they're both minions, gain <b>Charge</b>.</para>
+			/// <para><b>战吼：</b>抽两张牌。如果两张都是随从牌，本随从获得<b>冲锋</b>。</para>
+			/// </summary>
+			JAIL_462 = 128053,
+			/// <summary>
+			/// <para>随从 牧师 费用：3 攻击力：2 生命值：2</para>
+			/// <para>Lotus Troublemaker</para>
+			/// <para>玉莲帮捣蛋鬼</para>
+			/// <para>[x]<b>Battlecry:</b> Deal 2 damage to arandom enemy. Shoot @ |4(time, times)!<i>(While holding this, play cards__for 2 Mana to shoot more!)</i></para>
+			/// <para><b>战吼：</b>随机对一个敌人造成2点伤害，射击@次！<i>（当本牌在你手中时使用消耗（2）点法力的牌以增加射击次数！）</i></para>
+			/// </summary>
+			JAIL_470 = 129983,
+			/// <summary>
+			/// <para>法术 牧师 费用：3</para>
+			/// <para>Jade Guardians</para>
+			/// <para>青玉守卫</para>
+			/// <para>[x]Get two random 8-Costminions. They cost (1) lessfor each card you playedfor 2 Mana this game.@ <i>(@)</i></para>
+			/// <para>随机获取两张法力值消耗为（8）的随从牌。在本局对战中你每使用过一张消耗（2）点法力的牌，这两张牌的法力值消耗便减少（1）点。@<i>（减少@点）</i></para>
+			/// </summary>
+			JAIL_474 = 130021,
+			/// <summary>
+			/// <para>法术 牧师 费用：5</para>
+			/// <para>Slice and Dice</para>
+			/// <para>快刀乱斩</para>
+			/// <para>Replay all other cards played this turn <i>(targeting enemies if possible).</i> End your turn.</para>
+			/// <para>再次使用在本回合中使用的所有其他牌<i>（尽可能以敌人为目标）。</i>结束你的回合。</para>
+			/// </summary>
+			JAIL_500 = 125983,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Cloak of Night</para>
+			/// <para>深夜披风</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			JAIL_500e = 125984,
+			/// <summary>
+			/// <para>随从 牧师 费用：1 攻击力：1 生命值：1</para>
+			/// <para>Picklock</para>
+			/// <para>开锁匠</para>
+			/// <para>[x]All numbers on this cardequal your remaining Mana.<b>Battlecry:</b> Deal @ damageto an enemy minion.</para>
+			/// <para>本牌上的所有数字等于你剩余的法力值。<b>战吼：</b>对一个敌方随从造成@点伤害。</para>
+			/// </summary>
+			JAIL_501 = 125985,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：0 生命值：3</para>
+			/// <para>Alarm-o-Matic</para>
+			/// <para>狂乱报警机</para>
+			/// <para>At the start of your turn, swap this minion with a random one in your opponent's hand.</para>
+			/// <para>在你的回合开始时，随机将你对手的手牌中的一张随从牌与本随从交换。</para>
+			/// </summary>
+			JAIL_502 = 125986,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Subterfuge</para>
+			/// <para>诡诈</para>
+			/// <para>The next spell you cast this turn costs (3) less.</para>
+			/// <para>在本回合中，你施放的下一个法术的法力值消耗减少（3）点。</para>
+			/// </summary>
+			JAIL_502e = 125987,
+			/// <summary>
+			/// <para>武器 牧师 费用：3 攻击力：3 耐久度：0</para>
+			/// <para>Blackpaw's Whip</para>
+			/// <para>黑掌的链镖</para>
+			/// <para>Costs (1) less for each Coin you're holding.  <b>Deathrattle:</b> Draw a card.</para>
+			/// <para>你手牌中每有一张幸运币，本牌的法力值消耗便减少（1）点。<b>亡语：</b>抽一张牌。</para>
+			/// </summary>
+			JAIL_503 = 125988,
+			/// <summary>
+			/// <para>随从 牧师 费用：6 攻击力：6 生命值：3</para>
+			/// <para>Aya, Lotus Kingpin</para>
+			/// <para>艾雅，玉莲帮主</para>
+			/// <para>[x]You always go second.<b>Battlecry:</b> Pick an upgradedcounterfeit to replace your____Coins this game. Get two.__</para>
+			/// <para>你始终为后手。<b>战吼：</b>在本局对战中，将你的幸运币替换为所选的升级后的伪造幸运币，并获取两张。</para>
+			/// </summary>
+			JAIL_504 = 125989,
+			/// <summary>
+			/// <para>法术 牧师 费用：0</para>
+			/// <para>Jade Coin</para>
+			/// <para>玉莲幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only. Summon a{1} {0} <b>Jade Golem</b>.@Gain 1 Mana Crystal this turn only. Summon a <b>Jade Golem</b>.</para>
+			/// <para>在本回合中，获得一个法力水晶。召唤一个{0}的<b>青玉魔像</b>。@在本回合中，获得一个法力水晶。召唤一个<b>青玉魔像</b>。</para>
+			/// </summary>
+			JAIL_504t = 127152,
+			/// <summary>
+			/// <para>法术 牧师 费用：0</para>
+			/// <para>Grimy Coin</para>
+			/// <para>污手幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only. Deal $2 damage to a random enemy minion.</para>
+			/// <para>在本回合中，获得一个法力水晶。随机对一个敌方随从造成$2点伤害。</para>
+			/// </summary>
+			JAIL_504t2 = 127153,
+			/// <summary>
+			/// <para>法术 牧师 费用：0</para>
+			/// <para>Kabal Coin</para>
+			/// <para>暗金幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only. Get a random 1-Cost Kazakus Potion.</para>
+			/// <para>在本回合中，获得一个法力水晶。随机获取一张法力值消耗为（1）的卡扎库斯药水。</para>
+			/// </summary>
+			JAIL_504t3 = 127154,
+			/// <summary>
+			/// <para>法术 中立 费用：1</para>
+			/// <para>Kazakus Potion</para>
+			/// <para>卡扎库斯药水</para>
+			/// <para>{0}{1}</para>
+			/// <para>{0}{1}</para>
+			/// </summary>
+			JAIL_504t3p = 131327,
+			/// <summary>
+			/// <para>法术 中立 费用：1</para>
+			/// <para>Kazakus Potion Generator</para>
+			/// <para>卡扎库斯药水生成器</para>
+			/// <para>Get a random 1-Cost Potion.</para>
+			/// <para>随机获取一张法力值消耗为（1）的药水。</para>
+			/// </summary>
+			JAIL_504t5 = 128771,
+			/// <summary>
+			/// <para>随从 中立 费用：1 攻击力：1 生命值：1</para>
+			/// <para>Jade Golem</para>
+			/// <para>青玉魔像</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			JAIL_504tt01 = 127163,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：4 生命值：4</para>
+			/// <para>Jade Golem</para>
+			/// <para>青玉魔像</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			JAIL_504tt04 = 129987,
+			/// <summary>
+			/// <para>随从 中立 费用：7 攻击力：7 生命值：7</para>
+			/// <para>Jade Golem</para>
+			/// <para>青玉魔像</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			JAIL_504tt07 = 129988,
+			/// <summary>
+			/// <para>随从 中立 费用：10 攻击力：20 生命值：20</para>
+			/// <para>Jade Golem</para>
+			/// <para>青玉魔像</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			JAIL_504tt20 = 129989,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：3 攻击力：3 生命值：2</para>
+			/// <para>Spiteful Chef</para>
+			/// <para>怨毒大厨</para>
+			/// <para>[x]<b>Battlecry:</b> Summon a 2-Cost<b>Taunt</b> minion. If you have 10or more Mana, summon a6-Cost instead.</para>
+			/// <para><b>战吼：</b>召唤一个法力值消耗为（2）的<b>嘲讽</b>随从。如果你拥有至少10点法力值，改为召唤法力值消耗为（6）的嘲讽随从。</para>
+			/// </summary>
+			JAIL_507 = 125993,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>Bear Power</para>
+			/// <para>熊的力量</para>
+			/// <para>+8 Attack</para>
+			/// <para>+8攻击力</para>
+			/// </summary>
+			JAIL_507e = 125994,
+			/// <summary>
+			/// <para>随从 术士 费用：4 攻击力：5 生命值：4</para>
+			/// <para>Godfrey the Betrayer</para>
+			/// <para>背叛者高弗雷</para>
+			/// <para>[x]<b>Start of Game:</b> Overdrawncards return to your handwhen you have space.They cost (1) less.</para>
+			/// <para><b>对战开始时：</b>过量抽取的牌会在你手牌中有空位时返回手牌，且其法力值消耗减少（1）点。</para>
+			/// </summary>
+			JAIL_509 = 126125,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Godfrey's Atlas</para>
+			/// <para>高弗雷的监控</para>
+			/// <para>When you overdraw a card, get it when you have space. It costs (1) less.</para>
+			/// <para>过量抽取的牌会在你手牌中有空位时返回手牌，且其法力值消耗减少（1）点。</para>
+			/// </summary>
+			JAIL_509e = 126701,
+			/// <summary>
+			/// <para>法术 术士 费用：9</para>
+			/// <para>Annihilation</para>
+			/// <para>毁灭</para>
+			/// <para>[x]Destroy all minions.Summon any Demonsin the bottom 3 cardsof your deck.</para>
+			/// <para>消灭所有随从。召唤你牌库底三张牌中的恶魔。</para>
+			/// </summary>
+			JAIL_510 = 126128,
+			/// <summary>
+			/// <para>地标 术士 费用：5</para>
+			/// <para>Spire of Solitude</para>
+			/// <para>孤守晶塔</para>
+			/// <para>[x]Summon a Demonwith stats equal to yourhand size. It attacks arandom enemy minion.</para>
+			/// <para>召唤一个属性值等同于你的手牌数量的恶魔，并使其随机攻击一个敌方随从。</para>
+			/// </summary>
+			JAIL_511 = 126129,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>Solitary</para>
+			/// <para>孤守</para>
+			/// <para><b>Immune</b> this turn.</para>
+			/// <para>在本回合中<b>免疫</b>。</para>
+			/// </summary>
+			JAIL_511e = 126130,
+			/// <summary>
+			/// <para>随从 术士 费用：1 攻击力：1 生命值：1</para>
+			/// <para>Shivarra Infiltrator</para>
+			/// <para>破坏魔渗透者</para>
+			/// <para></para>
+			/// <para></para>
+			/// </summary>
+			JAIL_511t = 126476,
+			/// <summary>
+			/// <para>随从 术士 费用：3 攻击力：3 生命值：1</para>
+			/// <para>Caged Cranium</para>
+			/// <para>笼中颅骨</para>
+			/// <para>[x]<b>Taunt</b><b>Battlecry:</b> Gain +1 Health__for each card in your hand._</para>
+			/// <para><b>嘲讽</b>。<b>战吼：</b>你每有一张手牌，便获得+1生命值。</para>
+			/// </summary>
+			JAIL_513 = 126135,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Uncaged</para>
+			/// <para>出笼</para>
+			/// <para>Increased Health.</para>
+			/// <para>生命值提高。</para>
+			/// </summary>
+			JAIL_513e = 132552,
+			/// <summary>
+			/// <para>法术 术士 费用：10</para>
+			/// <para>The Unseen Atlas</para>
+			/// <para>秘密监控</para>
+			/// <para>Draw 3 cards.Costs (1) less for each card in your hand.</para>
+			/// <para>抽三张牌。你每有一张手牌，本牌的法力值消耗便减少（1）点。</para>
+			/// </summary>
+			JAIL_514 = 126477,
+			/// <summary>
+			/// <para>法术 术士 费用：2</para>
+			/// <para>Shadow Rounds</para>
+			/// <para>暗影轮射</para>
+			/// <para>[x]Deal $2 damage to anenemy minion. If it dies,cast this on anotherrandom enemy minion.</para>
+			/// <para>对一个敌方随从造成$2点伤害。如果该随从死亡，随机对另一个敌方随从施放本法术。</para>
+			/// </summary>
+			JAIL_515 = 126478,
+			/// <summary>
+			/// <para>随从 圣骑士 费用：5 攻击力：4 生命值：4</para>
+			/// <para>Scarlet Recruiter</para>
+			/// <para>血色招募者</para>
+			/// <para>[x]<b>Battlecry:</b> Summon twominions from your deckthat cost (2) or less.Give them <b>Rush</b>.</para>
+			/// <para><b>战吼：</b>从你的牌库中召唤两个法力值消耗小于或等于（2）点的随从，并使其获得<b>突袭</b>。</para>
+			/// </summary>
+			JAIL_516 = 127319,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>New Recruit</para>
+			/// <para>物色新人</para>
+			/// <para><b>Rush</b></para>
+			/// <para><b>突袭</b></para>
+			/// </summary>
+			JAIL_516e = 127321,
+			/// <summary>
+			/// <para>附魔 牧师 费用：0</para>
+			/// <para>Jade Improvements</para>
+			/// <para>青玉改进</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			JAIL_700e = 126096,
+			/// <summary>
+			/// <para>随从 中立 费用：1 攻击力：1 生命值：3</para>
+			/// <para>Gullible Guard</para>
+			/// <para>好骗的卫兵</para>
+			/// <para><b>Deathrattle:</b> You can say Sorry this game.</para>
+			/// <para><b>亡语：</b>在本局对战中，你可以发送抱歉。</para>
+			/// </summary>
+			JAIL_703 = 126092,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Apologetic</para>
+			/// <para>抱歉</para>
+			/// <para>+2/+2.</para>
+			/// <para>+2/+2。</para>
+			/// </summary>
+			JAIL_703e = 131214,
+			/// <summary>
+			/// <para>法术 牧师 费用：3</para>
+			/// <para>Thief's Tools</para>
+			/// <para>窃贼工具</para>
+			/// <para>Get two random 4-Cost spells. Reduce their Costs by (2).</para>
+			/// <para>随机获取两张法力值消耗为（4）的法术牌，其法力值消耗减少（2）点。</para>
+			/// </summary>
+			JAIL_706 = 126098,
+			/// <summary>
+			/// <para>随从 中立 费用：9 攻击力：4 生命值：4</para>
+			/// <para>Black Market Auctioneer</para>
+			/// <para>黑市拍卖师</para>
+			/// <para><b>Prepare</b>Whenever you cast a spell, draw a card.</para>
+			/// <para><b>预备</b>。每当你施放一个法术，抽一张牌。</para>
+			/// </summary>
+			JAIL_718 = 126210,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：4 攻击力：7 生命值：5</para>
+			/// <para>Irida Sinseeker</para>
+			/// <para>伊莉达·寻罪</para>
+			/// <para>[x]<b>Lifesteal</b>. <b>Battlecry:</b> Sendyour deck to the Void. At thestart of your turns, get twocards from the Void.</para>
+			/// <para><b>吸血</b>。<b>战吼：</b>将你的牌库送入虚空。在你的回合开始时，从虚空中获取两张牌。</para>
+			/// </summary>
+			JAIL_719 = 126211,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>The Void</para>
+			/// <para>虚空</para>
+			/// <para>Get 2 cards from the Void each turn.</para>
+			/// <para>每回合从虚空中获取2张牌。</para>
+			/// </summary>
+			JAIL_719e2 = 132521,
+			/// <summary>
+			/// <para>随从 牧师 费用：2 攻击力：2 生命值：2</para>
+			/// <para>Lotus Bookie</para>
+			/// <para>玉莲帮荷官</para>
+			/// <para><b>Deathrattle:</b> Get a Coin.</para>
+			/// <para><b>亡语：</b>获取一张幸运币。</para>
+			/// </summary>
+			JAIL_720 = 126221,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：6 攻击力：1 生命值：1</para>
+			/// <para>Tras'tath, Soul Parasite</para>
+			/// <para>特莱斯塔斯，寄生之魂</para>
+			/// <para>[x]<b>Prepare, Rush</b>After you summon a_Demon, gain its stats.</para>
+			/// <para><b>预备。突袭</b>。在你召唤一个恶魔后，获得其属性值。</para>
+			/// </summary>
+			JAIL_721 = 126222,
+			/// <summary>
+			/// <para>附魔 恶魔猎手 费用：0</para>
+			/// <para>Stolen Soul</para>
+			/// <para>窃取的灵魂</para>
+			/// <para>Increased Stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			JAIL_721e = 131257,
+			/// <summary>
+			/// <para>武器 恶魔猎手 费用：4 攻击力：3 耐久度：0</para>
+			/// <para>Stardust Scythe</para>
+			/// <para>星尘之镰</para>
+			/// <para>After your hero attacks, get a Void Soul.</para>
+			/// <para>在你的英雄攻击后，获取一张虚空灵魂。</para>
+			/// </summary>
+			JAIL_730 = 126660,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：1</para>
+			/// <para>Void Soul</para>
+			/// <para>虚空灵魂</para>
+			/// <para>[x]Summon a random@-Cost Demon. Improveyour future Void Souls.</para>
+			/// <para>随机召唤一个法力值消耗为（@）的恶魔。提升你此后的虚空灵魂效果。</para>
+			/// </summary>
+			JAIL_732 = 126662,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：3 攻击力：3 生命值：4</para>
+			/// <para>Vicious Voidscale</para>
+			/// <para>邪恶的虚鳞纳迦</para>
+			/// <para>[x]<b>Taunt</b><b>Deathrattle:</b> Geta Void Soul.</para>
+			/// <para><b>嘲讽</b>。<b>亡语：</b>获取一张虚空灵魂。</para>
+			/// </summary>
+			JAIL_733 = 126663,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：3 攻击力：2 生命值：2</para>
+			/// <para>Hellraiser</para>
+			/// <para>魂狱破坏者</para>
+			/// <para>[x]<b>Battlecry:</b> <b>Discover</b> a cardin your deck. If it's empty,gain +4/+4 instead.</para>
+			/// <para><b>战吼：</b>从你的牌库中<b>发现</b>一张牌。如果你的牌库已空，改为获得+4/+4。</para>
+			/// </summary>
+			JAIL_734 = 126664,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Unchained</para>
+			/// <para>解开枷锁</para>
+			/// <para>+4/+4</para>
+			/// <para>+4/+4</para>
+			/// </summary>
+			JAIL_734e = 132570,
+			/// <summary>
+			/// <para>法术 法师 费用：7</para>
+			/// <para>Code Violet</para>
+			/// <para>紫罗兰条令</para>
+			/// <para>[x]<b>Prepare.</b> Summon an8-Cost minion. If you'vecast 3 other spells thisturn, do it again.@ <i>({0} left!)</i> @ <i>(Ready!)</i></para>
+			/// <para><b>预备</b>。召唤一个法力值消耗为（8）的随从。在本回合中，如果你施放过3个其他法术，重复一次。@<i>（还剩{0}个！）</i>@（已经就绪！）<i></para>
+			/// </summary>
+			JAIL_735 = 126841,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：6 攻击力：6 生命值：7</para>
+			/// <para>Mug'Zee</para>
+			/// <para>穆格·兹伊</para>
+			/// <para>[x]<b>Start of Game:</b> If your deckhas no other minions, getMug's Hero Power. If it hasno spells, get Zee's!</para>
+			/// <para><b>对战开始时：</b>如果你的套牌中没有其他随从牌，获得穆格的英雄技能。如果没有法术牌，获得兹伊的技能！</para>
+			/// </summary>
+			JAIL_800 = 126416,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Mean Mug</para>
+			/// <para>杯卑磕砸</para>
+			/// <para>Your first minion each turn costs (2) less this game.</para>
+			/// <para>在本局对战中，每回合中你的第一个随从法力值消耗减少（2）点。</para>
+			/// </summary>
+			JAIL_800e = 126417,
+			/// <summary>
+			/// <para>英雄技能 萨满祭司 费用：0</para>
+			/// <para>Mug's Magic</para>
+			/// <para>穆格的魔法</para>
+			/// <para>[x]<b>Passive</b>Your first minion eachturn costs (2) less.</para>
+			/// <para><b>被动</b>每回合中，你的第一个随从法力值消耗减少（2）点。</para>
+			/// </summary>
+			JAIL_800hp1 = 127468,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Mug's Magic</para>
+			/// <para>穆格的魔法</para>
+			/// <para>The next minion you play costs (2) less.</para>
+			/// <para>你使用的下一张随从牌法力值消耗减少（2）点。</para>
+			/// </summary>
+			JAIL_800hp1e = 127533,
+			/// <summary>
+			/// <para>英雄技能 萨满祭司 费用：0</para>
+			/// <para>Zee's Might</para>
+			/// <para>兹伊的力量</para>
+			/// <para>[x]<b>Passive</b>Every fifth minionyou play triggers its<b>Battlecry</b> twice.</para>
+			/// <para><b>被动</b>你每使用五张随从牌，第五个随从的<b>战吼</b>会触发两次。</para>
+			/// </summary>
+			JAIL_800hp2 = 127476,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Zee Battlecry Doubler</para>
+			/// <para>兹伊的战吼翻倍</para>
+			/// <para>Your next minion's <b>Battlecry</b> triggers twice.</para>
+			/// <para>你的下一个随从的<b>战吼</b>会触发两次。</para>
+			/// </summary>
+			JAIL_800hp2e = 127477,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：3</para>
+			/// <para>Molten Gold</para>
+			/// <para>熔炼黄金</para>
+			/// <para>Deal $4 damage.<i>(Cast @ |4(spell, spells) to turn into a minion!)</i></para>
+			/// <para>造成$4点伤害。<i>（施放@个法术以变为随从牌！）</i></para>
+			/// </summary>
+			JAIL_801 = 126407,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：3 攻击力：3 生命值：3</para>
+			/// <para>Molten Gold Elemental</para>
+			/// <para>熔炼黄金元素</para>
+			/// <para><b>Battlecry:</b> Deal 4 damage.</para>
+			/// <para><b>战吼：</b>造成4点伤害。</para>
+			/// </summary>
+			JAIL_801t = 126408,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：1 攻击力：1 生命值：3</para>
+			/// <para>Gallagio Goon</para>
+			/// <para>加乐宫恶棍</para>
+			/// <para>After you play a <b>Battlecry</b> minion, give it +1/+1.</para>
+			/// <para>在你使用一张<b>战吼</b>随从牌后，使其获得+1/+1。</para>
+			/// </summary>
+			JAIL_802 = 126409,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Wiseguy</para>
+			/// <para>大聪明</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			JAIL_802e = 132652,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：5</para>
+			/// <para>Frostshatter</para>
+			/// <para>寒霜冰爆</para>
+			/// <para>[x]<b>Freeze</b> an enemy.Draw 2 cards.<i>(Cast @ |4(spell, spells) to turninto a minion!)</i></para>
+			/// <para><b>冻结</b>一个敌人。抽两张牌。<i>（施放@个法术以变为随从牌！）</i></para>
+			/// </summary>
+			JAIL_803 = 126410,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Frostshatter Elemental</para>
+			/// <para>寒霜冰爆元素</para>
+			/// <para><b>Battlecry:</b> <b>Freeze</b> an enemy. Draw two cards.</para>
+			/// <para><b>战吼：</b><b>冻结</b>一个敌人。抽两张牌。</para>
+			/// </summary>
+			JAIL_803t = 126411,
+			/// <summary>
+			/// <para>法术 萨满祭司 费用：7</para>
+			/// <para>Stormfury</para>
+			/// <para>风暴怒火</para>
+			/// <para>[x]<b>Lifesteal</b>. Deal 2 damageto all enemy minions.<i>(Cast @ |4(spell, spells) to turninto a minion!)</i></para>
+			/// <para><b>吸血</b>。对所有敌方随从造成2点伤害。<i>（施放@个法术以变为随从牌！）</i></para>
+			/// </summary>
+			JAIL_805 = 126413,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Stormpowered</para>
+			/// <para>风暴赋能</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			JAIL_805e = 132600,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：7 攻击力：7 生命值：7</para>
+			/// <para>Stormfury Elemental</para>
+			/// <para>风暴怒火元素</para>
+			/// <para>[x]<b>Lifesteal</b><b>Battlecry:</b> Deal 2 damageto all enemy minions.</para>
+			/// <para><b>吸血</b><b>战吼：</b>对所有敌方随从造成2点伤害。</para>
+			/// </summary>
+			JAIL_805t = 126414,
+			/// <summary>
+			/// <para>随从 萨满祭司 费用：6 攻击力：6 生命值：6</para>
+			/// <para>Hexmarshal</para>
+			/// <para>妖术长官</para>
+			/// <para>[x]<b>Battlecry:</b> Get a random_spell that costs (5) or more.If your deck started with no__spells, it costs (5) less.</para>
+			/// <para><b>战吼：</b>随机获取一张法力值消耗大于或等于（5）点的法术牌。如果你的套牌中没有法术牌，获取的这张牌法力值消耗减少（5）点。</para>
+			/// </summary>
+			JAIL_806 = 126415,
+			/// <summary>
+			/// <para>随从 猎人 费用：6 攻击力：6 生命值：5</para>
+			/// <para>King of the Underbelly</para>
+			/// <para>下水道之王</para>
+			/// <para>[x]While building your deck, pick 3 contraband Beasts. <b><b>Battlecry:</b>_Discover</b> one.It costs (3) less.</para>
+			/// <para>构筑套牌时，选择三张私藏的野兽牌。<b>战吼：</b>从中<b>发现</b>一张，其法力值消耗减少（3）点。</para>
+			/// </summary>
+			JAIL_831 = 125998,
+			/// <summary>
+			/// <para>随从 中立 费用：2 攻击力：1 生命值：4</para>
+			/// <para>Warden Maiev</para>
+			/// <para>典狱官玛维</para>
+			/// <para>[x]After you play a minion,give it +3/+3 and make it_go <b>Dormant</b> for 1 turn.</para>
+			/// <para>在你使用一张随从牌后，使其获得+3/+3并使其<b>休眠</b>1回合。</para>
+			/// </summary>
+			JAIL_850 = 126600,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>In the Slammer</para>
+			/// <para>乖乖蹲牢</para>
+			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
+			/// <para><b>休眠</b>。@回合后唤醒。</para>
+			/// </summary>
+			JAIL_850e = 127601,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Pushups</para>
+			/// <para>狱中健身</para>
+			/// <para>+3/+3.</para>
+			/// <para>+3/+3。</para>
+			/// </summary>
+			JAIL_850e2 = 126910,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：4 生命值：5</para>
+			/// <para>Inspector Murloc Holmes</para>
+			/// <para>探员摩洛克·福尔摩斯</para>
+			/// <para>[x]<b>Battlecry:</b> Investigate a cardin the enemy hand. If theyplay a card with that name_next turn, get 3 Coins.</para>
+			/// <para><b>战吼：</b>指认敌方手牌中的一张牌。如果对手在下回合使用了同名卡牌，你获取三张幸运币。</para>
+			/// </summary>
+			JAIL_851 = 126602,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>An Investigation Player Enchant</para>
+			/// <para>指认玩家附加效果</para>
+			/// <para>If the suspect is played next turn, get 3 Coins.</para>
+			/// <para>如果嫌犯在下回合被使用，获取三张幸运币。</para>
+			/// </summary>
+			JAIL_851e = 126603,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>An Investigation!</para>
+			/// <para>开始调查</para>
+			/// <para>If the suspect is played next turn, get 3 Coins.</para>
+			/// <para>如果嫌犯在下回合被使用，获取三张幸运币。</para>
+			/// </summary>
+			JAIL_851e1 = 132586,
+			/// <summary>
+			/// <para>随从 中立 费用：8 攻击力：5 生命值：5</para>
+			/// <para>Togwaggle, Smuggler King</para>
+			/// <para>私运之王托瓦格尔</para>
+			/// <para>[x]<b>Battlecry:</b> Shuffle both_players' hands together.</para>
+			/// <para><b>战吼：</b>将双方玩家的手牌放在一起洗混。</para>
+			/// </summary>
+			JAIL_852 = 126604,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：3 攻击力：3 生命值：3</para>
+			/// <para>Chef Neth'rek</para>
+			/// <para>主厨奈瑟雷克</para>
+			/// <para>[x]<b>Start of Game:</b> If your deckonly has cards that cost (3)or less, set your Mana to10 after five turns!</para>
+			/// <para><b>对战开始时：</b>如果你的套牌中只有法力值消耗小于或等于（3）点的牌，在五回合后将你的法力值变为10点！</para>
+			/// </summary>
+			JAIL_860 = 126045,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Good Soup</para>
+			/// <para>好汤</para>
+			/// <para>Set your Mana to 10 after 5 turns.</para>
+			/// <para>5回合后将你的法力值变为10点。</para>
+			/// </summary>
+			JAIL_860e = 126046,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：2</para>
+			/// <para>Noxious Bribe</para>
+			/// <para>腐毒贿赂</para>
+			/// <para>[x]<b>Discover</b> a <b>Choose One</b>card. It has both effectscombined. Give youropponent a plain copy.</para>
+			/// <para><b>发现</b>一张<b>抉择</b>牌，这张牌会同时拥有两种效果。使你的对手获得一张原始版复制。</para>
+			/// </summary>
+			JAIL_861 = 126054,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Noxious</para>
+			/// <para>腐毒</para>
+			/// <para><b>Choose One</b> combined.</para>
+			/// <para><b>抉择</b>牌同时拥有两种效果。</para>
+			/// </summary>
+			JAIL_861e = 132587,
+			/// <summary>
+			/// <para>法术 德鲁伊 费用：3</para>
+			/// <para>Lethal Recipe</para>
+			/// <para>致命配方</para>
+			/// <para>[x]Draw 2 minions.If you have 10 or moreMana, give them +3/+3.</para>
+			/// <para>抽两张随从牌。如果你拥有至少10点法力值，使其获得+3/+3。</para>
+			/// </summary>
+			JAIL_866 = 126205,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Lethal</para>
+			/// <para>致命</para>
+			/// <para>+3/+3.</para>
+			/// <para>+3/+3。</para>
+			/// </summary>
+			JAIL_866e = 131162,
+			/// <summary>
+			/// <para>随从 德鲁伊 费用：2 攻击力：1 生命值：4</para>
+			/// <para>Spider Rider</para>
+			/// <para>蜘蛛骑手</para>
+			/// <para>After your hero attacks, draw a card.</para>
+			/// <para>在你的英雄攻击后，抽一张牌。</para>
+			/// </summary>
+			JAIL_872 = 126225,
+			/// <summary>
+			/// <para>武器 德鲁伊 费用：4 攻击力：1 耐久度：0</para>
+			/// <para>Staff of Trickery</para>
+			/// <para>诡计法杖</para>
+			/// <para>[x]After your hero attacks,<b>Discover</b> a Druid card.Reduce its Cost byyour hero's Attack.</para>
+			/// <para>在你的英雄攻击后，<b>发现</b>一张德鲁伊牌，并使其法力值消耗减少，减少的量等同于你的英雄的攻击力。</para>
+			/// </summary>
+			JAIL_875 = 126243,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Trickery</para>
+			/// <para>诡计多端</para>
+			/// <para>Reduced Cost.</para>
+			/// <para>法力值消耗减少。</para>
+			/// </summary>
+			JAIL_875e = 126244,
+			/// <summary>
+			/// <para>法术 猎人 费用：4</para>
+			/// <para>Dig for Freedom</para>
+			/// <para>掘壁求生</para>
+			/// <para>[x]Give a friendlyminion "<b>Deathrattle:</b>Summon two random4-Cost minions."</para>
+			/// <para>使一个友方随从获得“<b>亡语：</b>随机召唤两个法力值消耗为（4）的随从。”</para>
+			/// </summary>
+			JAIL_876 = 126294,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>In the Tunnels</para>
+			/// <para>壁中穿行</para>
+			/// <para><b>Deathrattle:</b> Summon two random 4-Cost minions.</para>
+			/// <para><b>亡语：</b>随机召唤两个法力值消耗为（4）的随从。</para>
+			/// </summary>
+			JAIL_876e = 127325,
+			/// <summary>
+			/// <para>地标 猎人 费用：2</para>
+			/// <para>Underbelly Network</para>
+			/// <para>下水道管网</para>
+			/// <para>Summon a 2/1 Rat with "<b>Deathrattle:</b> Draw a card."</para>
+			/// <para>召唤一只2/1并具有“<b>亡语：</b>抽一张牌”的老鼠。</para>
+			/// </summary>
+			JAIL_877 = 126295,
+			/// <summary>
+			/// <para>随从 猎人 费用：2 攻击力：2 生命值：1</para>
+			/// <para>Snoot Hoarder</para>
+			/// <para>鼠吻贮藏者</para>
+			/// <para><b>Deathrattle:</b> Draw a card.</para>
+			/// <para><b>亡语：</b>抽一张牌。</para>
+			/// </summary>
+			JAIL_877t = 127698,
+			/// <summary>
+			/// <para>随从 猎人 费用：2 攻击力：3 生命值：1</para>
+			/// <para>Guard Dog</para>
+			/// <para>警卫犬</para>
+			/// <para>[x]<b>Deathrattle:</b> Summona random 1-Cost_<b>Deathrattle</b> minion.</para>
+			/// <para><b>亡语：</b>随机召唤一个法力值消耗为（1）的<b>亡语</b>随从。</para>
+			/// </summary>
+			JAIL_878 = 126299,
+			/// <summary>
+			/// <para>法术 猎人 费用：4</para>
+			/// <para>Beast Tripwire</para>
+			/// <para>野兽绊索</para>
+			/// <para>[x]Summon a random5-Cost Beast. Shuffle 2spells into your deck thatdo it again when drawn.</para>
+			/// <para>随机召唤一只法力值消耗为（5）的野兽。将两张法术牌洗入你的牌库，抽到该法术时会再随机召唤一次。</para>
+			/// </summary>
+			JAIL_879 = 126419,
+			/// <summary>
+			/// <para>法术 猎人 费用：4</para>
+			/// <para>Tripped Beast Tripwire</para>
+			/// <para>触发的野兽绊索</para>
+			/// <para><b>Casts When Drawn</b>Summon a random5-Cost Beast.</para>
+			/// <para><b>抽到时施放</b>随机召唤一只法力值消耗为（5）的野兽。</para>
+			/// </summary>
+			JAIL_879t = 126421,
+			/// <summary>
+			/// <para>随从 猎人 费用：1 攻击力：1 生命值：3</para>
+			/// <para>Black Market Overseer</para>
+			/// <para>黑市监管者</para>
+			/// <para>Whenever you play a <b>Deathrattle</b> minion,give it <b>Rush</b>.</para>
+			/// <para>每当你使用一张<b>亡语</b>随从牌，使其获得<b>突袭</b>。</para>
+			/// </summary>
+			JAIL_880 = 126422,
+			/// <summary>
+			/// <para>附魔 猎人 费用：0</para>
+			/// <para>Overseen</para>
+			/// <para>被监管</para>
+			/// <para><b>Rush</b>.</para>
+			/// <para><b>突袭</b>。</para>
+			/// </summary>
+			JAIL_880e = 131422,
+			/// <summary>
+			/// <para>法术 猎人 费用：3</para>
+			/// <para>Arcane Tripwire</para>
+			/// <para>奥术绊索</para>
+			/// <para>[x]Deal $5 damage splitamong all enemies. Shuffle2 spells into your deck thatdo it again when drawn.</para>
+			/// <para>造成$5点伤害，随机分配到所有敌人身上。将两张法术牌洗入你的牌库，抽到该法术时会再造成一次。</para>
+			/// </summary>
+			JAIL_881 = 126423,
+			/// <summary>
+			/// <para>法术 猎人 费用：3</para>
+			/// <para>Tripped Arcane Tripwire</para>
+			/// <para>触发的奥术绊索</para>
+			/// <para><b>Casts When Drawn</b>Deal $5 damage split among all enemies.</para>
+			/// <para><b>抽到时施放</b>造成$5点伤害，随机分配到所有敌人身上。</para>
+			/// </summary>
+			JAIL_881t = 126424,
+			/// <summary>
+			/// <para>随从 猎人 费用：3 攻击力：4 生命值：2</para>
+			/// <para>R4T-C4TCH3R</para>
+			/// <para>R4T-C4TCH3R捕鼠机</para>
+			/// <para>[x]<b>Battlecry:</b> Copy all spells_in your deck._<b>Deathrattle:</b> Draw one.</para>
+			/// <para><b>战吼：</b>复制你牌库中的所有法术牌。<b>亡语：</b>抽其中一张。</para>
+			/// </summary>
+			JAIL_882 = 126425,
+			/// <summary>
+			/// <para>随从 中立 费用：4 攻击力：4 生命值：5</para>
+			/// <para>Activated Golem</para>
+			/// <para>激活的魔像</para>
+			/// <para>At the end of each turn, gain <b>Reborn</b>.</para>
+			/// <para>在每个回合结束时，获得<b>复生</b>。</para>
+			/// </summary>
+			JAIL_883 = 126472,
+			/// <summary>
+			/// <para>地标 中立 费用：5</para>
+			/// <para>Zuramat's Prison</para>
+			/// <para>祖拉玛特的牢房</para>
+			/// <para>[x]Choose a card to discardto summon a 5/5 <b>Taunt</b>.<b>Deathrattle:</b> Free Zuramatwho plays one each turn!__</para>
+			/// <para>选择一张牌并弃掉，以召唤一个5/5并具有<b>嘲讽</b>的虚空低语。<b>亡语：</b>放出祖拉玛特。祖拉玛特每回合会使用一张弃掉的牌！</para>
+			/// </summary>
+			JAIL_887 = 126497,
+			/// <summary>
+			/// <para>随从 中立 费用：8 攻击力：8 生命值：8</para>
+			/// <para>Zuramat the Obliterator</para>
+			/// <para>湮灭者祖拉玛特</para>
+			/// <para>[x]At the end of your turn,play a card discarded byZuramat's Prison.</para>
+			/// <para>在你的回合结束时，使用一张被祖拉玛特的牢房弃掉的牌。</para>
+			/// </summary>
+			JAIL_887t2 = 126499,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Discarded Card</para>
+			/// <para>弃掉的牌</para>
+			/// <para>{0}</para>
+			/// <para>{0}</para>
+			/// </summary>
+			JAIL_887t2e = 133417,
+			/// <summary>
+			/// <para>随从 中立 费用：5 攻击力：5 生命值：5</para>
+			/// <para>Whisper of the Void</para>
+			/// <para>虚空低语</para>
+			/// <para><b>Taunt</b></para>
+			/// <para><b>嘲讽</b></para>
+			/// </summary>
+			JAIL_887t3 = 127277,
+			/// <summary>
+			/// <para>随从 恶魔猎手 费用：10 攻击力：6 生命值：12</para>
+			/// <para>Captive Nathrezim</para>
+			/// <para>被俘的纳斯雷兹姆</para>
+			/// <para><b>Prepare</b>, <b>Taunt</b>ALL minions cost (2) more.</para>
+			/// <para><b>预备</b>。<b>嘲讽</b>。所有随从的法力值消耗增加（2）点。</para>
+			/// </summary>
+			JAIL_890 = 127155,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Captive</para>
+			/// <para>俘虏</para>
+			/// <para>Costs (2) more.</para>
+			/// <para>法力值消耗增加（2）点。</para>
+			/// </summary>
+			JAIL_890e = 132569,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：2</para>
+			/// <para>Void Blast</para>
+			/// <para>虚空冲击</para>
+			/// <para>Deal $3 damage to aminion. If it dies,get a Void Soul.</para>
+			/// <para>对一个随从造成$3点伤害。如果该随从死亡，获取一张虚空灵魂。</para>
+			/// </summary>
+			JAIL_891 = 127157,
+			/// <summary>
+			/// <para>法术 恶魔猎手 费用：2</para>
+			/// <para>Cosmic Manifestations</para>
+			/// <para>宇宙具象</para>
+			/// <para>[x]Deal $2 damage. Shufflea random Demon Hunterspell into your deck.<b>Outcast:</b> Do it again.</para>
+			/// <para>造成$2点伤害。随机将一张恶魔猎手法术牌洗入你的牌库。<b>流放：</b>重复一次。</para>
+			/// </summary>
+			JAIL_892 = 127159,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Manifesting</para>
+			/// <para>具象</para>
+			/// <para><b>Rush</b>. <b>Deathrattle:</b>Get 2 Void Souls.</para>
+			/// <para><b>突袭</b>。<b>亡语：</b>获取2张虚空灵魂。</para>
+			/// </summary>
+			JAIL_892e = 130860,
+			/// <summary>
+			/// <para>随从 术士 费用：10 攻击力：6 生命值：5</para>
+			/// <para>Moragg</para>
+			/// <para>摩拉格</para>
+			/// <para>[x]<b>Prepare</b>. <b>Deathrattle:</b> Summona random Demon from yourdeck. Give it "<b>Deathrattle:</b>Summon Moragg."</para>
+			/// <para><b>预备</b>。<b>亡语：</b>随机从你的牌库中召唤一个恶魔。使其获得“<b>亡语：</b>召唤摩拉格。”</para>
+			/// </summary>
+			JAIL_906 = 124073,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Stolen Key</para>
+			/// <para>失窃的钥匙</para>
+			/// <para><b>Deathrattle:</b> Summon Moragg.</para>
+			/// <para><b>亡语：</b>召唤摩拉格。</para>
+			/// </summary>
+			JAIL_906e = 127316,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Prepared</para>
+			/// <para>预备完毕</para>
+			/// <para>Cost reduced.</para>
+			/// <para>法力值消耗减少。</para>
+			/// </summary>
+			JAIL_907e = 124068,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Preparing</para>
+			/// <para>正在预备</para>
+			/// <para>Can't be played this turn.</para>
+			/// <para>在本回合中无法使用。</para>
+			/// </summary>
+			JAIL_907e02 = 130992,
+			/// <summary>
+			/// <para>随从 牧师 费用：4 攻击力：2 生命值：2</para>
+			/// <para>Defias Wannabe</para>
+			/// <para>迪菲亚跟风狗</para>
+			/// <para>[x]<b>Prepare</b><b>Combo:</b> Gain +1/+1 foreach other card playedthis turn.@ <i>(@)</i></para>
+			/// <para><b>预备</b>。<b>连击：</b>在本回合中，你每使用一张其他牌，便获得+1/+1。@<i>（已使用@张）</i></para>
+			/// </summary>
+			JAIL_909 = 124075,
+			/// <summary>
+			/// <para>附魔 牧师 费用：0</para>
+			/// <para>Gimme a Chance!</para>
+			/// <para>让我试试！</para>
+			/// <para>Increased stats.</para>
+			/// <para>属性值提高。</para>
+			/// </summary>
+			JAIL_909e = 126206,
+			/// <summary>
+			/// <para>随从 潜行者 费用：7 攻击力：6 生命值：6</para>
+			/// <para>Soothsayer</para>
+			/// <para>预言师</para>
+			/// <para>[x]<b>Prepare</b>, <b><b>Taunt</b>.</b><b>Deathrattle:</b> Restore 6Health your hero. Summon a___random 6-Cost minion.</para>
+			/// <para><b>预备</b>。<b><b>嘲讽</b>。</b><b>亡语：</b>为你的英雄恢复6点生命值。随机召唤一个法力值消耗为（6）的随从。</para>
+			/// </summary>
+			JAIL_912 = 124079,
+			/// <summary>
+			/// <para>法术 潜行者 费用：5</para>
+			/// <para>Hold Them Off!</para>
+			/// <para>拦住他们！</para>
+			/// <para><b>Prepare</b>Give a minion +5/+5 and <b>Lifesteal</b>.</para>
+			/// <para><b>预备</b>。使一个随从获得+5/+5和<b>吸血</b>。</para>
+			/// </summary>
+			JAIL_913 = 124080,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Hold the Line!</para>
+			/// <para>坚守防线！</para>
+			/// <para>+5/+5 and <b>Lifesteal</b>.</para>
+			/// <para>+5/+5和<b>吸血</b>。</para>
+			/// </summary>
+			JAIL_913e = 131231,
+			/// <summary>
+			/// <para>法术 潜行者 费用：1</para>
+			/// <para>Undeath Sentence</para>
+			/// <para>不死徒刑</para>
+			/// <para>[x]Trigger the <b>Deathrattle</b> ofa random friendly minionthat died this game.</para>
+			/// <para>随机触发本局对战中死亡的一个友方随从的<b>亡语</b>。</para>
+			/// </summary>
+			JAIL_940 = 126867,
+			/// <summary>
+			/// <para>法术 潜行者 费用：2</para>
+			/// <para>Holy Embrace</para>
+			/// <para>神圣之拥</para>
+			/// <para>Restore #4 Health._Get a 'Dark Embrace'_that deals 4 damage.</para>
+			/// <para>恢复#4点生命值。获取一张能造成4点伤害的黑暗之拥。</para>
+			/// </summary>
+			JAIL_941 = 126896,
+			/// <summary>
+			/// <para>法术 潜行者 费用：2</para>
+			/// <para>Dark Embrace</para>
+			/// <para>黑暗之拥</para>
+			/// <para>Deal $4 damage.</para>
+			/// <para>造成$4点伤害。</para>
+			/// </summary>
+			JAIL_941t = 126897,
+			/// <summary>
+			/// <para>随从 潜行者 费用：2 攻击力：2 生命值：6</para>
+			/// <para>Specter of Despair</para>
+			/// <para>绝望鬼灵</para>
+			/// <para><b>Taunt</b>_Can't attack.</para>
+			/// <para><b>嘲讽</b>无法攻击。</para>
+			/// </summary>
+			JAIL_942 = 126898,
+			/// <summary>
+			/// <para>随从 中立 费用：2 攻击力：3 生命值：2</para>
+			/// <para>Captured Archmage</para>
+			/// <para>被绑的大法师</para>
+			/// <para>[x]<b>Deathrattle:</b> If you had 4 otherCaptured Archmages die thisgame, cast 'Fireball' at_a random enemy.@ <i>(@/4)</i></para>
+			/// <para><b>亡语：</b>在本局对战中，如果你有4个其他被绑的大法师死亡，随机对一个敌人施放火球术。@<i>（@/4）</i></para>
+			/// </summary>
+			JAIL_974 = 126874,
+			/// <summary>
+			/// <para>随从 中立 费用：2 攻击力：2 生命值：2</para>
+			/// <para>Frantic Forger</para>
+			/// <para>慌乱的造假者</para>
+			/// <para><b>Battlecry:</b> Get arandom playable spell.It is <b>Temporary</b>.</para>
+			/// <para><b>战吼：</b>随机获取一张可用的法术牌，该牌为<b>临时</b>牌。</para>
+			/// </summary>
+			JAIL_986 = 126937,
+			/// <summary>
+			/// <para>地标 萨满祭司 费用：1</para>
+			/// <para>Low Security Wing</para>
+			/// <para>安保盲区</para>
+			/// <para>[x]Get a random Shamanminion. It's locked inyour hand until youplay another card.</para>
+			/// <para>随机获取一张萨满祭司随从牌。该牌会锁入你的手牌，直到你使用另一张牌。</para>
+			/// </summary>
+			JAIL_987 = 126938,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Low Security</para>
+			/// <para>低级安保</para>
+			/// <para>Can't be played until another card is played.</para>
+			/// <para>无法使用，直到你使用另一张牌。</para>
+			/// </summary>
+			JAIL_987e = 129583,
+			/// <summary>
+			/// <para>附魔 萨满祭司 费用：0</para>
+			/// <para>Escaped</para>
+			/// <para>逃脱</para>
+			/// <para>+1/+1.</para>
+			/// <para>+1/+1。</para>
+			/// </summary>
+			JAIL_987e2 = 132502,
+			/// <summary>
+			/// <para>法术 术士 费用：2</para>
+			/// <para>Demonic Confinement</para>
+			/// <para>恶魔监禁</para>
+			/// <para>[x]Make a minion go<b>Dormant</b> for 2 turns.If it’s a friendly Demon,give it +3/+3 instead.</para>
+			/// <para>使一个随从<b>休眠</b>2回合。如果是友方恶魔，改为使其获得+3/+3。</para>
+			/// </summary>
+			JAIL_997 = 125915,
+			/// <summary>
+			/// <para>附魔 德鲁伊 费用：0</para>
+			/// <para>Exercise</para>
+			/// <para>训练</para>
+			/// <para>+6/+6.</para>
+			/// <para>+6/+6。</para>
+			/// </summary>
+			JAIL_997e = 132590,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>Demon on the Loose!</para>
+			/// <para>放出恶魔！</para>
+			/// <para>+3/+3.</para>
+			/// <para>+3/+3。</para>
+			/// </summary>
+			JAIL_997e1 = 132716,
+			/// <summary>
+			/// <para>附魔 术士 费用：0</para>
+			/// <para>Demonic Confinement</para>
+			/// <para>恶魔监禁</para>
+			/// <para><b>Dormant</b>. Awaken in @ |4(turn, turns).</para>
+			/// <para><b>休眠</b>。@回合后唤醒。</para>
+			/// </summary>
+			JAIL_997e3 = 132717,
+			/// <summary>
+			/// <para>随从 中立 费用：3 攻击力：2 生命值：3</para>
+			/// <para>Defias Smuggler</para>
+			/// <para>迪菲亚私运者</para>
+			/// <para><b>Prepare</b>. <b>Battlecry:</b>Give a friendly minion+2 Attack and <b>Rush</b>.</para>
+			/// <para><b>预备</b>。<b>战吼：</b>使一个友方随从获得+2攻击力和<b>突袭</b>。</para>
+			/// </summary>
+			JAIL_998 = 125914,
+			/// <summary>
+			/// <para>附魔 中立 费用：0</para>
+			/// <para>Surprise Attack!</para>
+			/// <para>突然偷袭！</para>
+			/// <para>+2 Attack and <b>Rush</b>.</para>
+			/// <para>+2攻击力和<b>突袭</b>。</para>
+			/// </summary>
+			JAIL_998e = 126840,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>The Coin</para>
+			/// <para>幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only.</para>
+			/// <para>在本回合中，获得一个法力水晶。</para>
+			/// </summary>
+			JAIL_COIN1 = 130273,
+			/// <summary>
+			/// <para>法术 中立 费用：0</para>
+			/// <para>The Coin</para>
+			/// <para>幸运币</para>
+			/// <para>Gain 1 Mana Crystal this turn only.</para>
+			/// <para>在本回合中，获得一个法力水晶。</para>
+			/// </summary>
+			JAIL_COIN2 = 130274,
 			/// <summary>
 			/// <para>随从 法师 费用：3 攻击力：3 生命值：3</para>
 			/// <para>Remixed Dispense-o-bot</para>
