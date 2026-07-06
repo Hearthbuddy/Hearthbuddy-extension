@@ -529,9 +529,9 @@ namespace Monitor
                 MonitorSettings.Instance.FullTimeNeeded = hour == 0 ? "恭喜满级":
                     ((hour / 24).ToString() + "天" + (hour % 24).ToString() + "小时");
 
-                TimeSpan ts1 = (DateTime.Now - new DateTime(2026, 03, 18, 0, 0, 0, 0));
-                TimeSpan ts2 = (new DateTime(2026, 07, 16, 0, 0, 0, 0) - DateTime.Now);
-                MonitorSettings.Instance.PassportEnd = "03.18-07.16 已过" +
+                TimeSpan ts1 = (DateTime.Now - new DateTime(2026, 07, 08, 0, 0, 0, 0));
+                TimeSpan ts2 = (new DateTime(2026, 11, 05, 0, 0, 0, 0) - DateTime.Now);
+                MonitorSettings.Instance.PassportEnd = "07.08-11.05 已过" +
                     ts1.Days.ToString() + "天" +
                     ts1.Hours.ToString() + "小时" +
                     ts1.Minutes.ToString() + "分 还剩" +
