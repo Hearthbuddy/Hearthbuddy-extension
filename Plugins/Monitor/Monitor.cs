@@ -25,7 +25,6 @@ using System.Threading.Tasks;
 using System.Reflection;
 using Triton.Game.Mapping;
 using Triton.Game.Mono;
-using Triton.Bot.Logic.Bots.DefaultBot;
 
 namespace Monitor
 {
@@ -358,23 +357,6 @@ namespace Monitor
                 if (rightControl != null)
                 {
                     string show = "";
-                    if (DefaultBotSettings.Instance.ConstructedGameRule == VisualsFormatType.标准)
-                    {
-                        show = "标准" + MonitorSettings.Instance.StandardInfo;
-                    }
-                    else if (DefaultBotSettings.Instance.ConstructedGameRule == VisualsFormatType.狂野)
-                    {
-                        show = "狂野" + MonitorSettings.Instance.WildInfo;
-                    }
-                    else if (DefaultBotSettings.Instance.ConstructedGameRule == VisualsFormatType.经典)
-                    {
-                        show = "经典" + MonitorSettings.Instance.ClassicInfo;
-                    }
-                    else if (DefaultBotSettings.Instance.ConstructedGameRule == VisualsFormatType.幻变)
-                    {
-                        show = "幻变" + MonitorSettings.Instance.TwistInfo;
-                    }
-                    else show = "休闲模式";
                     rightControl.Content = string.Format(
                         "战令{0}级({1}/{2})({3}/小时) {4} [{5}投] ",
                             MonitorSettings.Instance.Level,
