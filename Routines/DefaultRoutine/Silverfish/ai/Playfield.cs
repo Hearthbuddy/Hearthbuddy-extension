@@ -11257,42 +11257,26 @@ namespace HREngine.Bots
         public CardDB.Card getNextJadeGolem(bool own)
         {
             int golemLevel = own ? ++anzOwnJadeGolem : ++anzEnemyJadeGolem;
+            if (golemLevel > 30) golemLevel = 30;
 
-            // 根据玉莲帮魔像等级返回相应的卡牌
-            switch (golemLevel)
-            {
-                case 1: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t01);
-                case 2: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t02);
-                case 3: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t03);
-                case 4: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t04);
-                case 5: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t05);
-                case 6: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t06);
-                case 7: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t07);
-                case 8: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t08);
-                case 9: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t09);
-                case 10: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t10);
-                case 11: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t11);
-                case 12: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t12);
-                case 13: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t13);
-                case 14: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t14);
-                case 15: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t15);
-                case 16: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t16);
-                case 17: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t17);
-                case 18: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t18);
-                case 19: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t19);
-                case 20: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t20);
-                case 21: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t21);
-                case 22: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t22);
-                case 23: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t23);
-                case 24: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t24);
-                case 25: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t25);
-                case 26: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t26);
-                case 27: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t27);
-                case 28: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t28);
-                case 29: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t29);
-                case 30: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t30);
-                default: return CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_712_t30); // 如果超过30个，仍然返回最后一个等级的魔像
-            }
+            CardDB.cardIDEnum templateId;
+            if (golemLevel <= 1)
+                templateId = CardDB.cardIDEnum.CFM_712_t01;
+            else if (golemLevel <= 4)
+                templateId = CardDB.cardIDEnum.CFM_712_t04;
+            else if (golemLevel <= 7)
+                templateId = CardDB.cardIDEnum.CFM_712_t07;
+            else
+                templateId = CardDB.cardIDEnum.CFM_712_t20;
+
+            CardDB.Card template = CardDB.Instance.getCardDataFromID(templateId);
+            if (golemLevel == 1 || golemLevel == 4 || golemLevel == 7 || golemLevel == 20)
+                return template;
+
+            CardDB.Card jadeGolem = template.Clone();
+            jadeGolem.Attack = golemLevel;
+            jadeGolem.Health = golemLevel;
+            return jadeGolem;
         }
 
         /// <summary>

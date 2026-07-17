@@ -439,6 +439,11 @@ namespace HREngine.Bots
             public string textCN = "";
             public int count = 1;
 
+            public Card Clone()
+            {
+                return (Card)MemberwiseClone();
+            }
+
             private bool _honorableKill = false;
             private bool _overkill = false;
             private bool _spellburst = false;

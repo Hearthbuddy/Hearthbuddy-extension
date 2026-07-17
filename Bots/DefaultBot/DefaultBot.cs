@@ -1552,8 +1552,13 @@ namespace Triton.Bot.Logic.Bots.DefaultBot
 
 			BnetPresenceMgr bnet = BnetPresenceMgr.Get();
 			BnetBattleTag battleTag = bnet.GetMyPlayer().GetAccount().GetBattleTag();
-			string hashCode = (battleTag.GetName() + "#" +
-				battleTag.GetNumber()).GetHashCode().ToString();
+			string tag = battleTag.GetName() + "#" + battleTag.GetNumber();
+			uint djb2 = 5381;
+			foreach (char c in tag)
+			{
+				djb2 = djb2 * 33 ^ c;
+			}
+			string hashCode = ((int)djb2).ToString();
 			JsonSettings.SetMyHashCode(hashCode);
 			DevSettings.Instance.CurrAccountHashCode = hashCode;
 

@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using log4net;
@@ -44,10 +44,10 @@ namespace Monitor
         private int _xpNeeded;
         private int _allXp;
         private int _allXpNeeded;
-        private long _allRunTime;       //��
-        private long _allGetXp;         //�ܾ���
-        private int _perHourXp;         //��ֵÿСʱ
-        private string _perHourXpStr;   //��ֵÿСʱ(�ַ���)
+        private long _allRunTime;       //秒
+        private long _allGetXp;         //总经验
+        private int _perHourXp;         //均值每小时
+        private string _perHourXpStr;   //均值每小时(字符串)
         private int _fullXpNeeded;
         private string _fullTimeNeeded;
         private string _collection;
@@ -245,12 +245,12 @@ namespace Monitor
                     return;
                 }
                 _perHourXp = value;
-                PerHourXpStr = string.Format("{0}/Сʱ", _perHourXp);
+                PerHourXpStr = string.Format("{0}/小时", _perHourXp);
                 NotifyPropertyChanged(() => PerHourXp);
             }
         }
 
-        [DefaultValue("500/Сʱ")]
+        [DefaultValue("500/小时")]
         public string PerHourXpStr
         {
             get { return _perHourXpStr; }
@@ -280,7 +280,7 @@ namespace Monitor
             }
         }
 
-        [DefaultValue("δ֪")]
+        [DefaultValue("未知")]
         public string FullTimeNeeded
         {
             get { return _fullTimeNeeded; }
@@ -295,7 +295,7 @@ namespace Monitor
             }
         }
 
-        [DefaultValue("δ֪")]
+        [DefaultValue("未知")]
         public string Collection
         {
             get { return _collection; }
@@ -310,7 +310,7 @@ namespace Monitor
             }
         }
 
-        [DefaultValue("δ֪")]
+        [DefaultValue("未知")]
         public string PassportEnd
         {
             get { return _passportEnd; }
@@ -325,7 +325,7 @@ namespace Monitor
             }
         }
 
-        [DefaultValue("δ֪")]
+        [DefaultValue("未知")]
         public string ClassicInfo
         {
             get { return _classicInfo; }
@@ -340,7 +340,7 @@ namespace Monitor
             }
         }
 
-        [DefaultValue("δ֪")]
+        [DefaultValue("未知")]
         public string StandardInfo
         {
             get { return _standardInfo; }
@@ -355,7 +355,7 @@ namespace Monitor
             }
         }
 
-        [DefaultValue("δ֪")]
+        [DefaultValue("未知")]
         public string WildInfo
         {
             get { return _wildInfo; }
@@ -370,7 +370,7 @@ namespace Monitor
             }
         }
 
-        [DefaultValue("δ֪")]
+        [DefaultValue("未知")]
         public string TwistInfo
         {
             get { return _twistInfo; }
