@@ -507,7 +507,9 @@ namespace Monitor
                 MonitorSettings.Instance.FullXpNeeded =
                     MonitorSettings.Instance.AllXpNeeded - MonitorSettings.Instance.AllXp;
 
-                int hour = MonitorSettings.Instance.FullXpNeeded / MonitorSettings.Instance.PerHourXp;
+                int hour = MonitorSettings.Instance.PerHourXp > 0
+                    ? MonitorSettings.Instance.FullXpNeeded / MonitorSettings.Instance.PerHourXp
+                    : 0;
                 MonitorSettings.Instance.FullTimeNeeded = hour == 0 ? "恭喜满级":
                     ((hour / 24).ToString() + "天" + (hour % 24).ToString() + "小时");
 

@@ -196,7 +196,6 @@ namespace Monitor
                 AllRunTimeText = t.ToString("F2");
                 if (t > 0) PerHourXp = (int)(AllGetXp / t);
                 else PerHourXp = 0;
-                if (PerHourXp <= 300 || PerHourXp >= 700) PerHourXp = 500;
             }
         }
 
@@ -230,7 +229,6 @@ namespace Monitor
                 float t = ((float)AllRunTime / 3600);
                 if (t > 0) PerHourXp = (int)(value / t);
                 else PerHourXp = 0;
-                if (PerHourXp <= 300 || PerHourXp >= 700) PerHourXp = 500;
             }
         }
 
