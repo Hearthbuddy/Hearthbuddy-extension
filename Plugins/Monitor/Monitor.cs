@@ -462,11 +462,20 @@ namespace Monitor
                 NetCache netCacheData = NetCache.Get();
                 if (netCacheData != null)
                 {
-                    MonitorSettings.Instance.Collection = 
+                    long goldBalance = netCacheData.GetGoldBalance();
+                    if (goldBalance == 0)
+                    {
+                        ServiceLocator sl = ServiceManager.GetCurrentServiceLocator();
+                        CurrencyManager cm = sl?.GetServiceByClassName<CurrencyManager>("CurrencyManager");
+                        if (cm != null)
+                            goldBalance = cm.GetBalance(CurrencyType.GOLD);
+                    }
+
+                    MonitorSettings.Instance.Collection =
                         string.Format("金币({0}) 粉尘({1}) 门票({2})",
-                        netCacheData.GetGoldBalance(),
-                        netCacheData.GetArcaneDustBalance(),
-                        netCacheData.GetArenaTicketBalance());
+                            goldBalance,
+                            netCacheData.GetArcaneDustBalance(),
+                            netCacheData.GetArenaTicketBalance());
                 }
 
                 RewardTrackManager rewardTrackManager = RewardTrackManager.Get();
