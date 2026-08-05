@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：6 攻击力：6 生命值：4
+	//随从 巫妖王 费用：5 攻击力：5 生命值：3
 	//Sawbones
 	//锯骨巨魔
 	//[x]<b>Prepare</b>. <b>Battlecry:</b> Destroyall your other minions. Drawa card and refresh a Mana___for each one destroyed.

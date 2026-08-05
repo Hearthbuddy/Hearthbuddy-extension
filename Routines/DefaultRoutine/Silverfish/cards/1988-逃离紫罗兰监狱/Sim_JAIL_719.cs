@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：4 攻击力：7 生命值：5
+	//随从 恶魔猎手 费用：4 攻击力：7 生命值：7
 	//Irida Sinseeker
 	//伊莉达·寻罪
 	//[x]<b>Lifesteal</b>. <b>Battlecry:</b> Sendyour deck to the Void. At thestart of your turns, get twocards from the Void.

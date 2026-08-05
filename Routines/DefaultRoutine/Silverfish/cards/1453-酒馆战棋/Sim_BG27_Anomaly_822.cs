@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Denathrius' Anima Reserves
 	//德纳修斯的心能储备
 	//Start with 'Whodunit?' as your second Hero Power.
-	//对战开始时，将“悬案疑云”变为你的第二英雄技能
+	//对战开始时，将“悬案疑云”变为你的第二英雄技能。
 	class Sim_BG27_Anomaly_822 : SimTemplate
 	{
 		

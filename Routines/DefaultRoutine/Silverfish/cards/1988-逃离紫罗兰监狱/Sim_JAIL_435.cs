@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：7 攻击力：3 生命值：12
+	//随从 战士 费用：7 攻击力：4 生命值：12
 	//Rampaging Hound
 	//狂乱的猎犬
 	//[x]<b>Prepare</b><b>Battlecry:</b> Force all enemyminions to attack this.

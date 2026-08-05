@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：1
+	//法术 中立 费用：0
 	//Gem Day
 	//宝石特训
 	//<b>Choose One - </b>Your <b>Blood Gems</b> give an extra +1 Attack this game;or +1 Health.

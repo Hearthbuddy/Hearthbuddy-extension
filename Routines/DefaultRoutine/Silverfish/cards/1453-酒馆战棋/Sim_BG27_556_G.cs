@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：10 生命值：12
+	//随从 萨满祭司 费用：0 攻击力：8 生命值：10
 	//Diremuck Forager
 	//凶饿的觅食者
 	//<b>Start of Combat:</b> When you have space, summon the two highest-Attack Murlocs from your handfor this combat only.

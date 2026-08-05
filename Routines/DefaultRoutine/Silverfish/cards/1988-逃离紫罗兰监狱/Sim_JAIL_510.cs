@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 术士 费用：9
+	//法术 术士 费用：8
 	//Annihilation
 	//毁灭
 	//[x]Destroy all minions.Summon any Demonsin the bottom 3 cardsof your deck.

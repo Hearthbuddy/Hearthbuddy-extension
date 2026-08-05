@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//法术 中立 费用：0
 	//Mine Deeper
 	//深入挖掘
-	//Get two random 1-Cost Tavern spells.
-	//随机获取两张消耗1枚铸币的酒馆法术牌。
+	//Get 2 Gem Days.
+	//获取2张宝石特训。
 	class Sim_BG31_320_Gt2 : SimTemplate
 	{
 		

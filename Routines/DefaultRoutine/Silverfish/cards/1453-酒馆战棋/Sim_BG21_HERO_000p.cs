@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：1
+	//英雄技能 中立 费用：0
 	//Conviction
 	//定罪
 	//[x]Give {2} random friendly|4(minion, minions) +{0}/+{1}.<b><b>Passive</b>:</b> After each combat,choose an improvement.@[x]Give {2} random friendlyminions +{0}/+{1}.<b><b>Passive</b>:</b> After each combat,choose an improvement.

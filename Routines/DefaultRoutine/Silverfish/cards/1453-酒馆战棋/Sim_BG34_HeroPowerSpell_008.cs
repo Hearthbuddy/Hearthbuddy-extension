@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Power of Shudderwock
 	//沙德沃克之力
 	//[x]<b>Casts When Bought</b>Make 'Snicker-Snack'your second Hero Power.
-	//<b>购买时施放</b>将“奇诡尖啸”变为你的第二英雄技能
+	//<b>购买时施放</b>将“奇诡尖啸”变为你的第二英雄技能。
 	class Sim_BG34_HeroPowerSpell_008 : SimTemplate
 	{
 		

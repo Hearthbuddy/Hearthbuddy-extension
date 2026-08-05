@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 潜行者 费用：3 攻击力：4 生命值：3
+	//随从 潜行者 费用：2 攻击力：3 生命值：2
 	//Enthralled Shade
 	//被奴役的影魔
 	//[x]<b><b>Deathrattle:</b> </b>Reduce theCost of cards in your handthat were copied fromyour opponent by (1).

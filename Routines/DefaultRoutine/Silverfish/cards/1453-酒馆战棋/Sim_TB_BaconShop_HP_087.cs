@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//英雄技能 中立 费用：0
 	//BUY, INSECT!
 	//买吧，虫子！
-	//[x]After you buy 16 cards,get Sulfuras. <i>(@ left!)</i>
-	//在你购买16张牌后，获得萨弗拉斯。<i>（还剩@张！）</i>
+	//[x]After you buy 12 cards,get Sulfuras. <i>(@ left!)</i>
+	//在你购买12张牌后，获得萨弗拉斯。<i>（还剩@张！）</i>
 	class Sim_TB_BaconShop_HP_087 : SimTemplate
 	{
 		

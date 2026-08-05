@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：10 攻击力：6 生命值：5
+	//随从 术士 费用：9 攻击力：6 生命值：5
 	//Moragg
 	//摩拉格
 	//[x]<b>Prepare</b>. <b>Deathrattle:</b> Summona random Demon from yourdeck. Give it "<b>Deathrattle:</b>Summon Moragg."

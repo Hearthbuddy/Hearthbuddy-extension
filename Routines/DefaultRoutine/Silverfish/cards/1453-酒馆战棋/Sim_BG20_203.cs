@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：3
+	//随从 中立 费用：0 攻击力：3 生命值：4
 	//Prophet of the Boar
 	//野猪预言者
 	//<b>Taunt</b>After you play a Quilboar, get a <b>Blood Gem</b>.

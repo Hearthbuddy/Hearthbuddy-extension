@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：6 攻击力：4 生命值：4
+	//随从 中立 费用：7 攻击力：4 生命值：3
 	//Vanessa the Ringleader
 	//大头目梵妮莎
 	//[x]<b>Prepare</b>After you play a card, get arandom <b>Battlecry</b> minion.It costs (2) less.

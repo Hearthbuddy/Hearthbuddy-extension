@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：1 生命值：4
+	//随从 术士 费用：0 攻击力：1 生命值：3
 	//Wrath Weaver
 	//愤怒编织者
 	//After you play a Demon, deal 1 damage to your hero and gain +{0}/+{1}.

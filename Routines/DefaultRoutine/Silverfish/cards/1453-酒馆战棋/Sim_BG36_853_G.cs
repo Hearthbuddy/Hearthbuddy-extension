@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//随从 圣骑士 费用：0 攻击力：12 生命值：12
+	//Glambot
+	//炫彩机器人
+	//[x]Whenever you cast a spellon a Mech, <b>Magnetize</b> a{0}/{1} Satellite to ittwice.
+	//每当你对机械施放法术，对其<b>磁力吸附</b>一个{0}/{1}的卫星，触发两次。
+	class Sim_BG36_853_G : SimTemplate
+	{
+		
+		
+	}
+}

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 猎人 费用：4
+	//法术 猎人 费用：5
 	//Confront the Tol'vir
 	//直面托维尔
 	//[x]Replay each 1-Costcard you've playedthis game <i>(targetingenemies if possible.)</i>

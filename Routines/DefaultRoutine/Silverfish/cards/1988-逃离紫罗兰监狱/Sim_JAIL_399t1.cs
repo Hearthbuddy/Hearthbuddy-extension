@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：9 攻击力：9 生命值：9
+	//随从 术士 费用：8 攻击力：8 生命值：8
 	//Grandmother Imp
 	//小鬼奶奶
 	//<b>Taunt</b><b>Lifesteal</b>

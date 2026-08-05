@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 术士 费用：1
+	//法术 术士 费用：2
 	//The Soularium
 	//莫瑞甘的灵界
 	//Draw 3 cards.They are <b>Temporary</b>.
