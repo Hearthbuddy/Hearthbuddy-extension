@@ -459,18 +459,13 @@ namespace Monitor
         {
             try
             {
+                ServiceLocator sl = ServiceManager.GetCurrentServiceLocator();
+                CurrencyManager cm = sl?.GetServiceByClassName<CurrencyManager>("CurrencyManager");
+                long goldBalance = cm != null ? cm.GetBalance(CurrencyType.GOLD) : 0;
+
                 NetCache netCacheData = NetCache.Get();
                 if (netCacheData != null)
                 {
-                    long goldBalance = netCacheData.GetGoldBalance();
-                    if (goldBalance == 0)
-                    {
-                        ServiceLocator sl = ServiceManager.GetCurrentServiceLocator();
-                        CurrencyManager cm = sl?.GetServiceByClassName<CurrencyManager>("CurrencyManager");
-                        if (cm != null)
-                            goldBalance = cm.GetBalance(CurrencyType.GOLD);
-                    }
-
                     MonitorSettings.Instance.Collection =
                         string.Format("金币({0}) 粉尘({1}) 门票({2})",
                             goldBalance,
@@ -522,9 +517,9 @@ namespace Monitor
                 MonitorSettings.Instance.FullTimeNeeded = hour == 0 ? "恭喜满级":
                     ((hour / 24).ToString() + "天" + (hour % 24).ToString() + "小时");
 
-                TimeSpan ts1 = (DateTime.Now - new DateTime(2026, 07, 08, 0, 0, 0, 0));
-                TimeSpan ts2 = (new DateTime(2026, 11, 05, 0, 0, 0, 0) - DateTime.Now);
-                MonitorSettings.Instance.PassportEnd = "07.08-11.05 已过" +
+                TimeSpan ts1 = (DateTime.Now - new DateTime(2026, 10, 21, 0, 0, 0, 0));
+                TimeSpan ts2 = (new DateTime(2027, 02, 18, 0, 0, 0, 0) - DateTime.Now);
+                MonitorSettings.Instance.PassportEnd = "10.21-02.18 已过" +
                     ts1.Days.ToString() + "天" +
                     ts1.Hours.ToString() + "小时" +
                     ts1.Minutes.ToString() + "分 还剩" +
