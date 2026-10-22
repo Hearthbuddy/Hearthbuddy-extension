@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：2 攻击力：1 生命值：4
+	//随从 中立 费用：2 攻击力：1 生命值：3
 	//Warden Maiev
 	//典狱官玛维
 	//[x]After you play a minion,give it +3/+3 and make it_go <b>Dormant</b> for 1 turn.

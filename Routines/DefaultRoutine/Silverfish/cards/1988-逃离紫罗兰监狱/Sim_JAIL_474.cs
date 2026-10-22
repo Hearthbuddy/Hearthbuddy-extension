@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 牧师 费用：3
+	//法术 牧师 费用：5
 	//Jade Guardians
 	//青玉守卫
 	//[x]Get two random 8-Costminions. They cost (1) lessfor each card you playedfor 2 Mana this game.@ <i>(@)</i>

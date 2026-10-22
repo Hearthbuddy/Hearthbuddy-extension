@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 恶魔猎手 费用：3
+	//法术 恶魔猎手 费用：2
 	//Soul Immolation
 	//灵魂献祭
 	//[x]Your Hero Power becomes'Collapsing Star'.If it already is, increaseits damage by 1.

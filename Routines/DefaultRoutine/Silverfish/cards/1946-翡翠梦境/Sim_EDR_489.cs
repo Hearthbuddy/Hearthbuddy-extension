@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：10 攻击力：8 生命值：9
+	//随从 术士 费用：10 攻击力：9 生命值：9
 	//Agamaggan
 	//阿迦玛甘
 	//[x]<b>Battlecry:</b> The next card youplay costs your OPPONENT'SHealth instead of Mana<i>(up to 10)</i>.

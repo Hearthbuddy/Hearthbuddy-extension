@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：2 攻击力：1 生命值：4
+	//随从 法师 费用：2 攻击力：1 生命值：5
 	//Plume of Vulcanos
 	//沃坎诺斯的喷发柱
 	//[x]Whenever this takesdamage, get a random Firespell. It costs (3) less.

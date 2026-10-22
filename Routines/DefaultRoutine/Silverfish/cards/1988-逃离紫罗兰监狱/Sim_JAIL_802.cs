@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：1 攻击力：1 生命值：3
+	//随从 萨满祭司 费用：2 攻击力：2 生命值：3
 	//Gallagio Goon
 	//加乐宫恶棍
 	//After you play a <b>Battlecry</b> minion, give it +1/+1.
